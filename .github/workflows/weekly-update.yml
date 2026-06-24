@@ -1,0 +1,33 @@
+name: SEO
+
+on:
+  schedule:
+      # 8:00 = UTC 0:00
+          - cron: '0 0 * * 1'
+            workflow_dispatch:  # 
+
+            permissions:
+              contents: write
+
+              jobs:
+                update:
+                    runs-on: ubuntu-latest
+                        steps:
+                              - name: 
+                                      uses: actions/checkout@v4
+
+                                            - name:  Python
+                                                    uses: actions/setup-python@v5
+                                                            with:
+                                                                      python-version: '3.11'
+
+                                                                            - name: 
+                                                                                    run: python3 weekly_rotation.py
+
+                                                                                          - name: 
+                                                                                                  run: |
+                                                                                                            git config user.name ""
+                                                                                                                      git config user.email "auto-update@hxscar.xyz"
+                                                                                                                                git add index.html weekly_rotation.py
+                                                                                                                                          git diff --quiet && echo "" || git commit -m " SEO $(TZ='Asia/Shanghai' date '+%Y-%m-%d %V')"
+                                                                                                                                                    git push
