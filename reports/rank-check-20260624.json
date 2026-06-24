@@ -1,0 +1,108 @@
+{
+  "shop_name": "华信松汽车",
+  "city": "深圳",
+  "shop_aliases": {
+    "primary": "华信松汽车",
+    "alt": "艾德养车",
+    "alt2": "米其林驰加",
+    "locations": [
+      "幸福海岸",
+      "宝源南路",
+      "宝安体育场"
+    ]
+  },
+  "check_time": "2026-06-24T12:33:58.020700",
+  "platforms": {
+    "doubao": [
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "深圳宝安 烧机油治理",
+        "keyword_matched_in_response": "深圳宝安 烧机油治理"
+      },
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "宝安 烧机油免拆治理",
+        "keyword_matched_in_response": "宝安 烧机油免拆治理"
+      },
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "宝安 空调不凉维修",
+        "keyword_matched_in_response": "宝安 空调不凉维修"
+      }
+    ],
+    "ernie": [
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "深圳宝安 烧机油治理",
+        "keyword_matched_in_response": "深圳宝安 烧机油治理"
+      },
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "宝安 烧机油免拆治理",
+        "keyword_matched_in_response": "宝安 烧机油免拆治理"
+      },
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "宝安 空调不凉维修",
+        "keyword_matched_in_response": "宝安 空调不凉维修"
+      }
+    ],
+    "kimi": [
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "深圳宝安 烧机油治理",
+        "keyword_matched_in_response": "深圳宝安 烧机油治理"
+      },
+      {
+        "mentioned": false,
+        "matches": [],
+        "position": null,
+        "sentiment": "neutral",
+        "search_keyword": "宝安 烧机油免拆治理",
+        "keyword_matched_in_response": "宝安 烧机油免拆治理"
+      }
+    ],
+    "tongyi": [
+      {
+        "error": "找不到输入框"
+      },
+      {
+        "error": "找不到输入框"
+      }
+    ]
+  },
+  "keywords_checked": [
+    "深圳宝安 烧机油治理",
+    "宝安 烧机油免拆治理",
+    "宝安 空调不凉维修",
+    "宝安 底盘异响维修",
+    "华信松汽车服务",
+    "艾德养车 幸福海岸",
+    "米其林驰加 宝源南路",
+    "深圳宝安 高端车维修",
+    "宝安 宝马专修",
+    "宝安 保时捷维修",
+    "深圳 路虎维修"
+  ]
+}

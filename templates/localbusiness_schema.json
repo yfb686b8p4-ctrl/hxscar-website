@@ -1,0 +1,99 @@
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "{{门店名称}}",
+  "description": "{{门店简介}}",
+  "url": "{{门店网站或落地页URL}}",
+  "telephone": "{{联系电话}}",
+  "email": "{{联系邮箱}}",
+  "image": "{{门店照片URL}}",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{详细街道地址}}",
+    "addressLocality": "{{所在区}}",
+    "addressRegion": "{{所在城市}}",
+    "postalCode": "{{邮编}}",
+    "addressCountry": "CN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{纬度}},
+    "longitude": {{经度}}
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{评分}}",
+    "reviewCount": "{{评价数}}"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "{{客户名}}"
+      },
+      "reviewBody": "{{客户评价内容}}",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      }
+    }
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "{{服务覆盖区域}}"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "汽车服务",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "洗车服务",
+          "description": "包括外部清洗、内部吸尘、玻璃清洁等"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "汽车保养",
+          "description": "更换机油、机滤、空滤等常规保养"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "汽车维修",
+          "description": "发动机、变速箱、底盘等故障诊断与维修"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "汽车美容",
+          "description": "抛光打蜡、内饰清洁、镀晶等"
+        }
+      }
+    ]
+  }
+}

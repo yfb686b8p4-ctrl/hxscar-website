@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{门店名称}} — {{城市}}专业汽车服务</title>
+    <meta name="description" content="{{门店名称}}位于{{详细地址}}，提供洗车、保养、维修、美容等专业汽车服务。{{营业时间}}，联系电话：{{电话}}。">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "{{门店名称}}",
+      "description": "{{门店简介}}",
+      "telephone": "{{电话}}",
+      "image": "{{门店照片URL}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{详细地址}}",
+        "addressLocality": "{{所在区}}",
+        "addressRegion": "{{所在城市}}",
+        "addressCountry": "CN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{纬度}},
+        "longitude": {{经度}}
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "17:00"}
+      ],
+      "areaServed": {"@type": "City", "name": "{{服务覆盖区域}}"}
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #1a73e8, #0d47a1); color: white; padding: 40px 20px; text-align: center; border-radius: 12px; margin-bottom: 24px; }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { font-size: 16px; opacity: 0.9; }
+        .card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .card h2 { color: #1a73e8; margin-bottom: 16px; font-size: 20px; border-bottom: 2px solid #e8f0fe; padding-bottom: 8px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .info-item { padding: 8px 0; }
+        .info-label { color: #666; font-size: 14px; }
+        .info-value { font-size: 16px; font-weight: 500; }
+        .services { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .service-item { background: #f8f9fa; padding: 16px; border-radius: 8px; text-align: center; }
+        .service-item h3 { color: #1a73e8; margin-bottom: 4px; }
+        .service-item p { color: #666; font-size: 14px; }
+        .contact-btn { display: block; width: 100%; padding: 16px; background: #34a853; color: white; text-align: center; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold; margin-top: 16px; }
+        .contact-btn:hover { background: #2d8f47; }
+        .footer { text-align: center; color: #999; font-size: 12px; padding: 20px; }
+        @media (max-width: 600px) { .info-grid, .services { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>{{门店名称}}</h1>
+            <p>{{城市}} · {{所在区}} · 专业汽车服务门店</p>
+        </div>
+
+        <!-- 门店信息 -->
+        <div class="card">
+            <h2>📍 门店信息</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">地址</div>
+                    <div class="info-value">{{详细地址}}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">电话</div>
+                    <div class="info-value">{{电话}}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">营业时间</div>
+                    <div class="info-value">{{营业时间}}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">扫码预约</div>
+                    <div class="info-value">微信: {{微信号}}</div>
+                </div>
+            </div>
+            <a href="tel:{{电话}}" class="contact-btn">📞 立即预约</a>
+        </div>
+
+        <!-- 服务项目 -->
+        <div class="card">
+            <h2>🔧 服务项目</h2>
+            <div class="services">
+                <div class="service-item">
+                    <h3>洗车</h3>
+                    <p>精洗 / 普洗 / 内饰清洁</p>
+                </div>
+                <div class="service-item">
+                    <h3>保养</h3>
+                    <p>更换机油 / 三滤 / 全车检查</p>
+                </div>
+                <div class="service-item">
+                    <h3>维修</h3>
+                    <p>发动机 / 变速箱 / 底盘</p>
+                </div>
+                <div class="service-item">
+                    <h3>美容</h3>
+                    <p>抛光打蜡 / 镀晶 / 除臭</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关于我们 -->
+        <div class="card">
+            <h2>📖 关于我们</h2>
+            <p>{{门店简介}}</p>
+            <p style="margin-top: 12px; color: #666;">凭借专业的技术和优质的服务，我们已经成为{{城市}}{{所在区}}车主信赖的汽车服务伙伴。</p>
+        </div>
+
+        <!-- 客户评价 -->
+        <div class="card">
+            <h2>⭐ 客户评价</h2>
+            <div style="margin-bottom: 12px;">
+                <p><strong>张先生</strong> <span style="color: #fbbc04;">★★★★★</span></p>
+                <p style="color: #666;">"洗得很干净，服务态度好，价格也合理，以后就定这家了。"</p>
+            </div>
+            <div>
+                <p><strong>李女士</strong> <span style="color: #fbbc04;">★★★★★</span></p>
+                <p style="color: #666;">"做保养很专业，师傅检查得很仔细，还给了很多用车建议。"</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🗺️ 门店位置</h2>
+            <p style="margin-bottom: 12px; color: #666;">{{详细地址}} — 导航直达，免费停车</p>
+            <!-- 这里可嵌入地图（百度/高德地图 iframe） -->
+            <div style="background: #e8f0fe; padding: 40px; text-align: center; border-radius: 8px; color: #666;">
+                地图组件 — 可嵌入百度地图或高德地图定位
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>{{门店名称}} © 2024 | {{城市}} · 专业汽车服务</p>
+            <p style="margin-top: 4px;">ICP备案号：{{备案号}}</p>
+        </div>
+    </div>
+</body>
+</html>
