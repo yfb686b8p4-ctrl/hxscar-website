@@ -1,33 +1,30 @@
-name: SEO
+
+name: 每周SEO自动更新
 
 on:
   schedule:
-      # 8:00 = UTC 0:00
-          - cron: '0 0 * * 1'
-            workflow_dispatch:  # 
+    # 北京时间每周一 8:00 = UTC 0:00
+    - cron: '0 0 * * 1'
+  workflow_dispatch:  # 支持手动触发
 
-            permissions:
-              contents: write
+permissions:
+  contents: write
 
-              jobs:
-                update:
-                    runs-on: ubuntu-latest
-                        steps:
-                              - name: 
-                                      uses: actions/checkout@v4
-
-                                            - name:  Python
-                                                    uses: actions/setup-python@v5
-                                                            with:
-                                                                      python-version: '3.11'
-
-                                                                            - name: 
-                                                                                    run: python3 weekly_rotation.py
-
-                                                                                          - name: 
-                                                                                                  run: |
-                                                                                                            git config user.name ""
-                                                                                                                      git config user.email "auto-update@hxscar.xyz"
-                                                                                                                                git add index.html weekly_rotation.py
-                                                                                                                                          git diff --quiet && echo "" || git commit -m " SEO $(TZ='Asia/Shanghai' date '+%Y-%m-%d %V')"
-                                                                                                                                                    git push
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 运行关键字轮换脚本
+        run: python3 weekly_rotation.py
+      - name: 提交并推送更改
+        run: |
+          git config user.name "hxscar-auto"
+          git config user.email "auto-update@hxscar.xyz"
+          git add index.html weekly_rotation.py
+          git diff --quiet && echo "无变更" || git commit -m "每周SEO关键字轮换 $(TZ='Asia/Shanghai' date '+%Y-%m-%d 第%V周')"
+          git push
