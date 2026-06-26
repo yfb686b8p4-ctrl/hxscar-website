@@ -394,6 +394,8 @@ def main():
         r = subprocess.run(['git', 'diff', '--cached', '--quiet'], capture_output=True)
         if r.returncode != 0:
             print("   检测到变更，提交中...")
+            subprocess.run(['git', 'config', 'user.name', 'hxscar-auto'], capture_output=True)
+            subprocess.run(['git', 'config', 'user.email', 'hxscar-auto@users.noreply.github.com'], capture_output=True)
             subprocess.run(['git', 'commit', '-m', f'📅 每周SEO关键字轮换 {year}年第{week_number}周'], capture_output=True, check=True)
             p = subprocess.run(['git', 'push'], capture_output=True, text=True)
             if p.returncode == 0:
