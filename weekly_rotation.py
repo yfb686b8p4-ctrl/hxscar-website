@@ -390,21 +390,20 @@ def main():
     
     try:
         import subprocess
-        result = subprocess.run(['git', 'diff', '--cached', '--quiet', 'index.html'], capture_output=True)
-        if result.returncode != 0:
-            print("   检测到变更，自动提交...")
+        subprocess.run(['git', 'add', 'index.html'], capture_output=True, check=True)
+        r = subprocess.run(['git', 'diff', '--cached', '--quiet'], capture_output=True)
+        if r.returncode != 0:
+            print("   检测到变更，提交中...")
+            subprocess.run(['git', 'commit', '-m', f'📅 每周SEO关键字轮换 {year}年第{week_number}周'], capture_output=True, check=True)
+            p = subprocess.run(['git', 'push'], capture_output=True, text=True)
+            if p.returncode == 0:
+                print("   ✅ 已提交并推送至GitHub")
+            else:
+                print(f"   ⚠️ 推送结果: {p.stderr.strip()[-200:]}")
         else:
-            # 还没add，先add
-            subprocess.run(['git', 'add', 'index.html'], capture_output=True)
-            result2 = subprocess.run(['git', 'diff', '--cached', '--quiet', 'index.html'], capture_output=True)
-            if result2.returncode != 0:
-                print("   检测到变更，自动提交...")
-                subprocess.run(['git', 'commit', '-m', f'📅 每周SEO关键字轮换 {year}年第{week_number}周'], capture_output=True)
-                subprocess.run(['git', 'push'], capture_output=True)
-                print("   已提交并推送")
-        print("   无内容变更")
+            print("   本次无内容变更")
     except Exception as e:
-        print(f"   git操作跳过: {e}")
+        print(f"   git操作信息: {e}")
 
 
 if __name__ == "__main__":
