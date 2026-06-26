@@ -387,6 +387,24 @@ def main():
     print(f"   本周核心词: {', '.join(config['keyword_order'])}")
     print(f"   评价数: {len(selected)}条")
     print(f"   FAQ: {len(config['faqs'])}问")
+    
+    try:
+        import subprocess
+        result = subprocess.run(['git', 'diff', '--cached', '--quiet', 'index.html'], capture_output=True)
+        if result.returncode != 0:
+            print("   检测到变更，自动提交...")
+        else:
+            # 还没add，先add
+            subprocess.run(['git', 'add', 'index.html'], capture_output=True)
+            result2 = subprocess.run(['git', 'diff', '--cached', '--quiet', 'index.html'], capture_output=True)
+            if result2.returncode != 0:
+                print("   检测到变更，自动提交...")
+                subprocess.run(['git', 'commit', '-m', f'📅 每周SEO关键字轮换 {year}年第{week_number}周'], capture_output=True)
+                subprocess.run(['git', 'push'], capture_output=True)
+                print("   已提交并推送")
+        print("   无内容变更")
+    except Exception as e:
+        print(f"   git操作跳过: {e}")
 
 
 if __name__ == "__main__":
