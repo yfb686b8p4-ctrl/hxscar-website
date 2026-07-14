@@ -44,5 +44,6 @@ jobs:
             exit 0
           fi
           git commit -m "📅 每周SEO自动更新 $(TZ='Asia/Shanghai' date '+%Y-%m-%d 第%V周')"
-          git push
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push origin HEAD:main
           echo "✅ 已推送更新"
