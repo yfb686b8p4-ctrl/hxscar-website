@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 jobs:
-  update:
+  seo_update:
     runs-on: ubuntu-latest
     steps:
       - name: 检出仓库
@@ -30,19 +30,22 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 运行每周轮换脚本
+      - name: 运行每周轮换脚本（更新index.html）
         run: python3 weekly_rotation.py
+
+      - name: 生成多平台内容包
+        run: python3 multi_platform_publisher.py
 
       - name: 检查并提交更新
         run: |
           git config user.name "华信松自动更新机器人"
           git config user.email "bot@hxscar.auto"
-          git add index.html weekly_rotation.py .github/workflows/weekly-update.yml
+          git add index.html multi_platform_publisher.py platform_content/
           # 检查是否有变化
           if git diff --cached --quiet; then
             echo "⚠️ 无内容变化，跳过提交"
             exit 0
           fi
-          git commit -m "📅 每周SEO自动更新 $(TZ='Asia/Shanghai' date '+%Y-%m-%d 第%V周')"
+          git commit -m "📅 每周SEO自动更新 W$(TZ='Asia/Shanghai' date '+%V') · $(TZ='Asia/Shanghai' date '+%Y-%m-%d')"
           git push
-          echo "✅ 已推送更新"
+          echo "✅ 已推送更新（含多平台内容包）"
