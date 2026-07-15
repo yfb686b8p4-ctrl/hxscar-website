@@ -30,17 +30,36 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: 安装依赖
+        run: |
+          pip3 install playwright requests
+          python3 -m playwright install chromium --with-deps 2>/dev/null || true
+
       - name: 运行每周轮换脚本（更新index.html）
         run: python3 weekly_rotation.py
 
       - name: 生成多平台内容包
         run: python3 multi_platform_publisher.py
 
+      - name: 自动发布（地图API）
+        env:
+          AMAP_KEY: ${{ secrets.AMAP_KEY }}
+          AMAP_POI_ID: ${{ secrets.AMAP_POI_ID }}
+          BAIDU_MAP_AK: ${{ secrets.BAIDU_MAP_AK }}
+          BAIDU_POI_UID: ${{ secrets.BAIDU_POI_UID }}
+          DIANPING_ACCOUNT: ${{ secrets.DIANPING_ACCOUNT }}
+          DIANPING_PASSWORD: ${{ secrets.DIANPING_PASSWORD }}
+          XIAOHONGSHU_ACCOUNT: ${{ secrets.XIAOHONGSHU_ACCOUNT }}
+          XIAOHONGSHU_PASSWORD: ${{ secrets.XIAOHONGSHU_PASSWORD }}
+        run: |
+          # 尝试自动发布（若缺少密钥则自动跳过）
+          python3 auto_publisher.py || echo "⚠️ 自动发布跳过（部分平台未配置密钥）"
+
       - name: 检查并提交更新
         run: |
           git config user.name "华信松自动更新机器人"
           git config user.email "bot@hxscar.auto"
-          git add index.html multi_platform_publisher.py platform_content/
+          git add index.html weekly_rotation.py multi_platform_publisher.py auto_publisher.py publisher_config.json platform_content/
           # 检查是否有变化
           if git diff --cached --quiet; then
             echo "⚠️ 无内容变化，跳过提交"
@@ -48,4 +67,4 @@ jobs:
           fi
           git commit -m "📅 每周SEO自动更新 W$(TZ='Asia/Shanghai' date '+%V') · $(TZ='Asia/Shanghai' date '+%Y-%m-%d')"
           git push
-          echo "✅ 已推送更新（含多平台内容包）"
+          echo "✅ 已推送更新"

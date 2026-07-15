@@ -1,0 +1,23 @@
+{
+  "note": "请填写真实信息后重命名为 publisher_config.json",
+  "amap_key": "",
+  "amap_poi_id": "",
+  "baidu_ak": "",
+  "baidu_poi_uid": "",
+  "dianping": {
+    "account": "",
+    "password": ""
+  },
+  "xiaohongshu": {
+    "account": "",
+    "password": ""
+  },
+  "douyin": {
+    "account": "",
+    "password": ""
+  },
+  "58": {
+    "account": "",
+    "password": ""
+  }
+}
