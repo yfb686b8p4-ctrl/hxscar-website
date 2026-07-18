@@ -32,7 +32,7 @@ jobs:
 
       - name: 安装依赖
         run: |
-          pip3 install playwright requests
+          pip install -r requirements.txt
           python3 -m playwright install chromium --with-deps 2>/dev/null || true
 
       - name: 运行每周轮换脚本（更新index.html）
@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name "华信松自动更新机器人"
           git config user.email "bot@hxscar.auto"
-          git add index.html weekly_rotation.py multi_platform_publisher.py auto_publisher.py publisher_config.json platform_content/
+          git add index.html weekly_rotation.py data_loader.py data/ multi_platform_publisher.py auto_publisher.py platform_content/ requirements.txt .gitignore
           # 检查是否有变化
           if git diff --cached --quiet; then
             echo "⚠️ 无内容变化，跳过提交"

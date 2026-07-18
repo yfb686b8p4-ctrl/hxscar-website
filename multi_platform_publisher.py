@@ -13,19 +13,19 @@ now = datetime.now(tz)
 week_number = now.isocalendar()[1]
 year = now.year
 
-# 导入 weekly_rotation 中的数据
-sys.path.insert(0, str(Path(__file__).parent))
-import importlib
-rotation = importlib.import_module("weekly_rotation")
+# 从 data_loader 导入所有数据（数据在 data/*.json 中管理）
+from data_loader import (
+    ALL_FAQS,
+    ALL_CASES,
+    REVIEWS,
+    PHONE,
+    ADDRESS,
+    LANDMARK,
+    SHOP_NAMES,
+    CORE_TAGS,
+)
 
-faqs = rotation.ALL_FAQS
-ALL_CASES = rotation.ALL_CASES
-reviews = rotation.REVIEWS
-PHONE = rotation.PHONE
-ADDRESS = rotation.ADDRESS
-LANDMARK = rotation.LANDMARK
-SHOP_NAMES = rotation.SHOP_NAMES
-CORE_TAGS = rotation.CORE_TAGS
+faqs = ALL_FAQS
 
 # 服务价格参照
 SERVICE_PRICES = [

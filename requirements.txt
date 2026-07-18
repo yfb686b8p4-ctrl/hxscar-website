@@ -1,0 +1,12 @@
+# ===== 核心依赖 =====
+requests>=2.28.0
+
+# ===== 浏览器自动化（自动发布用） =====
+playwright>=1.40.0
+
+# ===== AI内容生成（可选） =====
+# openai>=1.0.0
+
+# ===== 安装方式 =====
+# pip install -r requirements.txt
+# playwright install chromium

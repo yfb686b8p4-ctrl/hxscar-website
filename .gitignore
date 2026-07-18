@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 环境变量与配置
+publisher_config.json
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 生成产物
+output/
+reports/
+platform_content/
+*.bak
+
+# 临时文件
+test.txt
+test-upload.txt
