@@ -41,7 +41,7 @@ year = now.year
 def select_config(week_num):
     """根据周数选择配置（4周循环），同时返回索引"""
     idx = (week_num % 4)
-    return WEEKLY_CONFIGS[idx], idx
+    return WEEKLY_CONFIGS[str(idx)], idx
 
 
 def build_page(config, selected_cases, selected_reviews, week_num):

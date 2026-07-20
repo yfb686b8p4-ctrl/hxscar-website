@@ -35,7 +35,7 @@ ALL_FAQS = [(item["question"], item["answer"]) for item in _raw_faqs]
 
 # ====== 维修案例 ======
 _raw_cases = _load_json("cases.json")
-_f_fields = ["tag", "car_type", "issue", "solution", "price", "result", "source"]
+_f_fields = ["tag", "car_type", "issue", "solution", "price", "result"]
 ALL_CASES = []
 for item in _raw_cases:
     if isinstance(item, dict):

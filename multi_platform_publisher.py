@@ -52,7 +52,7 @@ def safe_sample(pool, k):
 
 def generate_dianping(week):
     """大众点评 — 评价+菜单"""
-    selected = safe_sample(reviews, 10)
+    selected = safe_sample(REVIEWS, 10)
     selected_cases = safe_sample(ALL_CASES, 6)
     
     lines = [
