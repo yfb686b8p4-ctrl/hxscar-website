@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name "华信松自动更新机器人"
           git config user.email "bot@hxscar.auto"
-          git add index.html weekly_rotation.py data_loader.py data/ multi_platform_publisher.py auto_publisher.py platform_content/ requirements.txt .gitignore
+          git add index.html weekly_rotation.py data_loader.py data/ multi_platform_publisher.py auto_publisher.py requirements.txt .gitignore
           # 检查是否有变化
           if git diff --cached --quiet; then
             echo "⚠️ 无内容变化，跳过提交"
