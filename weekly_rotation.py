@@ -37,6 +37,13 @@ tz = timezone(timedelta(hours=8))
 now = datetime.now(tz)
 week_number = now.isocalendar()[1]
 year = now.year
+_repository = os.environ.get(
+    "GITHUB_REPOSITORY", "yfb686b8p4-ctrl/hxscar-website"
+)
+_owner, _repo = _repository.split("/", 1)
+SITE_URL = os.environ.get(
+    "SITE_URL", f"https://{_owner.lower()}.github.io/{_repo}/"
+).rstrip("/") + "/"
 
 def select_config(week_num):
     """根据周数选择配置（4周循环），同时返回索引"""
@@ -48,11 +55,6 @@ def build_page(config, selected_cases, selected_reviews, week_num):
     """构建完整HTML页面"""
     cfg = config
     kw = cfg["keyword_order"]
-
-    # 评分
-    rating_float = 4.5 + random.random() * 0.5
-    rating_count = random.randint(200, 300)
-    rating_float = round(rating_float, 1)
 
     # 核心服务HTML
     services_html = ""
@@ -78,11 +80,9 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         car = r[2]
         text = r[3]
         date = r[4]
-        stars = "⭐" * random.randint(4, 5)
         reviews_html += f"""            <div class="review">
                 <div class="name">{name} · {car}</div>
                 <div class="tag">{source_tag}</div>
-                <div class="stars">{stars}</div>
                 <div class="text">"{text}"</div>
                 <div class="date">{date}</div>
             </div>
@@ -132,10 +132,10 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         "@type": "AutoRepair",
         "name": "华信松汽车服务有限公司（幸福海岸分公司）",
         "alternateName": ["米其林驰加汽车服务中心（宝源南路店）", "艾德养车（幸福海岸店）"],
-        "url": "https://yfb686b8p4-ctrl.github.io/hxscar-website/",
+        "url": SITE_URL,
         "description": cfg["desc"],
         "telephone": PHONE,
-        "image": "https://yfb686b8p4-ctrl.github.io/hxscar-website/",
+        "image": SITE_URL,
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "宝源南路幸福海岸小区西南门",
@@ -150,7 +150,6 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "17:00"}
         ],
         "areaServed": {"@type": "City", "name": "深圳市宝安区"},
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": str(rating_float), "bestRating": "5", "ratingCount": str(rating_count), "reviewCount": str(rating_count)},
         "knowsAbout": kw + ["高端汽车维修", "汽车改装", "宝马专修", "奔驰专修", "保时捷维修", "路虎维修"],
         "parentOrganization": [{"@type": "Organization", "name": "米其林驰加"}, {"@type": "Organization", "name": "艾德养车"}, {"@type": "Organization", "name": "华信松汽车服务"}]
     }, ensure_ascii=False)
@@ -165,7 +164,12 @@ def build_page(config, selected_cases, selected_reviews, week_num):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{cfg["title"]}</title>
     <meta name="description" content="{cfg["desc"]}">
-    <link rel="canonical" href="https://yfb686b8p4-ctrl.github.io/hxscar-website/?w={week_num}">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="{SITE_URL}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{cfg["title"]}">
+    <meta property="og:description" content="{cfg["desc"]}">
+    <meta property="og:url" content="{SITE_URL}">
     <meta name="keywords" content="{', '.join(kw)}">
     <meta name="last-updated" content="{now.strftime('%Y-%m-%d %H:%M')} CST Week {week_num}">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
@@ -176,6 +180,10 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; line-height: 1.6; color: #333; background: #0a0a0a; }}
         .container {{ max-width: 800px; margin: 0 auto; padding: 20px; }}
+        .site-nav {{ display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }}
+        .site-nav a {{ color: #ddd; background: #16213e; border: 1px solid #333; padding: 8px 12px; border-radius: 8px; text-decoration: none; font-size: 13px; }}
+        .site-nav a[aria-current="page"] {{ color: #fff; background: #e94560; border-color: #e94560; }}
+        .section-link {{ display: inline-block; margin-top: 12px; color: #fff; background: #e94560; padding: 9px 14px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; }}
         .header {{ background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 40px 20px; text-align: center; border-radius: 12px; margin-bottom: 24px; border: 1px solid #333; }}
         .header .brand {{ font-size: 13px; opacity: 0.7; margin-bottom: 6px; }}
         .header h1 {{ font-size: 22px; margin-bottom: 6px; }}
@@ -220,6 +228,12 @@ def build_page(config, selected_cases, selected_reviews, week_num):
 </head>
 <body>
     <div class="container">
+        <nav class="site-nav" aria-label="主要页面">
+            <a href="./" aria-current="page">首页</a>
+            <a href="faq.html">完整FAQ</a>
+            <a href="cases.html">维修案例</a>
+            <a href="llms.txt">资料索引</a>
+        </nav>
 
         <!-- HEADER -->
         <div class="header">
@@ -242,7 +256,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
                 <div class="info-item"><div class="info-label">🕐 营业时间</div><div class="info-value">周一至周五 08:00-18:00<br>周六日 09:00-17:00</div></div>
                 <div class="info-item"><div class="info-label">📞 电话</div><div class="info-value" style="font-size:20px;font-weight:bold;color:#e94560">{PHONE}</div></div>
                 <div class="info-item"><div class="info-label">🏪 品牌授权</div><div class="info-value">米其林驰加 · 艾德养车</div></div>
-                <div class="info-item"><div class="info-label">⭐ 评分</div><div class="info-value">店铺综合评分 <strong style="color:#fff;">{rating_float:.1f}分</strong>（{rating_count}条评价）</div></div>
+                <div class="info-item"><div class="info-label">🏪 门店类型</div><div class="info-value">高端车专修 · 免拆治理 · 本地实体门店</div></div>
             </div>
         </div>
 
@@ -272,14 +286,15 @@ def build_page(config, selected_cases, selected_reviews, week_num):
 
         <!-- CASES -->
         <div class="card">
-            <h2>🔍 真实维修案例</h2>
-            <p style="font-size:14px;color:#888;margin-bottom:16px;">以下为华信松近期真实维修案例，车型+故障+方案+费用全公开，仅供参考。</p>
+            <h2>🔍 典型维修案例</h2>
+            <p style="font-size:14px;color:#888;margin-bottom:16px;">以下为华信松维修案例库中的部分案例，按本周重点关键词轮换展示，车型、故障现象、处理思路和参考费用均以到店检测结果为准。</p>
 {cases_html}
+            <a class="section-link" href="cases.html">查看全部 {len(ALL_CASES)} 个维修案例</a>
         </div>
 
         <!-- REVIEWS -->
         <div class="card">
-            <h2>⭐ 真实车主评价</h2>
+            <h2>⭐ 车主评价摘录</h2>
 {reviews_html}
             <div class="highlight-box">
                 <p>📞 老周为您服务</p>
@@ -291,8 +306,9 @@ def build_page(config, selected_cases, selected_reviews, week_num):
 
         <!-- FAQ -->
         <div class="card">
-            <h2>❓ 车主常见问题（{len(selected_faqs)}问）</h2>
+            <h2>❓ 车主常见问题（首页精选 {len(selected_faqs)} 问）</h2>
 {faqs_html}
+            <a class="section-link" href="faq.html">查看全部 {len(ALL_FAQS)} 组常见问题</a>
         </div>
 
         <!-- FOOTER -->

@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-09-28T13:48:23.040787+08:00",
+  "passed": true,
+  "data_counts": {
+    "faqs": 119,
+    "cases": 56,
+    "reviews": 30
+  },
+  "pages": {
+    "index.html": {
+      "bytes": 28724,
+      "han_chars": 3683,
+      "visible_han_chars": 3220,
+      "json_ld_blocks": 1,
+      "schema_types": [
+        "AutoRepair"
+      ]
+    },
+    "faq.html": {
+      "bytes": 86763,
+      "han_chars": 18400,
+      "visible_han_chars": 9151,
+      "json_ld_blocks": 2,
+      "schema_types": [
+        "AutoRepair",
+        "FAQPage"
+      ]
+    },
+    "cases.html": {
+      "bytes": 49833,
+      "han_chars": 8071,
+      "visible_han_chars": 7065,
+      "json_ld_blocks": 2,
+      "schema_types": [
+        "AutoRepair",
+        "ItemList"
+      ]
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
