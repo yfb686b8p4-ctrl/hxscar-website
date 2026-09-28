@@ -29,15 +29,15 @@ fi
 
 git commit -m "每周内容更新 W${week} · $(TZ='Asia/Shanghai' date '+%Y-%m-%d')"
 
-git_proxy=()
-if curl -sS --max-time 2 --proxy http://127.0.0.1:7897 \
-  https://api.github.com/rate_limit >/dev/null 2>&1; then
-  git_proxy=(-c http.proxy=http://127.0.0.1:7897)
-fi
-
 remote_name=web
 if ! git remote get-url "$remote_name" >/dev/null 2>&1; then
   remote_name=origin
 fi
 
-git "${git_proxy[@]}" -c http.version=HTTP/1.1 push "$remote_name" HEAD:main
+if curl -sS --max-time 2 --proxy http://127.0.0.1:7897 \
+  https://api.github.com/rate_limit >/dev/null 2>&1; then
+  proxy_config=(-c http.proxy=http://127.0.0.1:7897)
+  git "${proxy_config[@]}" -c http.version=HTTP/1.1 push "$remote_name" HEAD:main
+else
+  git -c http.version=HTTP/1.1 push "$remote_name" HEAD:main
+fi
