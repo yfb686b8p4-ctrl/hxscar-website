@@ -2,24 +2,24 @@
   "checked_at": "2026-09-28",
   "passed": true,
   "data_counts": {
-    "faqs": 119,
+    "faqs": 127,
     "cases": 56,
     "reviews": 30
   },
   "pages": {
     "index.html": {
-      "bytes": 28718,
-      "han_chars": 3683,
-      "visible_han_chars": 3220,
+      "bytes": 28048,
+      "han_chars": 3533,
+      "visible_han_chars": 3054,
       "json_ld_blocks": 1,
       "schema_types": [
         "AutoRepair"
       ]
     },
     "faq.html": {
-      "bytes": 86763,
-      "han_chars": 18400,
-      "visible_han_chars": 9151,
+      "bytes": 92866,
+      "han_chars": 19824,
+      "visible_han_chars": 9856,
       "json_ld_blocks": 2,
       "schema_types": [
         "AutoRepair",
@@ -27,8 +27,8 @@
       ]
     },
     "cases.html": {
-      "bytes": 49833,
-      "han_chars": 8071,
+      "bytes": 49884,
+      "han_chars": 8085,
       "visible_han_chars": 7065,
       "json_ld_blocks": 2,
       "schema_types": [

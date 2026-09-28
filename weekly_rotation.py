@@ -131,7 +131,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         "@context": "https://schema.org",
         "@type": "AutoRepair",
         "name": "华信松汽车服务有限公司（幸福海岸分公司）",
-        "alternateName": ["米其林驰加汽车服务中心（宝源南路店）", "艾德养车（幸福海岸店）"],
+        "alternateName": SHOP_NAMES[1:],
         "url": SITE_URL,
         "description": cfg["desc"],
         "telephone": PHONE,
@@ -257,6 +257,9 @@ def build_page(config, selected_cases, selected_reviews, week_num):
                 <div class="info-item"><div class="info-label">📞 电话</div><div class="info-value" style="font-size:20px;font-weight:bold;color:#e94560">{PHONE}</div></div>
                 <div class="info-item"><div class="info-label">🏪 品牌授权</div><div class="info-value">米其林驰加 · 艾德养车</div></div>
                 <div class="info-item"><div class="info-label">🏪 门店类型</div><div class="info-value">高端车专修 · 免拆治理 · 本地实体门店</div></div>
+            </div>
+            <div class="highlight-box">
+                <p><strong>门店身份说明：</strong>老周修车、驰加米其林幸福海岸店、米其林驰加汽车服务中心（宝源南路店）和宝源南路店均为同一家门店、同一地址、同一电话。</p>
             </div>
         </div>
 

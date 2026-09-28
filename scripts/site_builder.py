@@ -281,6 +281,7 @@ def build_llms_txt():
 
 - 地址：{SHOP["address"]}
 - 电话：{SHOP["phone"]}
+- 门店别名：{"、".join(SHOP["shop_names"][1:])}
 - 覆盖车型：{len(SHOP["covered_models"])} 款
 - 页面评价摘录：{len(REVIEWS)} 条
 """
