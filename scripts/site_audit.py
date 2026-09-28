@@ -114,7 +114,7 @@ def audit():
 
     if errors:
         return {
-            "checked_at": datetime.now(TZ).isoformat(),
+            "checked_at": datetime.now(TZ).date().isoformat(),
             "passed": False,
             "errors": errors,
             "warnings": warnings,
@@ -192,7 +192,7 @@ def audit():
         warnings.append("评价摘录数量较少")
 
     return {
-        "checked_at": datetime.now(TZ).isoformat(),
+        "checked_at": datetime.now(TZ).date().isoformat(),
         "passed": not errors,
         "data_counts": {
             "faqs": len(faqs),
