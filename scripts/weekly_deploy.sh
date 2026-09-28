@@ -35,4 +35,9 @@ if curl -sS --max-time 2 --proxy http://127.0.0.1:7897 \
   git_proxy=(-c http.proxy=http://127.0.0.1:7897)
 fi
 
-git "${git_proxy[@]}" -c http.version=HTTP/1.1 push web HEAD:main
+remote_name=web
+if ! git remote get-url "$remote_name" >/dev/null 2>&1; then
+  remote_name=origin
+fi
+
+git "${git_proxy[@]}" -c http.version=HTTP/1.1 push "$remote_name" HEAD:main
