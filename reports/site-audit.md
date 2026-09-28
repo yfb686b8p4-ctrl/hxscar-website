@@ -7,8 +7,8 @@
 
 | 页面 | 可见中文字符 | JSON-LD | 类型 |
 |---|---:|---:|---|
-| index.html | 3054 | 1 | AutoRepair |
-| faq.html | 9856 | 2 | AutoRepair, FAQPage |
+| index.html | 3338 | 1 | AutoRepair |
+| faq.html | 10211 | 2 | AutoRepair, FAQPage |
 | cases.html | 7065 | 2 | AutoRepair, ItemList |
 
 ## 错误

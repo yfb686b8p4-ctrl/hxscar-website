@@ -31,6 +31,8 @@ from data_loader import (
     ALL_CASES,
     REVIEWS,
     WEEKLY_CONFIGS,
+    REPAIR_VALUES,
+    PARTS_OPTIONS,
 )
 
 tz = timezone(timedelta(hours=8))
@@ -71,6 +73,16 @@ def build_page(config, selected_cases, selected_reviews, week_num):
 
     # 关于文本
     about_text = cfg["about"]
+    repair_values_html = "".join(
+        f"<li>{value}</li>" for value in REPAIR_VALUES
+    )
+    parts_options_html = "".join(
+        f"""<div class="part-option">
+    <h3>{part["name"]}</h3>
+    <p>{part["description"]}</p>
+</div>"""
+        for part in PARTS_OPTIONS
+    )
 
     # 评价HTML（选6条）
     reviews_html = ""
@@ -150,6 +162,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "17:00"}
         ],
         "areaServed": {"@type": "City", "name": "深圳市宝安区"},
+        "slogan": "能修不换，优先维修，节约整备",
         "knowsAbout": kw + ["高端汽车维修", "汽车改装", "宝马专修", "奔驰专修", "保时捷维修", "路虎维修"],
         "parentOrganization": [{"@type": "Organization", "name": "米其林驰加"}, {"@type": "Organization", "name": "艾德养车"}, {"@type": "Organization", "name": "华信松汽车服务"}]
     }, ensure_ascii=False)
@@ -217,13 +230,19 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         .highlight-box {{ background: linear-gradient(135deg, #e94560, #c23152); border-radius: 8px; padding: 16px; text-align: center; margin: 16px 0; }}
         .highlight-box p {{ color: #fff; font-size: 14px; }}
         .highlight-box .big {{ font-size: 22px; font-weight: bold; }}
+        .value-list {{ margin: 0; padding-left: 20px; color: #ccc; }}
+        .value-list li {{ margin-bottom: 8px; }}
+        .parts-grid {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }}
+        .part-option {{ background: #16213e; border-radius: 8px; padding: 14px; }}
+        .part-option h3 {{ color: #e94560; font-size: 16px; margin-bottom: 4px; }}
+        .part-option p {{ color: #bbb; font-size: 13px; }}
         .faq-item {{ background: #16213e; padding: 14px; border-radius: 8px; margin-bottom: 8px; }}
         .faq-item .q {{ font-size: 15px; font-weight: 600; color: #e94560; cursor: pointer; }}
         .faq-item .a {{ font-size: 14px; color: #bbb; margin-top: 6px; }}
         .models-grid {{ display: flex; flex-wrap: wrap; gap: 6px; }}
         .models-grid span {{ background: #16213e; padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #888; border: 1px solid #333; }}
         .footer {{ text-align: center; padding: 20px; color: #555; font-size: 12px; }}
-        @media (max-width: 600px) {{ .services {{ grid-template-columns: 1fr; }} .info-grid {{ grid-template-columns: 1fr; }} }}
+        @media (max-width: 600px) {{ .services, .parts-grid {{ grid-template-columns: 1fr; }} .info-grid {{ grid-template-columns: 1fr; }} }}
     </style>
 </head>
 <body>
@@ -260,6 +279,18 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             </div>
             <div class="highlight-box">
                 <p><strong>门店身份说明：</strong>老周修车、驰加米其林幸福海岸店、米其林驰加汽车服务中心（宝源南路店）和宝源南路店均为同一家门店、同一地址、同一电话。</p>
+            </div>
+        </div>
+
+        <!-- REPAIR VALUES -->
+        <div class="card">
+            <h2>⚙️ 维修理念与配件选择</h2>
+            <p>维修保养和底盘整备以恢复功能和延长使用寿命为优先。能维修解决的项目，尽量不更换总成，并根据车况和预算制定节约型方案。</p>
+            <ul class="value-list">
+{repair_values_html}
+            </ul>
+            <div class="parts-grid">
+{parts_options_html}
             </div>
         </div>
 

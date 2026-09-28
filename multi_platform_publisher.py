@@ -23,6 +23,8 @@ from data_loader import (
     LANDMARK,
     SHOP_NAMES,
     CORE_TAGS,
+    REPAIR_VALUES,
+    PARTS_OPTIONS,
 )
 
 faqs = ALL_FAQS
@@ -90,7 +92,22 @@ def generate_dianping(week):
     ])
     for item in SERVICE_PRICES:
         lines.append(f"| {item[0]} | {item[1]} | {item[2]} | {item[3]} |")
-    
+
+    lines.extend([
+        "",
+        "## 四、维修理念",
+        "",
+    ])
+    lines.extend(f"- {value}" for value in REPAIR_VALUES)
+    lines.extend([
+        "",
+        "## 五、配件选择",
+        "",
+    ])
+    lines.extend(
+        f"- **{part['name']}**：{part['description']}"
+        for part in PARTS_OPTIONS
+    )
     lines.append("")
     return "\n".join(lines)
 
@@ -248,6 +265,14 @@ def generate_58(week):
 {SHOP_NAMES[0]}位于{ADDRESS}，{LANDMARK}。
 团队拥有10年以上高端汽车维修经验。
 服务车型覆盖宝马、奔驰、保时捷、路虎、奥迪、玛莎拉蒂、法拉利等50+款车型。
+
+## 四、维修理念
+
+{chr(10).join(f'- {value}' for value in REPAIR_VALUES)}
+
+## 五、配件选择
+
+{chr(10).join(f'- **{part["name"]}**：{part["description"]}' for part in PARTS_OPTIONS)}
 """
 
 def generate_meituan(week):

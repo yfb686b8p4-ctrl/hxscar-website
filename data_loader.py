@@ -26,6 +26,8 @@ ADDRESS = _shop["address"]
 LANDMARK = _shop["landmark"]
 SHOP_NAMES = _shop["shop_names"]
 CORE_TAGS = _shop["core_tags"]
+REPAIR_VALUES = _shop["repair_values"]
+PARTS_OPTIONS = _shop["parts_options"]
 COVERED_MODELS = _shop["covered_models"]
 
 # ====== FAQ 数据 ======

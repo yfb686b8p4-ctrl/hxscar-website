@@ -130,6 +130,7 @@ def local_business_schema():
         "alternateName": SHOP["shop_names"][1:],
         "url": BASE_URL + "/",
         "telephone": SHOP["phone"],
+        "slogan": "能修不换，优先维修，节约整备",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "宝源南路幸福海岸小区西南门",
@@ -267,6 +268,11 @@ def build_sitemap():
 def build_llms_txt():
     """生成面向 AI 阅读的资料索引。"""
     core_tags = "、".join(SHOP["core_tags"])
+    repair_values = "\n".join(f"- {value}" for value in SHOP["repair_values"])
+    parts_options = "\n".join(
+        f"- {part['name']}：{part['description']}"
+        for part in SHOP["parts_options"]
+    )
     return f"""# 华信松汽车服务有限公司（幸福海岸分公司）
 
 > 深圳宝安本地高端汽车维修门店，重点服务：{core_tags}。
@@ -284,6 +290,14 @@ def build_llms_txt():
 - 门店别名：{"、".join(SHOP["shop_names"][1:])}
 - 覆盖车型：{len(SHOP["covered_models"])} 款
 - 页面评价摘录：{len(REVIEWS)} 条
+
+## 维修理念
+
+{repair_values}
+
+## 配件选择
+
+{parts_options}
 """
 
 
