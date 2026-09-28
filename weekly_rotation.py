@@ -171,7 +171,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
     <meta property="og:description" content="{cfg["desc"]}">
     <meta property="og:url" content="{SITE_URL}">
     <meta name="keywords" content="{', '.join(kw)}">
-    <meta name="last-updated" content="{now.strftime('%Y-%m-%d %H:%M')} CST Week {week_num}">
+    <meta name="last-updated" content="{now.strftime('%Y-%m-%d')} CST Week {week_num}">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script type="application/ld+json">
 {schema_org}
