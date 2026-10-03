@@ -23,6 +23,8 @@ from data_loader import (
     LANDMARK,
     SHOP_NAMES,
     CORE_TAGS,
+    REPAIR_VALUES,
+    PARTS_OPTIONS,
 )
 
 faqs = ALL_FAQS
@@ -57,7 +59,7 @@ def generate_dianping(week):
     
     lines = [
         f"# 🏪 大众点评内容包 · 第{week}周",
-        f"生成时间：{now.strftime('%Y-%m-%d %H:%M')}",
+        f"生成时间：{now.strftime('%Y-%m-%d')}",
         "",
         "---",
         "",
@@ -90,7 +92,22 @@ def generate_dianping(week):
     ])
     for item in SERVICE_PRICES:
         lines.append(f"| {item[0]} | {item[1]} | {item[2]} | {item[3]} |")
-    
+
+    lines.extend([
+        "",
+        "## 四、维修理念",
+        "",
+    ])
+    lines.extend(f"- {value}" for value in REPAIR_VALUES)
+    lines.extend([
+        "",
+        "## 五、配件选择",
+        "",
+    ])
+    lines.extend(
+        f"- **{part['name']}**：{part['description']}"
+        for part in PARTS_OPTIONS
+    )
     lines.append("")
     return "\n".join(lines)
 
@@ -135,7 +152,7 @@ def generate_xiaohongshu(week):
 ---
 """)
     
-    return f"# 📕 小红书内容包 · 第{week}周\n生成时间：{now.strftime('%Y-%m-%d %H:%M')}\n\n---\n\n" + "\n".join(items)
+    return f"# 📕 小红书内容包 · 第{week}周\n生成时间：{now.strftime('%Y-%m-%d')}\n\n---\n\n" + "\n".join(items)
 
 
 def generate_douyin(week):
@@ -217,14 +234,14 @@ def generate_douyin(week):
 ---
 """)
     
-    return f"# 🎬 抖音短视频脚本 · 第{week}周\n生成时间：{now.strftime('%Y-%m-%d %H:%M')}\n\n---\n\n" + "\n".join(items)
+    return f"# 🎬 抖音短视频脚本 · 第{week}周\n生成时间：{now.strftime('%Y-%m-%d')}\n\n---\n\n" + "\n".join(items)
 
 
 def generate_58(week):
     """58同城 — 商家信息"""
     price_lines = "\n".join([f"- **{item[0]}**：{item[2]}（{item[3]}）" for item in SERVICE_PRICES])
     return f"""# 🏢 58同城商家信息包 · 第{week}周
-生成时间：{now.strftime('%Y-%m-%d %H:%M')}
+生成时间：{now.strftime('%Y-%m-%d')}
 
 ---
 
@@ -248,6 +265,14 @@ def generate_58(week):
 {SHOP_NAMES[0]}位于{ADDRESS}，{LANDMARK}。
 团队拥有10年以上高端汽车维修经验。
 服务车型覆盖宝马、奔驰、保时捷、路虎、奥迪、玛莎拉蒂、法拉利等50+款车型。
+
+## 四、维修理念
+
+{chr(10).join(f'- {value}' for value in REPAIR_VALUES)}
+
+## 五、配件选择
+
+{chr(10).join(f'- **{part["name"]}**：{part["description"]}' for part in PARTS_OPTIONS)}
 """
 
 def generate_meituan(week):
@@ -262,7 +287,7 @@ def generate_meituan(week):
     
     lines = [
         f"# 🛵 美团团购内容包 · 第{week}周",
-        f"生成时间：{now.strftime('%Y-%m-%d %H:%M')}",
+        f"生成时间：{now.strftime('%Y-%m-%d')}",
         "",
         "---",
         "",
@@ -288,7 +313,7 @@ def generate_map(week):
     """高德/百度地图 — 店铺描述"""
     focus = ["底盘异响专修", "宝马专修", "免拆治理烧机油", "空调不凉专修"][(week - 1) % 4]
     return f"""# 📍 地图平台内容包 · 第{week}周
-生成时间：{now.strftime('%Y-%m-%d %H:%M')}
+生成时间：{now.strftime('%Y-%m-%d')}
 
 ---
 
@@ -324,6 +349,7 @@ def generate_map(week):
 
 
 def main():
+    random.seed(week_number * 7919)
     output_dir = Path(__file__).parent / "platform_content" / f"W{week_number}"
     output_dir.mkdir(parents=True, exist_ok=True)
     

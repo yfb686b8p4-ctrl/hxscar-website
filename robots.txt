@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yfb686b8p4-web.github.io/hxscar-website/sitemap.xml

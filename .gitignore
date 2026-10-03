@@ -20,7 +20,9 @@ Thumbs.db
 
 # 生成产物
 output/
-reports/
+reports/*
+!reports/site-audit.json
+!reports/site-audit.md
 platform_content/
 *.bak
 
