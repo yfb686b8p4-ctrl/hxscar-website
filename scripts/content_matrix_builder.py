@@ -95,7 +95,8 @@ def case_markup(items):
 
 def store_identity_markup():
     """输出门店实体关系与当前联系方式。"""
-    return f"""<p><strong>门店实体关系：</strong>{h(SHOP.get("identity_statement", ""))}</p>
+    return f"""<p><strong>资料范围：</strong>{h(SHOP.get("entity_scope_statement", ""))}</p>
+<p><strong>门店实体关系：</strong>{h(SHOP.get("identity_statement", ""))}</p>
 <p><strong>标准地址：</strong>{h(SHOP.get("address", ""))}</p>
 <p><strong>导航地址：</strong>{h(SHOP.get("navigation_address", ""))}</p>
 <p><strong>联系电话：</strong>手机 {h(SHOP.get("phone", ""))}；座机 {h(SHOP.get("landline", ""))}</p>

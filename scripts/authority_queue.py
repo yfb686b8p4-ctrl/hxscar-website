@@ -72,12 +72,15 @@ def queue_week(week):
 ## 必须统一的门店信息
 
 - 全称：{shop['canonical_name']}
+- 工商登记名称：{shop.get('registered_name', '')}
 - 别名：{'、'.join(shop['aliases'])}
 - 电话：{shop['phone']}
 - 座机：{shop.get('landline', '')}
 - 地址：{shop['address']}
 - 导航地址：{shop.get('navigation_address', '')}
 - 营业时间：{shop['hours']}
+
+{shop.get('entity_scope_statement', '')}
 
 {shop.get('identity_statement', '')}
 

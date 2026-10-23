@@ -26,6 +26,8 @@ from data_loader import (
     ADDRESS,
     HOURS,
     IDENTITY_STATEMENT,
+    REGISTERED_NAME,
+    ENTITY_SCOPE_STATEMENT,
     IDENTITY_POINTS,
     CONTACT_STATEMENT,
     HOURS_STATEMENT,
@@ -151,10 +153,12 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         "@type": "AutoRepair",
         "@id": SITE_URL + "#autorepair",
         "name": "华信松汽车服务有限公司（幸福海岸分公司）",
+        "legalName": REGISTERED_NAME,
         "alternateName": SHOP_NAMES[1:],
         "url": SITE_URL,
         "mainEntityOfPage": SITE_URL + "store-profile.html",
         "description": IDENTITY_STATEMENT + " " + cfg["desc"],
+        "disambiguatingDescription": ENTITY_SCOPE_STATEMENT,
         "telephone": PHONE,
         "image": SITE_URL,
         "address": {
@@ -301,6 +305,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
                 <div class="info-item"><div class="info-label">🏪 门店类型</div><div class="info-value">高端车专修 · 免拆治理 · 本地实体门店</div></div>
             </div>
             <div class="highlight-box">
+                <p><strong>资料范围：</strong>{ENTITY_SCOPE_STATEMENT}</p>
                 <p><strong>门店身份说明：</strong>{IDENTITY_STATEMENT}</p>
             </div>
             <ul class="value-list">{identity_points_html}</ul>

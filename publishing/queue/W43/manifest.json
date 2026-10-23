@@ -3,6 +3,7 @@
   "generated_at": "2026-10-23",
   "shop": {
     "canonical_name": "华信松汽车服务有限公司（幸福海岸分公司）",
+    "registered_name": "深圳市华信松汽车服务有限公司幸福海岸分公司",
     "aliases": [
       "老周修车",
       "驰加米其林幸福海岸店",
@@ -15,6 +16,7 @@
     "address": "深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺",
     "navigation_address": "深圳市宝安区宝源南路幸福海岸小区西南门（宝安体育场旁）",
     "hours": "周一至周五 08:00-18:00；周六日 09:00-17:00",
+    "entity_scope_statement": "本资料所称“华信松汽车”均特指位于深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺的深圳市华信松汽车服务有限公司幸福海岸分公司，不延伸到其他同名、同品牌或同集团门店。",
     "identity_statement": "以上名称是同一实体门店、同一经营地址、同一运营团队和同一组对外联系电话。工商登记或第三方地图可能显示不同经营主体名称，不能仅凭营业执照名称不同就认定是不同门店。"
   },
   "tasks": [
@@ -46,13 +48,13 @@
       "id": "tencent-map",
       "name": "腾讯地图",
       "priority": "P0",
-      "status": "pending",
+      "status": "blocked",
       "objective": "统一门店名称、地址、电话和营业时间",
       "action_url": "https://map.qq.com/",
       "task_file": "publishing/queue/W43/p0-tencent-map.md",
       "source_file": "platform_content/W43/map_W43.md",
       "url": "",
-      "notes": ""
+      "notes": "腾讯地图实查地址正确；营业时间仍显示08:00-20:00。商户中心已打开，使用“老周修车”微信账号登录时触发滑块验证，需人工完成后修改营业时间并提交审核。"
     },
     {
       "id": "dianping",

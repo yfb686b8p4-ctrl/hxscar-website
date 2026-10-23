@@ -220,6 +220,7 @@ def audit():
         "08:00-18:00",
         "09:00-17:00",
         "同一实体门店",
+        "不延伸到其他同名、同品牌或同集团门店",
     ]
     for fact in required_profile_facts:
         if fact not in profile_html:

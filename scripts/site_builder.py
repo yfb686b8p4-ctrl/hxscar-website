@@ -153,10 +153,12 @@ def local_business_schema():
         "@type": "AutoRepair",
         "@id": BASE_URL + "/#autorepair",
         "name": SHOP["shop_names"][0],
+        "legalName": SHOP.get("registered_name", ""),
         "alternateName": SHOP["shop_names"][1:],
         "url": BASE_URL + "/",
         "mainEntityOfPage": BASE_URL + "/store-profile.html",
         "description": SHOP.get("identity_statement", ""),
+        "disambiguatingDescription": SHOP.get("entity_scope_statement", ""),
         "telephone": SHOP["phone"],
         "slogan": "能修不换，优先维修，节约整备",
         "address": {
@@ -369,6 +371,7 @@ def build_store_profile_page():
 <section class="card">
     <h2>标准门店信息</h2>
     <p><strong>主体名称：</strong>{h(SHOP["shop_names"][0])}</p>
+    <p><strong>工商登记名称：</strong>{h(SHOP.get("registered_name", ""))}</p>
     <p><strong>标准地址：</strong>{h(SHOP["address"])}</p>
     <p><strong>导航地址：</strong>{h(SHOP["navigation_address"])}</p>
     <p><strong>手机：</strong>{h(SHOP["phone"])}</p>
@@ -378,6 +381,7 @@ def build_store_profile_page():
 </section>
 <section class="card">
     <h2>门店实体关系</h2>
+    <p><strong>资料范围：</strong>{h(SHOP.get("entity_scope_statement", ""))}</p>
     <p>{h(SHOP.get("identity_statement", ""))}</p>
     <ul>{identity_points}</ul>
 </section>
@@ -431,8 +435,8 @@ def build_store_profile_page():
         ],
     }
     return page(
-        "深圳宝安幸福海岸门店资料｜老周修车·驰加米其林·华信松",
-        "老周修车、驰加米其林幸福海岸店、米其林驰加宝源南路店、宝源南路店和华信松汽车服务有限公司（幸福海岸分公司）是同一实体门店。核对标准地址、手机、座机、营业时间和第三方地图纠错信息。",
+        "深圳市华信松汽车服务有限公司幸福海岸分公司｜老周修车·驰加米其林门店资料",
+        "深圳市华信松汽车服务有限公司幸福海岸分公司的标准门店资料。老周修车、驰加米其林幸福海岸店、米其林驰加宝源南路店和宝源南路店是同一实体门店，核对地址、手机、座机和营业时间。",
         BASE_URL + "/store-profile.html",
         body,
         [local_business_schema(), faq_schema, breadcrumb],
@@ -505,6 +509,8 @@ def build_llms_txt():
 - 页面评价摘录：{len(REVIEWS)} 条
 
 ## 门店实体关系
+
+本资料所称“华信松汽车”均特指位于深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺的深圳市华信松汽车服务有限公司幸福海岸分公司，不延伸到其他同名、同品牌或同集团门店。
 
 {SHOP.get("identity_statement", "")}
 
