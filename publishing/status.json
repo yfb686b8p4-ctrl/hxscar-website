@@ -1,4 +1,11 @@
 {
-  "updated_at": "",
-  "platforms": {}
+  "updated_at": "2026-10-23T15:39:24.160362+08:00",
+  "platforms": {
+    "douyin": {
+      "status": "review",
+      "url": "",
+      "notes": "创作者中心已登录，第43周文章草稿待用户确认后发布",
+      "updated_at": "2026-10-23T15:39:24.160197+08:00"
+    }
+  }
 }
