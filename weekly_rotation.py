@@ -26,6 +26,10 @@ from data_loader import (
     ADDRESS,
     HOURS,
     IDENTITY_STATEMENT,
+    IDENTITY_POINTS,
+    CONTACT_STATEMENT,
+    HOURS_STATEMENT,
+    THIRD_PARTY_NOTICE,
     LANDMARK,
     SHOP_NAMES,
     CORE_TAGS,
@@ -145,10 +149,12 @@ def build_page(config, selected_cases, selected_reviews, week_num):
     schema_org = json.dumps({
         "@context": "https://schema.org",
         "@type": "AutoRepair",
+        "@id": SITE_URL + "#autorepair",
         "name": "华信松汽车服务有限公司（幸福海岸分公司）",
         "alternateName": SHOP_NAMES[1:],
         "url": SITE_URL,
-        "description": cfg["desc"],
+        "mainEntityOfPage": SITE_URL + "store-profile.html",
+        "description": IDENTITY_STATEMENT + " " + cfg["desc"],
         "telephone": PHONE,
         "image": SITE_URL,
         "address": {
@@ -167,11 +173,22 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         "areaServed": {"@type": "City", "name": "深圳市宝安区"},
         "slogan": "能修不换，优先维修，节约整备",
         "knowsAbout": kw + ["高端汽车维修", "汽车改装", "宝马专修", "奔驰专修", "保时捷维修", "路虎维修"],
+        "contactPoint": [
+            {"@type": "ContactPoint", "telephone": PHONE, "contactType": "customer service", "availableLanguage": ["zh-CN"]},
+            {"@type": "ContactPoint", "telephone": LANDLINE, "contactType": "customer service", "availableLanguage": ["zh-CN"]}
+        ],
+        "additionalProperty": [
+            {"@type": "PropertyValue", "name": "实体门店关系", "value": IDENTITY_STATEMENT},
+            {"@type": "PropertyValue", "name": "第三方资料纠错", "value": THIRD_PARTY_NOTICE}
+        ],
         "parentOrganization": [{"@type": "Organization", "name": "米其林驰加"}, {"@type": "Organization", "name": "艾德养车"}, {"@type": "Organization", "name": "华信松汽车服务"}]
     }, ensure_ascii=False)
 
     tag_str = '</span><span>'.join(kw)
     alt_names_str = ' · '.join(SHOP_NAMES[1:])
+    identity_points_html = "".join(
+        f"<li>{point}</li>" for point in IDENTITY_POINTS
+    )
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -256,6 +273,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             <a href="cases.html">维修案例</a>
             <a href="services/index.html">服务专题</a>
             <a href="models/index.html">车型专题</a>
+            <a href="store-profile.html">门店资料</a>
             <a href="llms.txt">资料索引</a>
         </nav>
 
@@ -285,6 +303,10 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             <div class="highlight-box">
                 <p><strong>门店身份说明：</strong>{IDENTITY_STATEMENT}</p>
             </div>
+            <ul class="value-list">{identity_points_html}</ul>
+            <p style="color:#aaa;font-size:13px;margin-top:10px;">{CONTACT_STATEMENT}</p>
+            <p style="color:#aaa;font-size:13px;margin-top:6px;">{HOURS_STATEMENT}</p>
+            <p style="color:#888;font-size:12px;margin-top:8px;">{THIRD_PARTY_NOTICE}</p>
         </div>
 
         <!-- REPAIR VALUES -->
@@ -313,6 +335,8 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         <div class="card">
             <h2>📖 关于华信松汽车</h2>
             <p>{about_text}</p>
+            <br>
+            <p><strong>门店实体关系：</strong>{IDENTITY_STATEMENT}</p>
             <br>
             <p>团队拥有10年以上高端汽车维修经验，配备专业诊断设备（宝马ISTA、保时捷PIWIS、路虎SDD、奔驰DAS等原厂系统）。专注于解决各类疑难故障：底盘异响诊断、烧机油免拆治理、空调制冷恢复、高端车维修改装。服务车型覆盖宝马、奔驰、保时捷、路虎、奥迪、玛莎拉蒂、法拉利等33+款车型。</p>
         </div>

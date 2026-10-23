@@ -93,6 +93,16 @@ def case_markup(items):
     )
 
 
+def store_identity_markup():
+    """输出门店实体关系与当前联系方式。"""
+    return f"""<p><strong>门店实体关系：</strong>{h(SHOP.get("identity_statement", ""))}</p>
+<p><strong>标准地址：</strong>{h(SHOP.get("address", ""))}</p>
+<p><strong>导航地址：</strong>{h(SHOP.get("navigation_address", ""))}</p>
+<p><strong>联系电话：</strong>手机 {h(SHOP.get("phone", ""))}；座机 {h(SHOP.get("landline", ""))}</p>
+<p><strong>营业时间：</strong>{h(SHOP.get("hours", ""))}</p>
+<p><strong>第三方资料纠错：</strong>{h(SHOP.get("third_party_notice", ""))}</p>"""
+
+
 def service_faqs(service):
     """筛选与服务相关的 FAQ。"""
     matches = []
@@ -208,7 +218,8 @@ def build_service_pages():
 </section>
 <section class="card">
     <h2>服务说明</h2>
-    <p>老周修车、驰加米其林幸福海岸店、米其林驰加汽车服务中心（宝源南路店）和宝源南路店为同一家门店。所有维修先检查、后报价，维修保养和底盘整备可选择品牌件、原厂件或拆车件。</p>
+    <p>所有维修先检查、后报价，维修保养和底盘整备可选择品牌件、原厂件或拆车件。</p>
+    {store_identity_markup()}
     <div class="topic-list">
         <a href="index.html">全部服务专题</a>
         <a href="../models/index.html">车型专题</a>
@@ -239,7 +250,7 @@ def build_service_pages():
             schemas.append(faq_schema(faqs))
         html = page(
             f"{service['name']}｜老周修车·驰加米其林幸福海岸店",
-            f"{service['intro']} 老周修车、驰加米其林幸福海岸店和宝源南路店为同一家门店，电话{SHOP['phone']}。",
+            f"{service['intro']} 老周修车、驰加米其林幸福海岸店和宝源南路店为同一实体门店、同一地址和同一运营团队。手机{SHOP['phone']}，座机{SHOP.get('landline', '')}。",
             f"{BASE_URL}/services/{service['slug']}.html",
             body,
             schemas,
@@ -297,6 +308,10 @@ def build_model_pages():
         <a href="../services/chassis.html">底盘异响诊断维修</a>
         <a href="../services/vehicle-restoration.html">老车整备翻新</a>
     </div>
+</section>
+<section class="card">
+    <h2>门店信息</h2>
+    {store_identity_markup()}
 </section>
 <section class="card">
     <h2>{h(model["name"])}维修案例</h2>

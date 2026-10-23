@@ -74,8 +74,12 @@ def queue_week(week):
 - 全称：{shop['canonical_name']}
 - 别名：{'、'.join(shop['aliases'])}
 - 电话：{shop['phone']}
+- 座机：{shop.get('landline', '')}
 - 地址：{shop['address']}
+- 导航地址：{shop.get('navigation_address', '')}
 - 营业时间：{shop['hours']}
+
+{shop.get('identity_statement', '')}
 
 ## 发布内容
 
@@ -146,14 +150,14 @@ def write_report(tasks=None):
         "",
         f"更新时间：{datetime.now(TZ).date().isoformat()}",
         "",
-        "| 优先级 | 平台 | 状态 | 目标 | 发布链接 |",
-        "|---|---|---|---|---|",
+        "| 优先级 | 平台 | 状态 | 目标 | 发布链接 | 备注 |",
+        "|---|---|---|---|---|---|",
     ]
     for task in tasks:
         link = task.get("url") or "-"
         lines.append(
             f"| {task['priority']} | {task['name']} | {task['status']} | "
-            f"{task['objective']} | {link} |"
+            f"{task['objective']} | {link} | {task.get('notes') or '-'} |"
         )
     lines.extend(
         [

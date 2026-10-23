@@ -16,6 +16,7 @@ REQUIRED_FILES = [
     "index.html",
     "faq.html",
     "cases.html",
+    "store-profile.html",
     "robots.txt",
     "sitemap.xml",
     "llms.txt",
@@ -149,6 +150,7 @@ def audit():
         ROOT / "index.html",
         ROOT / "faq.html",
         ROOT / "cases.html",
+        ROOT / "store-profile.html",
         *service_pages,
         *model_pages,
     ]
@@ -175,6 +177,7 @@ def audit():
     index_html = read_text("index.html")
     faq_html = read_text("faq.html")
     cases_html = read_text("cases.html")
+    profile_html = read_text("store-profile.html")
     robots = read_text("robots.txt")
     sitemap = read_text("sitemap.xml")
     week = datetime.now(TZ).strftime("%V")
@@ -190,6 +193,8 @@ def audit():
         errors.append("cases.html 展示数量与案例数据总量不一致")
     if "FAQPage" not in page_stats["faq.html"]["schema_types"]:
         errors.append("faq.html 缺少 FAQPage 结构化数据")
+    if "FAQPage" not in page_stats["store-profile.html"]["schema_types"]:
+        errors.append("store-profile.html 缺少 FAQPage 结构化数据")
     if "ItemList" not in page_stats["cases.html"]["schema_types"]:
         errors.append("cases.html 缺少 ItemList 结构化数据")
     if "aggregateRating" in index_html:
@@ -202,10 +207,23 @@ def audit():
         errors.append("robots.txt 缺少 Sitemap 地址")
     if "faq.html" not in sitemap or "cases.html" not in sitemap:
         errors.append("sitemap.xml 未包含完整内容页")
+    if "store-profile.html" not in sitemap:
+        errors.append("sitemap.xml 未包含门店资料页")
     if "services/index.html" not in sitemap or "models/index.html" not in sitemap:
         errors.append("sitemap.xml 未包含服务或车型专题入口")
     if "真实维修案例" in index_html or "真实车主评价" in index_html:
         errors.append("index.html 仍把未核验数据标记为真实")
+    required_profile_facts = [
+        "N15区幸福海岸花园7栋104-105铺",
+        "18682417667",
+        "0755-23340534",
+        "08:00-18:00",
+        "09:00-17:00",
+        "同一实体门店",
+    ]
+    for fact in required_profile_facts:
+        if fact not in profile_html:
+            errors.append(f"store-profile.html 缺少标准资料: {fact}")
     if not queue_manifest.exists():
         errors.append(f"缺少 W{week} 站外发布队列")
 

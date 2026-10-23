@@ -21,9 +21,10 @@ python3 scripts/authority_queue.py --week "$week"
 python3 scripts/site_builder.py
 python3 scripts/site_audit.py
 
-git add index.html faq.html cases.html robots.txt sitemap.xml llms.txt
+git add index.html faq.html cases.html store-profile.html robots.txt sitemap.xml llms.txt
 git add services models
 git add reports/site-audit.json reports/site-audit.md reports/rank-history
+git add reports/recheck-*.md
 git add reports/visibility-insights.json reports/visibility-insights.md
 git add publishing
 if [ -d "platform_content/W${week}" ]; then

@@ -23,6 +23,7 @@ output/
 reports/*
 !reports/site-audit.json
 !reports/site-audit.md
+!reports/recheck-*.md
 !reports/rank-history/
 !reports/rank-history/**
 !reports/visibility-insights.json
