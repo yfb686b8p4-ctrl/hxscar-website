@@ -32,7 +32,7 @@
     {
       "id": "tencent-map",
       "name": "腾讯地图",
-      "priority": "P1",
+      "priority": "P0",
       "action_url": "https://map.qq.com/",
       "content_source": "map_W{week}.md",
       "objective": "统一门店名称、地址、电话和营业时间"
