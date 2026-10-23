@@ -10,8 +10,8 @@
   },
   "pages": {
     "index.html": {
-      "bytes": 34874,
-      "han_chars": 4829,
+      "bytes": 35168,
+      "han_chars": 4910,
       "visible_han_chars": 4019,
       "json_ld_blocks": 1,
       "schema_types": [
