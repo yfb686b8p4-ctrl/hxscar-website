@@ -68,9 +68,13 @@ def init_snapshot():
     existing = load_json(path) if path.exists() else {}
     results = existing.get("results", {})
     defaults = build_empty_results(config)
+    changed = not bool(existing)
 
     for keyword_id, default in defaults.items():
-        current = results.setdefault(keyword_id, default)
+        if keyword_id not in results:
+            results[keyword_id] = default
+            changed = True
+        current = results[keyword_id]
         current.update(
             {
                 "query": default["query"],
@@ -80,14 +84,20 @@ def init_snapshot():
         )
         platforms = current.setdefault("platforms", {})
         for platform in config["platforms"]:
-            platforms.setdefault(platform, default["platforms"][platform])
+            if platform not in platforms:
+                platforms[platform] = default["platforms"][platform]
+                changed = True
 
     snapshot = {
         "version": 1,
         "created_at": existing.get(
             "created_at", datetime.now(TZ).isoformat()
         ),
-        "updated_at": datetime.now(TZ).isoformat(),
+        "updated_at": (
+            datetime.now(TZ).isoformat()
+            if changed
+            else existing.get("updated_at", datetime.now(TZ).isoformat())
+        ),
         "platforms": config["platforms"],
         "shop_aliases": config["shop_aliases"],
         "results": results,

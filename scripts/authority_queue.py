@@ -109,7 +109,7 @@ def queue_week(week):
 
     manifest = {
         "week": f"W{week}",
-        "generated_at": datetime.now(TZ).isoformat(),
+        "generated_at": datetime.now(TZ).date().isoformat(),
         "shop": shop,
         "tasks": tasks,
     }
@@ -144,7 +144,7 @@ def write_report(tasks=None):
     lines = [
         "# 站外权威平台执行看板",
         "",
-        f"更新时间：{datetime.now(TZ).strftime('%Y-%m-%d %H:%M')}",
+        f"更新时间：{datetime.now(TZ).date().isoformat()}",
         "",
         "| 优先级 | 平台 | 状态 | 目标 | 发布链接 |",
         "|---|---|---|---|---|",
