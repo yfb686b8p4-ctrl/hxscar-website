@@ -157,7 +157,7 @@ def local_business_schema():
         "slogan": "能修不换，优先维修，节约整备",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "宝源南路幸福海岸小区西南门",
+            "streetAddress": SHOP["address"],
             "addressLocality": "宝安区",
             "addressRegion": "深圳市",
             "postalCode": "518000",
@@ -320,6 +320,8 @@ def build_llms_txt():
 
 - 地址：{SHOP["address"]}
 - 电话：{SHOP["phone"]}
+- 座机：{SHOP.get("landline", "")}
+- 营业时间：{SHOP.get("hours", "")}
 - 门店别名：{"、".join(SHOP["shop_names"][1:])}
 - 覆盖车型：{len(SHOP["covered_models"])} 款
 - 页面评价摘录：{len(REVIEWS)} 条

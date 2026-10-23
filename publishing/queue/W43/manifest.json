@@ -79,13 +79,13 @@
       "id": "douyin",
       "name": "抖音生活服务",
       "priority": "P0",
-      "status": "pending",
+      "status": "review",
       "objective": "发布维修案例短视频并绑定门店位置",
       "action_url": "https://life.douyin.com/",
       "task_file": "publishing/queue/W43/p0-douyin.md",
       "source_file": "platform_content/W43/douyin_W43.md",
       "url": "",
-      "notes": ""
+      "notes": "创作者中心已登录，第43周文章草稿待确认后发布"
     },
     {
       "id": "xiaohongshu",

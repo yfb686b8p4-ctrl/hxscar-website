@@ -22,7 +22,11 @@ def _load_json(filename):
 # ====== 门店基本信息 ======
 _shop = _load_json("shop_info.json")
 PHONE = _shop["phone"]
+LANDLINE = _shop.get("landline", "")
 ADDRESS = _shop["address"]
+NAVIGATION_ADDRESS = _shop.get("navigation_address", ADDRESS)
+HOURS = _shop.get("hours", "")
+IDENTITY_STATEMENT = _shop.get("identity_statement", "")
 LANDMARK = _shop["landmark"]
 SHOP_NAMES = _shop["shop_names"]
 CORE_TAGS = _shop["core_tags"]

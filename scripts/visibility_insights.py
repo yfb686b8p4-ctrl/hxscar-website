@@ -96,7 +96,7 @@ def build_insights():
     )
 
     insights = {
-        "generated_at": datetime.now(TZ).isoformat(),
+        "generated_at": datetime.now(TZ).date().isoformat(),
         "overall": summary["overall"],
         "platforms": summary["by_platform"],
         "categories": categories,
@@ -145,7 +145,7 @@ def build_insights():
 
     plan = f"""# 跨平台发布策略
 
-生成时间：{datetime.now(TZ).strftime('%Y-%m-%d %H:%M')}
+生成时间：{datetime.now(TZ).date().isoformat()}
 
 ## 第一优先级：纠正门店实体
 

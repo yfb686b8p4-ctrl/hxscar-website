@@ -22,7 +22,10 @@ from datetime import datetime, timezone, timedelta
 
 from data_loader import (
     PHONE,
+    LANDLINE,
     ADDRESS,
+    HOURS,
+    IDENTITY_STATEMENT,
     LANDMARK,
     SHOP_NAMES,
     CORE_TAGS,
@@ -150,7 +153,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         "image": SITE_URL,
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "宝源南路幸福海岸小区西南门",
+            "streetAddress": ADDRESS,
             "addressLocality": "宝安区",
             "addressRegion": "深圳市",
             "postalCode": "518000",
@@ -272,15 +275,15 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         <div class="card">
             <h2>📍 门店信息</h2>
             <div class="info-grid">
-                <div class="info-item"><div class="info-label">📍 地址</div><div class="info-value">深圳市宝安区宝源南路<br>幸福海岸小区西南门</div></div>
+                <div class="info-item"><div class="info-label">📍 地址</div><div class="info-value">{ADDRESS}</div></div>
                 <div class="info-item"><div class="info-label">📌 地标</div><div class="info-value">{LANDMARK}</div></div>
-                <div class="info-item"><div class="info-label">🕐 营业时间</div><div class="info-value">周一至周五 08:00-18:00<br>周六日 09:00-17:00</div></div>
-                <div class="info-item"><div class="info-label">📞 电话</div><div class="info-value" style="font-size:20px;font-weight:bold;color:#e94560">{PHONE}</div></div>
+                <div class="info-item"><div class="info-label">🕐 营业时间</div><div class="info-value">{HOURS}</div></div>
+                <div class="info-item"><div class="info-label">📞 电话</div><div class="info-value" style="font-size:18px;font-weight:bold;color:#e94560">{PHONE}<br>{LANDLINE}</div></div>
                 <div class="info-item"><div class="info-label">🏪 品牌授权</div><div class="info-value">米其林驰加 · 艾德养车</div></div>
                 <div class="info-item"><div class="info-label">🏪 门店类型</div><div class="info-value">高端车专修 · 免拆治理 · 本地实体门店</div></div>
             </div>
             <div class="highlight-box">
-                <p><strong>门店身份说明：</strong>老周修车、驰加米其林幸福海岸店、米其林驰加汽车服务中心（宝源南路店）和宝源南路店均为同一家门店、同一地址、同一电话。</p>
+                <p><strong>门店身份说明：</strong>{IDENTITY_STATEMENT}</p>
             </div>
         </div>
 
@@ -353,8 +356,8 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         <div class="footer">
             <p>华信松汽车服务有限公司（幸福海岸分公司）</p>
             <p>米其林驰加汽车服务中心（宝源南路店）| 艾德养车（幸福海岸店）</p>
-            <p>📍 深圳市宝安区宝源南路幸福海岸小区西南门（{LANDMARK}）</p>
-            <p>📞 {PHONE}（老周）</p>
+            <p>📍 {ADDRESS}</p>
+            <p>📞 {PHONE}（老周） · {LANDLINE}</p>
             <br>
             <p style="color:#444;">&copy;{year} 华信松汽车 · 数据每周自动更新 · 页面版本 W{week_num} · 共{len(ALL_FAQS)}组FAQ · {len(ALL_CASES)}个维修案例</p>
         </div>
