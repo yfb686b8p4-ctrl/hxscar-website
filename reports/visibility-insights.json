@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-23T15:43:14.719325+08:00",
+  "generated_at": "2026-10-23T15:57:22.041666+08:00",
   "overall": {
     "total": 192,
-    "completed": 32,
-    "mentioned": 9,
-    "mention_rate": 28.1
+    "completed": 33,
+    "mentioned": 10,
+    "mention_rate": 30.3
   },
   "platforms": {
     "豆包": {
@@ -25,11 +25,13 @@
     },
     "元宝": {
       "total": 32,
-      "completed": 0,
-      "mentioned": 0,
-      "positions": [],
-      "mention_rate": 0.0,
-      "average_position": null
+      "completed": 1,
+      "mentioned": 1,
+      "positions": [
+        1
+      ],
+      "mention_rate": 100.0,
+      "average_position": 1.0
     },
     "文心一言": {
       "total": 32,
@@ -67,8 +69,8 @@
   "categories": {
     "门店身份": {
       "total": 36,
-      "completed": 6,
-      "mentioned": 6,
+      "completed": 7,
+      "mentioned": 7,
       "mention_rate": 100.0
     },
     "宝马与豪车": {
@@ -106,6 +108,12 @@
     "空调诊断维修"
   ],
   "negative_mentions": [
+    {
+      "keyword_id": "alias-01",
+      "query": "老周修车 驰加米其林幸福海岸店",
+      "platform": "元宝",
+      "notes": "识别到门店，但地址写为福海街道宝源南路276号、营业时间08:00-19:00且电话未收录，基础信息与实际不一致"
+    },
     {
       "keyword_id": "alias-05",
       "query": "华信松汽车 老周修车 同一家吗",

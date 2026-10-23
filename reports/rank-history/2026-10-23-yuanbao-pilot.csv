@@ -1,0 +1,2 @@
+keyword_id,query,category,platform,mentioned,matched_aliases,position,cited_source,sentiment,notes
+alias-01,老周修车 驰加米其林幸福海岸店,门店身份,元宝,1,华信松汽车、驰加米其林幸福海岸店,1,腾讯地图与22篇引用资料,negative,识别到门店，但地址写为福海街道宝源南路276号、营业时间08:00-19:00且电话未收录，基础信息与实际不一致

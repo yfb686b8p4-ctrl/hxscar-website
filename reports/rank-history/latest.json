@@ -1,11 +1,11 @@
 {
   "snapshot": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site/reports/rank-history/2026-10-23.json",
-  "updated_at": "2026-10-23T15:35:33.994665+08:00",
+  "updated_at": "2026-10-23T15:57:22.008358+08:00",
   "overall": {
     "total": 192,
-    "completed": 32,
-    "mentioned": 9,
-    "mention_rate": 28.1
+    "completed": 33,
+    "mentioned": 10,
+    "mention_rate": 30.3
   },
   "by_platform": {
     "豆包": {
@@ -26,11 +26,13 @@
     },
     "元宝": {
       "total": 32,
-      "completed": 0,
-      "mentioned": 0,
-      "positions": [],
-      "mention_rate": 0.0,
-      "average_position": null
+      "completed": 1,
+      "mentioned": 1,
+      "positions": [
+        1
+      ],
+      "mention_rate": 100.0,
+      "average_position": 1.0
     },
     "文心一言": {
       "total": 32,
@@ -68,8 +70,8 @@
   "by_category": {
     "门店身份": {
       "total": 36,
-      "completed": 6,
-      "mentioned": 6,
+      "completed": 7,
+      "mentioned": 7,
       "mention_rate": 100.0
     },
     "宝马与豪车": {
