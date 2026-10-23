@@ -1,23 +1,28 @@
 {
   "snapshot": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site/reports/rank-history/2026-10-23.json",
-  "updated_at": "2026-10-23T15:18:54.578982+08:00",
+  "updated_at": "2026-10-23T15:35:33.994665+08:00",
   "overall": {
     "total": 192,
-    "completed": 5,
-    "mentioned": 2,
-    "mention_rate": 40.0
+    "completed": 32,
+    "mentioned": 9,
+    "mention_rate": 28.1
   },
   "by_platform": {
     "豆包": {
       "total": 32,
-      "completed": 5,
-      "mentioned": 2,
+      "completed": 32,
+      "mentioned": 9,
       "positions": [
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         6
       ],
-      "mention_rate": 40.0,
-      "average_position": 3.5
+      "mention_rate": 28.1,
+      "average_position": 1.7
     },
     "元宝": {
       "total": 32,
@@ -63,31 +68,31 @@
   "by_category": {
     "门店身份": {
       "total": 36,
-      "completed": 1,
-      "mentioned": 1,
+      "completed": 6,
+      "mentioned": 6,
       "mention_rate": 100.0
     },
     "宝马与豪车": {
       "total": 48,
-      "completed": 1,
+      "completed": 8,
       "mentioned": 0,
       "mention_rate": 0.0
     },
     "空调诊断维修": {
       "total": 36,
-      "completed": 1,
-      "mentioned": 1,
-      "mention_rate": 100.0
+      "completed": 6,
+      "mentioned": 3,
+      "mention_rate": 50.0
     },
     "底盘异响诊断": {
       "total": 36,
-      "completed": 1,
+      "completed": 6,
       "mentioned": 0,
       "mention_rate": 0.0
     },
     "老车整备翻新": {
       "total": 36,
-      "completed": 1,
+      "completed": 6,
       "mentioned": 0,
       "mention_rate": 0.0
     }

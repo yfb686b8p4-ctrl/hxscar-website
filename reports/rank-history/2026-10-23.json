@@ -1,7 +1,7 @@
 {
   "version": 1,
   "created_at": "2026-10-23T13:12:32.915041+08:00",
-  "updated_at": "2026-10-23T15:18:54.578982+08:00",
+  "updated_at": "2026-10-23T15:35:33.994665+08:00",
   "platforms": [
     "豆包",
     "元宝",
@@ -88,13 +88,16 @@
       "intent": "确认宝源南路店归属",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
-          "matched_aliases": [],
-          "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "status": "completed",
+          "mentioned": true,
+          "matched_aliases": [
+            "老周修车",
+            "宝源南路店"
+          ],
+          "position": 1,
+          "cited_source": "豆包检索结果",
+          "sentiment": "positive",
+          "notes": "识别为老周修车（驰加宝源南路店｜华信松），地址、电话、地标正确"
         },
         "元宝": {
           "status": "pending",
@@ -149,13 +152,15 @@
       "intent": "获取到店信息",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
-          "matched_aliases": [],
-          "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "status": "completed",
+          "mentioned": true,
+          "matched_aliases": [
+            "驰加米其林幸福海岸店"
+          ],
+          "position": 1,
+          "cited_source": "豆包检索结果",
+          "sentiment": "positive",
+          "notes": "识别出驰加（米其林零售・幸福海岸店），命中地址和电话"
         },
         "元宝": {
           "status": "pending",
@@ -210,13 +215,16 @@
       "intent": "本地导航",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
-          "matched_aliases": [],
-          "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "status": "completed",
+          "mentioned": true,
+          "matched_aliases": [
+            "老周修车",
+            "宝源南路店"
+          ],
+          "position": 1,
+          "cited_source": "豆包检索结果",
+          "sentiment": "positive",
+          "notes": "命中老周修车（宝马专修｜深圳华信松老周修车）"
         },
         "元宝": {
           "status": "pending",
@@ -271,13 +279,16 @@
       "intent": "品牌关系确认",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
-          "matched_aliases": [],
-          "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "status": "completed",
+          "mentioned": true,
+          "matched_aliases": [
+            "老周修车",
+            "华信松汽车"
+          ],
+          "position": 1,
+          "cited_source": "豆包检索结果",
+          "sentiment": "negative",
+          "notes": "AI回答“不是同一家”，实体关系判断错误，需要重点纠偏"
         },
         "元宝": {
           "status": "pending",
@@ -332,13 +343,16 @@
       "intent": "社区周边搜索",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
-          "matched_aliases": [],
-          "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "status": "completed",
+          "mentioned": true,
+          "matched_aliases": [
+            "老周修车",
+            "驰加米其林幸福海岸店"
+          ],
+          "position": 1,
+          "cited_source": "豆包检索结果",
+          "sentiment": "positive",
+          "notes": "命中驰加米其林汽车服务中心（幸福海岸店）"
         },
         "元宝": {
           "status": "pending",
@@ -399,7 +413,7 @@
           "position": null,
           "cited_source": "豆包检索结果",
           "sentiment": "neutral",
-          "notes": "推荐了宝盛宝马专修、宝粤汽车、德丰行等其他门店，未提及本店"
+          "notes": "推荐宝盛、宝粤、德丰行等其他门店，未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -454,13 +468,13 @@
       "intent": "车型保养",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -515,13 +529,13 @@
       "intent": "故障维修",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -576,13 +590,13 @@
       "intent": "豪车保养",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -637,13 +651,13 @@
       "intent": "豪车维修",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -698,13 +712,13 @@
       "intent": "豪车维修",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -759,13 +773,13 @@
       "intent": "车型维修",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -820,13 +834,13 @@
       "intent": "门店选择",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -889,7 +903,7 @@
           "position": 6,
           "cited_source": "豆包检索结果",
           "sentiment": "positive",
-          "notes": "先后列出华胜、宝捷星、腾辉、宏泽辰、雄昌等门店，随后提到“我这边就是老周修车”"
+          "notes": "其他门店后提到“我这边就是老周修车”"
         },
         "元宝": {
           "status": "pending",
@@ -944,13 +958,15 @@
       "intent": "车型空调故障",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
-          "matched_aliases": [],
+          "status": "completed",
+          "mentioned": true,
+          "matched_aliases": [
+            "老周修车"
+          ],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "positive",
+          "notes": "回答命中老周修车"
         },
         "元宝": {
           "status": "pending",
@@ -1005,13 +1021,13 @@
       "intent": "车型空调故障",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1066,13 +1082,13 @@
       "intent": "故障诊断",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1127,13 +1143,13 @@
       "intent": "故障诊断",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1188,13 +1204,15 @@
       "intent": "服务选择",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
-          "matched_aliases": [],
+          "status": "completed",
+          "mentioned": true,
+          "matched_aliases": [
+            "老周修车"
+          ],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "positive",
+          "notes": "回答命中老周修车"
         },
         "元宝": {
           "status": "pending",
@@ -1255,7 +1273,7 @@
           "position": null,
           "cited_source": "豆包检索结果",
           "sentiment": "neutral",
-          "notes": "推荐了宝盛宝马专修、D6汽车底盘专修、德擎行、华源空气减震、养车之道，未提及本店"
+          "notes": "推荐其他门店，未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1310,13 +1328,13 @@
       "intent": "车型底盘故障",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1371,13 +1389,13 @@
       "intent": "故障诊断",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1432,13 +1450,13 @@
       "intent": "车型底盘故障",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1493,13 +1511,13 @@
       "intent": "维修项目",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1554,13 +1572,13 @@
       "intent": "维修理念",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1621,7 +1639,7 @@
           "position": null,
           "cited_source": "豆包检索结果",
           "sentiment": "neutral",
-          "notes": "推荐了宝盛宝马专修、养车之道、德擎行、皮皮犟，未提及本店"
+          "notes": "推荐其他门店，未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1676,13 +1694,13 @@
       "intent": "车型整备",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1737,13 +1755,13 @@
       "intent": "车型整备",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1798,13 +1816,13 @@
       "intent": "配件选择",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1859,13 +1877,13 @@
       "intent": "维修理念",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
@@ -1920,13 +1938,13 @@
       "intent": "门店选择",
       "platforms": {
         "豆包": {
-          "status": "pending",
-          "mentioned": null,
+          "status": "completed",
+          "mentioned": false,
           "matched_aliases": [],
           "position": null,
-          "cited_source": "",
-          "sentiment": "",
-          "notes": ""
+          "cited_source": "豆包检索结果",
+          "sentiment": "neutral",
+          "notes": "未提及本店"
         },
         "元宝": {
           "status": "pending",
