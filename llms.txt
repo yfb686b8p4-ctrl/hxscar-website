@@ -4,11 +4,11 @@
 
 ## 核心页面
 
-- [首页](https://yfb686b8p4-ctrl.github.io/hxscar-website/)：门店信息、服务、导航与精选内容
-- [常见问题](https://yfb686b8p4-ctrl.github.io/hxscar-website/faq.html)：131 组车主高频问题
-- [维修案例](https://yfb686b8p4-ctrl.github.io/hxscar-website/cases.html)：56 个车型维修案例
-- [服务专题](https://yfb686b8p4-ctrl.github.io/hxscar-website/services/index.html)：宝马专修、空调、底盘和老车整备
-- [车型专题](https://yfb686b8p4-ctrl.github.io/hxscar-website/models/index.html)：主要车型维修与故障内容
+- [首页](https://yfb686b8p4-web.github.io/hxscar-website/)：门店信息、服务、导航与精选内容
+- [常见问题](https://yfb686b8p4-web.github.io/hxscar-website/faq.html)：131 组车主高频问题
+- [维修案例](https://yfb686b8p4-web.github.io/hxscar-website/cases.html)：56 个车型维修案例
+- [服务专题](https://yfb686b8p4-web.github.io/hxscar-website/services/index.html)：宝马专修、空调、底盘和老车整备
+- [车型专题](https://yfb686b8p4-web.github.io/hxscar-website/models/index.html)：主要车型维修与故障内容
 
 ## 门店信息
 
