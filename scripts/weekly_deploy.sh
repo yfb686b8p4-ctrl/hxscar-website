@@ -10,14 +10,20 @@ export GITHUB_REPOSITORY="yfb686b8p4-web/hxscar-website"
 export SITE_URL="https://yfb686b8p4-web.github.io/hxscar-website/"
 export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
 
+week="$(TZ='Asia/Shanghai' date '+%V')"
+
 python3 weekly_rotation.py
-python3 scripts/site_builder.py
 python3 multi_platform_publisher.py
+python3 scripts/content_matrix_builder.py
+python3 scripts/rank_monitor.py --init
+python3 scripts/authority_queue.py --week "$week"
+python3 scripts/site_builder.py
 python3 scripts/site_audit.py
 
-week="$(TZ='Asia/Shanghai' date '+%V')"
 git add index.html faq.html cases.html robots.txt sitemap.xml llms.txt
-git add reports/site-audit.json reports/site-audit.md
+git add services models
+git add reports/site-audit.json reports/site-audit.md reports/rank-history
+git add publishing
 if [ -d "platform_content/W${week}" ]; then
   git add -f "platform_content/W${week}"
 fi

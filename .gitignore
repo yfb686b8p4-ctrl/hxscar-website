@@ -23,6 +23,8 @@ output/
 reports/*
 !reports/site-audit.json
 !reports/site-audit.md
+!reports/rank-history/
+!reports/rank-history/**
 platform_content/
 *.bak
 

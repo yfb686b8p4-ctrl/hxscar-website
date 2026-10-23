@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "shop_aliases": [
+    "老周修车",
+    "驰加米其林幸福海岸店",
+    "米其林驰加汽车服务中心（宝源南路店）",
+    "宝源南路店",
+    "华信松汽车",
+    "艾德养车"
+  ],
+  "platforms": [
+    "豆包",
+    "元宝",
+    "文心一言",
+    "Kimi",
+    "通义千问",
+    "百度AI搜索"
+  ],
+  "keywords": [
+    {
+      "id": "alias-01",
+      "category": "门店身份",
+      "query": "老周修车 驰加米其林幸福海岸店",
+      "intent": "确认两个名称是否为同一家店"
+    },
+    {
+      "id": "alias-02",
+      "category": "门店身份",
+      "query": "老周修车 宝源南路店",
+      "intent": "确认宝源南路店归属"
+    },
+    {
+      "id": "alias-03",
+      "category": "门店身份",
+      "query": "驰加米其林幸福海岸店 地址 电话",
+      "intent": "获取到店信息"
+    },
+    {
+      "id": "alias-04",
+      "category": "门店身份",
+      "query": "深圳宝安 老周修车 在哪里",
+      "intent": "本地导航"
+    },
+    {
+      "id": "alias-05",
+      "category": "门店身份",
+      "query": "华信松汽车 老周修车 同一家吗",
+      "intent": "品牌关系确认"
+    },
+    {
+      "id": "alias-06",
+      "category": "门店身份",
+      "query": "幸福海岸 米其林驰加 修车",
+      "intent": "社区周边搜索"
+    },
+    {
+      "id": "bmw-01",
+      "category": "宝马与豪车",
+      "query": "宝安宝马专修推荐",
+      "intent": "寻找宝马专修门店"
+    },
+    {
+      "id": "bmw-02",
+      "category": "宝马与豪车",
+      "query": "宝安宝马5系维修保养",
+      "intent": "车型保养"
+    },
+    {
+      "id": "bmw-03",
+      "category": "宝马与豪车",
+      "query": "宝安宝马X5烧机油维修",
+      "intent": "故障维修"
+    },
+    {
+      "id": "bmw-04",
+      "category": "宝马与豪车",
+      "query": "深圳宝安 奔驰专修 保养",
+      "intent": "豪车保养"
+    },
+    {
+      "id": "bmw-05",
+      "category": "宝马与豪车",
+      "query": "宝安保时捷卡宴维修",
+      "intent": "豪车维修"
+    },
+    {
+      "id": "bmw-06",
+      "category": "宝马与豪车",
+      "query": "宝安路虎专修 保养",
+      "intent": "豪车维修"
+    },
+    {
+      "id": "bmw-07",
+      "category": "宝马与豪车",
+      "query": "宝安奥迪A6L维修保养",
+      "intent": "车型维修"
+    },
+    {
+      "id": "bmw-08",
+      "category": "宝马与豪车",
+      "query": "深圳宝安高端车维修哪家好",
+      "intent": "门店选择"
+    },
+    {
+      "id": "ac-01",
+      "category": "空调诊断维修",
+      "query": "宝安汽车空调不凉维修",
+      "intent": "空调故障"
+    },
+    {
+      "id": "ac-02",
+      "category": "空调诊断维修",
+      "query": "宝安宝马空调不制冷维修",
+      "intent": "车型空调故障"
+    },
+    {
+      "id": "ac-03",
+      "category": "空调诊断维修",
+      "query": "深圳宝安 奔驰空调不凉 专修",
+      "intent": "车型空调故障"
+    },
+    {
+      "id": "ac-04",
+      "category": "空调诊断维修",
+      "query": "汽车空调一边冷一边热怎么修",
+      "intent": "故障诊断"
+    },
+    {
+      "id": "ac-05",
+      "category": "空调诊断维修",
+      "query": "汽车空调加冷媒后还是不凉",
+      "intent": "故障诊断"
+    },
+    {
+      "id": "ac-06",
+      "category": "空调诊断维修",
+      "query": "宝安汽车空调检漏 维修",
+      "intent": "服务选择"
+    },
+    {
+      "id": "chassis-01",
+      "category": "底盘异响诊断",
+      "query": "宝安底盘异响维修",
+      "intent": "底盘故障"
+    },
+    {
+      "id": "chassis-02",
+      "category": "底盘异响诊断",
+      "query": "宝马5系底盘异响维修",
+      "intent": "车型底盘故障"
+    },
+    {
+      "id": "chassis-03",
+      "category": "底盘异响诊断",
+      "query": "奔驰E级过减速带异响",
+      "intent": "故障诊断"
+    },
+    {
+      "id": "chassis-04",
+      "category": "底盘异响诊断",
+      "query": "保时捷卡宴底盘异响",
+      "intent": "车型底盘故障"
+    },
+    {
+      "id": "chassis-05",
+      "category": "底盘异响诊断",
+      "query": "深圳宝安 底盘胶套更换",
+      "intent": "维修项目"
+    },
+    {
+      "id": "chassis-06",
+      "category": "底盘异响诊断",
+      "query": "底盘异响 能修不换",
+      "intent": "维修理念"
+    },
+    {
+      "id": "restore-01",
+      "category": "老车整备翻新",
+      "query": "深圳宝安老车整备翻新",
+      "intent": "整备服务"
+    },
+    {
+      "id": "restore-02",
+      "category": "老车整备翻新",
+      "query": "老宝马整备翻新 宝安",
+      "intent": "车型整备"
+    },
+    {
+      "id": "restore-03",
+      "category": "老车整备翻新",
+      "query": "老奔驰整备 翻新 深圳",
+      "intent": "车型整备"
+    },
+    {
+      "id": "restore-04",
+      "category": "老车整备翻新",
+      "query": "老车底盘整备 品牌件 原厂件 拆车件",
+      "intent": "配件选择"
+    },
+    {
+      "id": "restore-05",
+      "category": "老车整备翻新",
+      "query": "老车能修不换 节约整备",
+      "intent": "维修理念"
+    },
+    {
+      "id": "restore-06",
+      "category": "老车整备翻新",
+      "query": "宝安老车整备翻新哪家好",
+      "intent": "门店选择"
+    }
+  ]
+}

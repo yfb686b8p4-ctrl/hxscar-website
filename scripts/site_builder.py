@@ -45,11 +45,23 @@ def json_script(data):
 
 def nav(current):
     """生成各静态页共用的导航。"""
+    nested = current in {"services", "models"}
+    prefix = "../" if nested else ""
     items = [
-        ("index", "首页", "index.html"),
-        ("faq", "完整FAQ", "faq.html"),
-        ("cases", "维修案例", "cases.html"),
-        ("llms", "资料索引", "llms.txt"),
+        ("index", "首页", prefix + "index.html"),
+        ("faq", "完整FAQ", prefix + "faq.html"),
+        ("cases", "维修案例", prefix + "cases.html"),
+        (
+            "services",
+            "服务专题",
+            "index.html" if current == "services" else prefix + "services/index.html",
+        ),
+        (
+            "models",
+            "车型专题",
+            "index.html" if current == "models" else prefix + "models/index.html",
+        ),
+        ("llms", "资料索引", prefix + "llms.txt"),
     ]
     links = []
     for key, label, href in items:
@@ -58,12 +70,18 @@ def nav(current):
     return '<nav class="site-nav" aria-label="主要页面">' + "".join(links) + "</nav>"
 
 
-def page(title, description, canonical, body, schemas):
+def page(title, description, canonical, body, schemas, current=None):
     """构建统一风格的静态页面。"""
     schema_html = "\n".join(
         f'<script type="application/ld+json">{json_script(schema)}</script>'
         for schema in schemas
     )
+    if current is None:
+        current = (
+            canonical.rstrip("/").split("/")[-1].replace(".html", "")
+            if canonical.rstrip("/").split("/")[-1]
+            else "index"
+        )
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -93,6 +111,12 @@ def page(title, description, canonical, body, schemas):
         .summary strong {{ display: block; color: #e94560; font-size: 22px; }}
         .card {{ background: #1a1a2e; border: 1px solid #333; border-radius: 12px; padding: 22px; margin-bottom: 16px; color: #e0e0e0; }}
         .card h2 {{ color: #e94560; font-size: 21px; margin-bottom: 14px; }}
+        .link-grid {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }}
+        .link-card {{ display: block; background: #16213e; border: 1px solid #333; border-radius: 8px; padding: 15px; color: #ddd; text-decoration: none; }}
+        .link-card h3 {{ color: #fff; font-size: 16px; margin-bottom: 6px; }}
+        .link-card p {{ color: #aaa; font-size: 13px; }}
+        .topic-list {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }}
+        .topic-list a {{ color: #ff9aab; background: #16213e; border: 1px solid #333; border-radius: 6px; padding: 6px 10px; text-decoration: none; font-size: 13px; }}
         .faq-item, .case-item {{ background: #16213e; border-radius: 8px; padding: 16px; margin-bottom: 10px; scroll-margin-top: 16px; }}
         .faq-item h3, .case-item h3 {{ color: #fff; font-size: 16px; margin-bottom: 8px; }}
         .faq-item p, .case-item p {{ color: #bbb; font-size: 14px; }}
@@ -101,12 +125,12 @@ def page(title, description, canonical, body, schemas):
         .cta {{ display: block; text-align: center; background: #e94560; color: #fff; text-decoration: none; border-radius: 8px; padding: 14px; margin-top: 18px; font-weight: 700; }}
         .footer {{ text-align: center; color: #666; font-size: 12px; padding: 18px; }}
         a {{ color: #ff8094; }}
-        @media (max-width: 680px) {{ .summary {{ grid-template-columns: 1fr; }} .hero h1 {{ font-size: 23px; }} }}
+        @media (max-width: 680px) {{ .summary, .link-grid {{ grid-template-columns: 1fr; }} .hero h1 {{ font-size: 23px; }} }}
     </style>
 </head>
 <body>
     <div class="container">
-        {nav(canonical.rstrip("/").split("/")[-1].replace(".html", "") if canonical.rstrip("/").split("/")[-1] else "index")}
+        {nav(current)}
         <main>
             {body}
         </main>
@@ -250,6 +274,13 @@ def build_sitemap():
         (BASE_URL + "/cases.html", "0.9"),
         (BASE_URL + "/llms.txt", "0.5"),
     ]
+    for section in ("services", "models"):
+        for path in sorted((ROOT / section).glob("*.html")):
+            priority = "0.9" if path.name == "index.html" else "0.8"
+            urls.insert(
+                -1,
+                (f"{BASE_URL}/{section}/{path.name}", priority),
+            )
     entries = "\n".join(
         f"""  <url>
     <loc>{url}</loc>
@@ -282,6 +313,8 @@ def build_llms_txt():
 - [首页]({BASE_URL}/)：门店信息、服务、导航与精选内容
 - [常见问题]({BASE_URL}/faq.html)：{len(FAQS)} 组车主高频问题
 - [维修案例]({BASE_URL}/cases.html)：{len(CASES)} 个车型维修案例
+- [服务专题]({BASE_URL}/services/index.html)：宝马专修、空调、底盘和老车整备
+- [车型专题]({BASE_URL}/models/index.html)：主要车型维修与故障内容
 
 ## 门店信息
 

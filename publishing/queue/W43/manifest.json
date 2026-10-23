@@ -1,0 +1,115 @@
+{
+  "week": "W43",
+  "generated_at": "2026-10-23T13:13:09.903690+08:00",
+  "shop": {
+    "canonical_name": "华信松汽车服务有限公司（幸福海岸分公司）",
+    "aliases": [
+      "老周修车",
+      "驰加米其林幸福海岸店",
+      "米其林驰加汽车服务中心（宝源南路店）",
+      "宝源南路店",
+      "艾德养车（幸福海岸店）"
+    ],
+    "phone": "18682417667",
+    "address": "深圳市宝安区宝源南路幸福海岸小区西南门（宝安体育场旁）",
+    "hours": "周一至周五 08:00-18:00；周六日 09:00-17:00"
+  },
+  "tasks": [
+    {
+      "id": "amap",
+      "name": "高德地图",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "统一门店名称、地址、电话、营业时间和主营业务",
+      "action_url": "https://ditu.amap.com/",
+      "task_file": "publishing/queue/W43/p0-amap.md",
+      "source_file": "platform_content/W43/map_W43.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "baidu-map",
+      "name": "百度地图",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "认领并完善门店信息，增加服务标签和真实照片",
+      "action_url": "https://bsy.baidu.com/",
+      "task_file": "publishing/queue/W43/p0-baidu-map.md",
+      "source_file": "platform_content/W43/map_W43.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "tencent-map",
+      "name": "腾讯地图",
+      "priority": "P1",
+      "status": "pending",
+      "objective": "统一门店名称、地址、电话和营业时间",
+      "action_url": "https://map.qq.com/",
+      "task_file": "publishing/queue/W43/p1-tencent-map.md",
+      "source_file": "platform_content/W43/map_W43.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "dianping",
+      "name": "大众点评",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "更新门店介绍、服务项目、真实案例和评价回复",
+      "action_url": "https://e.dianping.com/",
+      "task_file": "publishing/queue/W43/p0-dianping.md",
+      "source_file": "platform_content/W43/dianping_W43.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "meituan",
+      "name": "美团",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "完善门店资料、服务套餐和真实施工图片",
+      "action_url": "https://e.meituan.com/",
+      "task_file": "publishing/queue/W43/p0-meituan.md",
+      "source_file": "platform_content/W43/meituan_W43.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "douyin",
+      "name": "抖音生活服务",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "发布维修案例短视频并绑定门店位置",
+      "action_url": "https://life.douyin.com/",
+      "task_file": "publishing/queue/W43/p0-douyin.md",
+      "source_file": "platform_content/W43/douyin_W43.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "priority": "P1",
+      "status": "pending",
+      "objective": "发布车型维修、整备和避坑内容，统一门店名称",
+      "action_url": "https://business.xiaohongshu.com/",
+      "task_file": "publishing/queue/W43/p1-xiaohongshu.md",
+      "source_file": "platform_content/W43/xiaohongshu_W43.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "58",
+      "name": "58同城",
+      "priority": "P2",
+      "status": "pending",
+      "objective": "维护商家资料、服务项目和本地服务范围",
+      "action_url": "https://www.58.com/",
+      "task_file": "publishing/queue/W43/p2-58.md",
+      "source_file": "platform_content/W43/58tongcheng_W43.md",
+      "url": "",
+      "notes": ""
+    }
+  ]
+}

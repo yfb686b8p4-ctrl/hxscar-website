@@ -19,6 +19,12 @@ REQUIRED_FILES = [
     "robots.txt",
     "sitemap.xml",
     "llms.txt",
+    "services/index.html",
+    "models/index.html",
+    "publishing/STATUS.md",
+    "publishing/AUTHORITY_PLAYBOOK.md",
+    "reports/rank-history/latest.json",
+    "reports/rank-history/latest.md",
 ]
 JSON_LD_PATTERN = re.compile(
     r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL
@@ -125,7 +131,26 @@ def audit():
     cases = load_json("cases.json")
     reviews = load_json("reviews.json")
 
-    for name in ("index.html", "faq.html", "cases.html"):
+    service_pages = sorted(
+        path for path in (ROOT / "services").glob("*.html") if path.name != "index.html"
+    )
+    model_pages = sorted(
+        path for path in (ROOT / "models").glob("*.html") if path.name != "index.html"
+    )
+    if len(service_pages) != 4:
+        errors.append(f"服务专题页数量应为 4，实际为 {len(service_pages)}")
+    if len(model_pages) != 12:
+        errors.append(f"车型专题页数量应为 12，实际为 {len(model_pages)}")
+
+    audit_pages = [
+        ROOT / "index.html",
+        ROOT / "faq.html",
+        ROOT / "cases.html",
+        *service_pages,
+        *model_pages,
+    ]
+    for path in audit_pages:
+        name = str(path.relative_to(ROOT))
         text = read_text(name)
         try:
             schemas = parse_schema(text)
@@ -149,6 +174,8 @@ def audit():
     cases_html = read_text("cases.html")
     robots = read_text("robots.txt")
     sitemap = read_text("sitemap.xml")
+    week = datetime.now(TZ).strftime("%V")
+    queue_manifest = ROOT / "publishing" / "queue" / f"W{week}" / "manifest.json"
 
     if page_stats["faq.html"]["visible_han_chars"] < 8000:
         errors.append("faq.html 可见中文字符不足 8000")
@@ -172,16 +199,21 @@ def audit():
         errors.append("robots.txt 缺少 Sitemap 地址")
     if "faq.html" not in sitemap or "cases.html" not in sitemap:
         errors.append("sitemap.xml 未包含完整内容页")
+    if "services/index.html" not in sitemap or "models/index.html" not in sitemap:
+        errors.append("sitemap.xml 未包含服务或车型专题入口")
     if "真实维修案例" in index_html or "真实车主评价" in index_html:
         errors.append("index.html 仍把未核验数据标记为真实")
+    if not queue_manifest.exists():
+        errors.append(f"缺少 W{week} 站外发布队列")
 
-    for name in ("index.html", "faq.html", "cases.html"):
+    for name in (str(path.relative_to(ROOT)) for path in audit_pages):
         text = read_text(name)
         for link in local_links(text):
             target = link or "index.html"
             if target.endswith("/"):
                 target += "index.html"
-            if not (ROOT / target).exists():
+            target_path = ((ROOT / name).parent / target).resolve()
+            if not target_path.exists():
                 errors.append(f"{name} 内链目标不存在: {link}")
 
     if len(set(item["question"] for item in faqs)) != len(faqs):
@@ -198,6 +230,8 @@ def audit():
             "faqs": len(faqs),
             "cases": len(cases),
             "reviews": len(reviews),
+            "service_pages": len(service_pages),
+            "model_pages": len(model_pages),
         },
         "pages": page_stats,
         "errors": errors,

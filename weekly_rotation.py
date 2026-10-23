@@ -251,6 +251,8 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             <a href="./" aria-current="page">首页</a>
             <a href="faq.html">完整FAQ</a>
             <a href="cases.html">维修案例</a>
+            <a href="services/index.html">服务专题</a>
+            <a href="models/index.html">车型专题</a>
             <a href="llms.txt">资料索引</a>
         </nav>
 
@@ -300,6 +302,8 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             <div class="services">
 {services_html}
             </div>
+            <a class="section-link" href="services/index.html">查看全部服务专题</a>
+            <a class="section-link" href="models/index.html">查看车型维修专题</a>
         </div>
 
         <!-- ABOUT -->

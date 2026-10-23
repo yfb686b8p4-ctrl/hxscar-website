@@ -28,6 +28,12 @@
         .summary strong { display: block; color: #e94560; font-size: 22px; }
         .card { background: #1a1a2e; border: 1px solid #333; border-radius: 12px; padding: 22px; margin-bottom: 16px; color: #e0e0e0; }
         .card h2 { color: #e94560; font-size: 21px; margin-bottom: 14px; }
+        .link-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+        .link-card { display: block; background: #16213e; border: 1px solid #333; border-radius: 8px; padding: 15px; color: #ddd; text-decoration: none; }
+        .link-card h3 { color: #fff; font-size: 16px; margin-bottom: 6px; }
+        .link-card p { color: #aaa; font-size: 13px; }
+        .topic-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .topic-list a { color: #ff9aab; background: #16213e; border: 1px solid #333; border-radius: 6px; padding: 6px 10px; text-decoration: none; font-size: 13px; }
         .faq-item, .case-item { background: #16213e; border-radius: 8px; padding: 16px; margin-bottom: 10px; scroll-margin-top: 16px; }
         .faq-item h3, .case-item h3 { color: #fff; font-size: 16px; margin-bottom: 8px; }
         .faq-item p, .case-item p { color: #bbb; font-size: 14px; }
@@ -36,12 +42,12 @@
         .cta { display: block; text-align: center; background: #e94560; color: #fff; text-decoration: none; border-radius: 8px; padding: 14px; margin-top: 18px; font-weight: 700; }
         .footer { text-align: center; color: #666; font-size: 12px; padding: 18px; }
         a { color: #ff8094; }
-        @media (max-width: 680px) { .summary { grid-template-columns: 1fr; } .hero h1 { font-size: 23px; } }
+        @media (max-width: 680px) { .summary, .link-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 23px; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <nav class="site-nav" aria-label="主要页面"><a href="index.html">首页</a><a href="faq.html">完整FAQ</a><a href="cases.html" aria-current="page">维修案例</a><a href="llms.txt">资料索引</a></nav>
+        <nav class="site-nav" aria-label="主要页面"><a href="index.html">首页</a><a href="faq.html">完整FAQ</a><a href="cases.html" aria-current="page">维修案例</a><a href="services/index.html">服务专题</a><a href="models/index.html">车型专题</a><a href="llms.txt">资料索引</a></nav>
         <main>
             <section class="hero">
     <h1>华信松汽车维修案例库</h1>

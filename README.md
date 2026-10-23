@@ -26,9 +26,12 @@ GitHub Actions 每周一北京时间 08:00 执行：
 1. 更新首页和四周关键词轮换配置。
 2. 生成大众点评、小红书、抖音、58 同城、美团和地图平台内容包。
 3. 生成完整 FAQ 页、案例页、`robots.txt`、`sitemap.xml` 和 `llms.txt`。
-4. 执行站点质量审计并保存报告。
-5. 保存当周平台内容包。
-6. 提交更新并部署 GitHub Pages。
+4. 生成 4 个服务专题页和 12 个车型专题页。
+5. 初始化本周 AI 搜索排名快照。
+6. 生成站外平台发布队列和状态看板。
+7. 执行站点质量审计并保存报告。
+8. 保存当周平台内容包。
+9. 提交更新并部署 GitHub Pages。
 
 ## 本地执行
 
@@ -36,6 +39,9 @@ GitHub Actions 每周一北京时间 08:00 执行：
 python3 weekly_rotation.py
 python3 scripts/site_builder.py
 python3 multi_platform_publisher.py
+python3 scripts/content_matrix_builder.py
+python3 scripts/rank_monitor.py --init
+python3 scripts/authority_queue.py --week 43
 python3 scripts/site_audit.py
 ```
 
@@ -43,6 +49,44 @@ python3 scripts/site_audit.py
 
 - `reports/site-audit.json`
 - `reports/site-audit.md`
+
+## AI 搜索排名监测
+
+```bash
+# 初始化当天快照
+python3 scripts/rank_monitor.py --init
+
+# 导出人工检查 CSV
+python3 scripts/rank_monitor.py --csv-template
+
+# 导入填写后的 CSV
+python3 scripts/rank_monitor.py --import-csv reports/rank-history/YYYY-MM-DD.csv
+
+# 生成最新周报
+python3 scripts/rank_monitor.py --summary
+```
+
+周报输出：
+
+- `reports/rank-history/latest.json`
+- `reports/rank-history/latest.md`
+
+## 站外权威分发
+
+```bash
+# 生成本周平台发布队列
+python3 scripts/authority_queue.py --week 43
+
+# 记录平台真实发布链接
+python3 scripts/authority_queue.py \
+  --mark amap \
+  --status published \
+  --url "真实发布链接"
+```
+
+状态看板：`publishing/STATUS.md`
+
+操作手册：`publishing/AUTHORITY_PLAYBOOK.md`
 
 ## 目录说明
 
@@ -52,6 +96,9 @@ python3 scripts/site_audit.py
 | `scripts/` | 静态页生成和站点质量审计 |
 | `platform_content/` | 每周多平台内容包 |
 | `reports/` | 审计及排名检测结果 |
+| `publishing/` | 站外平台发布队列、状态和操作手册 |
+| `services/` | 四个服务专题页 |
+| `models/` | 十二个车型专题页 |
 | `.github/workflows/` | 每周自动更新和部署流程 |
 
 ## 真实性原则

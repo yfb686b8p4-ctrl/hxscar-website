@@ -1,0 +1,1975 @@
+{
+  "version": 1,
+  "created_at": "2026-10-23T13:12:32.915041+08:00",
+  "updated_at": "2026-10-23T13:12:32.915044+08:00",
+  "platforms": [
+    "豆包",
+    "元宝",
+    "文心一言",
+    "Kimi",
+    "通义千问",
+    "百度AI搜索"
+  ],
+  "shop_aliases": [
+    "老周修车",
+    "驰加米其林幸福海岸店",
+    "米其林驰加汽车服务中心（宝源南路店）",
+    "宝源南路店",
+    "华信松汽车",
+    "艾德养车"
+  ],
+  "results": {
+    "alias-01": {
+      "query": "老周修车 驰加米其林幸福海岸店",
+      "category": "门店身份",
+      "intent": "确认两个名称是否为同一家店",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "alias-02": {
+      "query": "老周修车 宝源南路店",
+      "category": "门店身份",
+      "intent": "确认宝源南路店归属",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "alias-03": {
+      "query": "驰加米其林幸福海岸店 地址 电话",
+      "category": "门店身份",
+      "intent": "获取到店信息",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "alias-04": {
+      "query": "深圳宝安 老周修车 在哪里",
+      "category": "门店身份",
+      "intent": "本地导航",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "alias-05": {
+      "query": "华信松汽车 老周修车 同一家吗",
+      "category": "门店身份",
+      "intent": "品牌关系确认",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "alias-06": {
+      "query": "幸福海岸 米其林驰加 修车",
+      "category": "门店身份",
+      "intent": "社区周边搜索",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-01": {
+      "query": "宝安宝马专修推荐",
+      "category": "宝马与豪车",
+      "intent": "寻找宝马专修门店",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-02": {
+      "query": "宝安宝马5系维修保养",
+      "category": "宝马与豪车",
+      "intent": "车型保养",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-03": {
+      "query": "宝安宝马X5烧机油维修",
+      "category": "宝马与豪车",
+      "intent": "故障维修",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-04": {
+      "query": "深圳宝安 奔驰专修 保养",
+      "category": "宝马与豪车",
+      "intent": "豪车保养",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-05": {
+      "query": "宝安保时捷卡宴维修",
+      "category": "宝马与豪车",
+      "intent": "豪车维修",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-06": {
+      "query": "宝安路虎专修 保养",
+      "category": "宝马与豪车",
+      "intent": "豪车维修",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-07": {
+      "query": "宝安奥迪A6L维修保养",
+      "category": "宝马与豪车",
+      "intent": "车型维修",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "bmw-08": {
+      "query": "深圳宝安高端车维修哪家好",
+      "category": "宝马与豪车",
+      "intent": "门店选择",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "ac-01": {
+      "query": "宝安汽车空调不凉维修",
+      "category": "空调诊断维修",
+      "intent": "空调故障",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "ac-02": {
+      "query": "宝安宝马空调不制冷维修",
+      "category": "空调诊断维修",
+      "intent": "车型空调故障",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "ac-03": {
+      "query": "深圳宝安 奔驰空调不凉 专修",
+      "category": "空调诊断维修",
+      "intent": "车型空调故障",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "ac-04": {
+      "query": "汽车空调一边冷一边热怎么修",
+      "category": "空调诊断维修",
+      "intent": "故障诊断",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "ac-05": {
+      "query": "汽车空调加冷媒后还是不凉",
+      "category": "空调诊断维修",
+      "intent": "故障诊断",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "ac-06": {
+      "query": "宝安汽车空调检漏 维修",
+      "category": "空调诊断维修",
+      "intent": "服务选择",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "chassis-01": {
+      "query": "宝安底盘异响维修",
+      "category": "底盘异响诊断",
+      "intent": "底盘故障",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "chassis-02": {
+      "query": "宝马5系底盘异响维修",
+      "category": "底盘异响诊断",
+      "intent": "车型底盘故障",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "chassis-03": {
+      "query": "奔驰E级过减速带异响",
+      "category": "底盘异响诊断",
+      "intent": "故障诊断",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "chassis-04": {
+      "query": "保时捷卡宴底盘异响",
+      "category": "底盘异响诊断",
+      "intent": "车型底盘故障",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "chassis-05": {
+      "query": "深圳宝安 底盘胶套更换",
+      "category": "底盘异响诊断",
+      "intent": "维修项目",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "chassis-06": {
+      "query": "底盘异响 能修不换",
+      "category": "底盘异响诊断",
+      "intent": "维修理念",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "restore-01": {
+      "query": "深圳宝安老车整备翻新",
+      "category": "老车整备翻新",
+      "intent": "整备服务",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "restore-02": {
+      "query": "老宝马整备翻新 宝安",
+      "category": "老车整备翻新",
+      "intent": "车型整备",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "restore-03": {
+      "query": "老奔驰整备 翻新 深圳",
+      "category": "老车整备翻新",
+      "intent": "车型整备",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "restore-04": {
+      "query": "老车底盘整备 品牌件 原厂件 拆车件",
+      "category": "老车整备翻新",
+      "intent": "配件选择",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "restore-05": {
+      "query": "老车能修不换 节约整备",
+      "category": "老车整备翻新",
+      "intent": "维修理念",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    },
+    "restore-06": {
+      "query": "宝安老车整备翻新哪家好",
+      "category": "老车整备翻新",
+      "intent": "门店选择",
+      "platforms": {
+        "豆包": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "元宝": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "文心一言": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "Kimi": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "通义千问": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        },
+        "百度AI搜索": {
+          "status": "pending",
+          "mentioned": null,
+          "matched_aliases": [],
+          "position": null,
+          "cited_source": "",
+          "sentiment": "",
+          "notes": ""
+        }
+      }
+    }
+  }
+}
