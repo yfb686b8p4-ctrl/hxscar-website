@@ -25,6 +25,8 @@ reports/*
 !reports/site-audit.md
 !reports/rank-history/
 !reports/rank-history/**
+!reports/visibility-insights.json
+!reports/visibility-insights.md
 platform_content/
 *.bak
 

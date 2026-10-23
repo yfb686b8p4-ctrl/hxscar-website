@@ -25,6 +25,9 @@ REQUIRED_FILES = [
     "publishing/AUTHORITY_PLAYBOOK.md",
     "reports/rank-history/latest.json",
     "reports/rank-history/latest.md",
+    "reports/visibility-insights.json",
+    "reports/visibility-insights.md",
+    "publishing/CROSS_PLATFORM_PLAN.md",
 ]
 JSON_LD_PATTERN = re.compile(
     r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL
