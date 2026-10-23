@@ -13,11 +13,33 @@
 
 | 内容 | 数量 |
 |---|---:|
-| FAQ | 131 |
+| FAQ | 134 |
 | 维修案例 | 56 |
 | 评价摘录 | 30 |
 | 覆盖车型 | 54 |
 | 平台内容包 | 每周 6 个 |
+
+## 每日搜索效果检查
+
+```bash
+# 1. 生成当天12项抽样，并并发检查部署、LaunchAgent和9个线上URL
+python3 scripts/daily_control.py --prepare
+
+# 2. 执行豆包、元宝实测，填写 reports/daily/YYYY-MM-DD-results.csv
+
+# 3. 生成异常优先日报、昨日对比和待办
+python3 scripts/daily_control.py --finalize reports/daily/YYYY-MM-DD-results.csv
+
+# 4. 运行测试
+python3 -m unittest tests.test_daily_control -v
+```
+
+日报输出：
+
+- `reports/daily/latest.md`
+- `reports/daily/latest.json`
+- `reports/daily/latest-tasks.json`
+- `reports/daily/YYYY-MM-DD-results.csv`
 
 ## 每周自动流程
 

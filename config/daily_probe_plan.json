@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "platforms": [
+    "豆包",
+    "元宝"
+  ],
+  "rotating_keywords_per_day": 2,
+  "guardrails": [
+    {
+      "id": "guard-entity",
+      "category": "门店身份",
+      "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
+      "checks": [
+        "mentioned",
+        "identity_relation",
+        "address",
+        "phone",
+        "hours"
+      ]
+    },
+    {
+      "id": "guard-bmw",
+      "category": "宝马与豪车",
+      "query": "深圳宝安 宝马专修 豪车保养 推荐",
+      "source_keyword_id": "bmw-01",
+      "checks": [
+        "mentioned",
+        "position"
+      ]
+    },
+    {
+      "id": "guard-aircon",
+      "category": "空调诊断维修",
+      "query": "深圳宝安 汽车空调不凉 诊断维修",
+      "source_keyword_id": "ac-01",
+      "checks": [
+        "mentioned",
+        "position"
+      ]
+    },
+    {
+      "id": "guard-chassis-restore",
+      "category": "底盘与老车整备",
+      "query": "深圳宝安 底盘异响 老车整备 能修不换",
+      "checks": [
+        "mentioned",
+        "position"
+      ]
+    }
+  ]
+}

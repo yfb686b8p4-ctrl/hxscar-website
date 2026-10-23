@@ -1,0 +1,114 @@
+[
+  {
+    "id": "platform-amap",
+    "priority": "P0",
+    "action": "统一门店名称、地址、电话、营业时间和主营业务",
+    "category": "站外权威资料",
+    "platforms": [
+      "高德地图"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  },
+  {
+    "id": "platform-baidu-map",
+    "priority": "P0",
+    "action": "认领并完善门店信息，增加服务标签和真实照片",
+    "category": "站外权威资料",
+    "platforms": [
+      "百度地图"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  },
+  {
+    "id": "platform-dianping",
+    "priority": "P0",
+    "action": "更新门店介绍、服务项目、真实案例和评价回复",
+    "category": "站外权威资料",
+    "platforms": [
+      "大众点评"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  },
+  {
+    "id": "platform-douyin-followup",
+    "priority": "P0",
+    "action": "创作者中心实测有767个作品，个人主页显示668条原创内容、1331人关注；最近可见发布到2026-10-20。当前简介只有小区西南门和手机号，需补齐完整铺位、座机、营业时间和门店别名关系",
+    "category": "站外权威资料",
+    "platforms": [
+      "抖音生活服务"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  },
+  {
+    "id": "platform-meituan",
+    "priority": "P0",
+    "action": "完善门店资料、服务套餐和真实施工图片",
+    "category": "站外权威资料",
+    "platforms": [
+      "美团"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  },
+  {
+    "id": "platform-tencent-map",
+    "priority": "P0",
+    "action": "腾讯位置服务已用“老周修车”微信账号登录成功；地图商户中心要求使用微信App扫码入驻。已打开二维码窗口，需用户扫码后继续认领门店并将营业时间改为工作日08:00-18:00、周末09:00-17:00。",
+    "category": "站外权威资料",
+    "platforms": [
+      "腾讯地图"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  },
+  {
+    "id": "platform-xiaohongshu",
+    "priority": "P1",
+    "action": "发布车型维修、整备和避坑内容，统一门店名称",
+    "category": "站外权威资料",
+    "platforms": [
+      "小红书"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  },
+  {
+    "id": "platform-58",
+    "priority": "P2",
+    "action": "维护商家资料、服务项目和本地服务范围",
+    "category": "站外权威资料",
+    "platforms": [
+      "58同城"
+    ],
+    "sources": [
+      "publishing/status.json"
+    ],
+    "check_ids": [],
+    "requires_confirmation": true
+  }
+]

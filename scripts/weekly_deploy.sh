@@ -24,6 +24,7 @@ python3 scripts/site_audit.py
 git add index.html faq.html cases.html store-profile.html robots.txt sitemap.xml llms.txt
 git add services models
 git add reports/site-audit.json reports/site-audit.md reports/rank-history
+git add reports/daily
 git add reports/recheck-*.md
 git add reports/visibility-insights.json reports/visibility-insights.md
 git add publishing

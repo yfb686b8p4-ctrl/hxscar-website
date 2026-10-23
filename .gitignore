@@ -24,6 +24,8 @@ reports/*
 !reports/site-audit.json
 !reports/site-audit.md
 !reports/recheck-*.md
+!reports/daily/
+!reports/daily/**
 !reports/rank-history/
 !reports/rank-history/**
 !reports/visibility-insights.json
