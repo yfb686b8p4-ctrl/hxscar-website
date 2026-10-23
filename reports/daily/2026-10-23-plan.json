@@ -338,14 +338,14 @@
   ],
   "weekly_full_check_due": false,
   "status_snapshot": {
-    "checked_at": "2026-10-23T19:03:07.589319+08:00",
+    "checked_at": "2026-10-23T19:03:51.937938+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
-      "clean": false,
-      "change_count": 9,
-      "head": "1e68f7d\t更新腾讯地图扫码入驻阻塞状态",
+      "clean": true,
+      "change_count": 0,
+      "head": "28483f2\t建立每日搜索检查与异常优先日报",
       "error": ""
     },
     "deploy_repo": {
@@ -354,7 +354,7 @@
       "branch": "main",
       "clean": true,
       "change_count": 0,
-      "head": "1e68f7d\t更新腾讯地图扫码入驻阻塞状态",
+      "head": "28483f2\t建立每日搜索检查与异常优先日报",
       "error": ""
     },
     "launch_agent": {
@@ -379,7 +379,7 @@
           "status": 200,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 1.29,
+          "seconds": 1.48,
           "error": ""
         },
         {
@@ -389,7 +389,7 @@
           "status": 200,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 1.81,
+          "seconds": 2.05,
           "error": ""
         },
         {
@@ -399,7 +399,7 @@
           "status": 200,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 1.59,
+          "seconds": 1.33,
           "error": ""
         },
         {
@@ -409,7 +409,7 @@
           "status": 200,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 1.2,
+          "seconds": 2.59,
           "error": ""
         },
         {
@@ -419,7 +419,7 @@
           "status": 200,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 1.44,
+          "seconds": 2.11,
           "error": ""
         },
         {
@@ -429,7 +429,7 @@
           "status": 200,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 2.19,
+          "seconds": 1.12,
           "error": ""
         },
         {
@@ -439,7 +439,7 @@
           "status": 200,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 1.58,
+          "seconds": 1.09,
           "error": ""
         },
         {
@@ -449,7 +449,7 @@
           "status": 200,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 1.76,
+          "seconds": 1.51,
           "error": ""
         },
         {
@@ -459,7 +459,7 @@
           "status": 200,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 0.83,
+          "seconds": 3.31,
           "error": ""
         }
       ],
