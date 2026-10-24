@@ -1,6 +1,6 @@
 {
   "week": "W43",
-  "generated_at": "2026-10-23",
+  "generated_at": "2026-10-24",
   "shop": {
     "canonical_name": "华信松汽车服务有限公司（幸福海岸分公司）",
     "registered_name": "深圳市华信松汽车服务有限公司幸福海岸分公司",
@@ -24,13 +24,13 @@
       "id": "amap",
       "name": "高德地图",
       "priority": "P0",
-      "status": "pending",
+      "status": "blocked",
       "objective": "统一门店名称、地址、电话、营业时间和主营业务",
       "action_url": "https://ditu.amap.com/",
       "task_file": "publishing/queue/W43/p0-amap.md",
       "source_file": "platform_content/W43/map_W43.md",
       "url": "",
-      "notes": ""
+      "notes": "2026-10-24实查现有POI：B0H3LSJZZC“驰加(米其林零售|宝源南路店)”，地址和手机18682417667正确；当前营业时间08:00-20:00错误，名称格式不统一。网页反馈只能提交通用地点报错，商家认领/深度资料编辑入口需高德App账号；未重复新建POI。"
     },
     {
       "id": "baidu-map",
@@ -54,7 +54,7 @@
       "task_file": "publishing/queue/W43/p0-tencent-map.md",
       "source_file": "platform_content/W43/map_W43.md",
       "url": "",
-      "notes": "腾讯地图实查地址正确；营业时间仍显示08:00-20:00。商户中心已打开，使用“老周修车”微信账号登录时触发滑块验证，需人工完成后修改营业时间并提交审核。"
+      "notes": "2026-10-24复核：现有POI名称“驰加汽车服务中心（宝源南路店）”，地址正确，营业时间仍为08:00-20:00。腾讯位置服务以“老周修车”微信账号登录后为“未认证商户、暂无数据”，未绑定该门店；“申请认证”进入连锁品牌商标认证，不适用于单店纠错，需从腾讯地图App认领现有POI。目标营业时间：周一至周五08:00-18:00、周末09:00-17:00。"
     },
     {
       "id": "dianping",
@@ -84,13 +84,13 @@
       "id": "douyin",
       "name": "抖音生活服务",
       "priority": "P0",
-      "status": "published",
+      "status": "review",
       "objective": "持续发布维修案例短视频，统一门店名称、位置、地址、电话和营业时间",
       "action_url": "https://life.douyin.com/",
       "task_file": "publishing/queue/W43/p0-douyin.md",
       "source_file": "platform_content/W43/douyin_W43.md",
       "url": "",
-      "notes": "创作者中心实测有767个作品，最近可见发布到2026-10-20；账号已持续发布，但门店实体信息和标准联系方式未统一，需完善主页置顶资料或置顶评论"
+      "notes": "2026-10-24实查个人主页：697作品、1770关注、7812粉丝、9785获赞，商家认证账号有效。编辑资料弹窗已定位，现有简介为“80后东北老铁在深修车，扎根汽车行业20多年；坐标深圳宝安宝体幸福海岸；专注免拆治理烧机油、底盘整备、能修坚决不换”。拟替换为包含华信松/老周修车/驰加幸福海岸店同一实体、手机座机和分时营业时间的简介，提交前需最终确认。"
     },
     {
       "id": "xiaohongshu",
