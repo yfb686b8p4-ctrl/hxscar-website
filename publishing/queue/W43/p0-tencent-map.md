@@ -1,7 +1,7 @@
 # 腾讯地图发布任务
 
 - 平台优先级：P0
-- 当前状态：blocked
+- 当前状态：review
 - 目标：统一门店名称、地址、电话和营业时间
 - 操作入口：https://map.qq.com/
 - 内容来源：`platform_content/W43/map_W43.md`
