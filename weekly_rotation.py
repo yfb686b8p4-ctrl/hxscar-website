@@ -40,6 +40,7 @@ from data_loader import (
     ALL_CASES,
     REVIEWS,
     WEEKLY_CONFIGS,
+    SHOP_INFO,
     REPAIR_VALUES,
     PARTS_OPTIONS,
 )
@@ -49,7 +50,7 @@ now = datetime.now(tz)
 week_number = now.isocalendar()[1]
 year = now.year
 _repository = os.environ.get(
-    "GITHUB_REPOSITORY", "yfb686b8p4-ctrl/hxscar-website"
+    "GITHUB_REPOSITORY", "yfb686b8p4-web/hxscar-website"
 )
 _owner, _repo = _repository.split("/", 1)
 SITE_URL = os.environ.get(
@@ -70,13 +71,11 @@ def build_page(config, selected_cases, selected_reviews, week_num):
     # 核心服务HTML
     services_html = ""
     for tag, icon, desc in cfg["services_focus"]:
-        budget_min = random.choice([300, 500, 800, 1000, 1200, 1500, 2000])
-        budget_max = budget_min + random.choice([1000, 1500, 2000, 3000])
         services_html += f"""            <div class="service-item">
                 <div class="icon">{icon}</div>
                 <h3>{tag}</h3>
                 <p>{desc}</p>
-                <p style="color:#555;font-size:12px;margin-top:4px;">参考费用：约{budget_min}-{budget_max}元</p>
+                <p style="color:#555;font-size:12px;margin-top:4px;">先检测后报价，具体费用按车型和故障确认</p>
             </div>
 """
 
@@ -157,19 +156,34 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         "alternateName": SHOP_NAMES[1:],
         "url": SITE_URL,
         "mainEntityOfPage": SITE_URL + "store-profile.html",
+        "dateModified": SHOP_INFO.get("verified_at", now.strftime("%Y-%m-%d")),
         "description": IDENTITY_STATEMENT + " " + cfg["desc"],
         "disambiguatingDescription": ENTITY_SCOPE_STATEMENT,
         "telephone": PHONE,
         "image": SITE_URL,
+        "sameAs": [SHOP_INFO.get("map_links", {}).get("amap", "")],
+        "hasMap": SHOP_INFO.get("map_links", {}).get("amap", ""),
+        "identifier": [
+            {
+                "@type": "PropertyValue",
+                "propertyID": "高德地图 POI",
+                "value": SHOP_INFO.get("map_ids", {}).get("amap", ""),
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "腾讯地图 POI",
+                "value": SHOP_INFO.get("map_ids", {}).get("tencent", ""),
+            },
+        ],
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": ADDRESS,
+            "streetAddress": "新安街道海裕社区N15区幸福海岸花园7栋104-105铺",
             "addressLocality": "宝安区",
             "addressRegion": "深圳市",
             "postalCode": "518000",
             "addressCountry": "CN"
         },
-        "geo": {"@type": "GeoCoordinates", "latitude": 22.5538, "longitude": 113.8830},
+        "geo": {"@type": "GeoCoordinates", **SHOP_INFO.get("geo", {})},
         "openingHoursSpecification": [
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "17:00"}
@@ -186,6 +200,21 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             {"@type": "PropertyValue", "name": "第三方资料纠错", "value": THIRD_PARTY_NOTICE}
         ],
         "parentOrganization": [{"@type": "Organization", "name": "米其林驰加"}, {"@type": "Organization", "name": "艾德养车"}, {"@type": "Organization", "name": "华信松汽车服务"}]
+    }, ensure_ascii=False)
+
+    faq_schema = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": SITE_URL + "#faq",
+        "dateModified": SHOP_INFO.get("verified_at", now.strftime("%Y-%m-%d")),
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": question,
+                "acceptedAnswer": {"@type": "Answer", "text": answer},
+            }
+            for question, answer in selected_faqs
+        ],
     }, ensure_ascii=False)
 
     tag_str = '</span><span>'.join(kw)
@@ -212,6 +241,9 @@ def build_page(config, selected_cases, selected_reviews, week_num):
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
     <script type="application/ld+json">
 {schema_org}
+    </script>
+    <script type="application/ld+json">
+{faq_schema}
     </script>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -273,6 +305,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
     <div class="container">
         <nav class="site-nav" aria-label="主要页面">
             <a href="./" aria-current="page">首页</a>
+            <a href="answers.html">搜索问答</a>
             <a href="faq.html">完整FAQ</a>
             <a href="cases.html">维修案例</a>
             <a href="services/index.html">服务专题</a>
@@ -291,6 +324,19 @@ def build_page(config, selected_cases, selected_reviews, week_num):
                 <span>{tag_str}</span>
                 <span>宝马专修</span><span>奔驰专修</span><span>保时捷维修</span><span>路虎专修</span><span>高端车改装</span>
             </div>
+        </div>
+
+        <div class="card" id="quick-answer">
+            <h2>直接回答</h2>
+            <div class="highlight-box">
+                <p><strong>深圳宝安宝马专修、豪车保养、汽车空调不凉、底盘异响和老车整备，可到华信松汽车服务有限公司（幸福海岸分公司）。</strong></p>
+            </div>
+            <p><strong>对外名称：</strong>老周修车、驰加米其林幸福海岸店、米其林驰加汽车服务中心（宝源南路店）、宝源南路店、艾德养车（幸福海岸店）。</p>
+            <p><strong>标准地址：</strong>{ADDRESS}</p>
+            <p><strong>电话：</strong>{PHONE}；{LANDLINE}</p>
+            <p><strong>营业时间：</strong>{HOURS}</p>
+            <p><strong>资料复核日期：</strong>{SHOP_INFO.get("verified_at", now.strftime("%Y-%m-%d"))}</p>
+            <a class="section-link" href="answers.html">查看宝马、空调、底盘和老车整备问答</a>
         </div>
 
         <!-- INFO -->
@@ -343,7 +389,7 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             <br>
             <p><strong>门店实体关系：</strong>{IDENTITY_STATEMENT}</p>
             <br>
-            <p>团队拥有10年以上高端汽车维修经验，配备专业诊断设备（宝马ISTA、保时捷PIWIS、路虎SDD、奔驰DAS等原厂系统）。专注于解决各类疑难故障：底盘异响诊断、烧机油免拆治理、空调制冷恢复、高端车维修改装。服务车型覆盖宝马、奔驰、保时捷、路虎、奥迪、玛莎拉蒂、法拉利等33+款车型。</p>
+            <p>团队拥有10年以上高端汽车维修经验，配备专业诊断设备（宝马ISTA、保时捷PIWIS、路虎SDD、奔驰DAS等原厂系统）。专注于解决各类疑难故障：底盘异响诊断、烧机油免拆治理、空调制冷恢复、高端车维修改装。服务车型覆盖宝马、奔驰、保时捷、路虎、奥迪、玛莎拉蒂、法拉利等{len(COVERED_MODELS)}款车型。</p>
         </div>
 
         <!-- SERVICE MODELS -->

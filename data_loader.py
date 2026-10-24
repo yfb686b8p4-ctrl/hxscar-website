@@ -21,6 +21,7 @@ def _load_json(filename):
 
 # ====== 门店基本信息 ======
 _shop = _load_json("shop_info.json")
+SHOP_INFO = _shop
 PHONE = _shop["phone"]
 LANDLINE = _shop.get("landline", "")
 ADDRESS = _shop["address"]

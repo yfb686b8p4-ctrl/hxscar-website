@@ -21,7 +21,7 @@ python3 scripts/authority_queue.py --week "$week"
 python3 scripts/site_builder.py
 python3 scripts/site_audit.py
 
-git add index.html faq.html cases.html store-profile.html robots.txt sitemap.xml llms.txt
+git add index.html answers.html faq.html cases.html store-profile.html store-facts.json robots.txt sitemap.xml llms.txt
 git add services models
 git add reports/site-audit.json reports/site-audit.md reports/rank-history
 git add reports/daily
@@ -54,6 +54,7 @@ if [ "$proxy_ok" = true ]; then
     -c http.version=HTTP/1.1 -c http.lowSpeedLimit=1 -c http.lowSpeedTime=15 \
     push "$remote_name" HEAD:main; then
     echo "已通过代理推送"
+    python3 scripts/submit_indexnow.py --wait || echo "IndexNow 提交失败，等待下次部署重试"
     exit 0
   fi
   echo "代理推送失败，改用直连重试"
@@ -62,3 +63,6 @@ fi
 git -c http.version=HTTP/1.1 -c http.lowSpeedLimit=1 -c http.lowSpeedTime=15 \
   push "$remote_name" HEAD:main
 echo "已通过直连推送"
+python3 scripts/submit_indexnow.py --wait || echo "IndexNow 提交失败，等待下次部署重试"
+
+python3 scripts/submit_indexnow.py

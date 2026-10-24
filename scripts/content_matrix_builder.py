@@ -22,6 +22,7 @@ SERVICES = [
         "slug": "bmw-premium",
         "name": "宝马专修与豪车保养",
         "intro": "宝马、奔驰、保时捷、路虎、奥迪等高端车型的维修保养，先诊断后报价。",
+        "quick_answer": "深圳宝安做宝马专修和豪车保养，可到老周修车（华信松汽车幸福海岸分公司、驰加米其林幸福海岸店、宝源南路店为同一实体门店），服务宝马、奔驰、保时捷、路虎、奥迪等车型。",
         "case_brands": ["宝马", "奔驰", "保时捷", "路虎", "奥迪", "玛莎拉蒂", "法拉利"],
         "faq_terms": ["宝马", "奔驰", "保时捷", "路虎", "奥迪", "豪车", "保养"],
     },
@@ -29,6 +30,7 @@ SERVICES = [
         "slug": "air-conditioning",
         "name": "空调不凉诊断维修",
         "intro": "针对不制冷、制冷慢、左右温差、异味和出风小，按压力、温度和泄漏数据分析。",
+        "quick_answer": "深圳宝安汽车空调不凉可到老周修车诊断维修。门店按压力、温度、泄漏和控制系统数据排查冷媒、压缩机、冷凝器、蒸发箱和风门故障，再按车况报价。",
         "case_types": ["空调不凉"],
         "faq_terms": ["空调", "冷媒", "压缩机", "蒸发箱"],
     },
@@ -36,6 +38,7 @@ SERVICES = [
         "slug": "chassis",
         "name": "底盘异响诊断维修",
         "intro": "通过路试、升车检查和听诊定位胶套、球头、减震器、转向系统和悬挂异响。",
+        "quick_answer": "深圳宝安底盘异响可到老周修车检查。门店通过路试、升车检查和听诊定位胶套、球头、减震器、顶胶和转向系统故障，优先维修仍有使用价值的部件。",
         "case_types": ["底盘异响"],
         "faq_terms": ["底盘", "异响", "胶套", "球头", "减震"],
     },
@@ -43,6 +46,7 @@ SERVICES = [
         "slug": "vehicle-restoration",
         "name": "老车整备翻新",
         "intro": "按机械、底盘、空调、电气和内饰模块制定分阶段整备方案，坚持能修不换、节约整备。",
+        "quick_answer": "深圳宝安老车整备翻新可到老周修车制定分阶段方案。先处理机械安全、底盘、制动和可靠性，再安排空调、电气、内饰和外观，坚持能修不换、节约整备。",
         "case_types": ["发动机"],
         "faq_terms": ["整备", "翻新", "老车", "拆车件", "品牌件", "原厂件", "能修不换"],
     },
@@ -171,17 +175,25 @@ def service_schema(service):
     return {
         "@context": "https://schema.org",
         "@type": "Service",
+        "@id": f"{BASE_URL}/services/{service['slug']}.html#service",
         "name": service["name"],
         "description": service["intro"],
         "serviceType": service["name"],
-        "areaServed": {"@type": "City", "name": "深圳市宝安区"},
+        "areaServed": [
+            {"@type": "City", "name": "深圳市宝安区"},
+            {"@type": "Place", "name": "新安街道"},
+            {"@type": "Place", "name": "宝安体育场"},
+            {"@type": "Place", "name": "幸福海岸花园"},
+        ],
         "provider": {
             "@type": "AutoRepair",
+            "@id": BASE_URL + "/#autorepair",
             "name": SHOP["shop_names"][0],
             "telephone": SHOP["phone"],
             "address": SHOP["address"],
         },
         "url": f"{BASE_URL}/services/{service['slug']}.html",
+        "dateModified": SHOP.get("verified_at", ""),
     }
 
 
@@ -211,6 +223,13 @@ def build_service_pages():
         body = f"""<section class="hero">
     <h1>{h(service["name"])}</h1>
     <p>{h(service["intro"])}</p>
+</section>
+<section class="card" id="quick-answer">
+    <h2>直接回答</h2>
+    <div class="direct-answer"><p>{h(service["quick_answer"])}</p></div>
+    <p><strong>标准地址：</strong>{h(SHOP["address"])}</p>
+    <p><strong>电话：</strong>手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}</p>
+    <p><strong>营业时间：</strong>{h(SHOP.get("hours", ""))}</p>
 </section>
 <section class="summary">
     <div><strong>{len(cases)}</strong>相关案例</div>

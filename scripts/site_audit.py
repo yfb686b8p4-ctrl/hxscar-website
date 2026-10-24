@@ -17,6 +17,9 @@ REQUIRED_FILES = [
     "faq.html",
     "cases.html",
     "store-profile.html",
+    "answers.html",
+    "store-facts.json",
+    "hxscar20261024geoindexkey.txt",
     "robots.txt",
     "sitemap.xml",
     "llms.txt",
@@ -154,6 +157,7 @@ def audit():
         ROOT / "faq.html",
         ROOT / "cases.html",
         ROOT / "store-profile.html",
+        ROOT / "answers.html",
         *service_pages,
         *model_pages,
     ]
@@ -198,6 +202,8 @@ def audit():
         errors.append("faq.html 缺少 FAQPage 结构化数据")
     if "FAQPage" not in page_stats["store-profile.html"]["schema_types"]:
         errors.append("store-profile.html 缺少 FAQPage 结构化数据")
+    if "FAQPage" not in page_stats["answers.html"]["schema_types"]:
+        errors.append("answers.html 缺少 FAQPage 结构化数据")
     if "ItemList" not in page_stats["cases.html"]["schema_types"]:
         errors.append("cases.html 缺少 ItemList 结构化数据")
     if "aggregateRating" in index_html:
@@ -212,6 +218,8 @@ def audit():
         errors.append("sitemap.xml 未包含完整内容页")
     if "store-profile.html" not in sitemap:
         errors.append("sitemap.xml 未包含门店资料页")
+    if "answers.html" not in sitemap or "store-facts.json" not in sitemap:
+        errors.append("sitemap.xml 未包含搜索问答或机器可读门店事实")
     if "services/index.html" not in sitemap or "models/index.html" not in sitemap:
         errors.append("sitemap.xml 未包含服务或车型专题入口")
     if "真实维修案例" in index_html or "真实车主评价" in index_html:
@@ -224,10 +232,28 @@ def audit():
         "09:00-17:00",
         "同一实体门店",
         "不延伸到其他同名、同品牌或同集团门店",
+        "B0H3LSJZZC",
+        "4056673834161600251",
+        "9346609822993315588",
+        "113.876706",
+        "22.558986",
     ]
     for fact in required_profile_facts:
         if fact not in profile_html:
             errors.append(f"store-profile.html 缺少标准资料: {fact}")
+    facts_path = ROOT / "store-facts.json"
+    try:
+        facts = json.loads(facts_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"store-facts.json 无法解析: {exc}")
+        facts = {}
+    if facts:
+        if facts.get("entity", {}).get("canonicalName") != "华信松汽车服务有限公司（幸福海岸分公司）":
+            errors.append("store-facts.json 统一名称不正确")
+        if facts.get("location", {}).get("geo", {}).get("longitude") != 113.876706:
+            errors.append("store-facts.json 标准坐标不正确")
+        if len(facts.get("answers", [])) < 6:
+            errors.append("store-facts.json 搜索答案数量不足")
     if not queue_manifest.exists():
         errors.append(f"缺少 W{week} 站外发布队列")
 

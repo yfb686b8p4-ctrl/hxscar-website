@@ -7,26 +7,27 @@
 
 | 页面 | 可见中文字符 | JSON-LD | 类型 |
 |---|---:|---:|---|
-| index.html | 4109 | 1 | AutoRepair |
-| faq.html | 10841 | 2 | AutoRepair, FAQPage |
-| cases.html | 7094 | 2 | AutoRepair, ItemList |
-| store-profile.html | 1655 | 3 | AutoRepair, FAQPage, BreadcrumbList |
-| services/air-conditioning.html | 1891 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| services/bmw-premium.html | 2641 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| services/chassis.html | 1841 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| services/vehicle-restoration.html | 2625 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| models/audi-a6l.html | 1380 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/audi-q5.html | 1361 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/bmw-5-series.html | 1582 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/bmw-7-series.html | 1573 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/bmw-x5.html | 1519 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/land-rover-defender.html | 1414 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/land-rover-range-rover.html | 1292 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/mercedes-e-class.html | 1410 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/mercedes-glc.html | 1355 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/porsche-cayenne.html | 1674 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/porsche-macan.html | 1506 | 3 | AutoRepair, BreadcrumbList, FAQPage |
-| models/volkswagen-touareg.html | 1224 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| index.html | 4352 | 2 | AutoRepair, FAQPage |
+| faq.html | 10845 | 2 | AutoRepair, FAQPage |
+| cases.html | 7098 | 2 | AutoRepair, ItemList |
+| store-profile.html | 1922 | 3 | AutoRepair, FAQPage, BreadcrumbList |
+| answers.html | 1177 | 4 | AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| services/air-conditioning.html | 2023 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| services/bmw-premium.html | 2783 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| services/chassis.html | 1973 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| services/vehicle-restoration.html | 2757 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| models/audi-a6l.html | 1384 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/audi-q5.html | 1365 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/bmw-5-series.html | 1586 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/bmw-7-series.html | 1577 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/bmw-x5.html | 1523 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/land-rover-defender.html | 1418 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/land-rover-range-rover.html | 1296 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/mercedes-e-class.html | 1414 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/mercedes-glc.html | 1359 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/porsche-cayenne.html | 1678 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/porsche-macan.html | 1510 | 3 | AutoRepair, BreadcrumbList, FAQPage |
+| models/volkswagen-touareg.html | 1228 | 3 | AutoRepair, BreadcrumbList, FAQPage |
 
 ## 错误
 

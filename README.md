@@ -7,6 +7,8 @@
 - 首页：<https://yfb686b8p4-web.github.io/hxscar-website/>
 - 完整 FAQ：<https://yfb686b8p4-web.github.io/hxscar-website/faq.html>
 - 维修案例：<https://yfb686b8p4-web.github.io/hxscar-website/cases.html>
+- 搜索问答：<https://yfb686b8p4-web.github.io/hxscar-website/answers.html>
+- 机器可读门店事实：<https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json>
 - 资料索引：<https://yfb686b8p4-web.github.io/hxscar-website/llms.txt>
 
 ## 当前内容规模

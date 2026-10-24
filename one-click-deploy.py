@@ -8,7 +8,7 @@
 import json, os, base64, sys, webbrowser
 from pathlib import Path
 
-REPO = "yfb686b8p4-ctrl/hxscar-website"
+REPO = "yfb686b8p4-web/hxscar-website"
 
 print("="*60)
 print("华信松汽车服务 — 一键部署工具")
@@ -54,6 +54,8 @@ commit_sha = ref["object"]["sha"]
 # 创建 blob
 files_to_upload = [
     ("index.html", "修改后的首页"),
+    ("answers.html", "面向 AI 搜索的短答案页"),
+    ("store-facts.json", "机器可读门店事实"),
     ("_upload_temp/weekly_rotation.py", "每周轮换脚本"),
     ("_upload_temp/.github/workflows/weekly-update.yml", "GitHub Actions 自动更新工作流"),
 ]
@@ -90,4 +92,4 @@ print("="*60)
 webbrowser.open(f"https://github.com/{REPO}/actions")
 print("\n💡 建议：在 Actions 页面手动点一下 'Run workflow' 立即触发首次更新")
 print("   之后自动每周一 08:00（北京时间）运行")
-print("   地址：https://yfb686b8p4-ctrl.github.io/hxscar-website/")
+print("   地址：https://yfb686b8p4-web.github.io/hxscar-website/")

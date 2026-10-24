@@ -10,18 +10,19 @@
   },
   "pages": {
     "index.html": {
-      "bytes": 35877,
-      "han_chars": 5098,
-      "visible_han_chars": 4109,
-      "json_ld_blocks": 1,
+      "bytes": 42557,
+      "han_chars": 6437,
+      "visible_han_chars": 4352,
+      "json_ld_blocks": 2,
       "schema_types": [
-        "AutoRepair"
+        "AutoRepair",
+        "FAQPage"
       ]
     },
     "faq.html": {
-      "bytes": 103963,
-      "han_chars": 22255,
-      "visible_han_chars": 10841,
+      "bytes": 104986,
+      "han_chars": 22260,
+      "visible_han_chars": 10845,
       "json_ld_blocks": 2,
       "schema_types": [
         "AutoRepair",
@@ -29,9 +30,9 @@
       ]
     },
     "cases.html": {
-      "bytes": 53230,
-      "han_chars": 8604,
-      "visible_han_chars": 7094,
+      "bytes": 54253,
+      "han_chars": 8609,
+      "visible_han_chars": 7098,
       "json_ld_blocks": 2,
       "schema_types": [
         "AutoRepair",
@@ -39,9 +40,9 @@
       ]
     },
     "store-profile.html": {
-      "bytes": 18580,
-      "han_chars": 3163,
-      "visible_han_chars": 1655,
+      "bytes": 21282,
+      "han_chars": 3439,
+      "visible_han_chars": 1922,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -49,10 +50,22 @@
         "BreadcrumbList"
       ]
     },
+    "answers.html": {
+      "bytes": 18791,
+      "han_chars": 2681,
+      "visible_han_chars": 1177,
+      "json_ld_blocks": 4,
+      "schema_types": [
+        "AutoRepair",
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
     "services/air-conditioning.html": {
-      "bytes": 21743,
-      "han_chars": 3602,
-      "visible_han_chars": 1891,
+      "bytes": 23782,
+      "han_chars": 3750,
+      "visible_han_chars": 2023,
       "json_ld_blocks": 4,
       "schema_types": [
         "AutoRepair",
@@ -62,9 +75,9 @@
       ]
     },
     "services/bmw-premium.html": {
-      "bytes": 25640,
-      "han_chars": 4353,
-      "visible_han_chars": 2641,
+      "bytes": 27713,
+      "han_chars": 4511,
+      "visible_han_chars": 2783,
       "json_ld_blocks": 4,
       "schema_types": [
         "AutoRepair",
@@ -74,9 +87,9 @@
       ]
     },
     "services/chassis.html": {
-      "bytes": 21309,
-      "han_chars": 3531,
-      "visible_han_chars": 1841,
+      "bytes": 23336,
+      "han_chars": 3679,
+      "visible_han_chars": 1973,
       "json_ld_blocks": 4,
       "schema_types": [
         "AutoRepair",
@@ -86,9 +99,9 @@
       ]
     },
     "services/vehicle-restoration.html": {
-      "bytes": 25069,
-      "han_chars": 4310,
-      "visible_han_chars": 2625,
+      "bytes": 27114,
+      "han_chars": 4458,
+      "visible_han_chars": 2757,
       "json_ld_blocks": 4,
       "schema_types": [
         "AutoRepair",
@@ -98,9 +111,9 @@
       ]
     },
     "models/audi-a6l.html": {
-      "bytes": 17942,
-      "han_chars": 2784,
-      "visible_han_chars": 1380,
+      "bytes": 18968,
+      "han_chars": 2789,
+      "visible_han_chars": 1384,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -109,9 +122,9 @@
       ]
     },
     "models/audi-q5.html": {
-      "bytes": 17823,
-      "han_chars": 2765,
-      "visible_han_chars": 1361,
+      "bytes": 18849,
+      "han_chars": 2770,
+      "visible_han_chars": 1365,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -120,9 +133,9 @@
       ]
     },
     "models/bmw-5-series.html": {
-      "bytes": 18892,
-      "han_chars": 2940,
-      "visible_han_chars": 1582,
+      "bytes": 19918,
+      "han_chars": 2945,
+      "visible_han_chars": 1586,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -131,9 +144,9 @@
       ]
     },
     "models/bmw-7-series.html": {
-      "bytes": 18899,
-      "han_chars": 2930,
-      "visible_han_chars": 1573,
+      "bytes": 19925,
+      "han_chars": 2935,
+      "visible_han_chars": 1577,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -142,9 +155,9 @@
       ]
     },
     "models/bmw-x5.html": {
-      "bytes": 18675,
-      "han_chars": 2915,
-      "visible_han_chars": 1519,
+      "bytes": 19701,
+      "han_chars": 2920,
+      "visible_han_chars": 1523,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -153,9 +166,9 @@
       ]
     },
     "models/land-rover-defender.html": {
-      "bytes": 17641,
-      "han_chars": 2736,
-      "visible_han_chars": 1414,
+      "bytes": 18667,
+      "han_chars": 2741,
+      "visible_han_chars": 1418,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -164,9 +177,9 @@
       ]
     },
     "models/land-rover-range-rover.html": {
-      "bytes": 17055,
-      "han_chars": 2614,
-      "visible_han_chars": 1292,
+      "bytes": 18081,
+      "han_chars": 2619,
+      "visible_han_chars": 1296,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -175,9 +188,9 @@
       ]
     },
     "models/mercedes-e-class.html": {
-      "bytes": 18142,
-      "han_chars": 2843,
-      "visible_han_chars": 1410,
+      "bytes": 19168,
+      "han_chars": 2848,
+      "visible_han_chars": 1414,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -186,9 +199,9 @@
       ]
     },
     "models/mercedes-glc.html": {
-      "bytes": 17909,
-      "han_chars": 2758,
-      "visible_han_chars": 1355,
+      "bytes": 18935,
+      "han_chars": 2763,
+      "visible_han_chars": 1359,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -197,9 +210,9 @@
       ]
     },
     "models/porsche-cayenne.html": {
-      "bytes": 19305,
-      "han_chars": 3103,
-      "visible_han_chars": 1674,
+      "bytes": 20331,
+      "han_chars": 3108,
+      "visible_han_chars": 1678,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -208,9 +221,9 @@
       ]
     },
     "models/porsche-macan.html": {
-      "bytes": 18564,
-      "han_chars": 2927,
-      "visible_han_chars": 1506,
+      "bytes": 19590,
+      "han_chars": 2932,
+      "visible_han_chars": 1510,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
@@ -219,9 +232,9 @@
       ]
     },
     "models/volkswagen-touareg.html": {
-      "bytes": 16387,
-      "han_chars": 2457,
-      "visible_han_chars": 1224,
+      "bytes": 17413,
+      "han_chars": 2462,
+      "visible_han_chars": 1228,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",
