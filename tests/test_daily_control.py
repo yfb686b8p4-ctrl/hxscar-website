@@ -112,6 +112,18 @@ class DailyControlTests(unittest.TestCase):
         self.assertEqual(len(changes["fixed"]), 1)
         self.assertEqual(len(changes["new_errors"]), 1)
 
+    def test_pending_baseline_is_not_compared_as_zero(self):
+        changes = daily_control.compare_results(
+            [record()],
+            {
+                "date": "2026-10-23",
+                "records": [],
+                "metrics": daily_control.calculate_metrics([]),
+            },
+        )
+        self.assertFalse(changes["comparable"])
+        self.assertEqual(changes["metric_changes"], {})
+
     def test_tasks_are_grouped(self):
         tasks = daily_control.build_tasks(
             [

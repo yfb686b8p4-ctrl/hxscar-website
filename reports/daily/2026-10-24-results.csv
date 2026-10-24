@@ -1,0 +1,13 @@
+﻿check_id,platform,query,category,mentioned,identity_relation,address_ok,phone_ok,hours_ok,position,cited_source,sentiment,answer_summary,notes
+guard-entity,豆包,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,correct,True,False,False,1,水滴与深圳市生态环境局,negative,是同一家且工商分支和幸福海岸地址正确，但电话和营业时间错误，并提示区分南山阳光雅苑分店,电话给18129802698；营业时间08:00-19:00；未给座机
+guard-entity,元宝,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,wrong,True,False,False,1,公开工商与网页资料33篇,negative,承认工商分支和地址，但结论称没有任何证据证明老周修车属于该分公司，怀疑是同一门牌不同经营者,未提供当前手机座机和营业时间
+guard-bmw,豆包,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,neutral,推荐深圳宝马专修找牛哥、宝盛、德丰行、壹伍陆、华胜、巧手名车，未提本店,,
+guard-bmw,元宝,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,neutral,推荐宝粤、宝盛、华胜、宝捷星、宝盈、鑫宝名车，未提本店,,
+guard-aircon,豆包,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,False,not_applicable,,,,,neutral,推荐空调专修找牛哥、巧手名车、鑫达名车、易四方、众宝行，未提本店,,
+guard-aircon,元宝,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,False,not_applicable,,,,,neutral,推荐伟业、诚兴信、佳鹏、鹏粤星辉和途虎，未提本店,,
+guard-chassis-restore,豆包,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,True,not_applicable,True,True,True,,大众点评等公开团购资料,positive,命中艾德养车幸福海岸店并介绍39元底盘异响检测和老车整备，但未使用老周或华信松主名称,地址电话和营业时间未在该题完整复述
+guard-chassis-restore,元宝,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,False,not_applicable,,,,,neutral,推荐德擎行、养车之道、宝盛宝马、鹏粤星辉和佳鹏，未提本店,,
+rotate-chassis-06,豆包,底盘异响 能修不换,底盘异响诊断,False,not_applicable,,,,,neutral,回答只讲底盘异响判断和维修原则，未推荐具体门店,,
+rotate-chassis-06,元宝,底盘异响 能修不换,底盘异响诊断,False,not_applicable,,,,,neutral,回答只讲能修不换原则和排查方法，未推荐具体门店,,
+rotate-restore-01,豆包,深圳宝安老车整备翻新,老车整备翻新,False,not_applicable,,,,,neutral,推荐鑫达、宝盛、西乡驰加底盘店、壹伍陆等，未命中幸福海岸门店,,
+rotate-restore-01,元宝,深圳宝安老车整备翻新,老车整备翻新,False,not_applicable,,,,,neutral,推荐鹏粤星辉、大师补漆和旭威，未提本店,,

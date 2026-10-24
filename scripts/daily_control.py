@@ -445,10 +445,10 @@ def parse_results(path, plan):
                 if str(row.get("position", "")).strip().isdigit()
                 else None
             ),
-            "cited_source": row.get("cited_source", "").strip(),
-            "sentiment": row.get("sentiment", "").strip(),
-            "answer_summary": row.get("answer_summary", "").strip(),
-            "notes": row.get("notes", "").strip(),
+            "cited_source": (row.get("cited_source") or "").strip(),
+            "sentiment": (row.get("sentiment") or "").strip(),
+            "answer_summary": (row.get("answer_summary") or "").strip(),
+            "notes": (row.get("notes") or "").strip(),
         }
         record["effective_hit"] = evaluate_effective_hit(record)
         records.append(record)
@@ -577,6 +577,14 @@ def compare_results(records, previous):
     previous_metrics = previous.get("guardrail_metrics") or previous.get(
         "metrics", {}
     )
+    if not previous_metrics.get("completed"):
+        return {
+            "previous_date": previous.get("date"),
+            "comparable": False,
+            "metric_changes": {},
+            "fixed": [],
+            "new_errors": [],
+        }
     changes = {}
     for key, value in metrics.items():
         if key in {"total", "completed", "pending", "mentioned", "effective_hits", "entity_completed", "entity_correct", "full_info_correct", "service_completed", "service_hits"}:
@@ -584,6 +592,7 @@ def compare_results(records, previous):
         changes[key] = round(value - float(previous_metrics.get(key, 0)), 1)
     return {
         "previous_date": previous.get("date"),
+        "comparable": True,
         "metric_changes": changes,
         "fixed": fixed,
         "new_errors": new_errors,
@@ -747,6 +756,11 @@ def render_markdown(summary):
     previous_date = changes.get("previous_date")
     if not previous_date:
         lines.append("- 暂无上一份日报，今天作为基线。")
+    elif not changes.get("comparable", True):
+        lines.append(
+            f"- 对比日期：{previous_date}，但昨天没有已完成的护栏结果；"
+            "今天作为首个可比基线。"
+        )
     else:
         delta = changes.get("metric_changes", {})
         lines.append(f"- 对比日期：{previous_date}")
@@ -781,11 +795,13 @@ def render_markdown(summary):
                     details.append(f"{label}=错误")
             if not item["mentioned"]:
                 details.append("未提及")
-            lines.append(
+            line = (
                 f"- {item['platform']}｜{item['query']}："
-                f"{'，'.join(details) or '未达到有效命中'} "
-                f"{('｜' + item['notes']) if item['notes'] else ''}"
+                f"{'，'.join(details) or '未达到有效命中'}"
             )
+            if item["notes"]:
+                line += f"｜{item['notes']}"
+            lines.append(line)
     else:
         lines.append("- 无")
     lines.extend(["", "## 运行状态", ""])
