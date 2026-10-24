@@ -40,6 +40,8 @@ JSON_LD_PATTERN = re.compile(
     r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL
 )
 HAN_PATTERN = re.compile(r"[\u4e00-\u9fff]")
+EXPECTED_ORIGIN = "https://yfb686b8p4-web.github.io/hxscar-website"
+STALE_HOSTS = ("yfb686b8p4-ctrl.github.io", "hxscar.github.io")
 
 
 class VisibleTextParser(HTMLParser):
@@ -180,6 +182,9 @@ def audit():
                 if isinstance(schema, dict)
             ],
         }
+        canonical = re.search(r'<link rel="canonical" href="([^"]+)"', text)
+        if not canonical or not canonical.group(1).startswith(EXPECTED_ORIGIN):
+            errors.append(f"{name} canonical 未使用当前线上域名")
 
     index_html = read_text("index.html")
     faq_html = read_text("faq.html")
@@ -222,6 +227,11 @@ def audit():
         errors.append("sitemap.xml 未包含搜索问答或机器可读门店事实")
     if "services/index.html" not in sitemap or "models/index.html" not in sitemap:
         errors.append("sitemap.xml 未包含服务或车型专题入口")
+    if EXPECTED_ORIGIN not in sitemap:
+        errors.append("sitemap.xml 未使用当前线上域名")
+    for stale_host in STALE_HOSTS:
+        if stale_host in sitemap or stale_host in robots:
+            errors.append(f"抓取入口仍包含旧域名: {stale_host}")
     if "真实维修案例" in index_html or "真实车主评价" in index_html:
         errors.append("index.html 仍把未核验数据标记为真实")
     required_profile_facts = [
