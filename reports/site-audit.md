@@ -1,13 +1,13 @@
 # 站点质量审计
 
-- 检查时间：2026-10-24
+- 检查时间：2026-10-26
 - 结果：通过
 
 ## 页面统计
 
 | 页面 | 可见中文字符 | JSON-LD | 类型 |
 |---|---:|---:|---|
-| index.html | 4352 | 2 | AutoRepair, FAQPage |
+| index.html | 4480 | 2 | AutoRepair, FAQPage |
 | faq.html | 10845 | 2 | AutoRepair, FAQPage |
 | cases.html | 7098 | 2 | AutoRepair, ItemList |
 | store-profile.html | 1922 | 3 | AutoRepair, FAQPage, BreadcrumbList |

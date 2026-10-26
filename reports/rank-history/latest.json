@@ -1,41 +1,31 @@
 {
-  "snapshot": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site/reports/rank-history/2026-10-23.json",
-  "updated_at": "2026-10-23T15:57:22.008358+08:00",
+  "snapshot": "/Users/pingguo2019/Library/Application Support/hxscar-weekly-deploy/repo/reports/rank-history/2026-10-26.json",
+  "updated_at": "2026-10-26T08:00:00.640115+08:00",
   "overall": {
-    "total": 192,
-    "completed": 33,
-    "mentioned": 10,
-    "mention_rate": 30.3
+    "total": 198,
+    "completed": 0,
+    "mentioned": 0,
+    "mention_rate": 0.0
   },
   "by_platform": {
     "豆包": {
-      "total": 32,
-      "completed": 32,
-      "mentioned": 9,
-      "positions": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        6
-      ],
-      "mention_rate": 28.1,
-      "average_position": 1.7
+      "total": 33,
+      "completed": 0,
+      "mentioned": 0,
+      "positions": [],
+      "mention_rate": 0.0,
+      "average_position": null
     },
     "元宝": {
-      "total": 32,
-      "completed": 1,
-      "mentioned": 1,
-      "positions": [
-        1
-      ],
-      "mention_rate": 100.0,
-      "average_position": 1.0
+      "total": 33,
+      "completed": 0,
+      "mentioned": 0,
+      "positions": [],
+      "mention_rate": 0.0,
+      "average_position": null
     },
     "文心一言": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -43,7 +33,7 @@
       "average_position": null
     },
     "Kimi": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -51,7 +41,7 @@
       "average_position": null
     },
     "通义千问": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -59,7 +49,7 @@
       "average_position": null
     },
     "百度AI搜索": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -69,32 +59,32 @@
   },
   "by_category": {
     "门店身份": {
-      "total": 36,
-      "completed": 7,
-      "mentioned": 7,
-      "mention_rate": 100.0
+      "total": 42,
+      "completed": 0,
+      "mentioned": 0,
+      "mention_rate": 0.0
     },
     "宝马与豪车": {
       "total": 48,
-      "completed": 8,
+      "completed": 0,
       "mentioned": 0,
       "mention_rate": 0.0
     },
     "空调诊断维修": {
       "total": 36,
-      "completed": 6,
-      "mentioned": 3,
-      "mention_rate": 50.0
+      "completed": 0,
+      "mentioned": 0,
+      "mention_rate": 0.0
     },
     "底盘异响诊断": {
       "total": 36,
-      "completed": 6,
+      "completed": 0,
       "mentioned": 0,
       "mention_rate": 0.0
     },
     "老车整备翻新": {
       "total": 36,
-      "completed": 6,
+      "completed": 0,
       "mentioned": 0,
       "mention_rate": 0.0
     }

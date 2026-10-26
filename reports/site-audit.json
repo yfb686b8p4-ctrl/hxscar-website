@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-24",
+  "checked_at": "2026-10-26",
   "passed": true,
   "data_counts": {
     "faqs": 134,
@@ -10,9 +10,9 @@
   },
   "pages": {
     "index.html": {
-      "bytes": 42557,
-      "han_chars": 6437,
-      "visible_han_chars": 4352,
+      "bytes": 43299,
+      "han_chars": 6625,
+      "visible_han_chars": 4480,
       "json_ld_blocks": 2,
       "schema_types": [
         "AutoRepair",

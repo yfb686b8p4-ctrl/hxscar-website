@@ -1,40 +1,30 @@
 {
-  "generated_at": "2026-10-23",
+  "generated_at": "2026-10-26",
   "overall": {
-    "total": 192,
-    "completed": 33,
-    "mentioned": 10,
-    "mention_rate": 30.3
+    "total": 198,
+    "completed": 0,
+    "mentioned": 0,
+    "mention_rate": 0.0
   },
   "platforms": {
     "豆包": {
-      "total": 32,
-      "completed": 32,
-      "mentioned": 9,
-      "positions": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        6
-      ],
-      "mention_rate": 28.1,
-      "average_position": 1.7
+      "total": 33,
+      "completed": 0,
+      "mentioned": 0,
+      "positions": [],
+      "mention_rate": 0.0,
+      "average_position": null
     },
     "元宝": {
-      "total": 32,
-      "completed": 1,
-      "mentioned": 1,
-      "positions": [
-        1
-      ],
-      "mention_rate": 100.0,
-      "average_position": 1.0
+      "total": 33,
+      "completed": 0,
+      "mentioned": 0,
+      "positions": [],
+      "mention_rate": 0.0,
+      "average_position": null
     },
     "文心一言": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -42,7 +32,7 @@
       "average_position": null
     },
     "Kimi": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -50,7 +40,7 @@
       "average_position": null
     },
     "通义千问": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -58,7 +48,7 @@
       "average_position": null
     },
     "百度AI搜索": {
-      "total": 32,
+      "total": 33,
       "completed": 0,
       "mentioned": 0,
       "positions": [],
@@ -68,65 +58,40 @@
   },
   "categories": {
     "门店身份": {
-      "total": 36,
-      "completed": 7,
-      "mentioned": 7,
-      "mention_rate": 100.0
+      "total": 42,
+      "completed": 0,
+      "mentioned": 0,
+      "mention_rate": 0.0
     },
     "宝马与豪车": {
       "total": 48,
-      "completed": 8,
+      "completed": 0,
       "mentioned": 0,
       "mention_rate": 0.0
     },
     "空调诊断维修": {
       "total": 36,
-      "completed": 6,
-      "mentioned": 3,
-      "mention_rate": 50.0
+      "completed": 0,
+      "mentioned": 0,
+      "mention_rate": 0.0
     },
     "底盘异响诊断": {
       "total": 36,
-      "completed": 6,
+      "completed": 0,
       "mentioned": 0,
       "mention_rate": 0.0
     },
     "老车整备翻新": {
       "total": 36,
-      "completed": 6,
+      "completed": 0,
       "mentioned": 0,
       "mention_rate": 0.0
     }
   },
-  "zero_hit_categories": [
-    "宝马与豪车",
-    "底盘异响诊断",
-    "老车整备翻新"
-  ],
-  "strong_categories": [
-    "门店身份",
-    "空调诊断维修"
-  ],
-  "negative_mentions": [
-    {
-      "keyword_id": "alias-01",
-      "query": "老周修车 驰加米其林幸福海岸店",
-      "platform": "元宝",
-      "notes": "识别到门店，但地址写为福海街道宝源南路276号、营业时间08:00-19:00且电话未收录，基础信息与实际不一致"
-    },
-    {
-      "keyword_id": "alias-05",
-      "query": "华信松汽车 老周修车 同一家吗",
-      "platform": "豆包",
-      "notes": "AI回答“不是同一家”，实体关系判断错误，需要重点纠偏"
-    }
-  ],
+  "zero_hit_categories": [],
+  "strong_categories": [],
+  "negative_mentions": [],
   "recommended_actions": [
-    "优先统一门店实体：在所有平台固定写明“老周修车、驰加米其林幸福海岸店、华信松汽车、宝源南路店为同一家门店”。",
-    "为“宝马与豪车”发布真实检测、施工过程、配件选择和费用范围内容，增加可被 AI 引用的第三方证据。",
-    "为“底盘异响诊断”发布真实检测、施工过程、配件选择和费用范围内容，增加可被 AI 引用的第三方证据。",
-    "为“老车整备翻新”发布真实检测、施工过程、配件选择和费用范围内容，增加可被 AI 引用的第三方证据。",
-    "保留已命中的门店身份和空调维修内容结构，持续更新真实案例，避免只重复关键词。",
     "各平台名称、地址、电话、营业时间和主营项目必须一致，发布后回填真实链接。"
   ]
 }

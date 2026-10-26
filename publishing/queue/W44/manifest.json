@@ -1,0 +1,120 @@
+{
+  "week": "W44",
+  "generated_at": "2026-10-26",
+  "shop": {
+    "canonical_name": "华信松汽车服务有限公司（幸福海岸分公司）",
+    "registered_name": "深圳市华信松汽车服务有限公司幸福海岸分公司",
+    "aliases": [
+      "老周修车",
+      "驰加米其林幸福海岸店",
+      "米其林驰加汽车服务中心（宝源南路店）",
+      "宝源南路店",
+      "艾德养车（幸福海岸店）"
+    ],
+    "phone": "18682417667",
+    "landline": "0755-23340534",
+    "address": "深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺",
+    "navigation_address": "深圳市宝安区宝源南路幸福海岸小区西南门（宝安体育场旁）",
+    "hours": "周一至周五 08:00-18:00；周六日 09:00-17:00",
+    "entity_scope_statement": "本资料所称“华信松汽车”均特指位于深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺的深圳市华信松汽车服务有限公司幸福海岸分公司，不延伸到其他同名、同品牌或同集团门店。",
+    "identity_statement": "以上名称是同一实体门店、同一经营地址、同一运营团队和同一组对外联系电话。工商登记或第三方地图可能显示不同经营主体名称，不能仅凭营业执照名称不同就认定是不同门店。"
+  },
+  "tasks": [
+    {
+      "id": "amap",
+      "name": "高德地图",
+      "priority": "P0",
+      "status": "blocked",
+      "objective": "统一门店名称、地址、电话、营业时间和主营业务",
+      "action_url": "https://ditu.amap.com/",
+      "task_file": "publishing/queue/W44/p0-amap.md",
+      "source_file": "platform_content/W44/map_W44.md",
+      "url": "",
+      "notes": "2026-10-24实查现有POI：B0H3LSJZZC“驰加(米其林零售|宝源南路店)”，地址和手机18682417667正确；当前营业时间08:00-20:00错误，名称格式不统一。网页反馈只能提交通用地点报错，商家认领/深度资料编辑入口需高德App账号；未重复新建POI。"
+    },
+    {
+      "id": "baidu-map",
+      "name": "百度地图",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "认领并完善门店信息，增加服务标签和真实照片",
+      "action_url": "https://bsy.baidu.com/",
+      "task_file": "publishing/queue/W44/p0-baidu-map.md",
+      "source_file": "platform_content/W44/map_W44.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "tencent-map",
+      "name": "腾讯地图",
+      "priority": "P0",
+      "status": "blocked",
+      "objective": "统一门店名称、地址、电话和营业时间",
+      "action_url": "https://map.qq.com/",
+      "task_file": "publishing/queue/W44/p0-tencent-map.md",
+      "source_file": "platform_content/W44/map_W44.md",
+      "url": "",
+      "notes": "2026-10-24 10:59回执核对：店铺名称“驰加汽车服务中心（宝源南路店）”正确；基础信息中的地址在10:55:59被驳回，原因是重复添加行政前缀，实际显示成“广东省深圳市宝安区深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。需重新提交基础信息：若页面已自动带省市，只填“新安街道海裕社区幸福海岸花园7栋104、105”；若需完整地址，则填“广东省深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。店铺装修显示10:56:00处理中；回执未展示营业时间字段，审核后必须复查营业时间是否已改为工作日08:00-18:00、周末09:00-17:00。"
+    },
+    {
+      "id": "dianping",
+      "name": "大众点评",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "更新门店介绍、服务项目、真实案例和评价回复",
+      "action_url": "https://e.dianping.com/",
+      "task_file": "publishing/queue/W44/p0-dianping.md",
+      "source_file": "platform_content/W44/dianping_W44.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "meituan",
+      "name": "美团",
+      "priority": "P0",
+      "status": "pending",
+      "objective": "完善门店资料、服务套餐和真实施工图片",
+      "action_url": "https://e.meituan.com/",
+      "task_file": "publishing/queue/W44/p0-meituan.md",
+      "source_file": "platform_content/W44/meituan_W44.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "douyin",
+      "name": "抖音生活服务",
+      "priority": "P0",
+      "status": "review",
+      "objective": "持续发布维修案例短视频，统一门店名称、位置、地址、电话和营业时间",
+      "action_url": "https://life.douyin.com/",
+      "task_file": "publishing/queue/W44/p0-douyin.md",
+      "source_file": "platform_content/W44/douyin_W44.md",
+      "url": "",
+      "notes": "2026-10-24抖音个人主页已定位编辑资料入口，拟更新简介已填入：华信松=老周修车=驰加幸福海岸店=宝源南路店、宝马/豪车、空调、底盘异响、老车整备、手机座机和分时营业时间。点击保存后触发绑定手机186******67的短信安全验证，当前停在验证码窗口，需本人在窗口完成；验证前不可标记为已生效。"
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "小红书",
+      "priority": "P1",
+      "status": "pending",
+      "objective": "发布车型维修、整备和避坑内容，统一门店名称",
+      "action_url": "https://business.xiaohongshu.com/",
+      "task_file": "publishing/queue/W44/p1-xiaohongshu.md",
+      "source_file": "platform_content/W44/xiaohongshu_W44.md",
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "58",
+      "name": "58同城",
+      "priority": "P2",
+      "status": "pending",
+      "objective": "维护商家资料、服务项目和本地服务范围",
+      "action_url": "https://www.58.com/",
+      "task_file": "publishing/queue/W44/p2-58.md",
+      "source_file": "platform_content/W44/58tongcheng_W44.md",
+      "url": "",
+      "notes": ""
+    }
+  ]
+}
