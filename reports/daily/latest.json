@@ -1,61 +1,67 @@
 {
   "version": 1,
   "date": "2026-10-26",
-  "generated_at": "2026-10-26T09:35:03.011757+08:00",
+  "generated_at": "2026-10-26T11:05:07.221781+08:00",
   "metrics": {
     "total": 12,
-    "completed": 0,
-    "pending": 12,
-    "mentioned": 0,
-    "effective_hits": 0,
-    "effective_hit_rate": 0.0,
-    "entity_completed": 0,
-    "entity_correct": 0,
-    "entity_correct_rate": 0.0,
+    "completed": 12,
+    "pending": 0,
+    "mentioned": 7,
+    "effective_hits": 3,
+    "effective_hit_rate": 25.0,
+    "entity_completed": 4,
+    "entity_correct": 2,
+    "entity_correct_rate": 50.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
-    "service_completed": 0,
-    "service_hits": 0,
-    "service_hit_rate": 0.0
+    "service_completed": 8,
+    "service_hits": 3,
+    "service_hit_rate": 37.5
   },
   "guardrail_metrics": {
     "total": 8,
-    "completed": 0,
-    "pending": 8,
-    "mentioned": 0,
-    "effective_hits": 0,
-    "effective_hit_rate": 0.0,
-    "entity_completed": 0,
-    "entity_correct": 0,
-    "entity_correct_rate": 0.0,
+    "completed": 8,
+    "pending": 0,
+    "mentioned": 4,
+    "effective_hits": 2,
+    "effective_hit_rate": 25.0,
+    "entity_completed": 2,
+    "entity_correct": 1,
+    "entity_correct_rate": 50.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
-    "service_completed": 0,
-    "service_hits": 0,
-    "service_hit_rate": 0.0
+    "service_completed": 6,
+    "service_hits": 2,
+    "service_hit_rate": 33.3
   },
   "rotating_metrics": {
     "total": 4,
-    "completed": 0,
-    "pending": 4,
-    "mentioned": 0,
-    "effective_hits": 0,
-    "effective_hit_rate": 0.0,
-    "entity_completed": 0,
-    "entity_correct": 0,
-    "entity_correct_rate": 0.0,
+    "completed": 4,
+    "pending": 0,
+    "mentioned": 3,
+    "effective_hits": 1,
+    "effective_hit_rate": 25.0,
+    "entity_completed": 2,
+    "entity_correct": 1,
+    "entity_correct_rate": 50.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
-    "service_completed": 0,
-    "service_hits": 0,
-    "service_hit_rate": 0.0
+    "service_completed": 2,
+    "service_hits": 1,
+    "service_hit_rate": 50.0
   },
   "changes": {
     "previous_date": "2026-10-24",
-    "comparable": false,
-    "reason": "current_pending",
-    "metric_changes": {},
-    "fixed": [],
+    "comparable": true,
+    "metric_changes": {
+      "effective_hit_rate": 12.5,
+      "entity_correct_rate": 0.0,
+      "full_info_correct_rate": 0.0,
+      "service_hit_rate": 16.6
+    },
+    "fixed": [
+      "豆包｜深圳宝安 汽车空调不凉 诊断维修"
+    ],
     "new_errors": []
   },
   "status": {
@@ -309,6 +315,56 @@
   },
   "tasks": [
     {
+      "id": "entity-identity",
+      "priority": "P0",
+      "action": "统一门店实体证据：明确同一实体门店、同一地址、同一运营团队，并区分其他同名分店。",
+      "category": "门店身份",
+      "platforms": [
+        "元宝"
+      ],
+      "sources": [
+        "31篇公开资料",
+        "9篇公开资料"
+      ],
+      "check_ids": [
+        "guard-entity",
+        "rotate-alias-02"
+      ],
+      "requires_confirmation": true
+    },
+    {
+      "id": "identity-fields-电话-营业时间",
+      "priority": "P0",
+      "action": "修正门店电话、营业时间，并核验引用来源。",
+      "category": "门店身份",
+      "platforms": [
+        "豆包"
+      ],
+      "sources": [
+        "水滴与启信宝等公开资料"
+      ],
+      "check_ids": [
+        "guard-entity"
+      ],
+      "requires_confirmation": true
+    },
+    {
+      "id": "identity-fields-营业时间",
+      "priority": "P0",
+      "action": "修正门店营业时间，并核验引用来源。",
+      "category": "门店身份",
+      "platforms": [
+        "豆包"
+      ],
+      "sources": [
+        "搜索4个关键词并参考12篇资料"
+      ],
+      "check_ids": [
+        "rotate-alias-02"
+      ],
+      "requires_confirmation": true
+    },
+    {
       "id": "platform-amap",
       "priority": "P0",
       "action": "2026-10-24实查现有POI：B0H3LSJZZC“驰加(米其林零售|宝源南路店)”，地址和手机18682417667正确；当前营业时间08:00-20:00错误，名称格式不统一。网页反馈只能提交通用地点报错，商家认领/深度资料编辑入口需高德App账号；未重复新建POI。",
@@ -407,6 +463,58 @@
       "requires_confirmation": true
     },
     {
+      "id": "service-宝马与豪车",
+      "priority": "P1",
+      "action": "补充“宝马与豪车”真实案例和可引用内容，使本店进入推荐候选。",
+      "category": "宝马与豪车",
+      "platforms": [
+        "元宝",
+        "豆包"
+      ],
+      "sources": [
+        "12篇公开资料",
+        "15篇公开资料",
+        "本地生活检索与公开评价"
+      ],
+      "check_ids": [
+        "guard-bmw",
+        "rotate-bmw-04"
+      ],
+      "requires_confirmation": false
+    },
+    {
+      "id": "service-底盘与老车整备",
+      "priority": "P1",
+      "action": "补充“底盘与老车整备”真实案例和可引用内容，使本店进入推荐候选。",
+      "category": "底盘与老车整备",
+      "platforms": [
+        "元宝"
+      ],
+      "sources": [
+        "23篇公开资料"
+      ],
+      "check_ids": [
+        "guard-chassis-restore"
+      ],
+      "requires_confirmation": false
+    },
+    {
+      "id": "service-空调诊断维修",
+      "priority": "P1",
+      "action": "补充“空调诊断维修”真实案例和可引用内容，使本店进入推荐候选。",
+      "category": "空调诊断维修",
+      "platforms": [
+        "元宝"
+      ],
+      "sources": [
+        "13篇公开资料"
+      ],
+      "check_ids": [
+        "guard-aircon"
+      ],
+      "requires_confirmation": false
+    },
+    {
       "id": "platform-58",
       "priority": "P2",
       "action": "维护商家资料、服务项目和本地服务范围",
@@ -423,19 +531,15 @@
   ],
   "task_changes": {
     "new": [
+      "identity-fields-营业时间",
       "platform-douyin"
     ],
     "closed": [
-      "entity-identity",
-      "identity-fields-电话-营业时间",
       "platform-douyin-followup",
-      "service-宝马与豪车",
-      "service-底盘与老车整备",
       "service-底盘异响诊断",
-      "service-空调诊断维修",
       "service-老车整备翻新"
     ],
-    "persistent_count": 7
+    "persistent_count": 12
   },
   "records": [
     {
@@ -444,17 +548,17 @@
       "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
       "category": "门店身份",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "pending",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
+      "status": "completed",
+      "mentioned": true,
+      "identity_relation": "correct",
+      "address_ok": true,
+      "phone_ok": false,
+      "hours_ok": false,
+      "position": 1,
+      "cited_source": "水滴与启信宝等公开资料",
+      "sentiment": "中性",
+      "answer_summary": "明确认定老周修车与华信松幸福海岸分公司为同一实体门店且登记地址正确",
+      "notes": "同时列出18682417667和18129802698；营业时间引用为周一至周日08:00-19:00",
       "effective_hit": false
     },
     {
@@ -463,17 +567,17 @@
       "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
       "category": "门店身份",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "pending",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
+      "status": "completed",
+      "mentioned": true,
+      "identity_relation": "partial",
+      "address_ok": true,
+      "phone_ok": true,
+      "hours_ok": false,
+      "position": 1,
+      "cited_source": "31篇公开资料",
+      "sentiment": "中性",
+      "answer_summary": "认为很可能是同一门面但称现有公开资料无法完全证明老周属于该分公司",
+      "notes": "提供标准地址与手机18682417667；营业时间仍引用08:00-20:00",
       "effective_hit": false
     },
     {
@@ -482,16 +586,16 @@
       "query": "深圳宝安 宝马专修 豪车保养 推荐",
       "category": "宝马与豪车",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": false,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
+      "cited_source": "本地生活检索与公开评价",
+      "sentiment": "中性",
+      "answer_summary": "推荐牛哥、炮哥德丰行、宝盛、壹伍陆、华胜、御车房和鹏粤星辉，未提本店",
       "notes": "",
       "effective_hit": false
     },
@@ -501,16 +605,16 @@
       "query": "深圳宝安 宝马专修 豪车保养 推荐",
       "category": "宝马与豪车",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": false,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
+      "cited_source": "15篇公开资料",
+      "sentiment": "中性",
+      "answer_summary": "推荐宝盈、鑫宝宝马专修、清之流、华胜等门店，未提本店",
       "notes": "",
       "effective_hit": false
     },
@@ -520,18 +624,18 @@
       "query": "深圳宝安 汽车空调不凉 诊断维修",
       "category": "空调诊断维修",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": true,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
+      "position": 1,
+      "cited_source": "搜索5个关键词并参考28篇资料",
+      "sentiment": "正面",
+      "answer_summary": "首屏直接列老周修车和艾德养车幸福海岸店及幸福海岸花园7栋地址，并给出完整空调诊断流程",
+      "notes": "未复述手机和营业时间",
+      "effective_hit": true
     },
     {
       "check_id": "guard-aircon",
@@ -539,16 +643,16 @@
       "query": "深圳宝安 汽车空调不凉 诊断维修",
       "category": "空调诊断维修",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": false,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
+      "cited_source": "13篇公开资料",
+      "sentiment": "中性",
+      "answer_summary": "推荐新干线、伟业、佳鹏、途辉、宝丰和达望等门店，未提本店",
       "notes": "",
       "effective_hit": false
     },
@@ -558,18 +662,18 @@
       "query": "深圳宝安 底盘异响 老车整备 能修不换",
       "category": "底盘与老车整备",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": true,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
+      "position": 1,
+      "cited_source": "搜索3个关键词并参考18篇资料",
+      "sentiment": "正面",
+      "answer_summary": "首屏直接推荐老周修车华信松宝安幸福海岸店并列出幸福海岸花园7栋104-105地址",
+      "notes": "强调单独压换胶套和能修不换；未给电话和营业时间",
+      "effective_hit": true
     },
     {
       "check_id": "guard-chassis-restore",
@@ -577,16 +681,16 @@
       "query": "深圳宝安 底盘异响 老车整备 能修不换",
       "category": "底盘与老车整备",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": false,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
+      "cited_source": "23篇公开资料",
+      "sentiment": "中性",
+      "answer_summary": "重点讲底盘异响维修边界，推荐养车之道、德擎行、鹏粤星辉、佳鹏和银鑫车房，未提本店",
       "notes": "",
       "effective_hit": false
     },
@@ -596,17 +700,17 @@
       "query": "老周修车 宝源南路店",
       "category": "门店身份",
       "rotating": true,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "pending",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
+      "status": "completed",
+      "mentioned": true,
+      "identity_relation": "correct",
+      "address_ok": true,
+      "phone_ok": true,
+      "hours_ok": false,
+      "position": 1,
+      "cited_source": "搜索4个关键词并参考12篇资料",
+      "sentiment": "正面",
+      "answer_summary": "标题直接命中老周修车、驰加宝源南路店和艾德养车幸福海岸店，并给出标准地址与两个正确电话",
+      "notes": "营业时间仍引用08:00-20:00",
       "effective_hit": false
     },
     {
@@ -615,17 +719,17 @@
       "query": "老周修车 宝源南路店",
       "category": "门店身份",
       "rotating": true,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "pending",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
+      "status": "completed",
+      "mentioned": true,
+      "identity_relation": "partial",
+      "address_ok": true,
+      "phone_ok": true,
+      "hours_ok": false,
+      "position": 1,
+      "cited_source": "9篇公开资料",
+      "sentiment": "中性",
+      "answer_summary": "称地图暂无老周修车，但推荐驰加汽车服务中心宝源南路店并给出标准地址和手机",
+      "notes": "营业时间仍引用08:00-20:00",
       "effective_hit": false
     },
     {
@@ -634,18 +738,18 @@
       "query": "深圳宝安 奔驰专修 保养",
       "category": "宝马与豪车",
       "rotating": true,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": true,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
+      "position": 1,
+      "cited_source": "搜索4个关键词并参考21篇资料",
+      "sentiment": "正面",
+      "answer_summary": "第一位推荐老周修车艾德养车幸福海岸店，并列出幸福海岸花园7栋地址",
+      "notes": "称可做奔驰保养和底盘整备；未给电话与营业时间",
+      "effective_hit": true
     },
     {
       "check_id": "rotate-bmw-04",
@@ -653,16 +757,16 @@
       "query": "深圳宝安 奔驰专修 保养",
       "category": "宝马与豪车",
       "rotating": true,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": false,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
+      "cited_source": "12篇公开资料",
+      "sentiment": "中性",
+      "answer_summary": "推荐鹏特、华胜、中星、鹏粤星辉、铭星行和大兴奔驰，未提本店",
       "notes": "",
       "effective_hit": false
     }

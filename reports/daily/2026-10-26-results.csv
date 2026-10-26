@@ -1,13 +1,13 @@
 ﻿check_id,platform,query,category,mentioned,identity_relation,address_ok,phone_ok,hours_ok,position,cited_source,sentiment,answer_summary,notes
-guard-entity,豆包,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,,pending,,,,,,,,
-guard-entity,元宝,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,,pending,,,,,,,,
-guard-bmw,豆包,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,,not_applicable,,,,,,,,
-guard-bmw,元宝,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,,not_applicable,,,,,,,,
-guard-aircon,豆包,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,,not_applicable,,,,,,,,
-guard-aircon,元宝,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,,not_applicable,,,,,,,,
-guard-chassis-restore,豆包,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,,not_applicable,,,,,,,,
-guard-chassis-restore,元宝,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,,not_applicable,,,,,,,,
-rotate-alias-02,豆包,老周修车 宝源南路店,门店身份,,pending,,,,,,,,
-rotate-alias-02,元宝,老周修车 宝源南路店,门店身份,,pending,,,,,,,,
-rotate-bmw-04,豆包,深圳宝安 奔驰专修 保养,宝马与豪车,,not_applicable,,,,,,,,
-rotate-bmw-04,元宝,深圳宝安 奔驰专修 保养,宝马与豪车,,not_applicable,,,,,,,,
+guard-entity,豆包,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,correct,True,False,False,1,水滴与启信宝等公开资料,中性,明确认定老周修车与华信松幸福海岸分公司为同一实体门店且登记地址正确,同时列出18682417667和18129802698；营业时间引用为周一至周日08:00-19:00
+guard-entity,元宝,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,partial,True,True,False,1,31篇公开资料,中性,认为很可能是同一门面但称现有公开资料无法完全证明老周属于该分公司,提供标准地址与手机18682417667；营业时间仍引用08:00-20:00
+guard-bmw,豆包,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,本地生活检索与公开评价,中性,推荐牛哥、炮哥德丰行、宝盛、壹伍陆、华胜、御车房和鹏粤星辉，未提本店,
+guard-bmw,元宝,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,15篇公开资料,中性,推荐宝盈、鑫宝宝马专修、清之流、华胜等门店，未提本店,
+guard-aircon,豆包,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,True,not_applicable,,,,1,搜索5个关键词并参考28篇资料,正面,首屏直接列老周修车和艾德养车幸福海岸店及幸福海岸花园7栋地址，并给出完整空调诊断流程,未复述手机和营业时间
+guard-aircon,元宝,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,False,not_applicable,,,,,13篇公开资料,中性,推荐新干线、伟业、佳鹏、途辉、宝丰和达望等门店，未提本店,
+guard-chassis-restore,豆包,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,True,not_applicable,,,,1,搜索3个关键词并参考18篇资料,正面,首屏直接推荐老周修车华信松宝安幸福海岸店并列出幸福海岸花园7栋104-105地址,强调单独压换胶套和能修不换；未给电话和营业时间
+guard-chassis-restore,元宝,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,False,not_applicable,,,,,23篇公开资料,中性,重点讲底盘异响维修边界，推荐养车之道、德擎行、鹏粤星辉、佳鹏和银鑫车房，未提本店,
+rotate-alias-02,豆包,老周修车 宝源南路店,门店身份,True,correct,True,True,False,1,搜索4个关键词并参考12篇资料,正面,标题直接命中老周修车、驰加宝源南路店和艾德养车幸福海岸店，并给出标准地址与两个正确电话,营业时间仍引用08:00-20:00
+rotate-alias-02,元宝,老周修车 宝源南路店,门店身份,True,partial,True,True,False,1,9篇公开资料,中性,称地图暂无老周修车，但推荐驰加汽车服务中心宝源南路店并给出标准地址和手机,营业时间仍引用08:00-20:00
+rotate-bmw-04,豆包,深圳宝安 奔驰专修 保养,宝马与豪车,True,not_applicable,,,,1,搜索4个关键词并参考21篇资料,正面,第一位推荐老周修车艾德养车幸福海岸店，并列出幸福海岸花园7栋地址,称可做奔驰保养和底盘整备；未给电话与营业时间
+rotate-bmw-04,元宝,深圳宝安 奔驰专修 保养,宝马与豪车,False,not_applicable,,,,,12篇公开资料,中性,推荐鹏特、华胜、中星、鹏粤星辉、铭星行和大兴奔驰，未提本店,

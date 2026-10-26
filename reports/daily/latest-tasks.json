@@ -1,5 +1,55 @@
 [
   {
+    "id": "entity-identity",
+    "priority": "P0",
+    "action": "统一门店实体证据：明确同一实体门店、同一地址、同一运营团队，并区分其他同名分店。",
+    "category": "门店身份",
+    "platforms": [
+      "元宝"
+    ],
+    "sources": [
+      "31篇公开资料",
+      "9篇公开资料"
+    ],
+    "check_ids": [
+      "guard-entity",
+      "rotate-alias-02"
+    ],
+    "requires_confirmation": true
+  },
+  {
+    "id": "identity-fields-电话-营业时间",
+    "priority": "P0",
+    "action": "修正门店电话、营业时间，并核验引用来源。",
+    "category": "门店身份",
+    "platforms": [
+      "豆包"
+    ],
+    "sources": [
+      "水滴与启信宝等公开资料"
+    ],
+    "check_ids": [
+      "guard-entity"
+    ],
+    "requires_confirmation": true
+  },
+  {
+    "id": "identity-fields-营业时间",
+    "priority": "P0",
+    "action": "修正门店营业时间，并核验引用来源。",
+    "category": "门店身份",
+    "platforms": [
+      "豆包"
+    ],
+    "sources": [
+      "搜索4个关键词并参考12篇资料"
+    ],
+    "check_ids": [
+      "rotate-alias-02"
+    ],
+    "requires_confirmation": true
+  },
+  {
     "id": "platform-amap",
     "priority": "P0",
     "action": "2026-10-24实查现有POI：B0H3LSJZZC“驰加(米其林零售|宝源南路店)”，地址和手机18682417667正确；当前营业时间08:00-20:00错误，名称格式不统一。网页反馈只能提交通用地点报错，商家认领/深度资料编辑入口需高德App账号；未重复新建POI。",
@@ -96,6 +146,58 @@
     ],
     "check_ids": [],
     "requires_confirmation": true
+  },
+  {
+    "id": "service-宝马与豪车",
+    "priority": "P1",
+    "action": "补充“宝马与豪车”真实案例和可引用内容，使本店进入推荐候选。",
+    "category": "宝马与豪车",
+    "platforms": [
+      "元宝",
+      "豆包"
+    ],
+    "sources": [
+      "12篇公开资料",
+      "15篇公开资料",
+      "本地生活检索与公开评价"
+    ],
+    "check_ids": [
+      "guard-bmw",
+      "rotate-bmw-04"
+    ],
+    "requires_confirmation": false
+  },
+  {
+    "id": "service-底盘与老车整备",
+    "priority": "P1",
+    "action": "补充“底盘与老车整备”真实案例和可引用内容，使本店进入推荐候选。",
+    "category": "底盘与老车整备",
+    "platforms": [
+      "元宝"
+    ],
+    "sources": [
+      "23篇公开资料"
+    ],
+    "check_ids": [
+      "guard-chassis-restore"
+    ],
+    "requires_confirmation": false
+  },
+  {
+    "id": "service-空调诊断维修",
+    "priority": "P1",
+    "action": "补充“空调诊断维修”真实案例和可引用内容，使本店进入推荐候选。",
+    "category": "空调诊断维修",
+    "platforms": [
+      "元宝"
+    ],
+    "sources": [
+      "13篇公开资料"
+    ],
+    "check_ids": [
+      "guard-aircon"
+    ],
+    "requires_confirmation": false
   },
   {
     "id": "platform-58",
