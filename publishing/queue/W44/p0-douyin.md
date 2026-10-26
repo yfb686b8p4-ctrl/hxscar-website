@@ -1,7 +1,7 @@
 # 抖音生活服务发布任务
 
 - 平台优先级：P0
-- 当前状态：review
+- 当前状态：blocked
 - 目标：持续发布维修案例短视频，统一门店名称、位置、地址、电话和营业时间
 - 操作入口：https://life.douyin.com/
 - 内容来源：`platform_content/W44/douyin_W44.md`
