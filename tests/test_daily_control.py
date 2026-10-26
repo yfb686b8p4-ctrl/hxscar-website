@@ -124,6 +124,19 @@ class DailyControlTests(unittest.TestCase):
         self.assertFalse(changes["comparable"])
         self.assertEqual(changes["metric_changes"], {})
 
+    def test_pending_current_results_are_not_reported_as_regression(self):
+        changes = daily_control.compare_results(
+            [],
+            {
+                "date": "2026-10-24",
+                "records": [record()],
+                "guardrail_metrics": daily_control.calculate_metrics([record()]),
+            },
+        )
+        self.assertFalse(changes["comparable"])
+        self.assertEqual(changes["reason"], "current_pending")
+        self.assertEqual(changes["metric_changes"], {})
+
     def test_tasks_are_grouped(self):
         tasks = daily_control.build_tasks(
             [

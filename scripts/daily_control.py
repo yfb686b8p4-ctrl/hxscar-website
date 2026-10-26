@@ -577,6 +577,15 @@ def compare_results(records, previous):
         item for item in records if not item.get("rotating", False)
     ]
     metrics = calculate_metrics(stable_records)
+    if not metrics.get("completed"):
+        return {
+            "previous_date": previous.get("date"),
+            "comparable": False,
+            "reason": "current_pending",
+            "metric_changes": {},
+            "fixed": [],
+            "new_errors": [],
+        }
     previous_metrics = previous.get("guardrail_metrics") or previous.get(
         "metrics", {}
     )
@@ -760,10 +769,16 @@ def render_markdown(summary):
     if not previous_date:
         lines.append("- 暂无上一份日报，今天作为基线。")
     elif not changes.get("comparable", True):
-        lines.append(
-            f"- 对比日期：{previous_date}，但昨天没有已完成的护栏结果；"
-            "今天作为首个可比基线。"
-        )
+        if changes.get("reason") == "current_pending":
+            lines.append(
+                f"- 对比日期：{previous_date}；今天尚无已完成的护栏结果，"
+                "暂不计算升降幅。"
+            )
+        else:
+            lines.append(
+                f"- 对比日期：{previous_date}，但昨天没有已完成的护栏结果；"
+                "今天作为首个可比基线。"
+            )
     else:
         delta = changes.get("metric_changes", {})
         lines.append(f"- 对比日期：{previous_date}")

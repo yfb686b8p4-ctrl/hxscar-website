@@ -1,0 +1,13 @@
+﻿check_id,platform,query,category,mentioned,identity_relation,address_ok,phone_ok,hours_ok,position,cited_source,sentiment,answer_summary,notes
+guard-entity,豆包,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,,pending,,,,,,,,
+guard-entity,元宝,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,,pending,,,,,,,,
+guard-bmw,豆包,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,,not_applicable,,,,,,,,
+guard-bmw,元宝,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,,not_applicable,,,,,,,,
+guard-aircon,豆包,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,,not_applicable,,,,,,,,
+guard-aircon,元宝,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,,not_applicable,,,,,,,,
+guard-chassis-restore,豆包,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,,not_applicable,,,,,,,,
+guard-chassis-restore,元宝,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,,not_applicable,,,,,,,,
+rotate-alias-02,豆包,老周修车 宝源南路店,门店身份,,pending,,,,,,,,
+rotate-alias-02,元宝,老周修车 宝源南路店,门店身份,,pending,,,,,,,,
+rotate-bmw-04,豆包,深圳宝安 奔驰专修 保养,宝马与豪车,,not_applicable,,,,,,,,
+rotate-bmw-04,元宝,深圳宝安 奔驰专修 保养,宝马与豪车,,not_applicable,,,,,,,,
