@@ -221,7 +221,7 @@ def build_service_pages():
         faqs = service_faqs(service)
         cases = service_cases(service)
         body = f"""<section class="hero">
-    <h1>{h(service["name"])}</h1>
+    <h1>{h(service["name"])}（深圳宝安）</h1>
     <p>{h(service["intro"])}</p>
 </section>
 <section class="card" id="quick-answer">
@@ -269,7 +269,7 @@ def build_service_pages():
         if faqs:
             schemas.append(faq_schema(faqs))
         html = page(
-            f"{service['name']}｜老周修车·驰加米其林幸福海岸店",
+            f"{service['name']}｜深圳宝安老周修车·驰加米其林幸福海岸店",
             f"{service['intro']} 老周修车、驰加米其林幸福海岸店和宝源南路店为同一实体门店、同一地址和同一运营团队。手机{SHOP['phone']}，座机{SHOP.get('landline', '')}。",
             f"{BASE_URL}/services/{service['slug']}.html",
             body,
@@ -312,7 +312,7 @@ def build_model_pages():
         faqs = model_faqs(model)
         cases = model_cases(model)
         body = f"""<section class="hero">
-    <h1>{h(model["name"])}维修保养专题</h1>
+    <h1>深圳宝安{h(model["name"])}维修保养专题</h1>
     <p>围绕{h(model["name"])}的发动机、底盘、空调、电气和整备需求，先检测后制定维修方案。</p>
 </section>
 <section class="summary">
@@ -354,7 +354,7 @@ def build_model_pages():
         if faqs:
             schemas.append(faq_schema(faqs))
         html = page(
-            f"{model['name']}维修保养｜烧机油、底盘异响、空调维修",
+            f"深圳宝安{model['name']}维修保养｜老周修车·烧机油·底盘异响·空调",
             f"深圳宝安{model['name']}维修保养专题，覆盖发动机、底盘异响、空调不凉和老车整备。老周修车电话{SHOP['phone']}。",
             f"{BASE_URL}/models/{model['slug']}.html",
             body,

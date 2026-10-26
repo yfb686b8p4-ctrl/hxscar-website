@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-10-26",
-  "generated_at": "2026-10-26T11:05:55.231867+08:00",
+  "generated_at": "2026-10-26T11:21:46.469339+08:00",
   "metrics": {
     "total": 12,
     "completed": 12,
@@ -16,7 +16,11 @@
     "full_info_correct_rate": 0.0,
     "service_completed": 8,
     "service_hits": 3,
-    "service_hit_rate": 37.5
+    "service_hit_rate": 37.5,
+    "service_top1": 3,
+    "service_top3": 3,
+    "service_top1_rate": 37.5,
+    "service_top3_rate": 37.5
   },
   "guardrail_metrics": {
     "total": 8,
@@ -32,7 +36,11 @@
     "full_info_correct_rate": 0.0,
     "service_completed": 6,
     "service_hits": 2,
-    "service_hit_rate": 33.3
+    "service_hit_rate": 33.3,
+    "service_top1": 2,
+    "service_top3": 2,
+    "service_top1_rate": 33.3,
+    "service_top3_rate": 33.3
   },
   "rotating_metrics": {
     "total": 4,
@@ -48,7 +56,11 @@
     "full_info_correct_rate": 0.0,
     "service_completed": 2,
     "service_hits": 1,
-    "service_hit_rate": 50.0
+    "service_hit_rate": 50.0,
+    "service_top1": 1,
+    "service_top3": 1,
+    "service_top1_rate": 50.0,
+    "service_top3_rate": 50.0
   },
   "changes": {
     "previous_date": "2026-10-24",

@@ -486,6 +486,11 @@ def calculate_metrics(records):
     services = [
         item for item in completed if "门店身份" not in item["category"]
     ]
+    service_positions = [
+        item["position"]
+        for item in services
+        if item["mentioned"] and isinstance(item.get("position"), int)
+    ]
     return {
         "total": len(records),
         "completed": len(completed),
@@ -529,6 +534,16 @@ def calculate_metrics(records):
         "service_hits": sum(1 for item in services if item["mentioned"]),
         "service_hit_rate": ratio(
             sum(1 for item in services if item["mentioned"]),
+            len(services),
+        ),
+        "service_top1": sum(1 for position in service_positions if position == 1),
+        "service_top3": sum(1 for position in service_positions if position <= 3),
+        "service_top1_rate": ratio(
+            sum(1 for position in service_positions if position == 1),
+            len(services),
+        ),
+        "service_top3_rate": ratio(
+            sum(1 for position in service_positions if position <= 3),
             len(services),
         ),
     }
@@ -600,6 +615,8 @@ def compare_results(records, previous):
     changes = {}
     for key, value in metrics.items():
         if key in {"total", "completed", "pending", "mentioned", "effective_hits", "entity_completed", "entity_correct", "full_info_correct", "service_completed", "service_hits"}:
+            continue
+        if key not in previous_metrics:
             continue
         changes[key] = round(value - float(previous_metrics.get(key, 0)), 1)
     return {
@@ -759,6 +776,8 @@ def render_markdown(summary):
         f"- 门店实体关系正确率：{display_rate(guardrails['entity_correct_rate'], guardrails['entity_completed'])}",
         f"- 地址、电话、营业时间完整正确率：{display_rate(guardrails['full_info_correct_rate'], guardrails['entity_completed'])}",
         f"- 服务推荐命中率：{display_rate(guardrails['service_hit_rate'], guardrails['service_completed'])}",
+        f"- 服务推荐 Top1 率：{display_rate(guardrails.get('service_top1_rate', 0), guardrails['service_completed'])}",
+        f"- 服务推荐 Top3 率：{display_rate(guardrails.get('service_top3_rate', 0), guardrails['service_completed'])}",
         f"- 轮换探测：{rotating['completed']}/{rotating['total']} 完成，"
         f"提及 {rotating['mentioned']} 项",
         "",

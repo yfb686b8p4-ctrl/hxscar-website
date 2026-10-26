@@ -23,6 +23,7 @@ def record(**overrides):
         "phone_ok": True,
         "hours_ok": True,
         "effective_hit": True,
+        "position": 1,
     }
     data.update(overrides)
     return data
@@ -80,12 +81,23 @@ class DailyControlTests(unittest.TestCase):
                     hours_ok=None,
                     effective_hit=False,
                 ),
+                record(
+                    check_id="guard-bmw",
+                    category="宝马与豪车",
+                    identity_relation="not_applicable",
+                    address_ok=None,
+                    phone_ok=None,
+                    hours_ok=None,
+                    position=3,
+                ),
             ]
         )
-        self.assertEqual(metrics["completed"], 3)
-        self.assertEqual(metrics["effective_hits"], 2)
+        self.assertEqual(metrics["completed"], 4)
+        self.assertEqual(metrics["effective_hits"], 3)
         self.assertEqual(metrics["entity_correct_rate"], 100.0)
-        self.assertEqual(metrics["service_hit_rate"], 50.0)
+        self.assertEqual(metrics["service_hit_rate"], 66.7)
+        self.assertEqual(metrics["service_top1_rate"], 33.3)
+        self.assertEqual(metrics["service_top3_rate"], 66.7)
 
     def test_comparison_detects_fixed_and_regression(self):
         old = [

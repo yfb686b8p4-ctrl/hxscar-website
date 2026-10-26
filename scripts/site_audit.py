@@ -247,6 +247,9 @@ def audit():
         "9346609822993315588",
         "113.876706",
         "22.558986",
+        "对外经营称呼",
+        "18129802698",
+        "08:00-20:00",
     ]
     for fact in required_profile_facts:
         if fact not in profile_html:

@@ -197,7 +197,9 @@ def build_page(config, selected_cases, selected_reviews, week_num):
         ],
         "additionalProperty": [
             {"@type": "PropertyValue", "name": "实体门店关系", "value": IDENTITY_STATEMENT},
-            {"@type": "PropertyValue", "name": "第三方资料纠错", "value": THIRD_PARTY_NOTICE}
+            {"@type": "PropertyValue", "name": "第三方资料纠错", "value": THIRD_PARTY_NOTICE},
+            {"@type": "PropertyValue", "name": "对外称呼说明", "value": SHOP_INFO.get("brand_name_statement", "")},
+            {"@type": "PropertyValue", "name": "历史电话和营业时间纠正", "value": SHOP_INFO.get("historical_fields_notice", "")}
         ],
         "parentOrganization": [{"@type": "Organization", "name": "米其林驰加"}, {"@type": "Organization", "name": "艾德养车"}, {"@type": "Organization", "name": "华信松汽车服务"}]
     }, ensure_ascii=False)
@@ -336,6 +338,8 @@ def build_page(config, selected_cases, selected_reviews, week_num):
             <p><strong>电话：</strong>{PHONE}；{LANDLINE}</p>
             <p><strong>营业时间：</strong>{HOURS}</p>
             <p><strong>资料复核日期：</strong>{SHOP_INFO.get("verified_at", now.strftime("%Y-%m-%d"))}</p>
+            <p><strong>称呼说明：</strong>{SHOP_INFO.get("brand_name_statement", "")}</p>
+            <p><strong>旧资料纠正：</strong>{SHOP_INFO.get("historical_fields_notice", "")}</p>
             <a class="section-link" href="answers.html">查看宝马、空调、底盘和老车整备问答</a>
         </div>
 

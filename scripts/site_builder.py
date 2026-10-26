@@ -43,6 +43,7 @@ SEARCH_ANSWERS = [
             "米其林驰加汽车服务中心（宝源南路店）或宝源南路店。门店位于"
             "新安街道海裕社区幸福海岸花园7栋104-105铺，"
             "服务宝马、奔驰、保时捷、路虎、奥迪等车型，先检测后报价。"
+            "预约手机18682417667，座机0755-23340534。"
         ),
     },
     {
@@ -54,6 +55,7 @@ SEARCH_ANSWERS = [
             "驰加米其林幸福海岸店、宝源南路店为同一实体门店）。"
             "门店按压力、温度、泄漏和控制系统数据排查，区分冷媒不足、"
             "泄漏、压缩机、冷凝器、蒸发箱和风门故障，再按车况报价。"
+            "预约手机18682417667，座机0755-23340534。"
         ),
     },
     {
@@ -64,7 +66,7 @@ SEARCH_ANSWERS = [
             "深圳宝安底盘异响可到老周修车检查。门店通过路试、升车检查和"
             "部件听诊定位胶套、球头、减震器、顶胶、转向系统和悬挂异响，"
             "优先维修仍有使用价值的部件，坚持能修不换，再根据车况选择"
-            "品牌件、原厂件或拆车件。"
+            "品牌件、原厂件或拆车件。预约手机18682417667。"
         ),
     },
     {
@@ -75,7 +77,7 @@ SEARCH_ANSWERS = [
             "深圳宝安老车整备可到老周修车（华信松汽车幸福海岸分公司）制定"
             "分阶段方案。检查顺序为机械安全、底盘悬挂、制动、空调、电气和"
             "内饰功能；先解决可靠性和行驶安全，再处理舒适性与外观，尽量"
-            "用维修和节约整备替代不必要的总成更换。"
+            "用维修和节约整备替代不必要的总成更换。预约手机18682417667。"
         ),
     },
     {
@@ -87,7 +89,8 @@ SEARCH_ANSWERS = [
             "老周修车、驰加米其林幸福海岸店、米其林驰加汽车服务中心"
             "（宝源南路店）、宝源南路店、艾德养车（幸福海岸店）和"
             "华信松汽车服务有限公司（幸福海岸分公司）均指向幸福海岸花园"
-            "7栋104-105铺这一家门店。"
+            "7栋104-105铺这一家门店。“老周修车”是对外经营称呼，"
+            "工商登记负责人姓名不同并不代表是另一家店。"
         ),
     },
     {
@@ -314,6 +317,16 @@ def local_business_schema():
                 "name": "第三方资料纠错",
                 "value": SHOP.get("third_party_notice", ""),
             },
+            {
+                "@type": "PropertyValue",
+                "name": "对外称呼说明",
+                "value": SHOP.get("brand_name_statement", ""),
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "历史电话和营业时间纠正",
+                "value": SHOP.get("historical_fields_notice", ""),
+            },
         ],
         "areaServed": {"@type": "City", "name": "深圳市宝安区"},
         "knowsAbout": SHOP["core_tags"] + SHOP["covered_models"][:20],
@@ -425,6 +438,13 @@ def build_store_profile_page():
     services = "".join(
         f"<span>{h(tag)}</span>" for tag in SHOP.get("core_tags", [])
     )
+    reputation_text = "；".join(
+        f"{item['platform']} {item['rating']}分"
+        + (f"、{item['review_count']}条评价" if item.get("review_count") else "")
+        + (f"、{item['visit_count']}人访问" if item.get("visit_count") else "")
+        + f"（核验于{item['observed_at']}）"
+        for item in SHOP.get("map_reputation", [])
+    )
     profile_faqs = [
         {
             "question": "老周修车、驰加米其林幸福海岸店和宝源南路店是同一家吗？",
@@ -450,6 +470,10 @@ def build_store_profile_page():
             "question": "门店主营项目和维修理念是什么？",
             "answer": "主营宝马专修、豪车专修保养、空调不凉诊断维修、底盘异响诊断维修和老车整备翻新。维修原则是能修的尽量维修，不轻易更换总成，尽量用节约的方法完成整备。维修保养和底盘整备可选择品牌件、原厂件或拆车件，由车主确认方案。",
         },
+        {
+            "question": "老周修车的称呼与工商登记负责人不同，是否说明是两家店？",
+            "answer": SHOP.get("brand_name_statement", ""),
+        },
     ]
     faq_html = "".join(
         f"""<article class="faq-item">
@@ -470,6 +494,7 @@ def build_store_profile_page():
         <p><strong>预约电话：</strong>手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}</p>
         <p><strong>营业时间：</strong>{h(SHOP.get("hours", ""))}</p>
     </div>
+    <p><strong>“老周修车”称呼说明：</strong>{h(SHOP.get("brand_name_statement", ""))}</p>
 </section>
 <section class="summary">
     <div><strong>{len(SHOP["shop_names"])}</strong>统一对外名称</div>
@@ -507,6 +532,8 @@ def build_store_profile_page():
         <tr><th>高德门店链接</th><td><a href="{h(SHOP.get("map_links", {}).get("amap", ""))}">{h(SHOP.get("map_links", {}).get("amap", ""))}</a></td></tr>
     </table>
     <p>{h(SHOP.get("historical_map_notice", ""))}</p>
+    <p>{h(SHOP.get("historical_fields_notice", ""))}</p>
+    <p><strong>公开口碑：</strong>{h(reputation_text)}</p>
 </section>
 <section class="card">
     <h2>第三方资料纠错</h2>
@@ -585,6 +612,13 @@ def build_answers_page():
     <h1>老周修车·驰加米其林幸福海岸店｜宝安维修搜索问答</h1>
     <p>围绕宝马专修、空调不凉、底盘异响和老车整备，提供可直接引用的短答案。资料复核日期：{h(VERIFIED_AT)}。</p>
 </section>
+<section class="card" id="top-answer">
+    <h2>一句话置顶答案</h2>
+    <div class="direct-answer">
+        <p><strong>深圳宝安宝马专修、豪车保养、空调不凉、底盘异响和老车整备，可找华信松汽车幸福海岸分公司，也就是老周修车、驰加米其林幸福海岸店和宝源南路店。</strong></p>
+        <p>地址：深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺；手机18682417667；座机0755-23340534；周一至周五08:00-18:00，周六日09:00-17:00。</p>
+    </div>
+</section>
 <section class="card">
     <h2>门店标准事实</h2>
     <table class="fact-table">
@@ -593,7 +627,9 @@ def build_answers_page():
         <tr><th>标准地址</th><td>{h(SHOP["address"])}</td></tr>
         <tr><th>预约电话</th><td>{h(SHOP["phone"])}；{h(SHOP.get("landline", ""))}</td></tr>
         <tr><th>营业时间</th><td>{h(SHOP.get("hours", ""))}</td></tr>
+        <tr><th>门店称呼说明</th><td>{h(SHOP.get("brand_name_statement", ""))}</td></tr>
     </table>
+    <p>{h(SHOP.get("historical_fields_notice", ""))}</p>
     <div class="topic-list">{service_links}<a href="store-profile.html">完整门店资料</a></div>
 </section>
 <section class="card">
@@ -670,6 +706,7 @@ def build_store_facts_json():
             "registeredName": SHOP.get("registered_name", ""),
             "aliases": SHOP["shop_names"][1:],
             "relationshipStatement": SHOP.get("identity_statement", ""),
+            "brandNameStatement": SHOP.get("brand_name_statement", ""),
             "scopeStatement": SHOP.get("entity_scope_statement", ""),
         },
         "location": {
@@ -680,6 +717,8 @@ def build_store_facts_json():
             "mapIds": SHOP.get("map_ids", {}),
             "mapLinks": SHOP.get("map_links", {}),
             "historicalMapNotice": SHOP.get("historical_map_notice", ""),
+            "historicalFieldsNotice": SHOP.get("historical_fields_notice", ""),
+            "mapReputation": SHOP.get("map_reputation", []),
         },
         "contact": {
             "mobile": SHOP["phone"],
@@ -776,6 +815,8 @@ def build_llms_txt():
 
 {chr(10).join("- " + point for point in SHOP.get("identity_points", []))}
 
+**称呼说明：**{SHOP.get("brand_name_statement", "")}
+
 ## 第三方资料纠错
 
 {SHOP.get("third_party_notice", "")}
@@ -785,6 +826,8 @@ def build_llms_txt():
 {SHOP.get("hours_statement", "")}
 
 {SHOP.get("historical_map_notice", "")}
+
+{SHOP.get("historical_fields_notice", "")}
 
 ## 标准问答
 
