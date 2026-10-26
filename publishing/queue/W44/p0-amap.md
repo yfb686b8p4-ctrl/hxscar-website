@@ -1,7 +1,7 @@
 # 高德地图发布任务
 
 - 平台优先级：P0
-- 当前状态：blocked
+- 当前状态：review
 - 目标：统一门店名称、地址、电话、营业时间和主营业务
 - 操作入口：https://ditu.amap.com/
 - 内容来源：`platform_content/W44/map_W44.md`

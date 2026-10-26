@@ -24,13 +24,13 @@
       "id": "amap",
       "name": "高德地图",
       "priority": "P0",
-      "status": "blocked",
+      "status": "review",
       "objective": "统一门店名称、地址、电话、营业时间和主营业务",
       "action_url": "https://ditu.amap.com/",
       "task_file": "publishing/queue/W44/p0-amap.md",
       "source_file": "platform_content/W44/map_W44.md",
       "url": "",
-      "notes": "2026-10-24实查现有POI：B0H3LSJZZC“驰加(米其林零售|宝源南路店)”，地址和手机18682417667正确；当前营业时间08:00-20:00错误，名称格式不统一。网页反馈只能提交通用地点报错，商家认领/深度资料编辑入口需高德App账号；未重复新建POI。"
+      "notes": "2026-10-26 12:01已在高德网页版“地点报错”提交现有POI B0H3LSJZZC纠错：名称、地址、电话保持原值，目标营业时间改为周一至周五08:00-18:00、周六日09:00-17:00，并明确要求不要新建重复门店。页面返回“反馈提交成功”；尚未审核生效，公开页在复核前可能继续显示08:00-20:00。"
     },
     {
       "id": "baidu-map",

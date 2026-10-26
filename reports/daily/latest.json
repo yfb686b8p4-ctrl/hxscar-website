@@ -1,7 +1,7 @@
 {
   "version": 1,
   "date": "2026-10-26",
-  "generated_at": "2026-10-26T11:23:33.343369+08:00",
+  "generated_at": "2026-10-26T12:03:15.510281+08:00",
   "metrics": {
     "total": 12,
     "completed": 12,
@@ -77,14 +77,14 @@
     "new_errors": []
   },
   "status": {
-    "checked_at": "2026-10-26T11:05:55.079047+08:00",
+    "checked_at": "2026-10-26T12:03:15.349499+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
       "clean": false,
-      "change_count": 9,
-      "head": "8df6212\t记录2026-10-26 AI搜索实测结果",
+      "change_count": 5,
+      "head": "94ae2a0\t补充Top1与Top3排名指标",
       "error": ""
     },
     "deploy_repo": {
@@ -93,7 +93,7 @@
       "branch": "main",
       "clean": true,
       "change_count": 0,
-      "head": "5960ebf\t记录2026-10-26运行检查并修正待测对比",
+      "head": "94ae2a0\t补充Top1与Top3排名指标",
       "error": ""
     },
     "launch_agent": {
@@ -118,7 +118,7 @@
           "status": 200,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 0.84,
+          "seconds": 1.16,
           "error": ""
         },
         {
@@ -128,7 +128,7 @@
           "status": 200,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 1.36,
+          "seconds": 1.33,
           "error": ""
         },
         {
@@ -138,7 +138,7 @@
           "status": 200,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 0.98,
+          "seconds": 2.05,
           "error": ""
         },
         {
@@ -148,7 +148,7 @@
           "status": 200,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 0.9,
+          "seconds": 1.08,
           "error": ""
         },
         {
@@ -158,7 +158,7 @@
           "status": 200,
           "marker": "直接回答",
           "via": "直连",
-          "seconds": 1.05,
+          "seconds": 1.11,
           "error": ""
         },
         {
@@ -168,7 +168,7 @@
           "status": 200,
           "marker": "verifiedAt",
           "via": "直连",
-          "seconds": 1.03,
+          "seconds": 1.07,
           "error": ""
         },
         {
@@ -178,7 +178,7 @@
           "status": 200,
           "marker": "hxscar20261024geoindexkey",
           "via": "直连",
-          "seconds": 0.71,
+          "seconds": 1.01,
           "error": ""
         },
         {
@@ -188,7 +188,7 @@
           "status": 200,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 0.77,
+          "seconds": 1.5,
           "error": ""
         },
         {
@@ -198,7 +198,7 @@
           "status": 200,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 1.3,
+          "seconds": 1.15,
           "error": ""
         },
         {
@@ -208,7 +208,7 @@
           "status": 200,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 1.72,
+          "seconds": 1.22,
           "error": ""
         },
         {
@@ -218,7 +218,7 @@
           "status": 200,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 0.97,
+          "seconds": 0.94,
           "error": ""
         },
         {
@@ -228,7 +228,7 @@
           "status": 200,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 0.71,
+          "seconds": 1.16,
           "error": ""
         }
       ],
@@ -245,18 +245,19 @@
     },
     "publishing": {
       "counts": {
-        "blocked": 3,
-        "pending": 5
+        "review": 1,
+        "pending": 5,
+        "blocked": 2
       },
       "platforms": {
         "amap": {
           "name": "高德地图",
           "priority": "P0",
           "objective": "统一门店名称、地址、电话、营业时间和主营业务",
-          "status": "blocked",
+          "status": "review",
           "url": "",
-          "notes": "2026-10-24实查现有POI：B0H3LSJZZC“驰加(米其林零售|宝源南路店)”，地址和手机18682417667正确；当前营业时间08:00-20:00错误，名称格式不统一。网页反馈只能提交通用地点报错，商家认领/深度资料编辑入口需高德App账号；未重复新建POI。",
-          "updated_at": "2026-10-24T10:40:12.861309+08:00"
+          "notes": "2026-10-26 12:01已在高德网页版“地点报错”提交现有POI B0H3LSJZZC纠错：名称、地址、电话保持原值，目标营业时间改为周一至周五08:00-18:00、周六日09:00-17:00，并明确要求不要新建重复门店。页面返回“反馈提交成功”；尚未审核生效，公开页在复核前可能继续显示08:00-20:00。",
+          "updated_at": "2026-10-26T12:01:52.197788+08:00"
         },
         "baidu-map": {
           "name": "百度地图",
@@ -378,7 +379,7 @@
     {
       "id": "platform-amap",
       "priority": "P0",
-      "action": "2026-10-24实查现有POI：B0H3LSJZZC“驰加(米其林零售|宝源南路店)”，地址和手机18682417667正确；当前营业时间08:00-20:00错误，名称格式不统一。网页反馈只能提交通用地点报错，商家认领/深度资料编辑入口需高德App账号；未重复新建POI。",
+      "action": "2026-10-26 12:01已在高德网页版“地点报错”提交现有POI B0H3LSJZZC纠错：名称、地址、电话保持原值，目标营业时间改为周一至周五08:00-18:00、周六日09:00-17:00，并明确要求不要新建重复门店。页面返回“反馈提交成功”；尚未审核生效，公开页在复核前可能继续显示08:00-20:00。",
       "category": "站外权威资料",
       "platforms": [
         "高德地图"
