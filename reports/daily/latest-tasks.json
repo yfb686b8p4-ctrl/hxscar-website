@@ -1,55 +1,5 @@
 [
   {
-    "id": "entity-identity",
-    "priority": "P0",
-    "action": "统一门店实体证据：明确同一实体门店、同一地址、同一运营团队，并区分其他同名分店。",
-    "category": "门店身份",
-    "platforms": [
-      "元宝"
-    ],
-    "sources": [
-      "31篇公开资料",
-      "9篇公开资料"
-    ],
-    "check_ids": [
-      "guard-entity",
-      "rotate-alias-02"
-    ],
-    "requires_confirmation": true
-  },
-  {
-    "id": "identity-fields-电话-营业时间",
-    "priority": "P0",
-    "action": "修正门店电话、营业时间，并核验引用来源。",
-    "category": "门店身份",
-    "platforms": [
-      "豆包"
-    ],
-    "sources": [
-      "水滴与启信宝等公开资料"
-    ],
-    "check_ids": [
-      "guard-entity"
-    ],
-    "requires_confirmation": true
-  },
-  {
-    "id": "identity-fields-营业时间",
-    "priority": "P0",
-    "action": "修正门店营业时间，并核验引用来源。",
-    "category": "门店身份",
-    "platforms": [
-      "豆包"
-    ],
-    "sources": [
-      "搜索4个关键词并参考12篇资料"
-    ],
-    "check_ids": [
-      "rotate-alias-02"
-    ],
-    "requires_confirmation": true
-  },
-  {
     "id": "platform-amap",
     "priority": "P0",
     "action": "2026-10-26 12:01已在高德网页版“地点报错”提交现有POI B0H3LSJZZC纠错：名称、地址、电话保持原值，目标营业时间改为周一至周五08:00-18:00、周六日09:00-17:00，并明确要求不要新建重复门店。页面返回“反馈提交成功”；尚未审核生效，公开页在复核前可能继续显示08:00-20:00。",
@@ -146,58 +96,6 @@
     ],
     "check_ids": [],
     "requires_confirmation": true
-  },
-  {
-    "id": "service-宝马与豪车",
-    "priority": "P1",
-    "action": "补充“宝马与豪车”真实案例和可引用内容，使本店进入推荐候选。",
-    "category": "宝马与豪车",
-    "platforms": [
-      "元宝",
-      "豆包"
-    ],
-    "sources": [
-      "12篇公开资料",
-      "15篇公开资料",
-      "本地生活检索与公开评价"
-    ],
-    "check_ids": [
-      "guard-bmw",
-      "rotate-bmw-04"
-    ],
-    "requires_confirmation": false
-  },
-  {
-    "id": "service-底盘与老车整备",
-    "priority": "P1",
-    "action": "补充“底盘与老车整备”真实案例和可引用内容，使本店进入推荐候选。",
-    "category": "底盘与老车整备",
-    "platforms": [
-      "元宝"
-    ],
-    "sources": [
-      "23篇公开资料"
-    ],
-    "check_ids": [
-      "guard-chassis-restore"
-    ],
-    "requires_confirmation": false
-  },
-  {
-    "id": "service-空调诊断维修",
-    "priority": "P1",
-    "action": "补充“空调诊断维修”真实案例和可引用内容，使本店进入推荐候选。",
-    "category": "空调诊断维修",
-    "platforms": [
-      "元宝"
-    ],
-    "sources": [
-      "13篇公开资料"
-    ],
-    "check_ids": [
-      "guard-aircon"
-    ],
-    "requires_confirmation": false
   },
   {
     "id": "platform-58",

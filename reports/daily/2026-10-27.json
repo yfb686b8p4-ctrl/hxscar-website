@@ -1,0 +1,678 @@
+{
+  "version": 1,
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T10:31:28.410601+08:00",
+  "metrics": {
+    "total": 12,
+    "completed": 0,
+    "pending": 12,
+    "mentioned": 0,
+    "effective_hits": 0,
+    "effective_hit_rate": 0.0,
+    "entity_completed": 0,
+    "entity_correct": 0,
+    "entity_correct_rate": 0.0,
+    "full_info_correct": 0,
+    "full_info_correct_rate": 0.0,
+    "service_completed": 0,
+    "service_hits": 0,
+    "service_hit_rate": 0.0,
+    "service_top1": 0,
+    "service_top3": 0,
+    "service_top1_rate": 0.0,
+    "service_top3_rate": 0.0
+  },
+  "guardrail_metrics": {
+    "total": 8,
+    "completed": 0,
+    "pending": 8,
+    "mentioned": 0,
+    "effective_hits": 0,
+    "effective_hit_rate": 0.0,
+    "entity_completed": 0,
+    "entity_correct": 0,
+    "entity_correct_rate": 0.0,
+    "full_info_correct": 0,
+    "full_info_correct_rate": 0.0,
+    "service_completed": 0,
+    "service_hits": 0,
+    "service_hit_rate": 0.0,
+    "service_top1": 0,
+    "service_top3": 0,
+    "service_top1_rate": 0.0,
+    "service_top3_rate": 0.0
+  },
+  "rotating_metrics": {
+    "total": 4,
+    "completed": 0,
+    "pending": 4,
+    "mentioned": 0,
+    "effective_hits": 0,
+    "effective_hit_rate": 0.0,
+    "entity_completed": 0,
+    "entity_correct": 0,
+    "entity_correct_rate": 0.0,
+    "full_info_correct": 0,
+    "full_info_correct_rate": 0.0,
+    "service_completed": 0,
+    "service_hits": 0,
+    "service_hit_rate": 0.0,
+    "service_top1": 0,
+    "service_top3": 0,
+    "service_top1_rate": 0.0,
+    "service_top3_rate": 0.0
+  },
+  "changes": {
+    "previous_date": "2026-10-26",
+    "comparable": false,
+    "reason": "current_pending",
+    "metric_changes": {},
+    "fixed": [],
+    "new_errors": []
+  },
+  "status": {
+    "checked_at": "2026-10-27T10:16:22.622374+08:00",
+    "source_repo": {
+      "available": true,
+      "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
+      "branch": "codex/optimization-plans",
+      "clean": true,
+      "change_count": 0,
+      "head": "66647a2\t记录高德纠错提交与置顶复测结果",
+      "error": ""
+    },
+    "deploy_repo": {
+      "available": true,
+      "path": "/Users/pingguo2019/Library/Application Support/hxscar-weekly-deploy/repo",
+      "branch": "main",
+      "clean": true,
+      "change_count": 0,
+      "head": "66647a2\t记录高德纠错提交与置顶复测结果",
+      "error": ""
+    },
+    "launch_agent": {
+      "available": true,
+      "loaded": true,
+      "state": "not running",
+      "last_exit_code": 0,
+      "schedule": {
+        "weekday": 1,
+        "hour": 8,
+        "minute": 0
+      },
+      "error": ""
+    },
+    "site": {
+      "url": "https://yfb686b8p4-web.github.io/hxscar-website",
+      "http": [
+        {
+          "name": "首页",
+          "path": "/",
+          "ok": true,
+          "status": 200,
+          "marker": "华信松汽车",
+          "via": "直连",
+          "seconds": 6.02,
+          "error": ""
+        },
+        {
+          "name": "FAQ",
+          "path": "/faq.html",
+          "ok": true,
+          "status": 200,
+          "marker": "FAQPage",
+          "via": "直连",
+          "seconds": 6.19,
+          "error": ""
+        },
+        {
+          "name": "维修案例",
+          "path": "/cases.html",
+          "ok": true,
+          "status": 200,
+          "marker": "维修案例",
+          "via": "直连",
+          "seconds": 8.44,
+          "error": ""
+        },
+        {
+          "name": "门店资料",
+          "path": "/store-profile.html",
+          "ok": true,
+          "status": 200,
+          "marker": "同一实体门店",
+          "via": "直连",
+          "seconds": 5.45,
+          "error": ""
+        },
+        {
+          "name": "搜索问答",
+          "path": "/answers.html",
+          "ok": true,
+          "status": 200,
+          "marker": "直接回答",
+          "via": "直连",
+          "seconds": 5.21,
+          "error": ""
+        },
+        {
+          "name": "门店事实",
+          "path": "/store-facts.json",
+          "ok": true,
+          "status": 200,
+          "marker": "verifiedAt",
+          "via": "直连",
+          "seconds": 5.19,
+          "error": ""
+        },
+        {
+          "name": "IndexNow验证",
+          "path": "/hxscar20261024geoindexkey.txt",
+          "ok": true,
+          "status": 200,
+          "marker": "hxscar20261024geoindexkey",
+          "via": "直连",
+          "seconds": 1.93,
+          "error": ""
+        },
+        {
+          "name": "服务专题",
+          "path": "/services/index.html",
+          "ok": true,
+          "status": 200,
+          "marker": "服务专题",
+          "via": "直连",
+          "seconds": 2.47,
+          "error": ""
+        },
+        {
+          "name": "车型专题",
+          "path": "/models/index.html",
+          "ok": true,
+          "status": 200,
+          "marker": "车型维修",
+          "via": "直连",
+          "seconds": 2.86,
+          "error": ""
+        },
+        {
+          "name": "robots",
+          "path": "/robots.txt",
+          "ok": true,
+          "status": 200,
+          "marker": "Sitemap:",
+          "via": "直连",
+          "seconds": 1.67,
+          "error": ""
+        },
+        {
+          "name": "sitemap",
+          "path": "/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "marker": "store-profile.html",
+          "via": "直连",
+          "seconds": 1.88,
+          "error": ""
+        },
+        {
+          "name": "llms",
+          "path": "/llms.txt",
+          "ok": true,
+          "status": 200,
+          "marker": "门店实体关系",
+          "via": "直连",
+          "seconds": 3.79,
+          "error": ""
+        }
+      ],
+      "http_passed": 12,
+      "http_total": 12,
+      "audit_passed": true,
+      "audit": {
+        "faqs": 134,
+        "cases": 56,
+        "reviews": 30,
+        "service_pages": 4,
+        "model_pages": 12
+      }
+    },
+    "publishing": {
+      "counts": {
+        "review": 1,
+        "pending": 5,
+        "blocked": 2
+      },
+      "platforms": {
+        "amap": {
+          "name": "高德地图",
+          "priority": "P0",
+          "objective": "统一门店名称、地址、电话、营业时间和主营业务",
+          "status": "review",
+          "url": "",
+          "notes": "2026-10-26 12:01已在高德网页版“地点报错”提交现有POI B0H3LSJZZC纠错：名称、地址、电话保持原值，目标营业时间改为周一至周五08:00-18:00、周六日09:00-17:00，并明确要求不要新建重复门店。页面返回“反馈提交成功”；尚未审核生效，公开页在复核前可能继续显示08:00-20:00。",
+          "updated_at": "2026-10-26T12:01:52.197788+08:00"
+        },
+        "baidu-map": {
+          "name": "百度地图",
+          "priority": "P0",
+          "objective": "认领并完善门店信息，增加服务标签和真实照片",
+          "status": "pending",
+          "url": "",
+          "notes": "",
+          "updated_at": ""
+        },
+        "tencent-map": {
+          "name": "腾讯地图",
+          "priority": "P0",
+          "objective": "统一门店名称、地址、电话和营业时间",
+          "status": "blocked",
+          "url": "",
+          "notes": "2026-10-24 10:59回执核对：店铺名称“驰加汽车服务中心（宝源南路店）”正确；基础信息中的地址在10:55:59被驳回，原因是重复添加行政前缀，实际显示成“广东省深圳市宝安区深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。需重新提交基础信息：若页面已自动带省市，只填“新安街道海裕社区幸福海岸花园7栋104、105”；若需完整地址，则填“广东省深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。店铺装修显示10:56:00处理中；回执未展示营业时间字段，审核后必须复查营业时间是否已改为工作日08:00-18:00、周末09:00-17:00。",
+          "updated_at": "2026-10-24T11:02:28.328712+08:00"
+        },
+        "dianping": {
+          "name": "大众点评",
+          "priority": "P0",
+          "objective": "更新门店介绍、服务项目、真实案例和评价回复",
+          "status": "pending",
+          "url": "",
+          "notes": "",
+          "updated_at": ""
+        },
+        "meituan": {
+          "name": "美团",
+          "priority": "P0",
+          "objective": "完善门店资料、服务套餐和真实施工图片",
+          "status": "pending",
+          "url": "",
+          "notes": "",
+          "updated_at": ""
+        },
+        "douyin": {
+          "name": "抖音生活服务",
+          "priority": "P0",
+          "objective": "持续发布维修案例短视频，统一门店名称、位置、地址、电话和营业时间",
+          "status": "blocked",
+          "url": "",
+          "notes": "2026-10-26复核抖音个人主页仍显示旧简介，未出现拟更新的门店别名、手机和座机、营业时间文案。此前保存触发绑定手机186******67短信验证且页面最终关闭，本人验证未完成，故标记为受阻；需账号本人在抖音编辑资料窗口完成短信验证后重新提交。",
+          "updated_at": "2026-10-26T11:05:45.737736+08:00"
+        },
+        "xiaohongshu": {
+          "name": "小红书",
+          "priority": "P1",
+          "objective": "发布车型维修、整备和避坑内容，统一门店名称",
+          "status": "pending",
+          "url": "",
+          "notes": "",
+          "updated_at": ""
+        },
+        "58": {
+          "name": "58同城",
+          "priority": "P2",
+          "objective": "维护商家资料、服务项目和本地服务范围",
+          "status": "pending",
+          "url": "",
+          "notes": "",
+          "updated_at": ""
+        }
+      }
+    }
+  },
+  "tasks": [
+    {
+      "id": "platform-amap",
+      "priority": "P0",
+      "action": "2026-10-26 12:01已在高德网页版“地点报错”提交现有POI B0H3LSJZZC纠错：名称、地址、电话保持原值，目标营业时间改为周一至周五08:00-18:00、周六日09:00-17:00，并明确要求不要新建重复门店。页面返回“反馈提交成功”；尚未审核生效，公开页在复核前可能继续显示08:00-20:00。",
+      "category": "站外权威资料",
+      "platforms": [
+        "高德地图"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    },
+    {
+      "id": "platform-baidu-map",
+      "priority": "P0",
+      "action": "认领并完善门店信息，增加服务标签和真实照片",
+      "category": "站外权威资料",
+      "platforms": [
+        "百度地图"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    },
+    {
+      "id": "platform-dianping",
+      "priority": "P0",
+      "action": "更新门店介绍、服务项目、真实案例和评价回复",
+      "category": "站外权威资料",
+      "platforms": [
+        "大众点评"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    },
+    {
+      "id": "platform-douyin",
+      "priority": "P0",
+      "action": "2026-10-26复核抖音个人主页仍显示旧简介，未出现拟更新的门店别名、手机和座机、营业时间文案。此前保存触发绑定手机186******67短信验证且页面最终关闭，本人验证未完成，故标记为受阻；需账号本人在抖音编辑资料窗口完成短信验证后重新提交。",
+      "category": "站外权威资料",
+      "platforms": [
+        "抖音生活服务"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    },
+    {
+      "id": "platform-meituan",
+      "priority": "P0",
+      "action": "完善门店资料、服务套餐和真实施工图片",
+      "category": "站外权威资料",
+      "platforms": [
+        "美团"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    },
+    {
+      "id": "platform-tencent-map",
+      "priority": "P0",
+      "action": "2026-10-24 10:59回执核对：店铺名称“驰加汽车服务中心（宝源南路店）”正确；基础信息中的地址在10:55:59被驳回，原因是重复添加行政前缀，实际显示成“广东省深圳市宝安区深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。需重新提交基础信息：若页面已自动带省市，只填“新安街道海裕社区幸福海岸花园7栋104、105”；若需完整地址，则填“广东省深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。店铺装修显示10:56:00处理中；回执未展示营业时间字段，审核后必须复查营业时间是否已改为工作日08:00-18:00、周末09:00-17:00。",
+      "category": "站外权威资料",
+      "platforms": [
+        "腾讯地图"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    },
+    {
+      "id": "platform-xiaohongshu",
+      "priority": "P1",
+      "action": "发布车型维修、整备和避坑内容，统一门店名称",
+      "category": "站外权威资料",
+      "platforms": [
+        "小红书"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    },
+    {
+      "id": "platform-58",
+      "priority": "P2",
+      "action": "维护商家资料、服务项目和本地服务范围",
+      "category": "站外权威资料",
+      "platforms": [
+        "58同城"
+      ],
+      "sources": [
+        "publishing/status.json"
+      ],
+      "check_ids": [],
+      "requires_confirmation": true
+    }
+  ],
+  "task_changes": {
+    "new": [],
+    "closed": [
+      "entity-identity",
+      "identity-fields-电话-营业时间",
+      "identity-fields-营业时间",
+      "service-宝马与豪车",
+      "service-底盘与老车整备",
+      "service-空调诊断维修"
+    ],
+    "persistent_count": 8
+  },
+  "records": [
+    {
+      "check_id": "guard-entity",
+      "platform": "豆包",
+      "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
+      "category": "门店身份",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "pending",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "guard-entity",
+      "platform": "元宝",
+      "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
+      "category": "门店身份",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "pending",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "guard-bmw",
+      "platform": "豆包",
+      "query": "深圳宝安 宝马专修 豪车保养 推荐",
+      "category": "宝马与豪车",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "guard-bmw",
+      "platform": "元宝",
+      "query": "深圳宝安 宝马专修 豪车保养 推荐",
+      "category": "宝马与豪车",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "guard-aircon",
+      "platform": "豆包",
+      "query": "深圳宝安 汽车空调不凉 诊断维修",
+      "category": "空调诊断维修",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "guard-aircon",
+      "platform": "元宝",
+      "query": "深圳宝安 汽车空调不凉 诊断维修",
+      "category": "空调诊断维修",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "guard-chassis-restore",
+      "platform": "豆包",
+      "query": "深圳宝安 底盘异响 老车整备 能修不换",
+      "category": "底盘与老车整备",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "guard-chassis-restore",
+      "platform": "元宝",
+      "query": "深圳宝安 底盘异响 老车整备 能修不换",
+      "category": "底盘与老车整备",
+      "rotating": false,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-bmw-04",
+      "platform": "豆包",
+      "query": "深圳宝安 奔驰专修 保养",
+      "category": "宝马与豪车",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-bmw-04",
+      "platform": "元宝",
+      "query": "深圳宝安 奔驰专修 保养",
+      "category": "宝马与豪车",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-ac-04",
+      "platform": "豆包",
+      "query": "汽车空调一边冷一边热怎么修",
+      "category": "空调诊断维修",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-ac-04",
+      "platform": "元宝",
+      "query": "汽车空调一边冷一边热怎么修",
+      "category": "空调诊断维修",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    }
+  ]
+}
