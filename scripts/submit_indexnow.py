@@ -4,6 +4,7 @@
 
 import argparse
 import json
+import subprocess
 import time
 import urllib.parse
 import urllib.request
@@ -62,6 +63,59 @@ def wait_for_key(attempts=6, delay=10):
     return False
 
 
+def submit_payload(payload):
+    """优先用 curl 提交，规避系统 Python 的 LibreSSL 握手问题。"""
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    result = subprocess.run(
+        [
+            "curl",
+            "--http1.1",
+            "--silent",
+            "--show-error",
+            "--max-time",
+            "30",
+            "--retry",
+            "2",
+            "--request",
+            "POST",
+            "--header",
+            "Content-Type: application/json; charset=utf-8",
+            "--header",
+            "User-Agent: hxscar-indexnow/1.0",
+            "--data-binary",
+            "@-",
+            "--output",
+            "/dev/null",
+            "--write-out",
+            "%{http_code}",
+            ENDPOINT,
+        ],
+        input=body,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode == 0:
+        status = int(result.stdout.decode("ascii", "ignore").strip() or "0")
+        if 200 <= status < 300:
+            return status
+    error = result.stderr.decode("utf-8", "ignore").strip()
+
+    request = urllib.request.Request(
+        ENDPOINT,
+        data=body,
+        headers={
+            "Content-Type": "application/json; charset=utf-8",
+            "User-Agent": "hxscar-indexnow/1.0",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return response.status
+    except OSError as exc:
+        raise OSError(f"curl: {error or result.returncode}; Python: {exc}") from exc
+
+
 def main():
     """提交 IndexNow 请求。"""
     parser = argparse.ArgumentParser(description="提交核心页面到 IndexNow")
@@ -81,17 +135,8 @@ def main():
     if args.wait and not wait_for_key():
         raise SystemExit("IndexNow 验证文件尚未上线，本次跳过")
 
-    request = urllib.request.Request(
-        ENDPOINT,
-        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-        headers={
-            "Content-Type": "application/json; charset=utf-8",
-            "User-Agent": "hxscar-indexnow/1.0",
-        },
-        method="POST",
-    )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        print(f"IndexNow HTTP {response.status}: {len(payload['urlList'])} 个 URL")
+    status = submit_payload(payload)
+    print(f"IndexNow HTTP {status}: {len(payload['urlList'])} 个 URL")
 
 
 if __name__ == "__main__":
