@@ -18,13 +18,19 @@ KEY_LOCATION = f"https://{HOST}/hxscar-website/{KEY}.txt"
 ENDPOINT = "https://api.indexnow.org/indexnow"
 PRIORITY_PATHS = {
     "/hxscar-website/",
+    "/hxscar-website/faq.html",
+    "/hxscar-website/cases.html",
     "/hxscar-website/answers.html",
     "/hxscar-website/store-profile.html",
     "/hxscar-website/store-facts.json",
+    "/hxscar-website/llms.txt",
+    "/hxscar-website/llms-full.txt",
+    "/hxscar-website/services/index.html",
     "/hxscar-website/services/bmw-premium.html",
     "/hxscar-website/services/air-conditioning.html",
     "/hxscar-website/services/chassis.html",
     "/hxscar-website/services/vehicle-restoration.html",
+    "/hxscar-website/models/index.html",
 }
 
 
