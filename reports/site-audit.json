@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-10-26",
+  "checked_at": "2026-10-27",
   "passed": true,
   "data_counts": {
-    "faqs": 134,
+    "faqs": 142,
     "cases": 56,
     "reviews": 30,
     "service_pages": 4,
@@ -20,9 +20,9 @@
       ]
     },
     "faq.html": {
-      "bytes": 105636,
-      "han_chars": 22404,
-      "visible_han_chars": 10845,
+      "bytes": 114292,
+      "han_chars": 24584,
+      "visible_han_chars": 11935,
       "json_ld_blocks": 2,
       "schema_types": [
         "AutoRepair",
@@ -51,9 +51,9 @@
       ]
     },
     "answers.html": {
-      "bytes": 21088,
-      "han_chars": 3166,
-      "visible_han_chars": 1467,
+      "bytes": 25117,
+      "han_chars": 4063,
+      "visible_han_chars": 1934,
       "json_ld_blocks": 4,
       "schema_types": [
         "AutoRepair",
@@ -99,9 +99,9 @@
       ]
     },
     "services/vehicle-restoration.html": {
-      "bytes": 27806,
-      "han_chars": 4614,
-      "visible_han_chars": 2765,
+      "bytes": 28883,
+      "han_chars": 4900,
+      "visible_han_chars": 2908,
       "json_ld_blocks": 4,
       "schema_types": [
         "AutoRepair",

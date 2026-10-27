@@ -23,6 +23,7 @@ REQUIRED_FILES = [
     "robots.txt",
     "sitemap.xml",
     "llms.txt",
+    "llms-full.txt",
     "services/index.html",
     "models/index.html",
     "publishing/STATUS.md",
@@ -192,6 +193,8 @@ def audit():
     profile_html = read_text("store-profile.html")
     robots = read_text("robots.txt")
     sitemap = read_text("sitemap.xml")
+    llms = read_text("llms.txt")
+    llms_full = read_text("llms-full.txt")
     week = datetime.now(TZ).strftime("%V")
     queue_manifest = ROOT / "publishing" / "queue" / f"W{week}" / "manifest.json"
 
@@ -225,6 +228,8 @@ def audit():
         errors.append("sitemap.xml 未包含门店资料页")
     if "answers.html" not in sitemap or "store-facts.json" not in sitemap:
         errors.append("sitemap.xml 未包含搜索问答或机器可读门店事实")
+    if "llms.txt" not in sitemap or "llms-full.txt" not in sitemap:
+        errors.append("sitemap.xml 未包含 AI 资料索引或完整机器语料")
     if "services/index.html" not in sitemap or "models/index.html" not in sitemap:
         errors.append("sitemap.xml 未包含服务或车型专题入口")
     if EXPECTED_ORIGIN not in sitemap:
@@ -232,6 +237,31 @@ def audit():
     for stale_host in STALE_HOSTS:
         if stale_host in sitemap or stale_host in robots:
             errors.append(f"抓取入口仍包含旧域名: {stale_host}")
+    if "llms-full.txt" not in llms:
+        errors.append("llms.txt 未链接完整机器语料")
+    if len(llms_full) < 20000:
+        errors.append("llms-full.txt 内容量不足")
+    for required_text in (
+        "## 引用范围",
+        "## 标准搜索问答",
+        "## 完整常见问题",
+        "## 维修案例",
+        "深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺",
+        "18682417667",
+        "0755-23340534",
+        "08:00-18:00",
+        "09:00-17:00",
+        "旧手机18129802698",
+    ):
+        if required_text not in llms_full:
+            errors.append(f"llms-full.txt 缺少关键内容: {required_text}")
+    missing_faqs = [
+        item["question"]
+        for item in faqs
+        if f"### {item['question']}" not in llms_full
+    ]
+    if missing_faqs:
+        errors.append(f"llms-full.txt 缺少 FAQ: {missing_faqs[0]}")
     if "真实维修案例" in index_html or "真实车主评价" in index_html:
         errors.append("index.html 仍把未核验数据标记为真实")
     required_profile_facts = [
@@ -265,7 +295,7 @@ def audit():
             errors.append("store-facts.json 统一名称不正确")
         if facts.get("location", {}).get("geo", {}).get("longitude") != 113.876706:
             errors.append("store-facts.json 标准坐标不正确")
-        if len(facts.get("answers", [])) < 6:
+        if len(facts.get("answers", [])) < 10:
             errors.append("store-facts.json 搜索答案数量不足")
     if not queue_manifest.exists():
         errors.append(f"缺少 W{week} 站外发布队列")

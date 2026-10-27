@@ -6,12 +6,13 @@
 
 - [首页](https://yfb686b8p4-web.github.io/hxscar-website/)：门店信息、服务、导航与精选内容
 - [搜索问答](https://yfb686b8p4-web.github.io/hxscar-website/answers.html)：直接回答宝马、空调、底盘、老车整备和实体关系问题
-- [常见问题](https://yfb686b8p4-web.github.io/hxscar-website/faq.html)：134 组车主高频问题
+- [常见问题](https://yfb686b8p4-web.github.io/hxscar-website/faq.html)：142 组车主高频问题
 - [维修案例](https://yfb686b8p4-web.github.io/hxscar-website/cases.html)：56 个车型维修案例
 - [服务专题](https://yfb686b8p4-web.github.io/hxscar-website/services/index.html)：宝马专修、空调、底盘和老车整备
 - [车型专题](https://yfb686b8p4-web.github.io/hxscar-website/models/index.html)：主要车型维修与故障内容
 - [门店资料与名称对照](https://yfb686b8p4-web.github.io/hxscar-website/store-profile.html)：标准门店信息与实体消歧
 - [机器可读门店事实](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json)：名称、地址、电话、营业时间、地图 ID 和坐标
+- [完整机器语料](https://yfb686b8p4-web.github.io/hxscar-website/llms-full.txt)：标准问答、完整 FAQ 和维修案例的单一文本入口
 
 ## 门店信息
 

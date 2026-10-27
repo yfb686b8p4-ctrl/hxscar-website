@@ -1,6 +1,6 @@
 # 站点质量审计
 
-- 检查时间：2026-10-26
+- 检查时间：2026-10-27
 - 结果：通过
 
 ## 页面统计
@@ -8,14 +8,14 @@
 | 页面 | 可见中文字符 | JSON-LD | 类型 |
 |---|---:|---:|---|
 | index.html | 4616 | 2 | AutoRepair, FAQPage |
-| faq.html | 10845 | 2 | AutoRepair, FAQPage |
+| faq.html | 11935 | 2 | AutoRepair, FAQPage |
 | cases.html | 7098 | 2 | AutoRepair, ItemList |
 | store-profile.html | 2189 | 3 | AutoRepair, FAQPage, BreadcrumbList |
-| answers.html | 1467 | 4 | AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers.html | 1934 | 4 | AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | services/air-conditioning.html | 2031 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
 | services/bmw-premium.html | 2791 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
 | services/chassis.html | 1981 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| services/vehicle-restoration.html | 2765 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| services/vehicle-restoration.html | 2908 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
 | models/audi-a6l.html | 1394 | 3 | AutoRepair, BreadcrumbList, FAQPage |
 | models/audi-q5.html | 1375 | 3 | AutoRepair, BreadcrumbList, FAQPage |
 | models/bmw-5-series.html | 1596 | 3 | AutoRepair, BreadcrumbList, FAQPage |

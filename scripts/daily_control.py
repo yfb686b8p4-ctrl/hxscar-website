@@ -43,6 +43,7 @@ HTTP_CHECKS = [
     ("robots", "/robots.txt", "Sitemap:"),
     ("sitemap", "/sitemap.xml", "store-profile.html"),
     ("llms", "/llms.txt", "门店实体关系"),
+    ("完整机器语料", "/llms-full.txt", "完整常见问题"),
 ]
 RESULT_COLUMNS = [
     "check_id",

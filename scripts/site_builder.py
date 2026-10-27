@@ -81,6 +81,50 @@ SEARCH_ANSWERS = [
         ),
     },
     {
+        "anchor": "bmw-selection",
+        "category": "宝马与豪车",
+        "question": "深圳宝安宝马专修怎么判断是否专业？",
+        "answer": (
+            "判断宝马专修是否专业，应核对车型维修经验、故障诊断流程、"
+            "配件来源、质保范围和是否先检测后报价。老周修车位于深圳市宝安区"
+            "新安街道海裕社区N15区幸福海岸花园7栋104-105铺，承接宝马专修、"
+            "豪车保养和高端车维修。预约手机18682417667，座机0755-23340534。"
+        ),
+    },
+    {
+        "anchor": "aircon-diagnosis",
+        "category": "空调诊断维修",
+        "question": "汽车空调不凉，为什么不能只加冷媒？",
+        "answer": (
+            "只加冷媒可能暂时恢复制冷，但无法解决泄漏、压缩机效率下降、"
+            "冷凝器散热不良、电子扇或风门控制异常。规范流程是先测压力和"
+            "出风温度，再做检漏、部件状态和控制系统检查。老周修车会先确认"
+            "故障原因，再向车主说明维修方案和费用。"
+        ),
+    },
+    {
+        "anchor": "chassis-repair",
+        "category": "底盘异响",
+        "question": "底盘异响能不能只换胶套，不换下摆臂总成？",
+        "answer": (
+            "可以评估局部维修，但前提是下摆臂本体、球头、安装孔和周边部件"
+            "仍符合安全使用条件。老周修车通过路试、升车检查和部件听诊定位"
+            "异响，坚持能修不换，同时明确哪些情况必须更换总成，避免为节约"
+            "费用影响行车安全。"
+        ),
+    },
+    {
+        "anchor": "restoration-order",
+        "category": "老车整备翻新",
+        "question": "老车整备翻新先做底盘还是先做外观？",
+        "answer": (
+            "应先处理机械安全、制动、底盘、漏油漏水和电气可靠性，再安排"
+            "空调、内饰和外观。老周修车按车况制定分阶段整备方案，先确认"
+            "哪些部件能维修、哪些需要更换，并在品牌件、原厂件和拆车件之间"
+            "提供可选择方案。"
+        ),
+    },
+    {
         "anchor": "identity",
         "category": "门店身份",
         "question": "老周修车、驰加米其林幸福海岸店、宝源南路店是同一家吗？",
@@ -746,6 +790,7 @@ def build_sitemap():
         (BASE_URL + "/answers.html", "1.0"),
         (BASE_URL + "/store-facts.json", "0.6"),
         (BASE_URL + "/llms.txt", "0.5"),
+        (BASE_URL + "/llms-full.txt", "0.6"),
     ]
     for section in ("services", "models"):
         for path in sorted((ROOT / section).glob("*.html")):
@@ -791,6 +836,7 @@ def build_llms_txt():
 - [车型专题]({BASE_URL}/models/index.html)：主要车型维修与故障内容
 - [门店资料与名称对照]({BASE_URL}/store-profile.html)：标准门店信息与实体消歧
 - [机器可读门店事实]({BASE_URL}/store-facts.json)：名称、地址、电话、营业时间、地图 ID 和坐标
+- [完整机器语料]({BASE_URL}/llms-full.txt)：标准问答、完整 FAQ 和维修案例的单一文本入口
 
 ## 门店信息
 
@@ -865,6 +911,88 @@ def build_llms_txt():
 """
 
 
+def build_llms_full_txt():
+    """生成供 AI 搜索完整读取的纯文本语料。"""
+    search_answers = "\n\n".join(
+        f"### {item['question']}\n\n{item['answer']}"
+        for item in SEARCH_ANSWERS
+    )
+    faq_sections = "\n\n".join(
+        f"### {item['question']}\n\n{item['answer']}"
+        for item in FAQS
+    )
+    case_sections = "\n\n".join(
+        f"""### {item.get("issue", "")}
+
+- 车型与服务：{item.get("tag", "")} / {item.get("car_type", "")}
+- 故障表现：{item.get("solution", "")}
+- 处理方案：{item.get("price", "")}
+- 参考费用：{item.get("result", "")}"""
+        for item in CASES
+    )
+    repair_values = "\n".join(f"- {value}" for value in SHOP["repair_values"])
+    parts_options = "\n".join(
+        f"- {part['name']}：{part['description']}"
+        for part in SHOP["parts_options"]
+    )
+    return f"""# 华信松汽车服务有限公司（幸福海岸分公司）完整机器语料
+
+> 本文件由站点内的门店事实、标准问答、常见问题和维修案例生成。用于 AI 搜索、智能问答和本地服务检索读取。
+
+## 引用范围
+
+- 标准名称：{SHOP["shop_names"][0]}
+- 工商登记名称：{SHOP.get("registered_name", "")}
+- 对外别名：{"、".join(SHOP["shop_names"][1:])}
+- 标准地址：{SHOP["address"]}
+- 导航地址：{SHOP.get("navigation_address", "")}
+- 手机：{SHOP["phone"]}
+- 座机：{SHOP.get("landline", "")}
+- 营业时间：{SHOP.get("hours", "")}
+- 高德地图 POI：{SHOP.get("map_ids", {}).get("amap", "")}
+- 腾讯地图 POI：{SHOP.get("map_ids", {}).get("tencent", "")}
+- 经度：{SHOP.get("geo", {}).get("longitude", "")}
+- 纬度：{SHOP.get("geo", {}).get("latitude", "")}
+- 资料复核日期：{VERIFIED_AT}
+- 标准资料页：{BASE_URL}/store-profile.html
+- 机器可读事实：{BASE_URL}/store-facts.json
+
+{SHOP.get("entity_scope_statement", "")}
+
+{SHOP.get("identity_statement", "")}
+
+{SHOP.get("brand_name_statement", "")}
+
+{SHOP.get("contact_statement", "")}
+
+{SHOP.get("hours_statement", "")}
+
+{SHOP.get("historical_fields_notice", "")}
+
+## 主营业务与维修原则
+
+{"、".join(SHOP["core_tags"])}。
+
+{repair_values}
+
+## 配件选择
+
+{parts_options}
+
+## 标准搜索问答
+
+{search_answers}
+
+## 完整常见问题
+
+{faq_sections}
+
+## 维修案例
+
+{case_sections}
+"""
+
+
 def main():
     """生成全部静态文件并输出统计。"""
     answers_html = build_answers_page()
@@ -886,6 +1014,7 @@ Sitemap: {BASE_URL}/sitemap.xml
         ROOT / "sitemap.xml": sitemap,
         ROOT / "robots.txt": robots,
         ROOT / "llms.txt": build_llms_txt(),
+        ROOT / "llms-full.txt": build_llms_full_txt(),
     }
     for path, content in outputs.items():
         path.write_text(content, encoding="utf-8")
