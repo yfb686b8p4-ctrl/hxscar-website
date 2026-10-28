@@ -37,6 +37,21 @@ class DailyControlTests(unittest.TestCase):
         self.assertIs(daily_control.parse_optional_bool("错误"), False)
         self.assertIsNone(daily_control.parse_optional_bool(""))
 
+    def test_curl_response_parser_requires_marker_text(self):
+        parsed = daily_control.parse_curl_response(
+            "页面包含华信松汽车\n__HXSCAR_STATUS__200",
+            "华信松汽车",
+        )
+        self.assertTrue(parsed["ok"])
+        self.assertEqual(parsed["status"], 200)
+        self.assertIn("华信松汽车", parsed["body"])
+
+        missing = daily_control.parse_curl_response(
+            "页面内容\n__HXSCAR_STATUS__200",
+            "指定标记",
+        )
+        self.assertFalse(missing["ok"])
+
     def test_effective_hit_requires_complete_identity(self):
         self.assertTrue(daily_control.evaluate_effective_hit(record()))
         self.assertFalse(
@@ -270,6 +285,8 @@ class DailyControlTests(unittest.TestCase):
             }
         )
         self.assertIn("待检测", markdown)
+        self.assertIn("最近退出码 暂无记录", markdown)
+        self.assertNotIn("最近退出码 None", markdown)
 
 
 if __name__ == "__main__":

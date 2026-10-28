@@ -1,6 +1,6 @@
 # 站点质量审计
 
-- 检查时间：2026-10-27
+- 检查时间：2026-10-28
 - 结果：通过
 
 ## 页面统计
@@ -11,7 +11,7 @@
 | faq.html | 11935 | 2 | AutoRepair, FAQPage |
 | cases.html | 7098 | 2 | AutoRepair, ItemList |
 | store-profile.html | 2189 | 3 | AutoRepair, FAQPage, BreadcrumbList |
-| answers.html | 1934 | 4 | AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers.html | 2187 | 4 | AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | services/air-conditioning.html | 2031 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
 | services/bmw-premium.html | 2791 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
 | services/chassis.html | 1981 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |

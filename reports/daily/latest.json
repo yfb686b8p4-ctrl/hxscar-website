@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "date": "2026-10-27",
-  "generated_at": "2026-10-27T10:31:28.410601+08:00",
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T09:27:53.885115+08:00",
   "metrics": {
     "total": 12,
     "completed": 0,
@@ -63,7 +63,7 @@
     "service_top3_rate": 0.0
   },
   "changes": {
-    "previous_date": "2026-10-26",
+    "previous_date": "2026-10-27",
     "comparable": false,
     "reason": "current_pending",
     "metric_changes": {},
@@ -71,14 +71,14 @@
     "new_errors": []
   },
   "status": {
-    "checked_at": "2026-10-27T10:16:22.622374+08:00",
+    "checked_at": "2026-10-28T09:26:46.188045+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
-      "clean": true,
-      "change_count": 0,
-      "head": "66647a2\t记录高德纠错提交与置顶复测结果",
+      "clean": false,
+      "change_count": 4,
+      "head": "0ab6fc9\t记录2026-10-27最终运行状态",
       "error": ""
     },
     "deploy_repo": {
@@ -87,14 +87,14 @@
       "branch": "main",
       "clean": true,
       "change_count": 0,
-      "head": "66647a2\t记录高德纠错提交与置顶复测结果",
+      "head": "0ab6fc9\t记录2026-10-27最终运行状态",
       "error": ""
     },
     "launch_agent": {
       "available": true,
       "loaded": true,
       "state": "not running",
-      "last_exit_code": 0,
+      "last_exit_code": null,
       "schedule": {
         "weekday": 1,
         "hour": 8,
@@ -112,7 +112,7 @@
           "status": 200,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 6.02,
+          "seconds": 0.89,
           "error": ""
         },
         {
@@ -122,7 +122,7 @@
           "status": 200,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 6.19,
+          "seconds": 1.23,
           "error": ""
         },
         {
@@ -132,7 +132,7 @@
           "status": 200,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 8.44,
+          "seconds": 1.09,
           "error": ""
         },
         {
@@ -142,7 +142,7 @@
           "status": 200,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 5.45,
+          "seconds": 1.22,
           "error": ""
         },
         {
@@ -152,7 +152,7 @@
           "status": 200,
           "marker": "直接回答",
           "via": "直连",
-          "seconds": 5.21,
+          "seconds": 0.9,
           "error": ""
         },
         {
@@ -162,7 +162,7 @@
           "status": 200,
           "marker": "verifiedAt",
           "via": "直连",
-          "seconds": 5.19,
+          "seconds": 1.1,
           "error": ""
         },
         {
@@ -172,7 +172,7 @@
           "status": 200,
           "marker": "hxscar20261024geoindexkey",
           "via": "直连",
-          "seconds": 1.93,
+          "seconds": 0.75,
           "error": ""
         },
         {
@@ -182,7 +182,7 @@
           "status": 200,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 2.47,
+          "seconds": 0.74,
           "error": ""
         },
         {
@@ -192,7 +192,7 @@
           "status": 200,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 2.86,
+          "seconds": 0.86,
           "error": ""
         },
         {
@@ -202,7 +202,7 @@
           "status": 200,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 1.67,
+          "seconds": 0.82,
           "error": ""
         },
         {
@@ -212,7 +212,7 @@
           "status": 200,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 1.88,
+          "seconds": 0.73,
           "error": ""
         },
         {
@@ -222,15 +222,25 @@
           "status": 200,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 3.79,
+          "seconds": 0.73,
+          "error": ""
+        },
+        {
+          "name": "完整机器语料",
+          "path": "/llms-full.txt",
+          "ok": true,
+          "status": 200,
+          "marker": "完整常见问题",
+          "via": "直连",
+          "seconds": 0.61,
           "error": ""
         }
       ],
-      "http_passed": 12,
-      "http_total": 12,
+      "http_passed": 13,
+      "http_total": 13,
       "audit_passed": true,
       "audit": {
-        "faqs": 134,
+        "faqs": 142,
         "cases": 56,
         "reviews": 30,
         "service_pages": 4,
@@ -435,14 +445,7 @@
   ],
   "task_changes": {
     "new": [],
-    "closed": [
-      "entity-identity",
-      "identity-fields-电话-营业时间",
-      "identity-fields-营业时间",
-      "service-宝马与豪车",
-      "service-底盘与老车整备",
-      "service-空调诊断维修"
-    ],
+    "closed": [],
     "persistent_count": 8
   },
   "records": [
@@ -599,44 +602,6 @@
       "effective_hit": false
     },
     {
-      "check_id": "rotate-bmw-04",
-      "platform": "豆包",
-      "query": "深圳宝安 奔驰专修 保养",
-      "category": "宝马与豪车",
-      "rotating": true,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "not_applicable",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
-    },
-    {
-      "check_id": "rotate-bmw-04",
-      "platform": "元宝",
-      "query": "深圳宝安 奔驰专修 保养",
-      "category": "宝马与豪车",
-      "rotating": true,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "not_applicable",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
-    },
-    {
       "check_id": "rotate-ac-04",
       "platform": "豆包",
       "query": "汽车空调一边冷一边热怎么修",
@@ -660,6 +625,44 @@
       "platform": "元宝",
       "query": "汽车空调一边冷一边热怎么修",
       "category": "空调诊断维修",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-chassis-05",
+      "platform": "豆包",
+      "query": "深圳宝安 底盘胶套更换",
+      "category": "底盘异响诊断",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-chassis-05",
+      "platform": "元宝",
+      "query": "深圳宝安 底盘胶套更换",
+      "category": "底盘异响诊断",
       "rotating": true,
       "status": "pending",
       "mentioned": null,

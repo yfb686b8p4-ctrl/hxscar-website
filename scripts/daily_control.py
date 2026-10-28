@@ -155,8 +155,22 @@ def os_uid():
     return run(["id", "-u"])["stdout"] or "0"
 
 
+def parse_curl_response(output, expected):
+    """解析带状态码标记的 curl 响应。"""
+    marker = "__HXSCAR_STATUS__"
+    if marker not in output:
+        raise ValueError("curl 响应缺少状态码")
+    body, raw_status = output.rsplit(marker, 1)
+    status = int(raw_status.strip() or "0")
+    return {
+        "ok": 200 <= status < 400 and expected in body,
+        "status": status,
+        "body": body,
+    }
+
+
 def fetch_url(url, expected, timeout=15):
-    """访问 URL，失败时尝试本机代理。"""
+    """访问 URL，优先用 curl，失败时尝试本机代理。"""
     attempts = [
         ("直连", None),
         ("本机代理", "http://127.0.0.1:7897"),
@@ -164,6 +178,36 @@ def fetch_url(url, expected, timeout=15):
     errors = []
     for label, proxy in attempts:
         started = time.monotonic()
+        command = [
+            "curl",
+            "--http1.1",
+            "--silent",
+            "--show-error",
+            "--max-time",
+            str(timeout),
+            "--write-out",
+            "\n__HXSCAR_STATUS__%{http_code}",
+        ]
+        if proxy:
+            command.extend(["--proxy", proxy])
+        command.append(url)
+        curl_result = run(command)
+        if curl_result["returncode"] == 0:
+            try:
+                parsed = parse_curl_response(curl_result["stdout"], expected)
+                return {
+                    "ok": parsed["ok"],
+                    "status": parsed["status"],
+                    "marker": expected,
+                    "via": label,
+                    "seconds": round(time.monotonic() - started, 2),
+                    "error": "",
+                }
+            except ValueError as exc:
+                errors.append(f"{label} curl: {exc}")
+        else:
+            errors.append(f"{label} curl: {curl_result['stderr']}")
+
         try:
             if proxy:
                 opener = urllib.request.build_opener(
@@ -188,7 +232,7 @@ def fetch_url(url, expected, timeout=15):
                     "error": "",
                 }
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
-            errors.append(f"{label}: {exc}")
+            errors.append(f"{label} Python: {exc}")
     return {
         "ok": False,
         "status": None,
@@ -845,12 +889,16 @@ def render_markdown(summary):
     lines.extend(["", "## 运行状态", ""])
     launch = status.get("launch_agent", {})
     site = status.get("site", {})
+    last_exit_code = launch.get("last_exit_code")
+    last_exit_text = (
+        str(last_exit_code) if last_exit_code is not None else "暂无记录"
+    )
     lines.extend(
         [
             f"- 线上页面：{site.get('http_passed', 0)}/{site.get('http_total', 0)} 通过",
             f"- 最近站点审计：{'通过' if site.get('audit_passed') else '未通过或缺失'}",
             f"- 自动部署：{'已加载' if launch.get('loaded') else '未加载'}，"
-            f"最近退出码 {launch.get('last_exit_code')}",
+            f"最近退出码 {last_exit_text}",
             f"- 源仓库：{status.get('source_repo', {}).get('head', '未知')}，"
             f"{'干净' if status.get('source_repo', {}).get('clean') else '有未提交改动'}",
             f"- 部署副本：{status.get('deploy_repo', {}).get('head', '未知')}，"

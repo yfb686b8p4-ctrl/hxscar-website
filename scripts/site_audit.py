@@ -295,7 +295,7 @@ def audit():
             errors.append("store-facts.json 统一名称不正确")
         if facts.get("location", {}).get("geo", {}).get("longitude") != 113.876706:
             errors.append("store-facts.json 标准坐标不正确")
-        if len(facts.get("answers", [])) < 10:
+        if len(facts.get("answers", [])) < 12:
             errors.append("store-facts.json 搜索答案数量不足")
     if not queue_manifest.exists():
         errors.append(f"缺少 W{week} 站外发布队列")
