@@ -51,8 +51,25 @@ def wait_for_key(attempts=6, delay=10):
     """等待 GitHub Pages 发布验证文件。"""
     for attempt in range(1, attempts + 1):
         try:
-            with urllib.request.urlopen(KEY_LOCATION, timeout=15) as response:
-                content = response.read().decode("utf-8").strip()
+            result = subprocess.run(
+                [
+                    "curl",
+                    "--http1.1",
+                    "--silent",
+                    "--show-error",
+                    "--max-time",
+                    "15",
+                    KEY_LOCATION,
+                ],
+                capture_output=True,
+                check=False,
+            )
+            if result.returncode != 0:
+                raise OSError(
+                    result.stderr.decode("utf-8", "ignore").strip()
+                    or f"curl 退出码 {result.returncode}"
+                )
+            content = result.stdout.decode("utf-8", "ignore").strip()
             if content == KEY:
                 print(f"IndexNow 验证文件已上线，第 {attempt} 次检查通过")
                 return True
