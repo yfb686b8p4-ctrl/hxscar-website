@@ -24,6 +24,7 @@ def record(**overrides):
         "hours_ok": True,
         "effective_hit": True,
         "position": 1,
+        "cited_source": "",
     }
     data.update(overrides)
     return data
@@ -77,7 +78,7 @@ class DailyControlTests(unittest.TestCase):
     def test_metrics(self):
         metrics = daily_control.calculate_metrics(
             [
-                record(),
+                record(cited_source="官网"),
                 record(
                     check_id="guard-aircon",
                     category="空调诊断维修",
@@ -111,6 +112,7 @@ class DailyControlTests(unittest.TestCase):
         self.assertEqual(metrics["effective_hits"], 3)
         self.assertEqual(metrics["entity_correct_rate"], 100.0)
         self.assertEqual(metrics["service_hit_rate"], 66.7)
+        self.assertEqual(metrics["citation_rate"], 25.0)
         self.assertEqual(metrics["service_top1_rate"], 33.3)
         self.assertEqual(metrics["service_top3_rate"], 66.7)
 

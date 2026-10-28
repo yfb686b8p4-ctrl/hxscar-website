@@ -536,6 +536,16 @@ def calculate_metrics(records):
         for item in services
         if item["mentioned"] and isinstance(item.get("position"), int)
     ]
+    cited = [
+        item
+        for item in completed
+        if str(item.get("cited_source", "")).strip()
+    ]
+    service_cited = [
+        item
+        for item in services
+        if str(item.get("cited_source", "")).strip()
+    ]
     return {
         "total": len(records),
         "completed": len(completed),
@@ -546,6 +556,7 @@ def calculate_metrics(records):
             sum(1 for item in completed if item["effective_hit"]),
             len(completed),
         ),
+        "citation_rate": ratio(len(cited), len(completed)),
         "entity_completed": len(identity),
         "entity_correct": sum(
             1 for item in identity if item["identity_relation"] == "correct"
@@ -579,6 +590,10 @@ def calculate_metrics(records):
         "service_hits": sum(1 for item in services if item["mentioned"]),
         "service_hit_rate": ratio(
             sum(1 for item in services if item["mentioned"]),
+            len(services),
+        ),
+        "service_citation_rate": ratio(
+            len(service_cited),
             len(services),
         ),
         "service_top1": sum(1 for position in service_positions if position == 1),
@@ -659,7 +674,7 @@ def compare_results(records, previous):
         }
     changes = {}
     for key, value in metrics.items():
-        if key in {"total", "completed", "pending", "mentioned", "effective_hits", "entity_completed", "entity_correct", "full_info_correct", "service_completed", "service_hits"}:
+        if key in {"total", "completed", "pending", "mentioned", "effective_hits", "entity_completed", "entity_correct", "full_info_correct", "service_completed", "service_hits", "cited", "service_cited"}:
             continue
         if key not in previous_metrics:
             continue
@@ -818,6 +833,7 @@ def render_markdown(summary):
         f"- 今日结论：{headline}",
         f"- 完成检查：{metrics['completed']}/{metrics['total']}，待补测 {metrics['pending']}",
         f"- 护栏有效命中率：{display_rate(guardrails['effective_hit_rate'], guardrails['completed'])}",
+        f"- AI答案引用来源率：{display_rate(guardrails.get('citation_rate', 0), guardrails['completed'])}",
         f"- 门店实体关系正确率：{display_rate(guardrails['entity_correct_rate'], guardrails['entity_completed'])}",
         f"- 地址、电话、营业时间完整正确率：{display_rate(guardrails['full_info_correct_rate'], guardrails['entity_completed'])}",
         f"- 服务推荐命中率：{display_rate(guardrails['service_hit_rate'], guardrails['service_completed'])}",
@@ -854,6 +870,9 @@ def render_markdown(summary):
         )
         lines.append(
             f"- 完整资料正确率变化：{delta.get('full_info_correct_rate', 0):+} 个百分点"
+        )
+        lines.append(
+            f"- AI引用来源率变化：{delta.get('citation_rate', 0):+} 个百分点"
         )
     lines.extend(["", "## 今天确认改善", ""])
     fixed = changes.get("fixed", [])

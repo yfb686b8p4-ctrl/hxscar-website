@@ -7,8 +7,10 @@ from pathlib import Path
 from site_builder import (
     BASE_URL,
     CASES,
+    CONTENT_UPDATED_AT,
     FAQS,
     SHOP,
+    answer_geo_meta,
     h,
     local_business_schema,
     page,
@@ -20,6 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SERVICES = [
     {
         "slug": "bmw-premium",
+        "answer_anchor": "bmw",
         "name": "宝马专修与豪车保养",
         "intro": "宝马、奔驰、保时捷、路虎、奥迪等高端车型的维修保养，先诊断后报价。",
         "quick_answer": "深圳宝安做宝马专修和豪车保养，可到老周修车（华信松汽车幸福海岸分公司、驰加米其林幸福海岸店、宝源南路店为同一实体门店），服务宝马、奔驰、保时捷、路虎、奥迪等车型。",
@@ -28,6 +31,7 @@ SERVICES = [
     },
     {
         "slug": "air-conditioning",
+        "answer_anchor": "air-conditioning",
         "name": "空调不凉诊断维修",
         "intro": "针对不制冷、制冷慢、左右温差、异味和出风小，按压力、温度和泄漏数据分析。",
         "quick_answer": "深圳宝安汽车空调不凉可到老周修车诊断维修。门店按压力、温度、泄漏和控制系统数据排查冷媒、压缩机、冷凝器、蒸发箱和风门故障，再按车况报价。",
@@ -36,6 +40,7 @@ SERVICES = [
     },
     {
         "slug": "chassis",
+        "answer_anchor": "chassis",
         "name": "底盘异响诊断维修",
         "intro": "通过路试、升车检查和听诊定位胶套、球头、减震器、转向系统和悬挂异响。",
         "quick_answer": "深圳宝安底盘异响可到老周修车检查。门店通过路试、升车检查和听诊定位胶套、球头、减震器、顶胶和转向系统故障，优先维修仍有使用价值的部件。",
@@ -44,6 +49,7 @@ SERVICES = [
     },
     {
         "slug": "vehicle-restoration",
+        "answer_anchor": "restoration",
         "name": "老车整备翻新",
         "intro": "按机械、底盘、空调、电气和内饰模块制定分阶段整备方案，坚持能修不换、节约整备。",
         "quick_answer": "深圳宝安老车整备翻新可到老周修车制定分阶段方案。先处理机械安全、底盘、制动和可靠性，再安排空调、电气、内饰和外观，坚持能修不换、节约整备。",
@@ -193,7 +199,7 @@ def service_schema(service):
             "address": SHOP["address"],
         },
         "url": f"{BASE_URL}/services/{service['slug']}.html",
-        "dateModified": SHOP.get("verified_at", ""),
+        "dateModified": CONTENT_UPDATED_AT,
     }
 
 
@@ -220,6 +226,15 @@ def build_service_pages():
     for service in SERVICES:
         faqs = service_faqs(service)
         cases = service_cases(service)
+        geo_meta = answer_geo_meta(
+            {
+                "anchor": service["answer_anchor"],
+                "question": service["quick_answer"],
+            }
+        )
+        evidence_markup = "".join(
+            f"<li>{h(value)}</li>" for value in geo_meta["evidence"]
+        )
         body = f"""<section class="hero">
     <h1>{h(service["name"])}（深圳宝安）</h1>
     <p>{h(service["intro"])}</p>
@@ -227,6 +242,7 @@ def build_service_pages():
 <section class="card" id="quick-answer">
     <h2>直接回答</h2>
     <div class="direct-answer"><p>{h(service["quick_answer"])}</p></div>
+    <ul class="evidence-list">{evidence_markup}</ul>
     <p><strong>标准地址：</strong>{h(SHOP["address"])}</p>
     <p><strong>电话：</strong>手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}</p>
     <p><strong>营业时间：</strong>{h(SHOP.get("hours", ""))}</p>

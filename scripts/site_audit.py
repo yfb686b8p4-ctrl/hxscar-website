@@ -191,6 +191,7 @@ def audit():
     faq_html = read_text("faq.html")
     cases_html = read_text("cases.html")
     profile_html = read_text("store-profile.html")
+    answers_html = read_text("answers.html")
     robots = read_text("robots.txt")
     sitemap = read_text("sitemap.xml")
     llms = read_text("llms.txt")
@@ -212,6 +213,8 @@ def audit():
         errors.append("store-profile.html 缺少 FAQPage 结构化数据")
     if "FAQPage" not in page_stats["answers.html"]["schema_types"]:
         errors.append("answers.html 缺少 FAQPage 结构化数据")
+    if answers_html.count('class="evidence-list"') < 12:
+        errors.append("answers.html 直接答案证据块不足 12 组")
     if "ItemList" not in page_stats["cases.html"]["schema_types"]:
         errors.append("cases.html 缺少 ItemList 结构化数据")
     if "aggregateRating" in index_html:
@@ -252,6 +255,8 @@ def audit():
         "08:00-18:00",
         "09:00-17:00",
         "旧手机18129802698",
+        "- 常见问法：",
+        "事实依据：",
     ):
         if required_text not in llms_full:
             errors.append(f"llms-full.txt 缺少关键内容: {required_text}")
@@ -293,10 +298,24 @@ def audit():
     if facts:
         if facts.get("entity", {}).get("canonicalName") != "华信松汽车服务有限公司（幸福海岸分公司）":
             errors.append("store-facts.json 统一名称不正确")
+        if not facts.get("contentUpdatedAt"):
+            errors.append("store-facts.json 缺少内容更新日期")
+        if len(facts.get("citationTargets", [])) < 3:
+            errors.append("store-facts.json 引用目标不足")
         if facts.get("location", {}).get("geo", {}).get("longitude") != 113.876706:
             errors.append("store-facts.json 标准坐标不正确")
         if len(facts.get("answers", [])) < 12:
             errors.append("store-facts.json 搜索答案数量不足")
+        for item in facts.get("answers", []):
+            if not item.get("queryVariants"):
+                errors.append(f"store-facts.json 答案缺少常见问法: {item.get('anchor', '')}")
+                break
+            if len(item.get("evidence", [])) < 3:
+                errors.append(f"store-facts.json 答案证据不足: {item.get('anchor', '')}")
+                break
+            if not item.get("sourceUrl"):
+                errors.append(f"store-facts.json 答案缺少来源地址: {item.get('anchor', '')}")
+                break
     if not queue_manifest.exists():
         errors.append(f"缺少 W{week} 站外发布队列")
 

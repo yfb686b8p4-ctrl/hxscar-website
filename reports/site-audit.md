@@ -11,11 +11,11 @@
 | faq.html | 11935 | 2 | AutoRepair, FAQPage |
 | cases.html | 7098 | 2 | AutoRepair, ItemList |
 | store-profile.html | 2189 | 3 | AutoRepair, FAQPage, BreadcrumbList |
-| answers.html | 2187 | 4 | AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| services/air-conditioning.html | 2031 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| services/bmw-premium.html | 2791 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| services/chassis.html | 1981 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
-| services/vehicle-restoration.html | 2908 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| answers.html | 3196 | 4 | AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| services/air-conditioning.html | 2092 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| services/bmw-premium.html | 2849 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| services/chassis.html | 2045 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
+| services/vehicle-restoration.html | 2962 | 4 | AutoRepair, Service, BreadcrumbList, FAQPage |
 | models/audi-a6l.html | 1394 | 3 | AutoRepair, BreadcrumbList, FAQPage |
 | models/audi-q5.html | 1375 | 3 | AutoRepair, BreadcrumbList, FAQPage |
 | models/bmw-5-series.html | 1596 | 3 | AutoRepair, BreadcrumbList, FAQPage |

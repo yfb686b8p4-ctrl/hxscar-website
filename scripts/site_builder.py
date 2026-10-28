@@ -31,6 +31,7 @@ FAQS = load_json("faqs.json")
 CASES = load_json("cases.json")
 REVIEWS = load_json("reviews.json")
 VERIFIED_AT = SHOP.get("verified_at", datetime.now(TZ).date().isoformat())
+CONTENT_UPDATED_AT = datetime.now(TZ).date().isoformat()
 
 SEARCH_ANSWERS = [
     {
@@ -172,10 +173,199 @@ SEARCH_ANSWERS = [
     },
 ]
 
+GEO_ANSWER_META = {
+    "bmw": {
+        "queryVariants": [
+            "宝安宝马专修推荐",
+            "深圳宝安宝马专修哪家好",
+            "宝安豪车维修保养",
+        ],
+        "evidence": [
+            "服务范围覆盖宝马、奔驰、保时捷、路虎和奥迪等车型。",
+            "先检测故障，再由车主确认维修项目和配件方案。",
+            "维修保养可选择品牌件、原厂件或拆车件。",
+        ],
+        "servicePath": "services/bmw-premium.html",
+    },
+    "air-conditioning": {
+        "queryVariants": [
+            "宝安汽车空调不凉维修",
+            "深圳宝安汽车空调诊断",
+            "宝安汽车空调检漏",
+        ],
+        "evidence": [
+            "检查顺序包含压力、出风温度、泄漏和控制系统数据。",
+            "区分冷媒、压缩机、冷凝器、蒸发箱和风门故障。",
+            "确认故障原因后再报价，不用盲目添加冷媒代替诊断。",
+        ],
+        "servicePath": "services/air-conditioning.html",
+    },
+    "chassis": {
+        "queryVariants": [
+            "宝安底盘异响维修",
+            "深圳宝安底盘异响检查",
+            "底盘异响能修不换",
+        ],
+        "evidence": [
+            "通过路试确认异响出现条件，再升车检查底盘部件。",
+            "检查范围覆盖胶套、球头、减震器、顶胶和转向系统。",
+            "优先维修仍有使用价值的部件，同时明确安全更换边界。",
+        ],
+        "servicePath": "services/chassis.html",
+    },
+    "restoration": {
+        "queryVariants": [
+            "深圳宝安老车整备翻新",
+            "宝安老车整备哪家好",
+            "老车底盘整备",
+        ],
+        "evidence": [
+            "先处理机械安全、底盘、制动和可靠性问题。",
+            "空调、电气、内饰和外观按车况分阶段安排。",
+            "配件方案可在品牌件、原厂件和拆车件之间选择。",
+        ],
+        "servicePath": "services/vehicle-restoration.html",
+    },
+    "bmw-selection": {
+        "queryVariants": [
+            "深圳宝安宝马专修怎么选",
+            "宝安宝马维修店怎么判断",
+            "宝马专修先检测后报价",
+        ],
+        "evidence": [
+            "门店公开维修范围包含宝马专修、豪车保养和高端车维修。",
+            "官网明确采用先检测、后说明方案和费用的流程。",
+            "标准地址、手机、座机和营业时间均可独立核验。",
+        ],
+        "servicePath": "services/bmw-premium.html",
+    },
+    "aircon-diagnosis": {
+        "queryVariants": [
+            "汽车空调不凉为什么不能只加冷媒",
+            "汽车空调加冷媒后还是不凉",
+            "汽车空调不凉怎么查漏",
+        ],
+        "evidence": [
+            "只加冷媒不能解决泄漏或部件效率下降。",
+            "规范流程先测压力和出风温度，再做检漏和控制系统检查。",
+            "维修方案应针对已确认的故障点，而不是只缓解表面现象。",
+        ],
+        "servicePath": "services/air-conditioning.html",
+    },
+    "aircon-left-right": {
+        "queryVariants": [
+            "汽车空调一边冷一边热怎么修",
+            "空调左右温差大是什么原因",
+            "汽车空调分区温度不一致",
+        ],
+        "evidence": [
+            "先检查冷暖风门电机、风门翻板和分区温度设定。",
+            "再测量冷媒压力、出风温度和蒸发箱状态。",
+            "确认风门、冷媒或其他部件故障后再确定维修方案。",
+        ],
+        "servicePath": "services/air-conditioning.html",
+    },
+    "chassis-repair": {
+        "queryVariants": [
+            "底盘异响能只换胶套吗",
+            "下摆臂胶套能不能单独更换",
+            "底盘异响不换总成怎么修",
+        ],
+        "evidence": [
+            "局部维修前必须检查下摆臂本体、球头和安装孔状态。",
+            "部件仍符合安全使用条件时，可评估单独更换胶套。",
+            "球头松旷或摆臂变形时，必须说明更换总成的安全边界。",
+        ],
+        "servicePath": "services/chassis.html",
+    },
+    "chassis-bushing": {
+        "queryVariants": [
+            "深圳宝安底盘胶套更换",
+            "宝安下摆臂胶套更换",
+            "宝安平衡杆胶套更换",
+        ],
+        "evidence": [
+            "通过路试和升车检查确认异响来源。",
+            "区分下摆臂胶套、平衡杆胶套和其他底盘部件。",
+            "能否单独更换胶套取决于本体、球头和安装部位状态。",
+        ],
+        "servicePath": "services/chassis.html",
+    },
+    "restoration-order": {
+        "queryVariants": [
+            "老车整备先做底盘还是外观",
+            "老车翻新施工顺序",
+            "老车整备先修什么",
+        ],
+        "evidence": [
+            "安全和可靠性项目优先于内饰和外观。",
+            "底盘异响先定位胶套、球头、减震器和转向系统。",
+            "机械状态稳定后再做外观和舒适性，可减少重复施工。",
+        ],
+        "servicePath": "services/vehicle-restoration.html",
+    },
+    "identity": {
+        "queryVariants": [
+            "老周修车 驰加米其林幸福海岸店",
+            "老周修车 宝源南路店",
+            "华信松汽车 老周修车 同一家吗",
+        ],
+        "evidence": [
+            "所有对外名称指向同一标准地址和经营现场。",
+            "所有对外名称共用同一组当前联系电话。",
+            "工商登记或第三方地图名称不同，不等于另一家门店。",
+        ],
+        "servicePath": "store-profile.html",
+    },
+    "contact": {
+        "queryVariants": [
+            "老周修车地址电话",
+            "驰加米其林幸福海岸店营业时间",
+            "宝源南路店地址",
+        ],
+        "evidence": [
+            "标准地址为幸福海岸花园7栋104-105铺。",
+            "当前手机18682417667、座机0755-23340534。",
+            "工作日08:00-18:00，周六日09:00-17:00。",
+        ],
+        "servicePath": "store-profile.html",
+    },
+}
+
 
 def h(value):
     """安全输出 HTML 文本。"""
     return html.escape(str(value or ""), quote=True)
+
+
+def answer_geo_meta(item):
+    """返回答案的查询变体、证据和专题来源。"""
+    meta = GEO_ANSWER_META.get(item["anchor"], {})
+    return {
+        "queryVariants": meta.get("queryVariants", [item["question"]]),
+        "evidence": meta.get("evidence", []),
+        "servicePath": meta.get("servicePath", "store-profile.html"),
+    }
+
+
+def answer_evidence_markup(item):
+    """输出可被生成式搜索直接抽取的证据块。"""
+    meta = answer_geo_meta(item)
+    evidence = "".join(f"<li>{h(value)}</li>" for value in meta["evidence"])
+    service_path = h(meta["servicePath"])
+    if meta["servicePath"] == "store-profile.html":
+        source_links = (
+            '<a href="store-profile.html">门店标准资料</a> · '
+            '<a href="store-facts.json">机器可读事实</a>'
+        )
+    else:
+        source_links = (
+            f'<a href="{service_path}">对应服务专题</a> · '
+            '<a href="store-profile.html">门店标准资料</a> · '
+            '<a href="store-facts.json">机器可读事实</a>'
+        )
+    return f"""<ul class="evidence-list">{evidence}</ul>
+<p class="answer-meta">事实核验：{h(VERIFIED_AT)} · 内容更新：{h(CONTENT_UPDATED_AT)} · 来源：{source_links}</p>"""
 
 
 def json_script(data):
@@ -259,6 +449,9 @@ def page(title, description, canonical, body, schemas, current=None):
         .card h2 {{ color: #e94560; font-size: 21px; margin-bottom: 14px; }}
         .direct-answer {{ border-left: 4px solid #e94560; background: #16213e; padding: 16px; border-radius: 8px; margin: 14px 0; }}
         .direct-answer strong {{ color: #fff; }}
+        .evidence-list {{ margin: 10px 0 8px 20px; color: #ccc; font-size: 14px; }}
+        .evidence-list li {{ margin-bottom: 5px; }}
+        .answer-meta {{ color: #999; font-size: 12px; margin-top: 8px; }}
         .fact-table {{ width: 100%; border-collapse: collapse; font-size: 14px; }}
         .fact-table th, .fact-table td {{ border-bottom: 1px solid #333; padding: 9px 4px; text-align: left; vertical-align: top; }}
         .fact-table th {{ color: #aaa; font-weight: 500; width: 30%; }}
@@ -307,7 +500,7 @@ def local_business_schema():
         "alternateName": SHOP["shop_names"][1:],
         "url": BASE_URL + "/",
         "mainEntityOfPage": BASE_URL + "/store-profile.html",
-        "dateModified": VERIFIED_AT,
+        "dateModified": CONTENT_UPDATED_AT,
         "description": SHOP.get("identity_statement", ""),
         "disambiguatingDescription": SHOP.get("entity_scope_statement", ""),
         "telephone": SHOP["phone"],
@@ -664,6 +857,7 @@ def build_answers_page():
     <div class="case-meta">{h(item["category"])}</div>
     <h2>{h(item["question"])}</h2>
     <div class="direct-answer"><p><strong>直接回答：</strong>{h(item["answer"])}</p></div>
+    {answer_evidence_markup(item)}
 </article>"""
         )
     service_links = "".join(
@@ -711,7 +905,7 @@ def build_answers_page():
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "@id": BASE_URL + "/answers.html#faq",
-        "dateModified": VERIFIED_AT,
+        "dateModified": CONTENT_UPDATED_AT,
         "mainEntity": [
             {
                 "@type": "Question",
@@ -729,7 +923,7 @@ def build_answers_page():
         "@type": "WebPage",
         "name": "深圳宝安宝马专修、空调不凉、底盘异响与老车整备问答",
         "url": BASE_URL + "/answers.html",
-        "dateModified": VERIFIED_AT,
+        "dateModified": CONTENT_UPDATED_AT,
         "about": {"@id": BASE_URL + "/#autorepair"},
         "isPartOf": {"@type": "WebSite", "url": BASE_URL + "/"},
     }
@@ -764,9 +958,24 @@ def build_answers_page():
 def build_store_facts_json():
     """生成供搜索系统读取的标准门店事实数据。"""
     facts = {
-        "schemaVersion": "1.0",
+        "schemaVersion": "1.1",
         "verifiedAt": VERIFIED_AT,
+        "contentUpdatedAt": CONTENT_UPDATED_AT,
         "canonicalUrl": BASE_URL + "/store-profile.html",
+        "citationTargets": [
+            {
+                "name": "门店标准资料",
+                "url": BASE_URL + "/store-profile.html",
+            },
+            {
+                "name": "搜索直接答案",
+                "url": BASE_URL + "/answers.html",
+            },
+            {
+                "name": "完整机器语料",
+                "url": BASE_URL + "/llms-full.txt",
+            },
+        ],
         "entity": {
             "canonicalName": SHOP["shop_names"][0],
             "registeredName": SHOP.get("registered_name", ""),
@@ -796,7 +1005,14 @@ def build_store_facts_json():
         "services": SHOP.get("core_tags", []),
         "repairPolicy": SHOP.get("repair_values", []),
         "partsOptions": SHOP.get("parts_options", []),
-        "answers": SEARCH_ANSWERS,
+        "answers": [
+            {
+                **item,
+                **answer_geo_meta(item),
+                "sourceUrl": f"{BASE_URL}/answers.html#{item['anchor']}",
+            }
+            for item in SEARCH_ANSWERS
+        ],
     }
     return json.dumps(facts, ensure_ascii=False, indent=2) + "\n"
 
@@ -863,6 +1079,7 @@ def build_llms_txt():
 ## 门店信息
 
 - 资料复核日期：{VERIFIED_AT}
+- 内容更新日期：{CONTENT_UPDATED_AT}
 - 地址：{SHOP["address"]}
 - 导航地址：{SHOP.get("navigation_address", "")}
 - 电话：{SHOP["phone"]}
@@ -935,10 +1152,24 @@ def build_llms_txt():
 
 def build_llms_full_txt():
     """生成供 AI 搜索完整读取的纯文本语料。"""
-    search_answers = "\n\n".join(
-        f"### {item['question']}\n\n{item['answer']}"
-        for item in SEARCH_ANSWERS
-    )
+    search_answer_sections = []
+    for item in SEARCH_ANSWERS:
+        meta = answer_geo_meta(item)
+        variants = "、".join(meta["queryVariants"])
+        evidence = "\n".join(f"- {value}" for value in meta["evidence"])
+        search_answer_sections.append(
+            f"""### {item["question"]}
+
+{item["answer"]}
+
+- 常见问法：{variants}
+- 服务专题：{BASE_URL}/{meta["servicePath"]}
+
+事实依据：
+
+{evidence}"""
+        )
+    search_answers = "\n\n".join(search_answer_sections)
     faq_sections = "\n\n".join(
         f"### {item['question']}\n\n{item['answer']}"
         for item in FAQS
@@ -976,6 +1207,7 @@ def build_llms_full_txt():
 - 经度：{SHOP.get("geo", {}).get("longitude", "")}
 - 纬度：{SHOP.get("geo", {}).get("latitude", "")}
 - 资料复核日期：{VERIFIED_AT}
+- 内容更新日期：{CONTENT_UPDATED_AT}
 - 标准资料页：{BASE_URL}/store-profile.html
 - 机器可读事实：{BASE_URL}/store-facts.json
 
