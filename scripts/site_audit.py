@@ -213,8 +213,8 @@ def audit():
         errors.append("store-profile.html 缺少 FAQPage 结构化数据")
     if "FAQPage" not in page_stats["answers.html"]["schema_types"]:
         errors.append("answers.html 缺少 FAQPage 结构化数据")
-    if answers_html.count('class="evidence-list"') < 12:
-        errors.append("answers.html 直接答案证据块不足 12 组")
+    if answers_html.count('class="evidence-list"') < 13:
+        errors.append("answers.html 直接答案证据块不足 13 组")
     if "ItemList" not in page_stats["cases.html"]["schema_types"]:
         errors.append("cases.html 缺少 ItemList 结构化数据")
     if "aggregateRating" in index_html:
@@ -304,7 +304,7 @@ def audit():
             errors.append("store-facts.json 引用目标不足")
         if facts.get("location", {}).get("geo", {}).get("longitude") != 113.876706:
             errors.append("store-facts.json 标准坐标不正确")
-        if len(facts.get("answers", [])) < 12:
+        if len(facts.get("answers", [])) < 13:
             errors.append("store-facts.json 搜索答案数量不足")
         for item in facts.get("answers", []):
             if not item.get("queryVariants"):

@@ -11,7 +11,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
     """确保每个直接答案都包含可抽取问法和事实依据。"""
 
     def test_every_search_answer_has_geo_evidence(self):
-        self.assertGreaterEqual(len(site_builder.SEARCH_ANSWERS), 12)
+        self.assertGreaterEqual(len(site_builder.SEARCH_ANSWERS), 13)
         for item in site_builder.SEARCH_ANSWERS:
             meta = site_builder.answer_geo_meta(item)
             self.assertGreaterEqual(len(meta["queryVariants"]), 3, item["anchor"])
