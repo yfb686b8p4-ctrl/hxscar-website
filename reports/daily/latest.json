@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "date": "2026-10-29",
-  "generated_at": "2026-10-29T09:37:32.463099+08:00",
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T10:21:37.837962+08:00",
   "metrics": {
     "total": 12,
     "completed": 0,
@@ -69,7 +69,7 @@
     "service_top3_rate": 0.0
   },
   "changes": {
-    "previous_date": "2026-10-28",
+    "previous_date": "2026-10-29",
     "comparable": false,
     "reason": "current_pending",
     "metric_changes": {},
@@ -77,14 +77,14 @@
     "new_errors": []
   },
   "status": {
-    "checked_at": "2026-10-29T09:37:02.860551+08:00",
+    "checked_at": "2026-10-30T10:21:18.639692+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
       "clean": true,
       "change_count": 0,
-      "head": "70ae985\t增加AI答案引用来源率指标",
+      "head": "fc297a8\t补充老车整备精确答案并记录每日状态",
       "error": ""
     },
     "deploy_repo": {
@@ -118,7 +118,7 @@
           "status": 200,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 1.16,
+          "seconds": 1.23,
           "error": ""
         },
         {
@@ -128,7 +128,7 @@
           "status": 200,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 1.17,
+          "seconds": 1.89,
           "error": ""
         },
         {
@@ -138,7 +138,7 @@
           "status": 200,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 1.39,
+          "seconds": 1.59,
           "error": ""
         },
         {
@@ -148,7 +148,7 @@
           "status": 200,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 1.38,
+          "seconds": 1.07,
           "error": ""
         },
         {
@@ -158,7 +158,7 @@
           "status": 200,
           "marker": "直接回答",
           "via": "直连",
-          "seconds": 1.16,
+          "seconds": 1.24,
           "error": ""
         },
         {
@@ -168,7 +168,7 @@
           "status": 200,
           "marker": "verifiedAt",
           "via": "直连",
-          "seconds": 1.04,
+          "seconds": 1.07,
           "error": ""
         },
         {
@@ -178,7 +178,7 @@
           "status": 200,
           "marker": "hxscar20261024geoindexkey",
           "via": "直连",
-          "seconds": 0.89,
+          "seconds": 0.79,
           "error": ""
         },
         {
@@ -188,7 +188,7 @@
           "status": 200,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 0.82,
+          "seconds": 0.81,
           "error": ""
         },
         {
@@ -198,7 +198,7 @@
           "status": 200,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 0.81,
+          "seconds": 0.83,
           "error": ""
         },
         {
@@ -208,7 +208,7 @@
           "status": 200,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 0.8,
+          "seconds": 0.82,
           "error": ""
         },
         {
@@ -218,7 +218,7 @@
           "status": 200,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 0.74,
+          "seconds": 0.82,
           "error": ""
         },
         {
@@ -228,7 +228,7 @@
           "status": 200,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 1.24,
+          "seconds": 0.71,
           "error": ""
         },
         {
@@ -238,7 +238,7 @@
           "status": 200,
           "marker": "完整常见问题",
           "via": "直连",
-          "seconds": 1.19,
+          "seconds": 1.12,
           "error": ""
         }
       ],
@@ -608,44 +608,6 @@
       "effective_hit": false
     },
     {
-      "check_id": "rotate-chassis-05",
-      "platform": "豆包",
-      "query": "深圳宝安 底盘胶套更换",
-      "category": "底盘异响诊断",
-      "rotating": true,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "not_applicable",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
-    },
-    {
-      "check_id": "rotate-chassis-05",
-      "platform": "元宝",
-      "query": "深圳宝安 底盘胶套更换",
-      "category": "底盘异响诊断",
-      "rotating": true,
-      "status": "pending",
-      "mentioned": null,
-      "identity_relation": "not_applicable",
-      "address_ok": null,
-      "phone_ok": null,
-      "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
-    },
-    {
       "check_id": "rotate-restore-06",
       "platform": "豆包",
       "query": "宝安老车整备翻新哪家好",
@@ -673,6 +635,44 @@
       "status": "pending",
       "mentioned": null,
       "identity_relation": "not_applicable",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-alias-07",
+      "platform": "豆包",
+      "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
+      "category": "门店身份",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "pending",
+      "address_ok": null,
+      "phone_ok": null,
+      "hours_ok": null,
+      "position": null,
+      "cited_source": "",
+      "sentiment": "",
+      "answer_summary": "",
+      "notes": "",
+      "effective_hit": false
+    },
+    {
+      "check_id": "rotate-alias-07",
+      "platform": "元宝",
+      "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
+      "category": "门店身份",
+      "rotating": true,
+      "status": "pending",
+      "mentioned": null,
+      "identity_relation": "pending",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
