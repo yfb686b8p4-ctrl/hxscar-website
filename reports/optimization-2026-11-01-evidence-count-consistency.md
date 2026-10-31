@@ -23,6 +23,10 @@
 - 单元测试：`104/104` 通过。
 - 站点审计：通过，错误 `0`。
 - 主站与 Profile 文本入口均已检出 16 条。
+- 主站部署 `4191143`、Profile 部署 `167c2f2` 均成功。
+- 主站六端 IndexNow 各接收 62 个 URL；Profile 六端各接收 11 个 URL。
+- 线上主站 `llms.txt`、Profile `llms.txt` 和 Profile `answers.html`
+  均实测为 16 条。
 
 ## 边界
 

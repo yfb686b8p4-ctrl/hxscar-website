@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T07:33:23.891031+08:00",
+  "generated_at": "2026-11-01T07:40:43.694929+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -278,10 +278,10 @@
       "model_pages": 12,
       "case_pages": 3
     },
-    "online_checks_passed": 46,
-    "online_checks_total": 46,
-    "source_repo": "e7698ee\t刷新v5镜像缓存并完成最终汇总（3 项未提交）",
-    "deploy_repo": "e7698ee\t刷新v5镜像缓存并完成最终汇总（干净）"
+    "online_checks_passed": 47,
+    "online_checks_total": 47,
+    "source_repo": "4191143\t修复机器语料与Profile的问答数量漂移（2 项未提交）",
+    "deploy_repo": "4191143\t修复机器语料与Profile的问答数量漂移（干净）"
   },
   "platform_blocks": [
     {
@@ -435,10 +435,6 @@
     }
   ],
   "commits": [
-    "0c06dcb 在Profile发布独立视频证据镜像",
-    "be2ce94 将视频证据创作者关联到门店实体节点",
-    "49d3383 将Profile视频证据纳入IndexNow提交",
-    "1ace38b 刷新冲刺总结与最新复测记录",
     "027ccaf 修复最终汇总测试覆盖正式报告的副作用",
     "5658649 刷新最终线上状态与冲刺汇总",
     "51f1e7e 将Profile可见主标题统一为工商法定全称",
@@ -474,7 +470,11 @@
     "a0af148 记录豆包轿之林专项复测结果",
     "80ef102 生成米哥人工动作清单",
     "c92b3ff 更新门店实体核验PDF与历史主体说明",
-    "083e7e0 记录PDF线上逐字节校验结果"
+    "083e7e0 记录PDF线上逐字节校验结果",
+    "1ffcb18 补充最终汇总中的PDF与链接审计",
+    "c12963f 记录双Release正文与Latest状态同步",
+    "3030cc4 新增AI搜索证据政策与资料纠错规则页",
+    "4191143 修复机器语料与Profile的问答数量漂移"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"
