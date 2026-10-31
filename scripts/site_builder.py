@@ -4015,6 +4015,12 @@ Sitemap: {BASE_URL}/image-sitemap.xml
         ROOT / "store-facts.jsonld": build_store_facts_jsonld(),
         ROOT / "case-evidence.json": build_case_evidence_json(),
         ROOT / "qa-evidence.jsonl": build_qa_evidence_jsonl(),
+        (
+            ROOT
+            / "publishing"
+            / "github-profile-site"
+            / "qa-evidence.jsonl"
+        ): build_qa_evidence_jsonl(),
         ROOT / "feed.xml": build_feed_xml(),
         ROOT / "sitemap.xml": sitemap,
         ROOT / "image-sitemap.xml": build_image_sitemap(),

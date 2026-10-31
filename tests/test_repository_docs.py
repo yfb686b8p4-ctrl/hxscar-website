@@ -241,6 +241,10 @@ class RepositoryReadmeTests(unittest.TestCase):
         corrections = (
             site_dir / "entity-corrections.json"
         ).read_text(encoding="utf-8")
+        self.assertEqual(
+            (site_dir / "qa-evidence.jsonl").read_bytes(),
+            (ROOT / "qa-evidence.jsonl").read_bytes(),
+        )
         shop = json.loads(
             (ROOT / "data" / "shop_info.json").read_text(encoding="utf-8")
         )
