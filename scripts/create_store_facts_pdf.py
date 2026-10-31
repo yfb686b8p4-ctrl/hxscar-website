@@ -16,6 +16,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
+    CondPageBreak,
     Image,
     KeepTogether,
     PageBreak,
@@ -357,7 +358,7 @@ def build_pdf():
         [p("<b>项目</b>", body), p("<b>不应采用</b>", body), p("<b>当前标准</b>", body)],
         [
             p("手机", body),
-            p("18129802698<br/>13923454895", body),
+            p("13537862708<br/>18129802698<br/>13923454895", body),
             p("<b>18682417667</b>", body),
         ],
         [
@@ -399,6 +400,10 @@ def build_pdf():
                 small,
             ),
             Spacer(1, 4 * mm),
+            CondPageBreak(75 * mm),
+            p("同一门牌历史登记说明", heading),
+            p(SHOP.get("premises_history_notice", ""), body),
+            Spacer(1, 4 * mm),
             p("官方核验来源", heading),
         ]
     )
@@ -407,6 +412,10 @@ def build_pdf():
         (
             "实体核验页",
             "https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html",
+        ),
+        (
+            "同址历史主体答案",
+            "https://yfb686b8p4-web.github.io/hxscar-website/answers/same-address-history.html",
         ),
         (
             "门店资料",
@@ -434,6 +443,11 @@ def build_pdf():
             SHOP["external_profile_links"]["github_release"],
         ),
         ("GitHub Gist", SHOP["external_profile_links"]["gist"]),
+        (
+            "jsDelivr 门店事实镜像",
+            "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website"
+            "@ai-evidence-cdn-2026-11-01-v5/store-facts.json",
+        ),
     ]
     source_rows = [
         [p(label, body), p(url, source)] for label, url in sources
