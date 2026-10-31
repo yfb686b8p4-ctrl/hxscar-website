@@ -192,9 +192,17 @@ class RepositoryReadmeTests(unittest.TestCase):
             for crawler in (
                 "Bytespider",
                 "GPTBot",
+                "OAI-SearchBot",
+                "ChatGPT-User",
                 "ClaudeBot",
+                "Claude-SearchBot",
                 "PerplexityBot",
+                "Google-Extended",
+                "Applebot-Extended",
+                "Meta-ExternalAgent",
+                "Amazonbot",
                 "CCBot",
+                "cohere-ai",
             ):
                 self.assertIn(
                     f"User-agent: {crawler}\nAllow: /",

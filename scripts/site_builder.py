@@ -4213,28 +4213,31 @@ def main():
     entity_verification_html = build_entity_verification_page()
     answer_pages = build_answer_pages()
     sitemap = build_sitemap()
-    robots = f"""User-agent: Bytespider
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: *
-Allow: /
-
-Sitemap: {BASE_URL}/sitemap-index.xml
-Sitemap: {BASE_URL}/sitemap.xml
-Sitemap: {BASE_URL}/image-sitemap.xml
-"""
+    ai_crawlers = (
+        "Bytespider",
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User",
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "PerplexityBot",
+        "Google-Extended",
+        "Applebot-Extended",
+        "Meta-ExternalAgent",
+        "Amazonbot",
+        "CCBot",
+        "cohere-ai",
+    )
+    robots = (
+        "\n\n".join(
+            f"User-agent: {crawler}\nAllow: /"
+            for crawler in ai_crawlers
+        )
+        + "\n\nUser-agent: *\nAllow: /\n\n"
+        + f"Sitemap: {BASE_URL}/sitemap-index.xml\n"
+        + f"Sitemap: {BASE_URL}/sitemap.xml\n"
+        + f"Sitemap: {BASE_URL}/image-sitemap.xml\n"
+    )
     outputs = {
         ROOT / "index.html": refresh_home_entity_schema(),
         ROOT / "answers.html": answers_html,
