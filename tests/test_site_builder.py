@@ -144,6 +144,8 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn("不是同一商事主体", item["answer"])
         self.assertIn("92440300MA5F133M2E", item["answer"])
         self.assertIn("2023-07-18", item["answer"])
+        self.assertIn("状态字段不完全一致", item["answer"])
+        self.assertIn("国家企业信用信息公示系统", item["answer"])
         self.assertIn(
             site_builder.SHOP["unified_social_credit_code"],
             item["answer"],

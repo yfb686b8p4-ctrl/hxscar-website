@@ -10,9 +10,9 @@
 | index.html | 4940 | 3 | AutoRepair, FAQPage, WebSite |
 | faq.html | 7010 | 3 | WebSite, AutoRepair, FAQPage |
 | cases.html | 8572 | 3 | WebSite, AutoRepair, ItemList |
-| store-profile.html | 3095 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
-| entity-verification.html | 2295 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
-| answers.html | 8256 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| store-profile.html | 3221 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
+| entity-verification.html | 2421 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
+| answers.html | 8341 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | answers/air-conditioning.html | 995 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/aircon-diagnosis.html | 987 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/aircon-left-right.html | 1810 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
@@ -28,8 +28,8 @@
 | answers/restoration-order.html | 1115 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/restoration-selection.html | 1150 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/restoration.html | 1567 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/same-address-history.html | 1081 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/index.html | 2316 | 4 | WebSite, AutoRepair, CollectionPage, BreadcrumbList |
+| answers/same-address-history.html | 1166 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/index.html | 2333 | 4 | WebSite, AutoRepair, CollectionPage, BreadcrumbList |
 | services/air-conditioning.html | 2572 | 6 | WebSite, AutoRepair, Service, HowTo, BreadcrumbList, FAQPage |
 | services/bmw-premium.html | 3402 | 6 | WebSite, AutoRepair, Service, HowTo, BreadcrumbList, FAQPage |
 | services/chassis.html | 2532 | 6 | WebSite, AutoRepair, Service, HowTo, BreadcrumbList, FAQPage |
