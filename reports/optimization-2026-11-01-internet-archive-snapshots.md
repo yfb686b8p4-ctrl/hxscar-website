@@ -12,6 +12,8 @@
   `https://web.archive.org/web/20261031223606id_/https://yfb686b8p4-web.github.io/hxscar-website/answers/identity.html?v=20261101-identity-archive`
 - 视频证据 JSON：
   `https://web.archive.org/web/20261031223603id_/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json?v=20261101-video-archive`
+- 首页服务与案例：
+  `https://web.archive.org/web/20261031224330id_/https://yfb686b8p4-web.github.io/hxscar-website/?v=20261101-home-archive`
 
 ## 保真核验
 
@@ -26,6 +28,8 @@
   `171cfd309b22f8d2af522a50e02a8ea5b7353811c8ad72cf78752e14bb6febf2`
 - 视频证据快照与本地文件 SHA-256 完全一致：
   `c0528b454b7fce74799e83f599988e140ed70d62845364ad73e249c3ffd5f610`
+- 首页快照与本地文件 SHA-256 完全一致：
+  `0c5562b221b56306bfb7622d47f19dfc4972611656e6c63d913cbaa37bd2dd84`
 - 快照正文包含法定名称、信用代码、完整地址、双电话、分时营业时间和
   7 条视频证据。
 

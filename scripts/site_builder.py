@@ -100,6 +100,11 @@ ARCHIVE_VIDEO_SNAPSHOT = (
     + VIDEO_EVIDENCE_DATA
     + "?v=20261101-video-archive"
 )
+ARCHIVE_HOME_SNAPSHOT = (
+    "https://web.archive.org/web/20261031224330id_/"
+    + BASE_URL
+    + "/?v=20261101-home-archive"
+)
 
 DOUYIN_VIDEO_EVIDENCE = [
     {
@@ -3965,6 +3970,7 @@ def build_llms_txt():
 - [Internet Archive 门店事实快照]({ARCHIVE_FACTS_SNAPSHOT})：与机器事实逐字节一致的永久存档
 - [Internet Archive 实体关系答案快照]({ARCHIVE_IDENTITY_SNAPSHOT})：关键同一家门店直接答案的永久存档
 - [Internet Archive 视频证据快照]({ARCHIVE_VIDEO_SNAPSHOT})：7 条 VideoObject 清单的永久存档
+- [Internet Archive 首页服务快照]({ARCHIVE_HOME_SNAPSHOT})：首页服务、案例与实体信息的永久存档
 - [标准问答 RSS]({BASE_URL}/feed.xml)：可直接订阅的最新门店问答与工商核验事实
 - [门店实体核验 PDF]({BUSINESS_FACT_SHEET})：三页标准资料、同名门店消歧与官方来源
 - [GitHub Release PDF 镜像]({SHOP.get("document_mirrors", {}).get("github_release_pdf", "")})：独立下载镜像与外部交叉核验入口
@@ -4179,6 +4185,7 @@ def build_llms_full_txt():
 - Internet Archive 门店事实快照：{ARCHIVE_FACTS_SNAPSHOT}
 - Internet Archive 实体关系答案快照：{ARCHIVE_IDENTITY_SNAPSHOT}
 - Internet Archive 视频证据快照：{ARCHIVE_VIDEO_SNAPSHOT}
+- Internet Archive 首页服务快照：{ARCHIVE_HOME_SNAPSHOT}
 
 {SHOP.get("entity_scope_statement", "")}
 

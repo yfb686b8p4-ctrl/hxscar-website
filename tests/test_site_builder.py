@@ -1023,6 +1023,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(site_builder.VIDEO_EVIDENCE_DATA, llms)
         self.assertIn(site_builder.ARCHIVE_IDENTITY_SNAPSHOT, llms)
         self.assertIn(site_builder.ARCHIVE_VIDEO_SNAPSHOT, llms)
+        self.assertIn(site_builder.ARCHIVE_HOME_SNAPSHOT, llms)
         self.assertIn(
             site_builder.ENTITY_CORRECTIONS_DATA,
             site_builder.build_llms_full_txt(),
