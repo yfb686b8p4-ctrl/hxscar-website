@@ -19,6 +19,10 @@ KEY_LOCATION = f"https://{HOST}/hxscar-website/{KEY}.txt"
 ENDPOINTS = (
     ("IndexNow 聚合端点", "https://api.indexnow.org/indexnow"),
     ("Bing 直连端点", "https://www.bing.com/indexnow"),
+    ("Yandex 直连端点", "https://yandex.com/indexnow"),
+    ("Seznam 直连端点", "https://search.seznam.cz/indexnow"),
+    ("Naver 直连端点", "https://searchadvisor.naver.com/indexnow"),
+    ("Yep 直连端点", "https://indexnow.yep.com/indexnow"),
 )
 PRIORITY_PATHS = {
     "/hxscar-website/",

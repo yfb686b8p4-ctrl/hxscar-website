@@ -10,15 +10,18 @@ from scripts import submit_indexnow
 class SubmitIndexNowTests(unittest.TestCase):
     """防止快速收录只依赖单一端点或漏掉答案页。"""
 
-    def test_has_aggregator_and_bing_direct_endpoint(self):
+    def test_has_supported_indexnow_endpoints(self):
         endpoints = {name: url for name, url in submit_indexnow.ENDPOINTS}
         self.assertEqual(
-            endpoints["IndexNow 聚合端点"],
-            "https://api.indexnow.org/indexnow",
-        )
-        self.assertEqual(
-            endpoints["Bing 直连端点"],
-            "https://www.bing.com/indexnow",
+            endpoints,
+            {
+                "IndexNow 聚合端点": "https://api.indexnow.org/indexnow",
+                "Bing 直连端点": "https://www.bing.com/indexnow",
+                "Yandex 直连端点": "https://yandex.com/indexnow",
+                "Seznam 直连端点": "https://search.seznam.cz/indexnow",
+                "Naver 直连端点": "https://searchadvisor.naver.com/indexnow",
+                "Yep 直连端点": "https://indexnow.yep.com/indexnow",
+            },
         )
 
     def test_selected_urls_cover_answer_hub_and_details(self):
