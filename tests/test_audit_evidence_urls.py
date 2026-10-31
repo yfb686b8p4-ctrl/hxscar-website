@@ -3,6 +3,8 @@
 """验证机器证据 URL 审计器。"""
 
 import unittest
+from types import SimpleNamespace
+from unittest import mock
 
 from scripts import audit_evidence_urls
 
@@ -47,6 +49,23 @@ class AuditEvidenceUrlsTests(unittest.TestCase):
                 0,
                 "https://r.jina.ai/https://example.com",
             )
+        )
+
+    @mock.patch("scripts.audit_evidence_urls.subprocess.run")
+    def test_direct_timeout_retries_through_local_proxy(self, run):
+        """直连超时不能被误报成坏链。"""
+        run.side_effect = [
+            SimpleNamespace(stdout="0", stderr="timeout", returncode=28),
+            SimpleNamespace(stdout="200", stderr="", returncode=0),
+        ]
+        result = audit_evidence_urls.check_url("https://example.com/a")
+        self.assertEqual(result["status"], 200)
+        self.assertEqual(result["via"], "代理")
+        proxy_command = run.call_args_list[1].args[0]
+        self.assertIn("--proxy", proxy_command)
+        self.assertIn(
+            audit_evidence_urls.PROXY_URL,
+            proxy_command,
         )
 
 

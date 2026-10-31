@@ -35,6 +35,10 @@ VOLATILE_MIRROR_HOSTS = {
     "web.archive.org",
     "www.qcc.com",
 }
+PROXY_URL = os.environ.get(
+    "EVIDENCE_AUDIT_PROXY",
+    "http://127.0.0.1:7897",
+)
 
 
 def extract_urls(texts):
@@ -65,23 +69,31 @@ def is_blocked(status, url=""):
     return False
 
 
-def check_url(url):
-    """用 curl 检查 URL，遵循系统代理和压缩行为。"""
+def curl_command(url, proxy=""):
+    """构造一次 URL 可达性检查命令。"""
+    command = [
+        "curl",
+        "-L",
+        "--compressed",
+        "--silent",
+        "--show-error",
+        "--max-time",
+        "20",
+        "--output",
+        os.devnull,
+        "--write-out",
+        "%{http_code}",
+    ]
+    if proxy:
+        command.extend(["--proxy", proxy])
+    command.append(url)
+    return command
+
+
+def run_curl(url, proxy=""):
+    """执行一次 curl 并解析状态码。"""
     result = subprocess.run(
-        [
-            "curl",
-            "-L",
-            "--compressed",
-            "--silent",
-            "--show-error",
-            "--max-time",
-            "20",
-            "--output",
-            os.devnull,
-            "--write-out",
-            "%{http_code}",
-            url,
-        ],
+        curl_command(url, proxy),
         text=True,
         capture_output=True,
         check=False,
@@ -97,7 +109,19 @@ def check_url(url):
         "ok": is_success(status),
         "blocked": is_blocked(status, url),
         "error": error[:240],
+        "via": "代理" if proxy else "直连",
     }
+
+
+def check_url(url):
+    """直连超时后通过本地代理重试，区分网络失败与真实坏链。"""
+    result = run_curl(url)
+    if result["ok"] or result["blocked"] or not PROXY_URL:
+        return result
+    proxied = run_curl(url, PROXY_URL)
+    if proxied["ok"] or proxied["blocked"] or proxied["status"]:
+        return proxied
+    return result
 
 
 def check_with_retries(url, attempts=3, delay=1):
