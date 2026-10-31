@@ -36,7 +36,7 @@
 - [GitHub Gist 门店 JSON-LD 镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/store-facts.jsonld)：外部可下载的门店实体副本
 - [GitHub Gist 维修案例镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/case-evidence.json)：外部可下载的 56 条案例 JSON-LD 副本
 - [GitHub Gist 门店纠错镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/entity-corrections.json)：外部可下载的当前地址、电话、营业时间与历史错误值
-- [GitHub Gist 原子问答证据镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl)：外部可下载的 15 条逐行问答与案例引用副本
+- [GitHub Gist 原子问答证据镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl)：外部可下载的 16 条逐行问答与案例引用副本
 - [GitHub Release AI 证据包](https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01)：门店事实、JSON-LD、案例和机器语料的独立下载镜像
 - [GitHub Profile 实体镜像页](https://yfb686b8p4-web.github.io/yfb686b8p4-web/)：独立发布的同一实体资料、核心答案与证据入口
 - [GitHub Profile 七问答案镜像](https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html)：七个核心问题的独立静态答案页

@@ -4222,7 +4222,7 @@ def build_llms_txt():
 - [GitHub Gist 门店 JSON-LD 镜像]({SHOP.get("document_mirrors", {}).get("gist_store_facts_jsonld", "")})：外部可下载的门店实体副本
 - [GitHub Gist 维修案例镜像]({SHOP.get("document_mirrors", {}).get("gist_case_evidence_json", "")})：外部可下载的 56 条案例 JSON-LD 副本
 - [GitHub Gist 门店纠错镜像]({SHOP.get("document_mirrors", {}).get("gist_entity_corrections_json", "")})：外部可下载的当前地址、电话、营业时间与历史错误值
-- [GitHub Gist 原子问答证据镜像]({SHOP.get("document_mirrors", {}).get("gist_qa_evidence_jsonl", "")})：外部可下载的 15 条逐行问答与案例引用副本
+- [GitHub Gist 原子问答证据镜像]({SHOP.get("document_mirrors", {}).get("gist_qa_evidence_jsonl", "")})：外部可下载的 {len(SEARCH_ANSWERS)} 条逐行问答与案例引用副本
 - [GitHub Release AI 证据包]({SHOP.get("external_profile_links", {}).get("github_ai_evidence_release", "")})：门店事实、JSON-LD、案例和机器语料的独立下载镜像
 - [GitHub Profile 实体镜像页]({SHOP.get("external_profile_links", {}).get("github_profile_pages", "")})：独立发布的同一实体资料、核心答案与证据入口
 - [GitHub Profile 七问答案镜像]({SHOP.get("document_mirrors", {}).get("github_profile_answers_html", "")})：七个核心问题的独立静态答案页

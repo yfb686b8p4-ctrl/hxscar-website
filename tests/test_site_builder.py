@@ -1067,6 +1067,11 @@ class SiteBuilderGeoTests(unittest.TestCase):
             site_builder.BASE_URL + "/evidence-policy.html",
             llms,
         )
+        self.assertIn(
+            f"{len(site_builder.SEARCH_ANSWERS)} 条逐行问答",
+            llms,
+        )
+        self.assertNotIn("15 条逐行问答", llms)
         self.assertIn(site_builder.ARCHIVE_IDENTITY_SNAPSHOT, llms)
         self.assertIn(site_builder.ARCHIVE_VIDEO_SNAPSHOT, llms)
         self.assertIn(site_builder.ARCHIVE_HOME_SNAPSHOT, llms)
