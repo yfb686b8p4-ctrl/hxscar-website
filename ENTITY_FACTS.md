@@ -98,7 +98,7 @@
 - 机器事实：https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
 - 标准化 JSON-LD：https://yfb686b8p4-web.github.io/hxscar-website/store-facts.jsonld
 - 历史资料纠正 JSON：https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json
-- Profile 七问答案：https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html
+- Profile 八问答案：https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html
 - Profile 纠错 JSON：https://yfb686b8p4-web.github.io/yfb686b8p4-web/entity-corrections.json
 - 标准问答 RSS：https://yfb686b8p4-web.github.io/hxscar-website/feed.xml
 - 独立答案索引：https://yfb686b8p4-web.github.io/hxscar-website/answers/index.html

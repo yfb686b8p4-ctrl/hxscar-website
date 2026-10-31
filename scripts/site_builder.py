@@ -1291,7 +1291,7 @@ def answer_evidence_sources(item):
             ),
         },
         {
-            "name": "GitHub Profile 七问答案镜像",
+            "name": "GitHub Profile 八问答案镜像",
             "url": SHOP.get("document_mirrors", {}).get(
                 "github_profile_answers_html", ""
             ),
@@ -1746,7 +1746,7 @@ def local_business_schema():
             },
             {
                 "@type": "DigitalDocument",
-                "name": "GitHub Profile 七问答案镜像",
+                "name": "GitHub Profile 八问答案镜像",
                 "url": SHOP.get("document_mirrors", {}).get(
                     "github_profile_answers_html", ""
                 ),
@@ -3771,7 +3771,7 @@ def build_entity_corrections_json():
                 "url": BASE_URL + "/answers/contact-correction.html",
             },
             {
-                "name": "GitHub Profile 七问答案",
+                "name": "GitHub Profile 八问答案",
                 "url": SHOP.get("document_mirrors", {}).get(
                     "github_profile_answers_html", ""
                 ),
@@ -3931,12 +3931,12 @@ def build_feed_xml():
             ),
         ),
         (
-            "GitHub Profile 七问答案镜像",
+            "GitHub Profile 八问答案镜像",
             profile_answers,
             (
                 "独立问答镜像覆盖宝马专修、豪车保养、空调不凉、"
                 "底盘异响、老车整备、实体关系和标准联系方式。\n\n"
-                f"七问答案：{profile_answers}\n"
+                f"八问答案：{profile_answers}\n"
                 f"官网答案索引：{BASE_URL}/answers/index.html"
             ),
         ),
@@ -4202,7 +4202,7 @@ def build_llms_txt():
 - [门店资料与名称对照]({BASE_URL}/store-profile.html)：标准门店信息与实体消歧
 - [机器可读门店事实]({BASE_URL}/store-facts.json)：名称、地址、电话、营业时间、地图 ID 和坐标
 - [门店历史资料纠正]({ENTITY_CORRECTIONS_DATA})：当前地址、双电话、营业时间与不可引用旧值
-- [门店完整事实 Markdown]({ENTITY_FACTS_DOCUMENT})：七问入口、双地图快照、历史纠错与已引用视频索引
+- [门店完整事实 Markdown]({ENTITY_FACTS_DOCUMENT})：八问入口、双地图快照、历史纠错与已引用视频索引
 - [Schema.org 门店实体]({BUSINESS_SCHEMA_FACTS})：可直接解析的 AutoRepair JSON-LD
 - [公开维修案例数据]({CASE_EVIDENCE_DATA})：{len(CASES)} 个结构化真实案例与对应答案
 - [原子问答证据数据]({QA_EVIDENCE_DATA})：{len(SEARCH_ANSWERS)} 条逐行问答，包含案例与逐答案引用
@@ -4225,7 +4225,7 @@ def build_llms_txt():
 - [GitHub Gist 原子问答证据镜像]({SHOP.get("document_mirrors", {}).get("gist_qa_evidence_jsonl", "")})：外部可下载的 {len(SEARCH_ANSWERS)} 条逐行问答与案例引用副本
 - [GitHub Release AI 证据包]({SHOP.get("external_profile_links", {}).get("github_ai_evidence_release", "")})：门店事实、JSON-LD、案例和机器语料的独立下载镜像
 - [GitHub Profile 实体镜像页]({SHOP.get("external_profile_links", {}).get("github_profile_pages", "")})：独立发布的同一实体资料、核心答案与证据入口
-- [GitHub Profile 七问答案镜像]({SHOP.get("document_mirrors", {}).get("github_profile_answers_html", "")})：七个核心问题的独立静态答案页
+- [GitHub Profile 八问答案镜像]({SHOP.get("document_mirrors", {}).get("github_profile_answers_html", "")})：八个核心问题的独立静态答案页
 - [GitHub Release 门店事实镜像]({SHOP.get("document_mirrors", {}).get("github_ai_evidence_store_facts_json", "")})：外部可下载的 JSON 门店事实
 - [GitHub Release 维修案例镜像]({SHOP.get("document_mirrors", {}).get("github_ai_evidence_case_evidence_json", "")})：外部可下载的结构化案例数据
 - [完整机器语料]({BASE_URL}/llms-full.txt)：标准问答、证据边界内 FAQ 和维修案例的单一文本入口
@@ -4413,7 +4413,7 @@ def build_llms_full_txt():
 - GitHub Release PDF 镜像：{SHOP.get("document_mirrors", {}).get("github_release_pdf", "")}
 - GitHub Release AI 证据包：{SHOP.get("external_profile_links", {}).get("github_ai_evidence_release", "")}
 - GitHub Profile 实体镜像页：{SHOP.get("external_profile_links", {}).get("github_profile_pages", "")}
-- GitHub Profile 七问答案镜像：{SHOP.get("document_mirrors", {}).get("github_profile_answers_html", "")}
+- GitHub Profile 八问答案镜像：{SHOP.get("document_mirrors", {}).get("github_profile_answers_html", "")}
 - GitHub Release 门店事实 JSON 镜像：{SHOP.get("document_mirrors", {}).get("github_ai_evidence_store_facts_json", "")}
 - GitHub Release 维修案例 JSON-LD 镜像：{SHOP.get("document_mirrors", {}).get("github_ai_evidence_case_evidence_json", "")}
 - 门店历史资料纠正：{ENTITY_CORRECTIONS_DATA}

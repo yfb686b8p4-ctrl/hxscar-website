@@ -446,7 +446,7 @@ def build_pdf():
         (
             "jsDelivr 门店事实镜像",
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website"
-            "@ai-evidence-cdn-2026-11-01-v5/store-facts.json",
+            "@ai-evidence-cdn-2026-11-01-v6/store-facts.json",
         ),
     ]
     source_rows = [

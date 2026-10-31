@@ -95,7 +95,7 @@ class DailyControlTests(unittest.TestCase):
             checks[
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html"
             ][2],
-            "七个直接答案",
+            "八个直接答案",
         )
         self.assertIn(
             "https://yfb686b8p4-web.github.io/yfb686b8p4-web/"
@@ -129,13 +129,13 @@ class DailyControlTests(unittest.TestCase):
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v5/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v6/"
             "qa-evidence.jsonl",
             checks,
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v5/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v6/"
             "store-facts.json",
             checks,
         )

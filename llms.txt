@@ -16,7 +16,7 @@
 - [门店资料与名称对照](https://yfb686b8p4-web.github.io/hxscar-website/store-profile.html)：标准门店信息与实体消歧
 - [机器可读门店事实](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json)：名称、地址、电话、营业时间、地图 ID 和坐标
 - [门店历史资料纠正](https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json)：当前地址、双电话、营业时间与不可引用旧值
-- [门店完整事实 Markdown](https://yfb686b8p4-web.github.io/hxscar-website/downloads/entity-facts-2026-11-01.md)：七问入口、双地图快照、历史纠错与已引用视频索引
+- [门店完整事实 Markdown](https://yfb686b8p4-web.github.io/hxscar-website/downloads/entity-facts-2026-11-01.md)：八问入口、双地图快照、历史纠错与已引用视频索引
 - [Schema.org 门店实体](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.jsonld)：可直接解析的 AutoRepair JSON-LD
 - [公开维修案例数据](https://yfb686b8p4-web.github.io/hxscar-website/case-evidence.json)：56 个结构化真实案例与对应答案
 - [原子问答证据数据](https://yfb686b8p4-web.github.io/hxscar-website/qa-evidence.jsonl)：16 条逐行问答，包含案例与逐答案引用
@@ -39,7 +39,7 @@
 - [GitHub Gist 原子问答证据镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl)：外部可下载的 16 条逐行问答与案例引用副本
 - [GitHub Release AI 证据包](https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01)：门店事实、JSON-LD、案例和机器语料的独立下载镜像
 - [GitHub Profile 实体镜像页](https://yfb686b8p4-web.github.io/yfb686b8p4-web/)：独立发布的同一实体资料、核心答案与证据入口
-- [GitHub Profile 七问答案镜像](https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html)：七个核心问题的独立静态答案页
+- [GitHub Profile 八问答案镜像](https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html)：八个核心问题的独立静态答案页
 - [GitHub Release 门店事实镜像](https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.json)：外部可下载的 JSON 门店事实
 - [GitHub Release 维修案例镜像](https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/case-evidence.json)：外部可下载的结构化案例数据
 - [完整机器语料](https://yfb686b8p4-web.github.io/hxscar-website/llms-full.txt)：标准问答、证据边界内 FAQ 和维修案例的单一文本入口

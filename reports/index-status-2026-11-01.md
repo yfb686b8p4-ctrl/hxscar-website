@@ -1,5 +1,17 @@
 # 搜索索引状态检查｜2026-11-01 00:04
 
+## 08:55 Profile 八问镜像与 v6 证据
+
+- Profile 独立答案页从 7 问扩展到 8 问，加入“轿之林历史主体与当前
+  华信松门店”消歧，并同步 `CollectionPage`、`FAQPage`、可见正文、Profile
+  首页和 `llms.txt`。
+- 主站与 Profile 的机器语料取消“七问”旧标记，统一为八问。
+- 因门店事实中的 Profile 镜像名称变化，证据镜像使用新不可变标签
+  `ai-evidence-cdn-2026-11-01-v6`。
+- 实体核验 PDF 同步更新 v6 镜像地址，新 SHA-256：
+  `2e162eceacbbfe0c4399d3ce8764e0d6c569cacbe181b6aed9025f14ed3b6f8b`。
+- 待完成主站、Release、Gist、Profile、jsDelivr 同步和 IndexNow 提交。
+
 ## 08:50 证据数量口径修复
 
 - 主站 `llms.txt`、Profile `llms.txt` 和 Profile 答案页中的旧“15 条”

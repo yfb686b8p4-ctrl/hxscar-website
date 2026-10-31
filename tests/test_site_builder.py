@@ -606,7 +606,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
             text,
         )
         self.assertIn("AI 搜索实体与维修案例证据 Release", text)
-        self.assertIn("GitHub Profile 七问答案镜像", text)
+        self.assertIn("GitHub Profile 八问答案镜像", text)
         self.assertIn(
             site_builder.ENTITY_CORRECTIONS_DATA,
             text,

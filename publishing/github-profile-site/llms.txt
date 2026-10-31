@@ -24,7 +24,7 @@
 ## 核心入口
 
 - 官网：https://yfb686b8p4-web.github.io/hxscar-website/
-- Profile 镜像七个直接答案：https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html
+- Profile 镜像八个直接答案：https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html
 - Profile 标准联系方式答案：https://yfb686b8p4-web.github.io/hxscar-website/answers/contact.html
 - Profile 历史电话与营业时间纠错：https://yfb686b8p4-web.github.io/hxscar-website/answers/contact-correction.html
 - Profile 门店事实纠错 JSON：https://yfb686b8p4-web.github.io/yfb686b8p4-web/entity-corrections.json
