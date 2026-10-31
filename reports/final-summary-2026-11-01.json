@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T06:21:35.243179+08:00",
+  "generated_at": "2026-11-01T06:22:06.139074+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -365,7 +365,6 @@
     }
   ],
   "commits": [
-    "07dc0ab 提升首页颜色对比度与键盘焦点可访问性",
     "137b56c 修复首页按钮文字对比度优先级",
     "73530d4 增加首页WebP优先加载与图片抓取入口",
     "360eb66 记录首页Lighthouse四项满分与WebP优化结果",
@@ -404,7 +403,8 @@
     "7132998 扩展主站与Profile的AI搜索爬虫白名单",
     "0c06dcb 在Profile发布独立视频证据镜像",
     "be2ce94 将视频证据创作者关联到门店实体节点",
-    "49d3383 将Profile视频证据纳入IndexNow提交"
+    "49d3383 将Profile视频证据纳入IndexNow提交",
+    "1ace38b 刷新冲刺总结与最新复测记录"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"

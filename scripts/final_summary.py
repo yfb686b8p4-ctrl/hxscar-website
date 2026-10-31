@@ -186,7 +186,7 @@ def build_summary():
     return summary
 
 
-def render_markdown(summary):
+def render_markdown(summary, write=False):
     """把汇总渲染为米哥可直接检查的中文报告。"""
     metrics = summary["metrics"]
     technical = summary["technical"]
@@ -315,14 +315,16 @@ def render_markdown(summary):
             "",
         ]
     )
-    MARKDOWN_PATH.write_text("\n".join(lines), encoding="utf-8")
-    return "\n".join(lines)
+    markdown = "\n".join(lines)
+    if write:
+        MARKDOWN_PATH.write_text(markdown, encoding="utf-8")
+    return markdown
 
 
 def main():
     """生成最终 JSON 和 Markdown 汇总。"""
     summary = build_summary()
-    markdown = render_markdown(summary)
+    markdown = render_markdown(summary, write=True)
     print(markdown)
     print(f"JSON: {JSON_PATH}")
     print(f"Markdown: {MARKDOWN_PATH}")
