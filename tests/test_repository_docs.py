@@ -313,6 +313,10 @@ class RepositoryReadmeTests(unittest.TestCase):
             for item in faq["mainEntity"]
         ]
         self.assertEqual(len(question_names), len(set(question_names)))
+        self.assertIn(
+            "南山总店或其他分公司与幸福海岸分公司是同一家门店吗？",
+            question_names,
+        )
         self.assertIn("store-banner-960.jpg", html)
         self.assertIn('src="assets/store-banner-960.jpg"', html)
         self.assertNotIn(

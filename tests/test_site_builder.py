@@ -1126,6 +1126,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(site_builder.SHOP["disambiguation_notice"], html)
         self.assertIn("13923454895", html)
         self.assertIn("宝源南路276号", html)
+        self.assertIn("南山总店或其他分公司与幸福海岸分公司是同一家门店吗？", html)
         self.assertIn(
             site_builder.SHOP["external_profile_links"]["gist"],
             html,
