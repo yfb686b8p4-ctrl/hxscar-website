@@ -363,7 +363,10 @@ def model_service_schema(model):
         "provider": {
             "@type": "AutoRepair",
             "@id": BASE_URL + "/#autorepair",
-            "name": SHOP["shop_names"][0],
+            "name": SHOP.get("registered_name", SHOP["shop_names"][0]),
+            "legalName": SHOP.get("registered_name", ""),
+            "taxID": SHOP.get("unified_social_credit_code", ""),
+            "alternateName": SHOP["shop_names"],
             "telephone": SHOP["phone"],
             "address": SHOP["address"],
         },

@@ -309,8 +309,8 @@
       ]
     },
     "services/air-conditioning.html": {
-      "bytes": 46283,
-      "han_chars": 5695,
+      "bytes": 46642,
+      "han_chars": 5720,
       "visible_han_chars": 2572,
       "json_ld_blocks": 6,
       "schema_types": [
@@ -323,8 +323,8 @@
       ]
     },
     "services/bmw-premium.html": {
-      "bytes": 50863,
-      "han_chars": 6505,
+      "bytes": 51222,
+      "han_chars": 6530,
       "visible_han_chars": 3402,
       "json_ld_blocks": 6,
       "schema_types": [
@@ -337,8 +337,8 @@
       ]
     },
     "services/chassis.html": {
-      "bytes": 46082,
-      "han_chars": 5628,
+      "bytes": 46441,
+      "han_chars": 5653,
       "visible_han_chars": 2532,
       "json_ld_blocks": 6,
       "schema_types": [
@@ -351,8 +351,8 @@
       ]
     },
     "services/vehicle-restoration.html": {
-      "bytes": 48545,
-      "han_chars": 6396,
+      "bytes": 48904,
+      "han_chars": 6421,
       "visible_han_chars": 3331,
       "json_ld_blocks": 6,
       "schema_types": [
@@ -365,8 +365,8 @@
       ]
     },
     "models/audi-a6l.html": {
-      "bytes": 33771,
-      "han_chars": 3544,
+      "bytes": 34480,
+      "han_chars": 3655,
       "visible_han_chars": 1314,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -378,8 +378,8 @@
       ]
     },
     "models/audi-q5.html": {
-      "bytes": 33647,
-      "han_chars": 3525,
+      "bytes": 34356,
+      "han_chars": 3636,
       "visible_han_chars": 1295,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -391,8 +391,8 @@
       ]
     },
     "models/bmw-5-series.html": {
-      "bytes": 39504,
-      "han_chars": 4415,
+      "bytes": 40213,
+      "han_chars": 4526,
       "visible_han_chars": 1884,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -404,8 +404,8 @@
       ]
     },
     "models/bmw-7-series.html": {
-      "bytes": 39584,
-      "han_chars": 4443,
+      "bytes": 40293,
+      "han_chars": 4554,
       "visible_han_chars": 1894,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -417,8 +417,8 @@
       ]
     },
     "models/bmw-x5.html": {
-      "bytes": 39077,
-      "han_chars": 4376,
+      "bytes": 39786,
+      "han_chars": 4487,
       "visible_han_chars": 1809,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -430,8 +430,8 @@
       ]
     },
     "models/land-rover-defender.html": {
-      "bytes": 32401,
-      "han_chars": 3391,
+      "bytes": 33110,
+      "han_chars": 3502,
       "visible_han_chars": 1300,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -443,8 +443,8 @@
       ]
     },
     "models/land-rover-range-rover.html": {
-      "bytes": 31703,
-      "han_chars": 3258,
+      "bytes": 32412,
+      "han_chars": 3369,
       "visible_han_chars": 1167,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -456,8 +456,8 @@
       ]
     },
     "models/mercedes-e-class.html": {
-      "bytes": 31798,
-      "han_chars": 3280,
+      "bytes": 32507,
+      "han_chars": 3391,
       "visible_han_chars": 1182,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -469,8 +469,8 @@
       ]
     },
     "models/mercedes-glc.html": {
-      "bytes": 31734,
-      "han_chars": 3244,
+      "bytes": 32443,
+      "han_chars": 3355,
       "visible_han_chars": 1152,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -482,8 +482,8 @@
       ]
     },
     "models/porsche-cayenne.html": {
-      "bytes": 34477,
-      "han_chars": 3760,
+      "bytes": 35186,
+      "han_chars": 3871,
       "visible_han_chars": 1566,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -495,8 +495,8 @@
       ]
     },
     "models/porsche-macan.html": {
-      "bytes": 33611,
-      "han_chars": 3567,
+      "bytes": 34320,
+      "han_chars": 3678,
       "visible_han_chars": 1385,
       "json_ld_blocks": 5,
       "schema_types": [
@@ -508,8 +508,8 @@
       ]
     },
     "models/volkswagen-touareg.html": {
-      "bytes": 31689,
-      "han_chars": 3271,
+      "bytes": 32398,
+      "han_chars": 3382,
       "visible_han_chars": 1184,
       "json_ld_blocks": 5,
       "schema_types": [

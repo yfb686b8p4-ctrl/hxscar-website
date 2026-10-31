@@ -100,6 +100,39 @@ class ContentMatrixTests(unittest.TestCase):
                 path.name,
             )
 
+    def test_model_service_provider_uses_registered_identity(self):
+        """车型服务内嵌门店必须使用法定全称和完整别名。"""
+        html = (ROOT / "models" / "bmw-5-series.html").read_text(
+            encoding="utf-8"
+        )
+        schemas = [
+            json.loads(raw)
+            for raw in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>',
+                html,
+                re.DOTALL,
+            )
+        ]
+        service = next(
+            schema
+            for schema in schemas
+            if schema.get("@type") == "Service"
+        )
+        provider = service["provider"]
+        self.assertEqual(
+            provider["name"],
+            "深圳市华信松汽车服务有限公司幸福海岸分公司",
+        )
+        self.assertEqual(
+            provider["legalName"],
+            "深圳市华信松汽车服务有限公司幸福海岸分公司",
+        )
+        self.assertEqual(
+            provider["taxID"],
+            "91440300MA5GYCTQ6P",
+        )
+        self.assertIn("老周修车", provider["alternateName"])
+
 
 if __name__ == "__main__":
     unittest.main()

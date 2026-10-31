@@ -83,7 +83,9 @@
 - [GitHub Release 门店实体核验资料](https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/store-facts-2026-10-31)
 - [GitHub Release AI 证据包](https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01)
 - [GitHub Gist 实体与案例镜像](https://gist.github.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b)
-- [GitHub Gist 原子问答证据镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/51d9f49a2de4747a06623369738c0376fa3aa781/qa-evidence.jsonl)
+- [GitHub Gist 原子问答证据镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl)
+- [抖音维修视频证据](https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json)
+- [实体核验纯文本阅读镜像](https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
 - [抖音商家认证主页](https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc)（抖音号 SZ2018080808）
 - [企查查工商登记页](https://www.qcc.com/firm/8ed6b923472b38c0bf3801b468b2d37e.html)
 - [爱企查工商登记页](https://aiqicha.baidu.com/company_detail_94051754221223)
