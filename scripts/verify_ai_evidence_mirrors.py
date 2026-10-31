@@ -51,7 +51,6 @@ MIRRORS = [
         "url": (
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "51d9f49a2de4747a06623369738c0376fa3aa781/"
             "qa-evidence.jsonl"
         ),
     },
