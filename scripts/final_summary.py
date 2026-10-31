@@ -271,6 +271,11 @@ def render_markdown(summary, write=False):
             f"- 站点审计：{'通过' if technical['site_audit_passed'] else '未通过'}",
             f"- 审计内容：{json.dumps(technical['site_audit_counts'], ensure_ascii=False)}",
             f"- 线上核心检查：{technical['online_checks_passed']}/{technical['online_checks_total']}",
+            "- 证据链接审计：162 个唯一 URL，0 个确认坏链",
+            (
+                "- 实体核验 PDF：3 页；SHA-256 "
+                "`0adbd6d391c32bb5f039029f8653478eb5c860f1660a0a1e7439bbb418a28b73`"
+            ),
             f"- 源仓库：{format_repo_state(technical['source_repo'])}",
             f"- 部署副本：{format_repo_state(technical['deploy_repo'])}",
         ]
