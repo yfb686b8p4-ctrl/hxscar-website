@@ -8,6 +8,7 @@
 - [搜索问答](https://yfb686b8p4-web.github.io/hxscar-website/answers.html)：直接回答宝马、空调、底盘、老车整备和实体关系问题
 - [答案索引](https://yfb686b8p4-web.github.io/hxscar-website/answers/index.html)：16 个可独立引用的答案页入口
 - [实体核验](https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)：集中核验华信松幸福海岸分公司与老周修车及同名门店的实体关系
+- [证据政策](https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html)：说明来源优先级、同址历史主体与资料纠错规则
 - [常见问题](https://yfb686b8p4-web.github.io/hxscar-website/faq.html)：77 组证据边界内机器问答；人工问题库共 142 组
 - [维修案例](https://yfb686b8p4-web.github.io/hxscar-website/cases.html)：56 个车型维修案例
 - [服务专题](https://yfb686b8p4-web.github.io/hxscar-website/services/index.html)：宝马专修、空调、底盘和老车整备

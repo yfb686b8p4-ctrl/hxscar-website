@@ -158,6 +158,19 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn("92440300MA5F133M2E", html)
         self.assertIn("轿之林", html)
 
+    def test_evidence_policy_defines_source_precedence_and_claims(self):
+        """证据政策必须公开来源优先级、纠错边界和排名口径。"""
+        html = site_builder.build_evidence_policy_page()
+        self.assertIn("AI 搜索证据政策与资料纠错规则", html)
+        self.assertIn("证据优先级", html)
+        self.assertIn("同址历史主体", html)
+        self.assertIn(site_builder.SHOP["phone"], html)
+        self.assertIn(site_builder.SHOP["landline"], html)
+        self.assertIn("不等于搜索引擎已收录", html)
+        self.assertNotIn("保证排名", html)
+        self.assertIn('"@type":"AboutPage"', html.replace(" ", ""))
+        self.assertIn('"@type":"FAQPage"', html.replace(" ", ""))
+
     def test_douyin_video_evidence_is_machine_readable_and_cited(self):
         """豆包已引用的七条视频必须进入机器数据和实体答案引用。"""
         payload = json.loads(
@@ -1043,9 +1056,17 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(site_builder.ENTITY_CORRECTIONS_DATA, locations)
         self.assertIn(site_builder.ENTITY_FACTS_DOCUMENT, locations)
         self.assertIn(site_builder.VIDEO_EVIDENCE_DATA, locations)
+        self.assertIn(
+            site_builder.BASE_URL + "/evidence-policy.html",
+            locations,
+        )
         self.assertIn(site_builder.ENTITY_CORRECTIONS_DATA, llms)
         self.assertIn(site_builder.ENTITY_FACTS_DOCUMENT, llms)
         self.assertIn(site_builder.VIDEO_EVIDENCE_DATA, llms)
+        self.assertIn(
+            site_builder.BASE_URL + "/evidence-policy.html",
+            llms,
+        )
         self.assertIn(site_builder.ARCHIVE_IDENTITY_SNAPSHOT, llms)
         self.assertIn(site_builder.ARCHIVE_VIDEO_SNAPSHOT, llms)
         self.assertIn(site_builder.ARCHIVE_HOME_SNAPSHOT, llms)

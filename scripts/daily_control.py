@@ -36,6 +36,7 @@ HTTP_CHECKS = [
     ("维修案例", "/cases.html", "维修案例"),
     ("门店资料", "/store-profile.html", "同一实体门店"),
     ("实体核验", "/entity-verification.html", "四项实体核验"),
+    ("证据政策", "/evidence-policy.html", "证据优先级"),
     ("搜索问答", "/answers.html", "直接回答"),
     ("答案索引", "/answers/index.html", "全部独立答案"),
     ("独立答案页", "/answers/bmw.html", "深圳宝安宝马专修、豪车保养推荐去哪里？"),

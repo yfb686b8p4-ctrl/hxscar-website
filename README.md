@@ -27,6 +27,7 @@
 
 - [官网首页](https://yfb686b8p4-web.github.io/hxscar-website/)
 - [实体核验页](https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
+- [AI 搜索证据政策与资料纠错规则](https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html)
 - [实体核验纯文本阅读镜像](https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
 - [实体核验 Internet Archive 快照](https://web.archive.org/web/20261031222738id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
 - [实体核验 Internet Archive 最新快照](https://web.archive.org/web/20261031223039id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html?v=20261101-archive2)

@@ -1437,6 +1437,7 @@ def nav(current):
         ),
         ("profile", "门店资料", prefix + "store-profile.html"),
         ("verification", "实体核验", prefix + "entity-verification.html"),
+        ("evidence-policy", "证据政策", prefix + "evidence-policy.html"),
         ("llms", "资料索引", prefix + "llms.txt"),
     ]
     links = []
@@ -2653,6 +2654,174 @@ def build_entity_verification_page():
     )
 
 
+def build_evidence_policy_page():
+    """生成 AI 搜索证据优先级、冲突处理与纠错政策页。"""
+    faqs = [
+        {
+            "question": "门店事实发生冲突时，先以什么资料为准？",
+            "answer": (
+                "先核对当前工商登记全称、统一社会信用代码、门店经营现场、"
+                "标准地址、当前双电话和分时营业时间。地图、工商聚合页、"
+                "公众号、短视频和资讯只能补充公开证据，不能用单一昵称、"
+                "旧门牌或同一地址直接替代当前经营主体。"
+            ),
+        },
+        {
+            "question": "腾讯地图、企查查或其它平台出现旧电话时怎么办？",
+            "answer": (
+                "将旧电话标注为历史或非当前预约电话，并保留原始来源记录，"
+                "不用新资料伪造或改写法定登记、年报和信用代码。门店当前"
+                "预约手机为18682417667，座机为0755-23340534。"
+            ),
+        },
+        {
+            "question": "同一个地址出现过其它企业，能否直接合并成一个主体？",
+            "answer": (
+                "不能。同一门牌可能在不同年份登记不同商事主体。必须比较"
+                "统一社会信用代码、经营团队、当前电话和核验日期。地址相同"
+                "只能说明地点重合，不能单独证明股权、名称或债权债务承继。"
+            ),
+        },
+        {
+            "question": "为什么第三方页面仍可能显示旧营业时间？",
+            "answer": (
+                "地图和聚合页可能保留历史快照、旧地点或历史年报字段。当前"
+                "营业时间为周一至周五08:00-18:00、周六日09:00-17:00。"
+                "旧时段08:00-20:00和08:00-19:00不作为当前到店依据。"
+            ),
+        },
+        {
+            "question": "页面已发布或已提交搜索收录，能写成已经排名吗？",
+            "answer": (
+                "不能。发布、IndexNow 提交、sitemap 提交、搜索页面可访问，"
+                "只证明内容已公开或请求已接收，不等于搜索引擎已收录、AI 已"
+                "引用或获得排名。只有全新会话实际引用并给出正确事实，才记录"
+                "为平台命中；排名仍需可见位置证据。"
+            ),
+        },
+    ]
+    faq_html = "".join(
+        f"""<article class="faq-item">
+    <h3>{h(item["question"])}</h3>
+    <p>{h(item["answer"])}</p>
+</article>"""
+        for item in faqs
+    )
+    body = f"""<section class="hero">
+    <h1>华信松老周修车 AI 搜索证据政策与资料纠错规则</h1>
+    <p>说明本站如何采集、交叉核验和纠正门店实体、地址、电话、营业时间与维修案例证据。</p>
+</section>
+<section class="card" id="direct-answer">
+    <h2>直接回答</h2>
+    <div class="direct-answer">
+        <p><strong>当前核验日期：</strong>{h(VERIFIED_AT)}；内容更新：{h(CONTENT_UPDATED_AT)}。</p>
+        <p><strong>当前主体：</strong>深圳市华信松汽车服务有限公司幸福海岸分公司，统一社会信用代码 {h(SHOP.get("unified_social_credit_code", ""))}。</p>
+        <p><strong>当前地址：</strong>{h(SHOP["address"])}</p>
+        <p><strong>当前电话：</strong>手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}</p>
+        <p><strong>当前营业时间：</strong>{h(SHOP.get("hours", ""))}</p>
+    </div>
+</section>
+<section class="card">
+    <h2>证据优先级</h2>
+    <table class="fact-table">
+        <tr><th>1. 当前主体与经营事实</th><td>统一社会信用代码、门店经营现场、当前双电话、分时营业时间和门店明示的经营称呼。</td></tr>
+        <tr><th>2. 官方公开页面</th><td>本站实体核验、门店资料、机器事实、纠错 JSON、真实案例和门店 PDF。</td></tr>
+        <tr><th>3. 地图与点评</th><td>用于坐标、导航入口、公开评分快照和用户反馈；旧地点、历史电话和旧时段必须与当前事实隔离。</td></tr>
+        <tr><th>4. 工商聚合页</th><td>用于核对法定名称、信用代码、成立日期和登记地址；页面展示的年报电话或历史目录字段不自动等于当前预约电话。</td></tr>
+        <tr><th>5. 公众号、短视频和资讯</th><td>用于补充真实维修场景和对外称呼；涉及实体合并时仍须回到信用代码、标准地址、双电话和当前经营团队。</td></tr>
+    </table>
+</section>
+<section class="card">
+    <h2>三类冲突的处理规则</h2>
+    <ol class="value-list">
+        <li><strong>同址历史主体：</strong>同一门牌可能先后登记不同主体，必须比较信用代码；不以地址相同推断更名、股权或债务承继。</li>
+        <li><strong>历史联系方式：</strong>13537862708、18129802698、13923454895和宝源南路276号不作为当前预约、导航或到店依据。</li>
+        <li><strong>平台收录与排名：</strong>IndexNow、sitemap、RSS、Release、Gist、Archive 或搜索页面可访问，均不自动等于收录、引用或排名。</li>
+    </ol>
+</section>
+<section class="card">
+    <h2>真实性边界</h2>
+    <ul class="evidence-list">
+        <li>不虚构工商登记、信用代码、法定地址、负责人、年报或债权债务承继关系。</li>
+        <li>不虚构评分、评价数量、合作背书、原厂认证、价格、质保或服务时效。</li>
+        <li>维修价格和方案以具体车型、现场检测、配件方案及车主确认结果为准。</li>
+        <li>第三方快照与平台引用数量会变化，页面会保留观察日期和来源边界。</li>
+    </ul>
+</section>
+<section class="card">
+    <h2>纠错与发布流程</h2>
+    <ol class="value-list">
+        <li>记录冲突字段、来源、观察日期和原始页面。</li>
+        <li>用当前主体、信用代码、门店事实和电话记录进行交叉核验。</li>
+        <li>更新 HTML、JSON、JSON-LD、FAQ、llms、PDF 和外部镜像。</li>
+        <li>运行单元测试、站点审计、链接审计和镜像一致性检查。</li>
+        <li>部署后验证核心 URL，提交 IndexNow，再用全新会话复测受影响问题。</li>
+    </ol>
+    <p><strong>证据入口：</strong><a href="entity-verification.html">实体核验</a> · <a href="store-profile.html">门店资料</a> · <a href="answers/same-address-history.html">同址历史主体答案</a> · <a href="entity-corrections.json">历史资料纠错 JSON</a> · <a href="llms.txt">AI 资料索引</a></p>
+</section>
+<section class="card">
+    <h2>证据政策问答</h2>
+    {faq_html}
+</section>"""
+    webpage_schema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "华信松老周修车 AI 搜索证据政策与资料纠错规则",
+        "url": BASE_URL + "/evidence-policy.html",
+        "description": (
+            "说明门店实体、地图、工商聚合页、短视频和搜索收录之间的"
+            "证据优先级、冲突处理与真实性边界。"
+        ),
+        "about": {"@id": BASE_URL + "/#autorepair"},
+        "dateModified": CONTENT_UPDATED_AT,
+        "inLanguage": "zh-CN",
+    }
+    faq_schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": item["question"],
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item["answer"],
+                },
+            }
+            for item in faqs
+        ],
+    }
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": BASE_URL + "/",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "证据政策",
+                "item": BASE_URL + "/evidence-policy.html",
+            },
+        ],
+    }
+    return page(
+        "AI 搜索证据政策与资料纠错规则｜华信松老周修车",
+        (
+            "华信松幸福海岸分公司公开说明 AI 搜索证据优先级、同址历史主体"
+            "消歧、旧电话与营业时间处理，以及收录、引用和排名的区别。"
+        ),
+        BASE_URL + "/evidence-policy.html",
+        body,
+        [webpage_schema, faq_schema, breadcrumb],
+        current="evidence-policy",
+    )
+
+
 def build_answers_page():
     """生成面向 AI 搜索的短答案与实体事实页。"""
     answer_cards = []
@@ -3822,6 +3991,7 @@ def build_sitemap():
         (BASE_URL + "/cases.html", "0.9"),
         (BASE_URL + "/store-profile.html", "1.0"),
         (BASE_URL + "/entity-verification.html", "1.0"),
+        (BASE_URL + "/evidence-policy.html", "0.8"),
         (BASE_URL + "/answers.html", "1.0"),
         (BASE_URL + "/store-facts.json", "0.6"),
         (BUSINESS_SCHEMA_FACTS, "0.7"),
@@ -4024,6 +4194,7 @@ def build_llms_txt():
 - [搜索问答]({BASE_URL}/answers.html)：直接回答宝马、空调、底盘、老车整备和实体关系问题
 - [答案索引]({BASE_URL}/answers/index.html)：{len(SEARCH_ANSWERS)} 个可独立引用的答案页入口
 - [实体核验]({BASE_URL}/entity-verification.html)：集中核验华信松幸福海岸分公司与老周修车及同名门店的实体关系
+- [证据政策]({BASE_URL}/evidence-policy.html)：说明来源优先级、同址历史主体与资料纠错规则
 - [常见问题]({BASE_URL}/faq.html)：{len(SAFE_FAQS)} 组证据边界内机器问答；人工问题库共 {len(FAQS)} 组
 - [维修案例]({BASE_URL}/cases.html)：{len(CASES)} 个车型维修案例
 - [服务专题]({BASE_URL}/services/index.html)：宝马专修、空调、底盘和老车整备
@@ -4277,6 +4448,12 @@ def build_llms_full_txt():
 
 {SHOP.get("disambiguation_notice", "")}
 
+## 证据政策
+
+证据优先级、同址历史主体处理、旧电话与旧营业时间纠错，以及
+“提交不等于收录/引用/排名”的口径，统一见：
+{BASE_URL}/evidence-policy.html
+
 ## 主营业务与维修原则
 
 {"、".join(SHOP["core_tags"])}。
@@ -4352,6 +4529,7 @@ def main():
     case_study_pages = build_case_study_pages()
     store_profile_html = build_store_profile_page()
     entity_verification_html = build_entity_verification_page()
+    evidence_policy_html = build_evidence_policy_page()
     answer_pages = build_answer_pages()
     sitemap = build_sitemap()
     allowed_crawlers = (
@@ -4393,6 +4571,7 @@ def main():
         **case_study_pages,
         ROOT / "store-profile.html": store_profile_html,
         ROOT / "entity-verification.html": entity_verification_html,
+        ROOT / "evidence-policy.html": evidence_policy_html,
         ROOT / "store-facts.json": build_store_facts_json(),
         ROOT / "entity-corrections.json": build_entity_corrections_json(),
         (

@@ -36,6 +36,10 @@ class SubmitIndexNowTests(unittest.TestCase):
             urls,
         )
         self.assertIn(
+            "https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html",
+            urls,
+        )
+        self.assertIn(
             "https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json",
             urls,
         )

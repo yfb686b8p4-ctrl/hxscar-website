@@ -31,6 +31,7 @@ PRIORITY_PATHS = {
     "/hxscar-website/answers.html",
     "/hxscar-website/store-profile.html",
     "/hxscar-website/entity-verification.html",
+    "/hxscar-website/evidence-policy.html",
     "/hxscar-website/store-facts.json",
     "/hxscar-website/entity-corrections.json",
     "/hxscar-website/downloads/entity-facts-2026-11-01.md",
