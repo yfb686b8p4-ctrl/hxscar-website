@@ -8,6 +8,10 @@
   `https://web.archive.org/web/20261031223039id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html?v=20261101-archive2`
 - 门店机器事实：
   `https://web.archive.org/web/20261031222736id_/https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json`
+- 实体关系答案页：
+  `https://web.archive.org/web/20261031223606id_/https://yfb686b8p4-web.github.io/hxscar-website/answers/identity.html?v=20261101-identity-archive`
+- 视频证据 JSON：
+  `https://web.archive.org/web/20261031223603id_/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json?v=20261101-video-archive`
 
 ## 保真核验
 
@@ -18,6 +22,10 @@
   `412794ee22141d537df54a9795a9f1dc69b6e161f42eeeff105fb38a7a7e1331`
 - 门店事实快照与本地文件 SHA-256 完全一致：
   `29654639a2f16f23200e63aa05279f5596e2f96e8a4352373adfbbb474449b4f`
+- 实体关系答案快照与本地文件 SHA-256 完全一致：
+  `171cfd309b22f8d2af522a50e02a8ea5b7353811c8ad72cf78752e14bb6febf2`
+- 视频证据快照与本地文件 SHA-256 完全一致：
+  `c0528b454b7fce74799e83f599988e140ed70d62845364ad73e249c3ffd5f610`
 - 快照正文包含法定名称、信用代码、完整地址、双电话、分时营业时间和
   7 条视频证据。
 

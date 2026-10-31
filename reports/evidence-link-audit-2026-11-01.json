@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T06:35:41.766750+08:00",
+  "checked_at": "2026-11-01T06:37:27.600626+08:00",
   "source_files": [
     "qa-evidence.jsonl",
     "case-evidence.json",
@@ -10,14 +10,13 @@
     "feed.xml",
     "llms-full.txt"
   ],
-  "total": 157,
-  "passed": 151,
-  "blocked": 6,
+  "total": 159,
+  "passed": 155,
+  "blocked": 4,
   "failed": 0,
   "status_counts": {
     "0": 3,
-    "200": 151,
-    "404": 2,
+    "200": 155,
     "405": 1
   },
   "items": [
@@ -219,16 +218,30 @@
     },
     {
       "url": "https://web.archive.org/web/20261031222738id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html",
-      "status": 404,
-      "ok": false,
-      "blocked": true,
+      "status": 200,
+      "ok": true,
+      "blocked": false,
       "error": ""
     },
     {
       "url": "https://web.archive.org/web/20261031223039id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html?v=20261101-archive2",
-      "status": 404,
-      "ok": false,
-      "blocked": true,
+      "status": 200,
+      "ok": true,
+      "blocked": false,
+      "error": ""
+    },
+    {
+      "url": "https://web.archive.org/web/20261031223603id_/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json?v=20261101-video-archive",
+      "status": 200,
+      "ok": true,
+      "blocked": false,
+      "error": ""
+    },
+    {
+      "url": "https://web.archive.org/web/20261031223606id_/https://yfb686b8p4-web.github.io/hxscar-website/answers/identity.html?v=20261101-identity-archive",
+      "status": 200,
+      "ok": true,
+      "blocked": false,
       "error": ""
     },
     {

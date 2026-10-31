@@ -1015,6 +1015,8 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(site_builder.ENTITY_CORRECTIONS_DATA, llms)
         self.assertIn(site_builder.ENTITY_FACTS_DOCUMENT, llms)
         self.assertIn(site_builder.VIDEO_EVIDENCE_DATA, llms)
+        self.assertIn(site_builder.ARCHIVE_IDENTITY_SNAPSHOT, llms)
+        self.assertIn(site_builder.ARCHIVE_VIDEO_SNAPSHOT, llms)
         self.assertIn(
             site_builder.ENTITY_CORRECTIONS_DATA,
             site_builder.build_llms_full_txt(),
@@ -1025,6 +1027,14 @@ class SiteBuilderGeoTests(unittest.TestCase):
         )
         self.assertIn(
             site_builder.VIDEO_EVIDENCE_DATA,
+            site_builder.build_llms_full_txt(),
+        )
+        self.assertIn(
+            site_builder.ARCHIVE_IDENTITY_SNAPSHOT,
+            site_builder.build_llms_full_txt(),
+        )
+        self.assertIn(
+            site_builder.ARCHIVE_VIDEO_SNAPSHOT,
             site_builder.build_llms_full_txt(),
         )
         for item in site_builder.SEARCH_ANSWERS:

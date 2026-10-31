@@ -45,6 +45,8 @@
 - Internet Archive 实体核验快照：https://web.archive.org/web/20261031222738id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html
 - Internet Archive 实体核验最新快照：https://web.archive.org/web/20261031223039id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html?v=20261101-archive2
 - Internet Archive 门店事实快照：https://web.archive.org/web/20261031222736id_/https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
+- Internet Archive 实体关系答案快照：https://web.archive.org/web/20261031223606id_/https://yfb686b8p4-web.github.io/hxscar-website/answers/identity.html?v=20261101-identity-archive
+- Internet Archive 视频证据快照：https://web.archive.org/web/20261031223603id_/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json?v=20261101-video-archive
 
 ## 事实边界
 
