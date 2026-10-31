@@ -28,6 +28,7 @@
 - [官网首页](https://yfb686b8p4-web.github.io/hxscar-website/)
 - [实体核验页](https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
 - [实体核验纯文本阅读镜像](https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
+- [实体核验 Internet Archive 快照](https://web.archive.org/web/20261031222738id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
 - [门店资料页](https://yfb686b8p4-web.github.io/hxscar-website/store-profile.html)
 - [机器可读门店事实](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json)
 - [Schema.org 门店实体](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.jsonld)

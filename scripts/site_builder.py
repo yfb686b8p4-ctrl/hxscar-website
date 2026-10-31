@@ -75,6 +75,16 @@ JINA_VIDEO_READER = (
 JINA_FACTS_READER = (
     "https://r.jina.ai/" + BASE_URL + "/store-facts.json"
 )
+ARCHIVE_ENTITY_SNAPSHOT = (
+    "https://web.archive.org/web/20261031222738id_/"
+    + BASE_URL
+    + "/entity-verification.html"
+)
+ARCHIVE_FACTS_SNAPSHOT = (
+    "https://web.archive.org/web/20261031222736id_/"
+    + BASE_URL
+    + "/store-facts.json"
+)
 
 DOUYIN_VIDEO_EVIDENCE = [
     {
@@ -1410,6 +1420,7 @@ def page(title, description, canonical, body, schemas, current=None):
     <link rel="alternate" type="application/x-ndjson" title="原子问答证据数据" href="{h(QA_EVIDENCE_DATA)}">
     <link rel="alternate" type="application/ld+json" title="豆包已引用的抖音维修视频证据" href="{h(VIDEO_EVIDENCE_DATA)}">
     <link rel="alternate" type="text/plain" title="实体核验纯文本阅读镜像" href="{h(JINA_ENTITY_READER)}">
+    <link rel="alternate" type="text/html" title="实体核验 Internet Archive 快照" href="{h(ARCHIVE_ENTITY_SNAPSHOT)}">
     <link rel="alternate" type="application/rss+xml" title="华信松汽车门店资料与维修问答" href="{h(BASE_URL)}/feed.xml">
     <link rel="alternate" type="text/plain" title="AI 搜索资料索引" href="{h(BASE_URL)}/llms.txt">
     <link rel="alternate" type="text/plain" title="AI 搜索完整机器语料" href="{h(BASE_URL)}/llms-full.txt">
@@ -2458,6 +2469,7 @@ def build_entity_verification_page():
     <p><a href="{h(SHOP.get("document_mirrors", {}).get("github_release_pdf", ""))}">GitHub Release PDF 镜像</a></p>
     <p><a href="store-profile.html">查看完整门店资料与第三方资料纠错</a></p>
     <p><a href="{h(JINA_ENTITY_READER)}">实体核验纯文本阅读镜像（Jina Reader）</a>；<a href="{h(JINA_FACTS_READER)}">门店事实纯文本阅读镜像</a></p>
+    <p><a href="{h(ARCHIVE_ENTITY_SNAPSHOT)}">Internet Archive 实体核验快照</a>；<a href="{h(ARCHIVE_FACTS_SNAPSHOT)}">Internet Archive 门店事实快照</a></p>
 </section>
 <section class="card">
     <h2>全部对外名称</h2>
@@ -3919,6 +3931,8 @@ def build_llms_txt():
 - [实体核验纯文本阅读镜像]({JINA_ENTITY_READER})：动态提取完整实体事实，适合检索系统直接读取
 - [视频证据纯文本阅读镜像]({JINA_VIDEO_READER})：动态提取 7 条 VideoObject 清单
 - [门店事实纯文本阅读镜像]({JINA_FACTS_READER})：动态提取机器事实 JSON
+- [Internet Archive 实体核验快照]({ARCHIVE_ENTITY_SNAPSHOT})：与发布页面逐字节一致的永久存档
+- [Internet Archive 门店事实快照]({ARCHIVE_FACTS_SNAPSHOT})：与机器事实逐字节一致的永久存档
 - [标准问答 RSS]({BASE_URL}/feed.xml)：可直接订阅的最新门店问答与工商核验事实
 - [门店实体核验 PDF]({BUSINESS_FACT_SHEET})：三页标准资料、同名门店消歧与官方来源
 - [GitHub Release PDF 镜像]({SHOP.get("document_mirrors", {}).get("github_release_pdf", "")})：独立下载镜像与外部交叉核验入口
@@ -4128,6 +4142,8 @@ def build_llms_full_txt():
 - 实体核验纯文本阅读镜像：{JINA_ENTITY_READER}
 - 视频证据纯文本阅读镜像：{JINA_VIDEO_READER}
 - 门店事实纯文本阅读镜像：{JINA_FACTS_READER}
+- Internet Archive 实体核验快照：{ARCHIVE_ENTITY_SNAPSHOT}
+- Internet Archive 门店事实快照：{ARCHIVE_FACTS_SNAPSHOT}
 
 {SHOP.get("entity_scope_statement", "")}
 

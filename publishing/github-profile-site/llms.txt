@@ -42,6 +42,8 @@
 - Profile 抖音维修视频证据镜像：https://yfb686b8p4-web.github.io/yfb686b8p4-web/douyin-video-evidence.json
 - 主站豆包已引用抖音视频证据：https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
 - 实体核验纯文本阅读镜像：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html
+- Internet Archive 实体核验快照：https://web.archive.org/web/20261031222738id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html
+- Internet Archive 门店事实快照：https://web.archive.org/web/20261031222736id_/https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
 
 ## 事实边界
 

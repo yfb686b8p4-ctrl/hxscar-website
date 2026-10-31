@@ -205,6 +205,8 @@ class SiteBuilderGeoTests(unittest.TestCase):
             site_builder.JINA_ENTITY_READER,
             site_builder.JINA_VIDEO_READER,
             site_builder.JINA_FACTS_READER,
+            site_builder.ARCHIVE_ENTITY_SNAPSHOT,
+            site_builder.ARCHIVE_FACTS_SNAPSHOT,
         ):
             self.assertIn(url, page)
         self.assertIn(site_builder.JINA_ENTITY_READER, html)
