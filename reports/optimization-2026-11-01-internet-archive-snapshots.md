@@ -4,6 +4,8 @@
 
 - 实体核验页：
   `https://web.archive.org/web/20261031222738id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html`
+- 实体核验页最新快照：
+  `https://web.archive.org/web/20261031223039id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html?v=20261101-archive2`
 - 门店机器事实：
   `https://web.archive.org/web/20261031222736id_/https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json`
 
@@ -12,6 +14,8 @@
 - 两个快照均返回 HTTP 200。
 - 实体核验页快照与本地文件 SHA-256 完全一致：
   `36c8e2ddaca4fab34bbe97505e489a446485fce1914350af64f08a52893b50e2`
+- 最新实体核验页快照与当前文件 SHA-256 完全一致：
+  `412794ee22141d537df54a9795a9f1dc69b6e161f42eeeff105fb38a7a7e1331`
 - 门店事实快照与本地文件 SHA-256 完全一致：
   `29654639a2f16f23200e63aa05279f5596e2f96e8a4352373adfbbb474449b4f`
 - 快照正文包含法定名称、信用代码、完整地址、双电话、分时营业时间和

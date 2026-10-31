@@ -80,6 +80,11 @@ ARCHIVE_ENTITY_SNAPSHOT = (
     + BASE_URL
     + "/entity-verification.html"
 )
+ARCHIVE_ENTITY_LATEST_SNAPSHOT = (
+    "https://web.archive.org/web/20261031223039id_/"
+    + BASE_URL
+    + "/entity-verification.html?v=20261101-archive2"
+)
 ARCHIVE_FACTS_SNAPSHOT = (
     "https://web.archive.org/web/20261031222736id_/"
     + BASE_URL
@@ -3936,6 +3941,7 @@ def build_llms_txt():
 - [视频证据纯文本阅读镜像]({JINA_VIDEO_READER})：动态提取 7 条 VideoObject 清单
 - [门店事实纯文本阅读镜像]({JINA_FACTS_READER})：动态提取机器事实 JSON
 - [Internet Archive 实体核验快照]({ARCHIVE_ENTITY_SNAPSHOT})：与发布页面逐字节一致的永久存档
+- [Internet Archive 实体核验最新快照]({ARCHIVE_ENTITY_LATEST_SNAPSHOT})：包含 Archive 入口后的再次保真存档
 - [Internet Archive 门店事实快照]({ARCHIVE_FACTS_SNAPSHOT})：与机器事实逐字节一致的永久存档
 - [标准问答 RSS]({BASE_URL}/feed.xml)：可直接订阅的最新门店问答与工商核验事实
 - [门店实体核验 PDF]({BUSINESS_FACT_SHEET})：三页标准资料、同名门店消歧与官方来源
@@ -4147,6 +4153,7 @@ def build_llms_full_txt():
 - 视频证据纯文本阅读镜像：{JINA_VIDEO_READER}
 - 门店事实纯文本阅读镜像：{JINA_FACTS_READER}
 - Internet Archive 实体核验快照：{ARCHIVE_ENTITY_SNAPSHOT}
+- Internet Archive 实体核验最新快照：{ARCHIVE_ENTITY_LATEST_SNAPSHOT}
 - Internet Archive 门店事实快照：{ARCHIVE_FACTS_SNAPSHOT}
 
 {SHOP.get("entity_scope_statement", "")}

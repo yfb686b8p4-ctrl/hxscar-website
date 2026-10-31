@@ -45,6 +45,7 @@
 - 视频证据纯文本阅读镜像：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
 - 门店事实纯文本阅读镜像：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
 - Internet Archive 实体核验快照：https://web.archive.org/web/20261031222738id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html
+- Internet Archive 实体核验最新快照：https://web.archive.org/web/20261031223039id_/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html?v=20261101-archive2
 - Internet Archive 门店事实快照：https://web.archive.org/web/20261031222736id_/https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
 
 本资料所称“华信松汽车”均特指位于深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺的深圳市华信松汽车服务有限公司幸福海岸分公司，不延伸到其他同名、同品牌或同集团门店。
