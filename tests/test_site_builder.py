@@ -1126,7 +1126,17 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(site_builder.SHOP["hours"], html)
         self.assertIn(site_builder.SHOP["disambiguation_notice"], html)
         self.assertIn("13923454895", html)
+        self.assertIn("13537862708", html)
         self.assertIn("宝源南路276号", html)
+        self.assertIn(
+            "工商聚合页出现13537862708，是幸福海岸店当前电话吗？",
+            html,
+        )
+        self.assertIn(
+            "深圳市华信松汽车服务有限公司幸福海岸分公司"
+            "与老周修车是同一家吗｜实体核验",
+            html,
+        )
         self.assertIn("南山总店或其他分公司与幸福海岸分公司是同一家门店吗？", html)
         self.assertIn(
             site_builder.SHOP["external_profile_links"]["gist"],

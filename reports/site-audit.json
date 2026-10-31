@@ -58,9 +58,9 @@
       ]
     },
     "entity-verification.html": {
-      "bytes": 48994,
-      "han_chars": 4702,
-      "visible_han_chars": 1805,
+      "bytes": 51058,
+      "han_chars": 4930,
+      "visible_han_chars": 1892,
       "json_ld_blocks": 6,
       "schema_types": [
         "WebSite",
