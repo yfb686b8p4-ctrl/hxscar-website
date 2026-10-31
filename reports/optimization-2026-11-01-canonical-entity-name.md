@@ -26,6 +26,9 @@
 - 服务页和车型页内嵌的门店 `provider` 同步补充法定全称、信用代码和
   完整别名集合。
 - RSS 门店事实同时区分法定名称与对外展示名称。
+- Profile Pages 的 `AutoRepair.name`、`WebSite.name` 和
+  `entity-corrections.json` 同步使用法定全称。
+- Profile `FAQPage` 删除重复问法，把第二个标准资料问题改为工商全称问法。
 
 ## 验证结果
 
@@ -34,6 +37,13 @@
 - 生成范围：15 个答案页、4 个服务页、12 个车型页、3 个独立案例页。
 - `store-facts.jsonld` 可解析，`taxID` 为 `91440300MA5GYCTQ6P`。
 - `entity-corrections.json` 的 `canonicalName` 与工商登记名称一致。
+- 主站 Pages `620ae89` 构建成功。
+- Profile Pages `5665b1a` 构建成功。
+- 线上 `store-facts.json` 已检出法定全称、展示名称和 6 个已核验别名。
+- 线上 `store-facts.jsonld` 已检出法定全称与
+  `91440300MA5GYCTQ6P`。
+- IndexNow 聚合端点和 Bing 直连端点均返回 HTTP 200：
+  主站 59 个 URL，Profile 10 个 URL。
 
 ## 边界
 

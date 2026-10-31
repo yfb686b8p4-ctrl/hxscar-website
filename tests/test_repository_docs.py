@@ -253,6 +253,36 @@ class RepositoryReadmeTests(unittest.TestCase):
             self.assertIn(shop["hours"], text)
             self.assertNotIn("4.9+", text)
             self.assertNotIn("服务超1000台", text)
+        schemas = [
+            json.loads(raw)
+            for raw in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>',
+                html,
+                re.S,
+            )
+        ]
+        business = next(
+            schema
+            for schema in schemas
+            if schema.get("@type") == "AutoRepair"
+        )
+        website = next(
+            schema
+            for schema in schemas
+            if schema.get("@type") == "WebSite"
+        )
+        faq = next(
+            schema
+            for schema in schemas
+            if schema.get("@type") == "FAQPage"
+        )
+        self.assertEqual(business["name"], shop["registered_name"])
+        self.assertEqual(website["name"], shop["registered_name"] + "实体镜像")
+        question_names = [
+            item["name"]
+            for item in faq["mainEntity"]
+        ]
+        self.assertEqual(len(question_names), len(set(question_names)))
         self.assertIn("store-banner-960.jpg", html)
         self.assertIn('src="assets/store-banner-960.jpg"', html)
         self.assertNotIn(
