@@ -1005,6 +1005,12 @@ class SiteBuilderGeoTests(unittest.TestCase):
             for node in sitemap.findall("sm:url/sm:loc", namespace)
         }
         llms = site_builder.build_llms_txt()
+        self.assertTrue(
+            llms.startswith(
+                "# "
+                + site_builder.SHOP["registered_name"]
+            )
+        )
         feed = site_builder.build_feed_xml()
         hub_url = site_builder.BASE_URL + "/answers/index.html"
         self.assertIn(hub_url, locations)

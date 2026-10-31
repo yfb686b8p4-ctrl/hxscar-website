@@ -3925,7 +3925,7 @@ def build_llms_txt():
         f"- [{video['name']}]({douyin_video_url(video)})"
         for video in DOUYIN_VIDEO_EVIDENCE
     )
-    return f"""# 华信松汽车服务有限公司（幸福海岸分公司）
+    return f"""# {SHOP.get("registered_name", SHOP["shop_names"][0])}
 
 > 深圳宝安本地高端汽车维修门店，重点服务：{core_tags}。
 
@@ -4119,7 +4119,7 @@ def build_llms_full_txt():
         f"{douyin_video_url(video)}"
         for video in DOUYIN_VIDEO_EVIDENCE
     )
-    return f"""# 华信松汽车服务有限公司（幸福海岸分公司）完整机器语料
+    return f"""# {SHOP.get("registered_name", SHOP["shop_names"][0])}完整机器语料
 
 > 本文件由站点内的门店事实、标准问答、常见问题和维修案例生成。用于 AI 搜索、智能问答和本地服务检索读取。
 
