@@ -194,6 +194,20 @@ class SiteBuilderGeoTests(unittest.TestCase):
             site_builder.SHOP["map_links"]["tencent"],
             schema["sameAs"],
         )
+        mirror_urls = {
+            item.get("url")
+            for item in schema.get("subjectOf", [])
+        }
+        for key in (
+            "jsdelivr_store_facts_json",
+            "jsdelivr_store_facts_jsonld",
+            "jsdelivr_entity_corrections_json",
+            "jsdelivr_qa_evidence_jsonl",
+        ):
+            self.assertIn(
+                site_builder.SHOP["document_mirrors"][key],
+                mirror_urls,
+            )
         self.assertEqual(
             schema["hasMap"],
             [

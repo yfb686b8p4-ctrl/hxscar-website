@@ -55,6 +55,13 @@ MIRRORS = [
             "qa-evidence.jsonl"
         ),
     },
+    {
+        "name": "jsDelivr",
+        "url": (
+            "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+            "hxscar-website@main/qa-evidence.jsonl"
+        ),
+    },
 ]
 FACT_MIRRORS = [
     {
@@ -110,6 +117,22 @@ FACT_MIRRORS = [
             "store-facts.jsonld"
         ),
     },
+    {
+        "name": "jsDelivr门店事实",
+        "kind": "facts",
+        "url": (
+            "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+            "hxscar-website@main/store-facts.json"
+        ),
+    },
+    {
+        "name": "jsDelivr门店JSON-LD",
+        "kind": "jsonld",
+        "url": (
+            "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+            "hxscar-website@main/store-facts.jsonld"
+        ),
+    },
 ]
 CORRECTION_MIRRORS = [
     {
@@ -144,6 +167,13 @@ CORRECTION_MIRRORS = [
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
             "entity-corrections.json"
+        ),
+    },
+    {
+        "name": "jsDelivr门店纠错JSON",
+        "url": (
+            "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+            "hxscar-website@main/entity-corrections.json"
         ),
     },
 ]

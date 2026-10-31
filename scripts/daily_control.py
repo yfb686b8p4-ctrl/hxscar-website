@@ -157,6 +157,34 @@ HTTP_CHECKS = [
         30,
     ),
     (
+        "jsDelivr门店事实",
+        "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+        "hxscar-website@main/store-facts.json",
+        "深圳市华信松汽车服务有限公司幸福海岸分公司",
+        30,
+    ),
+    (
+        "jsDelivr门店JSON-LD",
+        "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+        "hxscar-website@main/store-facts.jsonld",
+        "AutoRepair",
+        30,
+    ),
+    (
+        "jsDelivr门店历史资料纠正",
+        "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+        "hxscar-website@main/entity-corrections.json",
+        "BusinessEntityFactCorrection",
+        30,
+    ),
+    (
+        "jsDelivr问答证据镜像",
+        "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+        "hxscar-website@main/qa-evidence.jsonl",
+        '"@type":"Question"',
+        30,
+    ),
+    (
         "Profile IndexNow验证",
         "https://yfb686b8p4-web.github.io/yfb686b8p4-web/"
         "hxscarprofile20261101geo.txt",

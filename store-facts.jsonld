@@ -133,6 +133,30 @@
     },
     {
       "@type": "DataFeed",
+      "name": "jsDelivr 门店事实 JSON 镜像",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@type": "DataFeed",
+      "name": "jsDelivr 门店 JSON-LD 镜像",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld",
+      "encodingFormat": "application/ld+json"
+    },
+    {
+      "@type": "DataFeed",
+      "name": "jsDelivr 门店纠错 JSON 镜像",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@type": "DataFeed",
+      "name": "jsDelivr 原子问答证据镜像",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl",
+      "encodingFormat": "application/x-ndjson"
+    },
+    {
+      "@type": "DataFeed",
       "name": "机器可读门店事实",
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json",
       "encodingFormat": "application/json"

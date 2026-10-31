@@ -1108,6 +1108,30 @@ def answer_evidence_sources(item):
                 "github_profile_answers_html", ""
             ),
         },
+        {
+            "name": "jsDelivr 门店事实 JSON 镜像",
+            "url": SHOP.get("document_mirrors", {}).get(
+                "jsdelivr_store_facts_json", ""
+            ),
+        },
+        {
+            "name": "jsDelivr 门店 JSON-LD 镜像",
+            "url": SHOP.get("document_mirrors", {}).get(
+                "jsdelivr_store_facts_jsonld", ""
+            ),
+        },
+        {
+            "name": "jsDelivr 门店纠错 JSON 镜像",
+            "url": SHOP.get("document_mirrors", {}).get(
+                "jsdelivr_entity_corrections_json", ""
+            ),
+        },
+        {
+            "name": "jsDelivr 原子问答证据镜像",
+            "url": SHOP.get("document_mirrors", {}).get(
+                "jsdelivr_qa_evidence_jsonl", ""
+            ),
+        },
     ]
     if item["category"] in {"门店身份", "门店资料"}:
         sources.extend(
@@ -1519,6 +1543,38 @@ def local_business_schema():
                     "github_profile_answers_html", ""
                 ),
                 "encodingFormat": "text/html",
+            },
+            {
+                "@type": "DataFeed",
+                "name": "jsDelivr 门店事实 JSON 镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_store_facts_json", ""
+                ),
+                "encodingFormat": "application/json",
+            },
+            {
+                "@type": "DataFeed",
+                "name": "jsDelivr 门店 JSON-LD 镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_store_facts_jsonld", ""
+                ),
+                "encodingFormat": "application/ld+json",
+            },
+            {
+                "@type": "DataFeed",
+                "name": "jsDelivr 门店纠错 JSON 镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_entity_corrections_json", ""
+                ),
+                "encodingFormat": "application/json",
+            },
+            {
+                "@type": "DataFeed",
+                "name": "jsDelivr 原子问答证据镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_qa_evidence_jsonl", ""
+                ),
+                "encodingFormat": "application/x-ndjson",
             },
         ],
         "sameAs": [
@@ -3022,6 +3078,30 @@ def build_store_facts_json():
                 ),
             },
             {
+                "name": "jsDelivr 门店事实 JSON 镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_store_facts_json", ""
+                ),
+            },
+            {
+                "name": "jsDelivr 门店 JSON-LD 镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_store_facts_jsonld", ""
+                ),
+            },
+            {
+                "name": "jsDelivr 门店纠错 JSON 镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_entity_corrections_json", ""
+                ),
+            },
+            {
+                "name": "jsDelivr 原子问答证据镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_qa_evidence_jsonl", ""
+                ),
+            },
+            {
                 "name": "门店实体核验 PDF",
                 "url": BUSINESS_FACT_SHEET,
             },
@@ -3238,6 +3318,12 @@ def build_entity_corrections_json():
                 "name": "GitHub Gist 门店事实纠错镜像",
                 "url": SHOP.get("document_mirrors", {}).get(
                     "gist_entity_corrections_json", ""
+                ),
+            },
+            {
+                "name": "jsDelivr 门店事实纠错镜像",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "jsdelivr_entity_corrections_json", ""
                 ),
             },
         ],

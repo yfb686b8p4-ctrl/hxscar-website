@@ -113,7 +113,7 @@ class DailyControlTests(unittest.TestCase):
         )
 
     def test_checks_cover_release_and_gist_qa_mirrors(self):
-        """每日检查必须覆盖四个原子问答镜像中的远端两个。"""
+        """每日检查必须覆盖 Release、Gist 与 jsDelivr 问答镜像。"""
         checks = {item[1] for item in daily_control.HTTP_CHECKS}
         self.assertIn(
             "https://github.com/yfb686b8p4-web/hxscar-website/"
@@ -124,6 +124,16 @@ class DailyControlTests(unittest.TestCase):
         self.assertIn(
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/ENTITY_FACTS.md",
+            checks,
+        )
+        self.assertIn(
+            "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+            "hxscar-website@main/qa-evidence.jsonl",
+            checks,
+        )
+        self.assertIn(
+            "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
+            "hxscar-website@main/store-facts.json",
             checks,
         )
         self.assertIn(

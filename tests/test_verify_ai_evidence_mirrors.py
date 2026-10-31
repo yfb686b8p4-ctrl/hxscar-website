@@ -36,6 +36,7 @@ class VerifyAiEvidenceMirrorsTests(unittest.TestCase):
                 "Profile Pages",
                 "GitHub Release",
                 "GitHub Gist",
+                "jsDelivr",
             },
         )
         fact_names = {
@@ -52,6 +53,8 @@ class VerifyAiEvidenceMirrorsTests(unittest.TestCase):
                 "官网门店JSON-LD",
                 "Release门店JSON-LD",
                 "Gist门店JSON-LD",
+                "jsDelivr门店事实",
+                "jsDelivr门店JSON-LD",
             },
         )
         correction_names = {
@@ -66,6 +69,7 @@ class VerifyAiEvidenceMirrorsTests(unittest.TestCase):
                 "Profile门店纠错JSON",
                 "Release门店纠错JSON",
                 "Gist门店纠错JSON",
+                "jsDelivr门店纠错JSON",
             },
         )
 
