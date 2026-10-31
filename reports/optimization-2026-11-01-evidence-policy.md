@@ -35,6 +35,7 @@
 - 所有页面主导航增加“证据政策”。
 - `sitemap.xml` 增加 `evidence-policy.html`。
 - `llms.txt` 和 `llms-full.txt` 增加证据政策链接。
+- 标准问答 RSS 增加证据政策条目，携带来源优先级和纠错边界摘要。
 - `submit_indexnow.py` 将证据政策页纳入优先提交 URL。
 - 每日线上检查增加证据政策页。
 - 站点审计将证据政策页纳入逐页结构化数据检查。

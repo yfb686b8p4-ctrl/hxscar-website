@@ -3856,6 +3856,24 @@ def build_feed_xml():
         f"实体消歧规则：{SHOP.get('disambiguation_notice', '')}"
     )
     items = []
+    policy_link = BASE_URL + "/evidence-policy.html"
+    policy_description = (
+        "AI 搜索证据政策：说明当前主体、工商聚合页、地图、公众号和短视频"
+        "之间的事实优先级，同址历史主体不自动合并，历史电话和旧营业时间"
+        "不作为当前资料；发布或提交 IndexNow 不等于收录、引用或排名。\n\n"
+        f"证据政策：{policy_link}\n"
+        f"实体核验：{BASE_URL}/entity-verification.html"
+    )
+    items.append(
+        f"""  <item>
+    <title>华信松老周修车 AI 搜索证据政策与资料纠错规则</title>
+    <link>{h(policy_link)}</link>
+    <guid isPermaLink="true">{h(policy_link)}</guid>
+    <category>证据政策</category>
+    <pubDate>{h(pub_date)}</pubDate>
+    <description>{h(policy_description)}</description>
+  </item>"""
+    )
     for item in SEARCH_ANSWERS:
         if item["anchor"] == "identity":
             link = f"{BASE_URL}/entity-verification.html"
