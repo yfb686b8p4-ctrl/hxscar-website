@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T06:48:05.035561+08:00",
+  "generated_at": "2026-11-01T06:52:31.740820+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -12,8 +12,8 @@
     "effective_hit_rate": 33.3,
     "citation_rate": 100.0,
     "entity_completed": 2,
-    "entity_correct": 1,
-    "entity_correct_rate": 50.0,
+    "entity_correct": 2,
+    "entity_correct_rate": 100.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
     "service_completed": 10,
@@ -35,8 +35,8 @@
     "effective_hit_rate": 37.5,
     "citation_rate": 100.0,
     "entity_completed": 2,
-    "entity_correct": 1,
-    "entity_correct_rate": 50.0,
+    "entity_correct": 2,
+    "entity_correct_rate": 100.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
     "service_completed": 6,
@@ -84,7 +84,7 @@
     "metric_changes": {
       "effective_hit_rate": 0.0,
       "citation_rate": 50.0,
-      "entity_correct_rate": 0.0,
+      "entity_correct_rate": 50.0,
       "full_info_correct_rate": 0.0,
       "service_hit_rate": 0.0,
       "service_citation_rate": 66.7,
@@ -196,6 +196,16 @@
       "before_summary": "豆包和元宝在实体问题中把南山总店、其他分公司与幸福海岸店的信息混在一起。",
       "after_summary": "豆包和元宝均明确回答不是同一家实体门店；豆包参考12篇资料，元宝给出了南山与宝安两处不同地址。",
       "outcome": "专项实体场所消歧正确"
+    },
+    {
+      "id": "entity-indexnow-archive-recheck",
+      "title": "六端 IndexNow 与 Archive 证据后实体复测",
+      "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
+      "deployed_commit": "6f30a07",
+      "measured_at": "2026-11-01T06:52:00+08:00",
+      "before_summary": "06:14 复测时豆包确认同一家但完整资料缺失；元宝判断错误，并继续使用工商历史电话。",
+      "after_summary": "豆包明确回答是同一家门店并参考11篇资料，但只给简易地址，未给双电话和分时营业时间；元宝改为基本可以确定是同一家店，参考31篇资料并给出共同门牌与当前手机，但仍采用腾讯地图旧营业时间，未给座机和完整标准地址。",
+      "outcome": "核心实体关系正确率由1/2提升到2/2；完整资料仍为0/2；元宝31篇来源未读取本店官网、Archive、Jina、Gist或Release"
     }
   ],
   "wrong_items": [
@@ -203,7 +213,7 @@
       "platform": "元宝",
       "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
       "category": "门店身份",
-      "notes": "视频证据上线后全新对话复测；实体关系错误；仍称查不到官网公开证据"
+      "notes": "06:52六端IndexNow与Archive后全新对话复测；实体关系由错误转正确；31篇来源未读取官网或Archive；完整资料仍未通过"
     }
   ],
   "technical": {
@@ -220,8 +230,8 @@
     },
     "online_checks_passed": 46,
     "online_checks_total": 46,
-    "source_repo": "6f30a07\t记录六端IndexNow与Archive索引证据（干净）",
-    "deploy_repo": "6f30a07\t记录六端IndexNow与Archive索引证据（干净）"
+    "source_repo": "909b3ce\t刷新南山消歧后的日报与最终汇总（4 项未提交）",
+    "deploy_repo": "909b3ce\t刷新南山消歧后的日报与最终汇总（干净）"
   },
   "platform_blocks": [
     {
@@ -264,16 +274,9 @@
     {
       "priority": "P0",
       "category": "门店身份",
-      "action": "统一门店实体证据：明确同一实体门店、同一地址、同一运营团队，并区分其他同名分店。",
-      "platforms": [
-        "元宝"
-      ]
-    },
-    {
-      "priority": "P0",
-      "category": "门店身份",
       "action": "修正门店地址、电话、营业时间，并核验引用来源。",
       "platforms": [
+        "元宝",
         "豆包"
       ]
     },
@@ -375,7 +378,6 @@
     }
   ],
   "commits": [
-    "a27fbfe 刷新抖音实体说明视频后的41项状态",
     "620ae89 统一门店法定全称与品牌别名实体关系",
     "1dbf94b 同步Profile法定实体名称并记录索引通知",
     "6855882 增加jsDelivr外部实体证据镜像与一致性门禁",
@@ -414,7 +416,8 @@
     "a037e81 再次触发GitHub Pages构建恢复",
     "1505b08 增加首页服务Archive快照并刷新链接审计",
     "060a80d 记录南山总店与幸福海岸门店消歧复测",
-    "6f30a07 记录六端IndexNow与Archive索引证据"
+    "6f30a07 记录六端IndexNow与Archive索引证据",
+    "909b3ce 刷新南山消歧后的日报与最终汇总"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"
