@@ -62,8 +62,47 @@ BUSINESS_FACT_SHEET = BASE_URL + "/" + SHOP.get(
 BUSINESS_SCHEMA_FACTS = BASE_URL + "/store-facts.jsonld"
 CASE_EVIDENCE_DATA = BASE_URL + "/case-evidence.json"
 QA_EVIDENCE_DATA = BASE_URL + "/qa-evidence.jsonl"
+VIDEO_EVIDENCE_DATA = BASE_URL + "/douyin-video-evidence.json"
 ENTITY_CORRECTIONS_DATA = BASE_URL + "/entity-corrections.json"
 ENTITY_FACTS_DOCUMENT = BASE_URL + "/downloads/entity-facts-2026-11-01.md"
+
+DOUYIN_VIDEO_EVIDENCE = [
+    {
+        "id": "7638945775598479497",
+        "name": "底盘异响：摆臂球头与胶套维修边界",
+        "category": "底盘异响",
+    },
+    {
+        "id": "7583932086392196415",
+        "name": "比亚迪汉底盘异响：下摆臂球头检查",
+        "category": "底盘异响",
+    },
+    {
+        "id": "7639222767086704454",
+        "name": "比亚迪汉底盘异响：机脚胶检查",
+        "category": "底盘异响",
+    },
+    {
+        "id": "7571335895384565459",
+        "name": "奥迪烧机油与底盘异响整备记录",
+        "category": "老车整备翻新",
+    },
+    {
+        "id": "7650438382129424198",
+        "name": "奔驰S级底盘异响：平衡杆球头检查",
+        "category": "底盘异响",
+    },
+    {
+        "id": "7650435103483496042",
+        "name": "奔驰S400底盘异响：减震检查",
+        "category": "底盘异响",
+    },
+    {
+        "id": "7636254430954405796",
+        "name": "小鹏G6底盘异响：后桥检查",
+        "category": "底盘异响",
+    },
+]
 
 CASE_STUDY_SLUGS = {
     "宝马X5 3.0T烧机油半年，从5000km报警到1500km加1升": (
@@ -1049,6 +1088,67 @@ def map_reputation_lines():
     return "\n".join(lines)
 
 
+def douyin_video_url(video):
+    """返回豆包引用面板中的抖音公开分享地址。"""
+    return f"https://www.iesdouyin.com/share/video/{video['id']}"
+
+
+def douyin_video_records(item):
+    """按答案主题选择已进入豆包引用来源的公开维修视频。"""
+    if item["anchor"] == "identity":
+        return DOUYIN_VIDEO_EVIDENCE
+    if item["category"] in {"底盘异响", "老车整备翻新"}:
+        return [
+            video
+            for video in DOUYIN_VIDEO_EVIDENCE
+            if video["category"] in {"底盘异响", "老车整备翻新"}
+        ]
+    return []
+
+
+def douyin_video_evidence_schema():
+    """生成豆包已引用维修视频的机器可读证据清单。"""
+    return {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": VIDEO_EVIDENCE_DATA + "#videos",
+        "url": VIDEO_EVIDENCE_DATA,
+        "name": "豆包已引用的老周修车公开维修视频",
+        "description": (
+            "以下视频来自本门店抖音公开账号，并在2026-11-01豆包实体问题的"
+            "引用来源面板中出现。视频只用于核对真实维修场景；地址、电话、"
+            "营业时间和同名门店关系仍以实体核验页和机器事实为准。"
+        ),
+        "dateModified": CONTENT_UPDATED_AT,
+        "numberOfItems": len(DOUYIN_VIDEO_EVIDENCE),
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": index,
+                "item": {
+                    "@type": "VideoObject",
+                    "@id": douyin_video_url(video),
+                    "name": video["name"],
+                    "url": douyin_video_url(video),
+                    "about": video["category"],
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "深圳华信松老周修车",
+                        "sameAs": SHOP.get(
+                            "external_profile_links",
+                            {},
+                        ).get("douyin", ""),
+                    },
+                },
+            }
+            for index, video in enumerate(
+                DOUYIN_VIDEO_EVIDENCE,
+                start=1,
+            )
+        ],
+    }
+
+
 def answer_evidence_sources(item):
     """生成标准答案可被 AI 直接引用和交叉核验的来源列表。"""
     sources = [
@@ -1132,7 +1232,18 @@ def answer_evidence_sources(item):
                 "jsdelivr_qa_evidence_jsonl", ""
             ),
         },
+        {
+            "name": "豆包已引用的门店维修视频证据",
+            "url": VIDEO_EVIDENCE_DATA,
+        },
     ]
+    sources.extend(
+        {
+            "name": "抖音公开维修视频：" + video["name"],
+            "url": douyin_video_url(video),
+        }
+        for video in douyin_video_records(item)
+    )
     if item["category"] in {"门店身份", "门店资料"}:
         sources.extend(
             [
@@ -1184,6 +1295,7 @@ def entity_citation_urls():
         BASE_URL + "/entity-verification.html",
         BASE_URL + "/store-facts.json",
         BUSINESS_SCHEMA_FACTS,
+        VIDEO_EVIDENCE_DATA,
         BUSINESS_FACT_SHEET,
         SHOP.get("document_mirrors", {}).get("github_release_pdf", ""),
     ]
@@ -1279,6 +1391,7 @@ def page(title, description, canonical, body, schemas, current=None):
     <link rel="alternate" type="application/ld+json" href="{h(BUSINESS_SCHEMA_FACTS)}">
     <link rel="alternate" type="application/ld+json" title="公开维修案例数据" href="{h(CASE_EVIDENCE_DATA)}">
     <link rel="alternate" type="application/x-ndjson" title="原子问答证据数据" href="{h(QA_EVIDENCE_DATA)}">
+    <link rel="alternate" type="application/ld+json" title="豆包已引用的抖音维修视频证据" href="{h(VIDEO_EVIDENCE_DATA)}">
     <link rel="alternate" type="application/rss+xml" title="华信松汽车门店资料与维修问答" href="{h(BASE_URL)}/feed.xml">
     <link rel="alternate" type="text/plain" title="AI 搜索资料索引" href="{h(BASE_URL)}/llms.txt">
     <link rel="alternate" type="text/plain" title="AI 搜索完整机器语料" href="{h(BASE_URL)}/llms-full.txt">
@@ -1575,6 +1688,12 @@ def local_business_schema():
                     "jsdelivr_qa_evidence_jsonl", ""
                 ),
                 "encodingFormat": "application/x-ndjson",
+            },
+            {
+                "@type": "ItemList",
+                "name": "豆包已引用的抖音维修视频证据",
+                "url": VIDEO_EVIDENCE_DATA,
+                "numberOfItems": len(DOUYIN_VIDEO_EVIDENCE),
             },
         ],
         "sameAs": [
@@ -2258,6 +2377,12 @@ def build_entity_verification_page():
     aliases = "".join(
         f"<span>{h(name)}</span>" for name in SHOP["shop_names"]
     )
+    video_links = "".join(
+        f'<li><a href="{h(douyin_video_url(video))}">'
+        f'{h(video["name"])}</a>'
+        f'（{h(video["category"])}，抖音视频 {h(video["id"])}）</li>'
+        for video in DOUYIN_VIDEO_EVIDENCE
+    )
     body = f"""<section class="hero">
     <img class="brand-logo" src="assets/store-avatar-300.jpg" alt="{h(SHOP["shop_names"][0])}商家认证头像" width="96" height="96">
     <h1>深圳市华信松汽车服务有限公司幸福海岸分公司与老周修车是同一家吗？</h1>
@@ -2300,6 +2425,12 @@ def build_entity_verification_page():
         <tr><th>错误或历史营业时间</th><td>08:00-20:00、08:00-19:00；当前营业时间应为 {h(SHOP.get("hours", ""))}</td></tr>
     </table>
     <p>{h(SHOP.get("third_party_notice", ""))}</p>
+</section>
+<section class="card" id="douyin-video-evidence">
+    <h2>豆包已引用的公开维修视频</h2>
+    <p>以下 7 条视频来自本门店抖音公开账号，并于 2026-11-01 出现在豆包实体问题的引用来源面板。视频用于核对真实维修场景；地址、电话、营业时间和同名门店关系仍以本页四项实体核验为准。</p>
+    <ul class="evidence-list">{video_links}</ul>
+    <p><a href="douyin-video-evidence.json">查看机器可读视频证据清单</a></p>
 </section>
 <section class="card">
     <h2>公开核验来源</h2>
@@ -2373,7 +2504,13 @@ def build_entity_verification_page():
         ),
         BASE_URL + "/entity-verification.html",
         body,
-        [local_business_schema(), webpage_schema, faq_schema, breadcrumb],
+        [
+            local_business_schema(),
+            webpage_schema,
+            faq_schema,
+            douyin_video_evidence_schema(),
+            breadcrumb,
+        ],
         current="verification",
     )
 
@@ -2971,6 +3108,18 @@ def build_case_evidence_json():
     return json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
 
 
+def build_douyin_video_evidence_json():
+    """生成豆包已引用维修视频的独立 JSON 文件。"""
+    return (
+        json.dumps(
+            douyin_video_evidence_schema(),
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n"
+    )
+
+
 def build_qa_evidence_jsonl():
     """生成逐行可读取的问题、答案、案例和引用证据数据。"""
     rows = []
@@ -3050,6 +3199,10 @@ def build_store_facts_json():
             {
                 "name": "原子问答证据数据",
                 "url": QA_EVIDENCE_DATA,
+            },
+            {
+                "name": "豆包已引用的抖音维修视频证据",
+                "url": VIDEO_EVIDENCE_DATA,
             },
             {
                 "name": "门店历史资料纠正",
@@ -3142,6 +3295,15 @@ def build_store_facts_json():
                 "external_profile_links", {}
             ),
             "douyinId": SHOP.get("douyin_id", ""),
+            "douyinVideoEvidence": [
+                {
+                    **video,
+                    "url": douyin_video_url(video),
+                    "observedAt": "2026-11-01",
+                    "source": "豆包实体问题引用来源面板",
+                }
+                for video in DOUYIN_VIDEO_EVIDENCE
+            ],
             "brandAssets": {
                 "image": BUSINESS_IMAGE,
                 "logo": BUSINESS_LOGO,
@@ -3345,6 +3507,7 @@ def build_store_facts_jsonld():
         BUSINESS_FACT_SHEET,
         BASE_URL + "/store-facts.json",
         BASE_URL + "/answers/index.html",
+        VIDEO_EVIDENCE_DATA,
     ]
     schema["subjectOf"] = [
         *schema.get("subjectOf", []),
@@ -3525,6 +3688,7 @@ def build_sitemap():
         (BUSINESS_SCHEMA_FACTS, "0.7"),
         (CASE_EVIDENCE_DATA, "0.7"),
         (QA_EVIDENCE_DATA, "0.7"),
+        (VIDEO_EVIDENCE_DATA, "0.7"),
         (ENTITY_CORRECTIONS_DATA, "0.8"),
         (ENTITY_FACTS_DOCUMENT, "0.7"),
         (BASE_URL + "/feed.xml", "0.6"),
@@ -3707,6 +3871,10 @@ def build_llms_txt():
         for case in CASES
         if case_study_path(case)
     )
+    douyin_videos = "\n".join(
+        f"- [{video['name']}]({douyin_video_url(video)})"
+        for video in DOUYIN_VIDEO_EVIDENCE
+    )
     return f"""# 华信松汽车服务有限公司（幸福海岸分公司）
 
 > 深圳宝安本地高端汽车维修门店，重点服务：{core_tags}。
@@ -3728,6 +3896,7 @@ def build_llms_txt():
 - [Schema.org 门店实体]({BUSINESS_SCHEMA_FACTS})：可直接解析的 AutoRepair JSON-LD
 - [公开维修案例数据]({CASE_EVIDENCE_DATA})：{len(CASES)} 个结构化真实案例与对应答案
 - [原子问答证据数据]({QA_EVIDENCE_DATA})：{len(SEARCH_ANSWERS)} 条逐行问答，包含案例与逐答案引用
+- [豆包已引用的抖音维修视频证据]({VIDEO_EVIDENCE_DATA})：{len(DOUYIN_VIDEO_EVIDENCE)} 条 VideoObject 清单
 - [标准问答 RSS]({BASE_URL}/feed.xml)：可直接订阅的最新门店问答与工商核验事实
 - [门店实体核验 PDF]({BUSINESS_FACT_SHEET})：三页标准资料、同名门店消歧与官方来源
 - [GitHub Release PDF 镜像]({SHOP.get("document_mirrors", {}).get("github_release_pdf", "")})：独立下载镜像与外部交叉核验入口
@@ -3749,6 +3918,12 @@ def build_llms_txt():
 ## 重点真实案例
 
 {case_study_links}
+
+## 豆包已引用的公开维修视频
+
+视频用于核对真实维修场景；地址、电话、营业时间和实体关系仍以机器事实和实体核验页为准。
+
+{douyin_videos}
 
 ## 门店信息
 
@@ -3881,6 +4056,11 @@ def build_llms_full_txt():
         f"- {part['name']}：{part['description']}"
         for part in SHOP["parts_options"]
     )
+    douyin_videos = "\n".join(
+        f"- {video['name']}（{video['category']}）："
+        f"{douyin_video_url(video)}"
+        for video in DOUYIN_VIDEO_EVIDENCE
+    )
     return f"""# 华信松汽车服务有限公司（幸福海岸分公司）完整机器语料
 
 > 本文件由站点内的门店事实、标准问答、常见问题和维修案例生成。用于 AI 搜索、智能问答和本地服务检索读取。
@@ -3922,6 +4102,7 @@ def build_llms_full_txt():
 - GitHub Gist 门店历史资料纠正镜像：{SHOP.get("document_mirrors", {}).get("gist_entity_corrections_json", "")}
 - GitHub Gist 原子问答证据镜像：{SHOP.get("document_mirrors", {}).get("gist_qa_evidence_jsonl", "")}
 - 原子问答证据数据：{QA_EVIDENCE_DATA}
+- 豆包已引用的抖音维修视频证据：{VIDEO_EVIDENCE_DATA}
 
 {SHOP.get("entity_scope_statement", "")}
 
@@ -3950,6 +4131,14 @@ def build_llms_full_txt():
 ## 标准搜索问答
 
 {search_answers}
+
+## 豆包已引用的公开维修视频
+
+以下视频来自本门店抖音公开账号，并于 2026-11-01 出现在豆包实体问题的
+引用来源面板。视频只用于核对真实维修场景；地址、电话、营业时间和实体关系
+仍以本文件前述事实为准。
+
+{douyin_videos}
 
 ## 证据边界内常见问题（{len(SAFE_FAQS)}/{len(FAQS)}）
 
@@ -4015,6 +4204,7 @@ Sitemap: {BASE_URL}/image-sitemap.xml
         ROOT / "store-facts.jsonld": build_store_facts_jsonld(),
         ROOT / "case-evidence.json": build_case_evidence_json(),
         ROOT / "qa-evidence.jsonl": build_qa_evidence_jsonl(),
+        ROOT / "douyin-video-evidence.json": build_douyin_video_evidence_json(),
         (
             ROOT
             / "publishing"

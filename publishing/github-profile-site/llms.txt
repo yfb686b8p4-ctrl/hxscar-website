@@ -38,7 +38,8 @@
 - Profile 原子问答镜像：https://yfb686b8p4-web.github.io/yfb686b8p4-web/qa-evidence.jsonl
 - AI 证据 Release：https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01
 - GitHub Gist：https://gist.github.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b
-- GitHub Gist 原子问答证据：https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/51d9f49a2de4747a06623369738c0376fa3aa781/qa-evidence.jsonl
+- GitHub Gist 原子问答证据：https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl
+- 豆包已引用的抖音维修视频证据：https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
 
 ## 事实边界
 

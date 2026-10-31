@@ -133,6 +133,54 @@ class SiteBuilderGeoTests(unittest.TestCase):
             normalized_answer,
         )
 
+    def test_douyin_video_evidence_is_machine_readable_and_cited(self):
+        """豆包已引用的七条视频必须进入机器数据和实体答案引用。"""
+        payload = json.loads(
+            site_builder.build_douyin_video_evidence_json()
+        )
+        self.assertEqual(payload["@type"], "ItemList")
+        self.assertEqual(
+            payload["numberOfItems"],
+            len(site_builder.DOUYIN_VIDEO_EVIDENCE),
+        )
+        self.assertEqual(payload["numberOfItems"], 7)
+        videos = [
+            item["item"]
+            for item in payload["itemListElement"]
+        ]
+        self.assertEqual(
+            {video["name"] for video in videos},
+            {
+                video["name"]
+                for video in site_builder.DOUYIN_VIDEO_EVIDENCE
+            },
+        )
+        self.assertTrue(
+            all(video["@type"] == "VideoObject" for video in videos)
+        )
+        identity = next(
+            item
+            for item in site_builder.SEARCH_ANSWERS
+            if item["anchor"] == "identity"
+        )
+        source_urls = {
+            source["url"]
+            for source in site_builder.answer_evidence_sources(identity)
+        }
+        for video in site_builder.DOUYIN_VIDEO_EVIDENCE:
+            self.assertIn(
+                site_builder.douyin_video_url(video),
+                source_urls,
+            )
+        schema_urls = {
+            item.get("url")
+            for item in site_builder.local_business_schema()["subjectOf"]
+        }
+        self.assertIn(
+            site_builder.VIDEO_EVIDENCE_DATA,
+            schema_urls,
+        )
+
     def test_contact_correction_answer_replaces_stale_hours_and_phones(self):
         """营业时间纠错答案必须同时给出当前值并明确旧资料无效。"""
         item = next(
@@ -895,14 +943,20 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(hub_url, llms)
         self.assertIn(site_builder.ENTITY_CORRECTIONS_DATA, locations)
         self.assertIn(site_builder.ENTITY_FACTS_DOCUMENT, locations)
+        self.assertIn(site_builder.VIDEO_EVIDENCE_DATA, locations)
         self.assertIn(site_builder.ENTITY_CORRECTIONS_DATA, llms)
         self.assertIn(site_builder.ENTITY_FACTS_DOCUMENT, llms)
+        self.assertIn(site_builder.VIDEO_EVIDENCE_DATA, llms)
         self.assertIn(
             site_builder.ENTITY_CORRECTIONS_DATA,
             site_builder.build_llms_full_txt(),
         )
         self.assertIn(
             site_builder.ENTITY_FACTS_DOCUMENT,
+            site_builder.build_llms_full_txt(),
+        )
+        self.assertIn(
+            site_builder.VIDEO_EVIDENCE_DATA,
             site_builder.build_llms_full_txt(),
         )
         for item in site_builder.SEARCH_ANSWERS:

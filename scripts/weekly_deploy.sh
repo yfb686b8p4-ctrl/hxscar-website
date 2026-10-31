@@ -21,7 +21,7 @@ python3 scripts/authority_queue.py --week "$week"
 python3 scripts/site_builder.py
 python3 scripts/site_audit.py
 
-git add index.html answers.html faq.html cases.html store-profile.html entity-verification.html store-facts.json feed.xml robots.txt sitemap.xml llms.txt llms-full.txt
+git add index.html answers.html faq.html cases.html store-profile.html entity-verification.html store-facts.json store-facts.jsonld entity-corrections.json case-evidence.json qa-evidence.jsonl douyin-video-evidence.json feed.xml robots.txt sitemap.xml sitemap-index.xml image-sitemap.xml llms.txt llms-full.txt
 git add answers
 git add services models
 git add assets

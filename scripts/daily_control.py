@@ -42,6 +42,7 @@ HTTP_CHECKS = [
     ("门店事实", "/store-facts.json", "verifiedAt"),
     ("门店历史资料纠正", "/entity-corrections.json", "BusinessEntityFactCorrection"),
     ("问答证据JSONL", "/qa-evidence.jsonl", '"@type":"Question"', 30),
+    ("抖音视频证据", "/douyin-video-evidence.json", "VideoObject", 30),
     ("标准问答RSS", "/feed.xml", "91440300MA5GYCTQ6P", 45),
     ("门店品牌图", "/assets/store-avatar-300.jpg", "JFIF", 30),
     ("门店外观图", "/assets/store-banner.jpg", "JFIF", 60),
@@ -158,28 +159,28 @@ HTTP_CHECKS = [
     (
         "jsDelivr门店事实",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v2/store-facts.json",
         "深圳市华信松汽车服务有限公司幸福海岸分公司",
         30,
     ),
     (
         "jsDelivr门店JSON-LD",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v2/store-facts.jsonld",
         "AutoRepair",
         30,
     ),
     (
         "jsDelivr门店历史资料纠正",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v2/entity-corrections.json",
         "BusinessEntityFactCorrection",
         30,
     ),
     (
         "jsDelivr问答证据镜像",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v2/qa-evidence.jsonl",
         '"@type":"Question"',
         30,
     ),

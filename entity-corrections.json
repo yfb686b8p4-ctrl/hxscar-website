@@ -26,6 +26,64 @@
       "douyin": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
     },
     "douyinId": "SZ2018080808",
+    "douyinVideoEvidence": [
+      {
+        "id": "7638945775598479497",
+        "name": "底盘异响：摆臂球头与胶套维修边界",
+        "category": "底盘异响",
+        "url": "https://www.iesdouyin.com/share/video/7638945775598479497",
+        "observedAt": "2026-11-01",
+        "source": "豆包实体问题引用来源面板"
+      },
+      {
+        "id": "7583932086392196415",
+        "name": "比亚迪汉底盘异响：下摆臂球头检查",
+        "category": "底盘异响",
+        "url": "https://www.iesdouyin.com/share/video/7583932086392196415",
+        "observedAt": "2026-11-01",
+        "source": "豆包实体问题引用来源面板"
+      },
+      {
+        "id": "7639222767086704454",
+        "name": "比亚迪汉底盘异响：机脚胶检查",
+        "category": "底盘异响",
+        "url": "https://www.iesdouyin.com/share/video/7639222767086704454",
+        "observedAt": "2026-11-01",
+        "source": "豆包实体问题引用来源面板"
+      },
+      {
+        "id": "7571335895384565459",
+        "name": "奥迪烧机油与底盘异响整备记录",
+        "category": "老车整备翻新",
+        "url": "https://www.iesdouyin.com/share/video/7571335895384565459",
+        "observedAt": "2026-11-01",
+        "source": "豆包实体问题引用来源面板"
+      },
+      {
+        "id": "7650438382129424198",
+        "name": "奔驰S级底盘异响：平衡杆球头检查",
+        "category": "底盘异响",
+        "url": "https://www.iesdouyin.com/share/video/7650438382129424198",
+        "observedAt": "2026-11-01",
+        "source": "豆包实体问题引用来源面板"
+      },
+      {
+        "id": "7650435103483496042",
+        "name": "奔驰S400底盘异响：减震检查",
+        "category": "底盘异响",
+        "url": "https://www.iesdouyin.com/share/video/7650435103483496042",
+        "observedAt": "2026-11-01",
+        "source": "豆包实体问题引用来源面板"
+      },
+      {
+        "id": "7636254430954405796",
+        "name": "小鹏G6底盘异响：后桥检查",
+        "category": "底盘异响",
+        "url": "https://www.iesdouyin.com/share/video/7636254430954405796",
+        "observedAt": "2026-11-01",
+        "source": "豆包实体问题引用来源面板"
+      }
+    ],
     "brandAssets": {
       "image": "https://yfb686b8p4-web.github.io/hxscar-website/assets/store-banner.jpg",
       "logo": "https://yfb686b8p4-web.github.io/hxscar-website/assets/store-avatar-300.jpg",
@@ -139,7 +197,7 @@
     },
     {
       "name": "jsDelivr 门店事实纠错镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v2/entity-corrections.json"
     }
   ],
   "claimBoundary": "本文件只纠正公开资料中的地址、电话和营业时间，不声明搜索收录、AI引用或排名；维修价格、质保和时效须由门店当次确认为准。"

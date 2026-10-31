@@ -90,6 +90,7 @@ class DailyControlTests(unittest.TestCase):
         )
         checks = {item[1]: item for item in daily_control.HTTP_CHECKS}
         self.assertIn(profile_url, checks)
+        self.assertIn("/douyin-video-evidence.json", checks)
         self.assertEqual(
             checks[
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html"
@@ -128,13 +129,13 @@ class DailyControlTests(unittest.TestCase):
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v2/"
             "qa-evidence.jsonl",
             checks,
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v2/"
             "store-facts.json",
             checks,
         )

@@ -1,0 +1,124 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json#videos",
+  "url": "https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json",
+  "name": "豆包已引用的老周修车公开维修视频",
+  "description": "以下视频来自本门店抖音公开账号，并在2026-11-01豆包实体问题的引用来源面板中出现。视频只用于核对真实维修场景；地址、电话、营业时间和同名门店关系仍以实体核验页和机器事实为准。",
+  "dateModified": "2026-11-01",
+  "numberOfItems": 7,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "VideoObject",
+        "@id": "https://www.iesdouyin.com/share/video/7638945775598479497",
+        "name": "底盘异响：摆臂球头与胶套维修边界",
+        "url": "https://www.iesdouyin.com/share/video/7638945775598479497",
+        "about": "底盘异响",
+        "creator": {
+          "@type": "Organization",
+          "name": "深圳华信松老周修车",
+          "sameAs": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "VideoObject",
+        "@id": "https://www.iesdouyin.com/share/video/7583932086392196415",
+        "name": "比亚迪汉底盘异响：下摆臂球头检查",
+        "url": "https://www.iesdouyin.com/share/video/7583932086392196415",
+        "about": "底盘异响",
+        "creator": {
+          "@type": "Organization",
+          "name": "深圳华信松老周修车",
+          "sameAs": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "VideoObject",
+        "@id": "https://www.iesdouyin.com/share/video/7639222767086704454",
+        "name": "比亚迪汉底盘异响：机脚胶检查",
+        "url": "https://www.iesdouyin.com/share/video/7639222767086704454",
+        "about": "底盘异响",
+        "creator": {
+          "@type": "Organization",
+          "name": "深圳华信松老周修车",
+          "sameAs": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "VideoObject",
+        "@id": "https://www.iesdouyin.com/share/video/7571335895384565459",
+        "name": "奥迪烧机油与底盘异响整备记录",
+        "url": "https://www.iesdouyin.com/share/video/7571335895384565459",
+        "about": "老车整备翻新",
+        "creator": {
+          "@type": "Organization",
+          "name": "深圳华信松老周修车",
+          "sameAs": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "VideoObject",
+        "@id": "https://www.iesdouyin.com/share/video/7650438382129424198",
+        "name": "奔驰S级底盘异响：平衡杆球头检查",
+        "url": "https://www.iesdouyin.com/share/video/7650438382129424198",
+        "about": "底盘异响",
+        "creator": {
+          "@type": "Organization",
+          "name": "深圳华信松老周修车",
+          "sameAs": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "VideoObject",
+        "@id": "https://www.iesdouyin.com/share/video/7650435103483496042",
+        "name": "奔驰S400底盘异响：减震检查",
+        "url": "https://www.iesdouyin.com/share/video/7650435103483496042",
+        "about": "底盘异响",
+        "creator": {
+          "@type": "Organization",
+          "name": "深圳华信松老周修车",
+          "sameAs": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "VideoObject",
+        "@id": "https://www.iesdouyin.com/share/video/7636254430954405796",
+        "name": "小鹏G6底盘异响：后桥检查",
+        "url": "https://www.iesdouyin.com/share/video/7636254430954405796",
+        "about": "底盘异响",
+        "creator": {
+          "@type": "Organization",
+          "name": "深圳华信松老周修车",
+          "sameAs": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
+        }
+      }
+    }
+  ]
+}

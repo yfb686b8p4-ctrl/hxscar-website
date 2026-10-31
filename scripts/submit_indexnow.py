@@ -33,6 +33,7 @@ PRIORITY_PATHS = {
     "/hxscar-website/store-facts.jsonld",
     "/hxscar-website/case-evidence.json",
     "/hxscar-website/qa-evidence.jsonl",
+    "/hxscar-website/douyin-video-evidence.json",
     "/hxscar-website/feed.xml",
     "/hxscar-website/assets/store-avatar-300.jpg",
     "/hxscar-website/assets/store-banner.jpg",

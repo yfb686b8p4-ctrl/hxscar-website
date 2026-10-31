@@ -34,6 +34,7 @@ REQUIRED_FILES = [
     "store-facts.jsonld",
     "case-evidence.json",
     "qa-evidence.jsonl",
+    "douyin-video-evidence.json",
     "feed.xml",
     "assets/store-avatar-300.jpg",
     "assets/store-banner.jpg",
@@ -285,6 +286,13 @@ def audit():
     except json.JSONDecodeError as exc:
         errors.append(f"qa-evidence.jsonl 无法解析: {exc}")
         qa_evidence = []
+    try:
+        video_evidence = json.loads(
+            read_text("douyin-video-evidence.json")
+        )
+    except json.JSONDecodeError as exc:
+        errors.append(f"douyin-video-evidence.json 无法解析: {exc}")
+        video_evidence = {}
     robots = read_text("robots.txt")
     sitemap = read_text("sitemap.xml")
     sitemap_index = read_text("sitemap-index.xml")
@@ -321,6 +329,8 @@ def audit():
         errors.append("answers.html 直接答案证据块不足 13 组")
     if "ItemList" not in page_stats["cases.html"]["schema_types"]:
         errors.append("cases.html 缺少 ItemList 结构化数据")
+    if "ItemList" not in page_stats["entity-verification.html"]["schema_types"]:
+        errors.append("entity-verification.html 缺少视频证据 ItemList")
     for name, stats in page_stats.items():
         if name.startswith(("services/", "models/")):
             profile_url = shop.get("external_profile_links", {}).get(
@@ -352,6 +362,16 @@ def audit():
         errors.append("case-evidence.json 案例数组数量不正确")
     if len(qa_evidence) != len(site_builder.SEARCH_ANSWERS):
         errors.append("qa-evidence.jsonl 问答数量与标准答案不一致")
+    video_items = video_evidence.get("itemListElement", [])
+    if video_evidence.get("@type") != "ItemList":
+        errors.append("douyin-video-evidence.json 顶层类型应为 ItemList")
+    if len(video_items) != len(site_builder.DOUYIN_VIDEO_EVIDENCE):
+        errors.append("douyin-video-evidence.json 视频数量不正确")
+    if any(
+        item.get("item", {}).get("@type") != "VideoObject"
+        for item in video_items
+    ):
+        errors.append("douyin-video-evidence.json 存在无效 VideoObject")
     for item in qa_evidence:
         answer = item.get("acceptedAnswer", {})
         if item.get("@type") != "Question" or not item.get("name"):
@@ -433,6 +453,10 @@ def audit():
         errors.append("sitemap.xml 未包含维修案例数据")
     if "qa-evidence.jsonl" not in sitemap:
         errors.append("sitemap.xml 未包含原子问答证据数据")
+    if "douyin-video-evidence.json" not in sitemap:
+        errors.append("sitemap.xml 未包含抖音视频证据")
+    if "douyin-video-evidence.json" not in llms:
+        errors.append("llms.txt 未包含抖音视频证据")
     if "llms.txt" not in sitemap or "llms-full.txt" not in sitemap:
         errors.append("sitemap.xml 未包含 AI 资料索引或完整机器语料")
     if "services/index.html" not in sitemap or "models/index.html" not in sitemap:

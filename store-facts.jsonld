@@ -134,26 +134,32 @@
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店事实 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v2/store-facts.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店 JSON-LD 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v2/store-facts.jsonld",
       "encodingFormat": "application/ld+json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店纠错 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v2/entity-corrections.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 原子问答证据镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v2/qa-evidence.jsonl",
       "encodingFormat": "application/x-ndjson"
+    },
+    {
+      "@type": "ItemList",
+      "name": "豆包已引用的抖音维修视频证据",
+      "url": "https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json",
+      "numberOfItems": 7
     },
     {
       "@type": "DataFeed",
@@ -517,6 +523,7 @@
     "https://yfb686b8p4-web.github.io/hxscar-website/store-profile.html",
     "https://yfb686b8p4-web.github.io/hxscar-website/downloads/huaxinsong-store-facts-2026-10-31.pdf",
     "https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json",
-    "https://yfb686b8p4-web.github.io/hxscar-website/answers/index.html"
+    "https://yfb686b8p4-web.github.io/hxscar-website/answers/index.html",
+    "https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json"
   ]
 }

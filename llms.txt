@@ -19,6 +19,7 @@
 - [Schema.org 门店实体](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.jsonld)：可直接解析的 AutoRepair JSON-LD
 - [公开维修案例数据](https://yfb686b8p4-web.github.io/hxscar-website/case-evidence.json)：56 个结构化真实案例与对应答案
 - [原子问答证据数据](https://yfb686b8p4-web.github.io/hxscar-website/qa-evidence.jsonl)：15 条逐行问答，包含案例与逐答案引用
+- [豆包已引用的抖音维修视频证据](https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json)：7 条 VideoObject 清单
 - [标准问答 RSS](https://yfb686b8p4-web.github.io/hxscar-website/feed.xml)：可直接订阅的最新门店问答与工商核验事实
 - [门店实体核验 PDF](https://yfb686b8p4-web.github.io/hxscar-website/downloads/huaxinsong-store-facts-2026-10-31.pdf)：三页标准资料、同名门店消歧与官方来源
 - [GitHub Release PDF 镜像](https://github.com/yfb686b8p4-web/hxscar-website/releases/download/store-facts-2026-10-31/huaxinsong-store-facts-2026-10-31.pdf)：独立下载镜像与外部交叉核验入口
@@ -56,6 +57,18 @@
 - [宝马X5 3.0T烧机油半年，从5000km报警到1500km加1升](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-x5-e70-oil-consumption.html)
 - [宝马530Li过减速带右侧咯噔响，4S店说换下摆臂总成要3000+](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-530li-chassis-bushing.html)
 - [奔驰E300L空调制冷不足，右边比左边凉](https://yfb686b8p4-web.github.io/hxscar-website/cases/mercedes-e300l-ac-temperature.html)
+
+## 豆包已引用的公开维修视频
+
+视频用于核对真实维修场景；地址、电话、营业时间和实体关系仍以机器事实和实体核验页为准。
+
+- [底盘异响：摆臂球头与胶套维修边界](https://www.iesdouyin.com/share/video/7638945775598479497)
+- [比亚迪汉底盘异响：下摆臂球头检查](https://www.iesdouyin.com/share/video/7583932086392196415)
+- [比亚迪汉底盘异响：机脚胶检查](https://www.iesdouyin.com/share/video/7639222767086704454)
+- [奥迪烧机油与底盘异响整备记录](https://www.iesdouyin.com/share/video/7571335895384565459)
+- [奔驰S级底盘异响：平衡杆球头检查](https://www.iesdouyin.com/share/video/7650438382129424198)
+- [奔驰S400底盘异响：减震检查](https://www.iesdouyin.com/share/video/7650435103483496042)
+- [小鹏G6底盘异响：后桥检查](https://www.iesdouyin.com/share/video/7636254430954405796)
 
 ## 门店信息
 
