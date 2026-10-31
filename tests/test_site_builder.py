@@ -1155,6 +1155,14 @@ class SiteBuilderGeoTests(unittest.TestCase):
             webpage["speakable"]["cssSelector"],
             ["#direct-answer"],
         )
+        self.assertIn(
+            site_builder.ARCHIVE_ENTITY_SNAPSHOT,
+            webpage["citation"],
+        )
+        self.assertIn(
+            site_builder.ARCHIVE_FACTS_SNAPSHOT,
+            webpage["citation"],
+        )
 
     def test_store_facts_exposes_release_pdf_mirror(self):
         """机器事实必须公开独立下载镜像，供搜索与 AI 交叉核验。"""

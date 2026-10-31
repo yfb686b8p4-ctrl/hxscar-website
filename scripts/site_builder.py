@@ -1323,6 +1323,10 @@ def entity_citation_urls():
         BASE_URL + "/store-facts.json",
         BUSINESS_SCHEMA_FACTS,
         VIDEO_EVIDENCE_DATA,
+        JINA_ENTITY_READER,
+        JINA_FACTS_READER,
+        ARCHIVE_ENTITY_SNAPSHOT,
+        ARCHIVE_FACTS_SNAPSHOT,
         BUSINESS_FACT_SHEET,
         SHOP.get("document_mirrors", {}).get("github_release_pdf", ""),
     ]

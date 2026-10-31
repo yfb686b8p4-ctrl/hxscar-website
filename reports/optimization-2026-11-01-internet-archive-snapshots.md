@@ -21,6 +21,7 @@
 
 - 主站所有生成页的 head 增加实体核验 Archive 快照发现入口。
 - 实体核验页增加实体页和机器事实两个 Archive 快照链接。
+- 实体核验页 `WebPage` 与 FAQ 的 `citation` 同时引用两个保真快照。
 - 主站 `llms.txt`、`llms-full.txt`、README 和 AI 证据 Release 正文增加快照地址。
 - Profile 首页与 `llms.txt` 增加 Archive 入口。
 
