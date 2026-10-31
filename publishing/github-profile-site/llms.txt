@@ -39,7 +39,8 @@
 - AI 证据 Release：https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01
 - GitHub Gist：https://gist.github.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b
 - GitHub Gist 原子问答证据：https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl
-- 豆包已引用的抖音维修视频证据：https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
+- Profile 抖音维修视频证据镜像：https://yfb686b8p4-web.github.io/yfb686b8p4-web/douyin-video-evidence.json
+- 主站豆包已引用抖音视频证据：https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
 - 实体核验纯文本阅读镜像：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html
 
 ## 事实边界

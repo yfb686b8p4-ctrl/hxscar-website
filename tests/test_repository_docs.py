@@ -253,6 +253,10 @@ class RepositoryReadmeTests(unittest.TestCase):
             (site_dir / "qa-evidence.jsonl").read_bytes(),
             (ROOT / "qa-evidence.jsonl").read_bytes(),
         )
+        self.assertEqual(
+            (site_dir / "douyin-video-evidence.json").read_bytes(),
+            (ROOT / "douyin-video-evidence.json").read_bytes(),
+        )
         shop = json.loads(
             (ROOT / "data" / "shop_info.json").read_text(encoding="utf-8")
         )
@@ -359,6 +363,11 @@ class RepositoryReadmeTests(unittest.TestCase):
         )
         self.assertIn(
             "https://yfb686b8p4-web.github.io/yfb686b8p4-web/qa-evidence.jsonl",
+            sitemap,
+        )
+        self.assertIn(
+            "https://yfb686b8p4-web.github.io/yfb686b8p4-web/"
+            "douyin-video-evidence.json",
             sitemap,
         )
         self.assertIn(

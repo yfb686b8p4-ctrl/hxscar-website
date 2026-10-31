@@ -4262,6 +4262,12 @@ def main():
             ROOT
             / "publishing"
             / "github-profile-site"
+            / "douyin-video-evidence.json"
+        ): build_douyin_video_evidence_json(),
+        (
+            ROOT
+            / "publishing"
+            / "github-profile-site"
             / "qa-evidence.jsonl"
         ): build_qa_evidence_jsonl(),
         ROOT / "feed.xml": build_feed_xml(),
