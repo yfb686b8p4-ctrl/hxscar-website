@@ -1,5 +1,19 @@
 # 搜索索引状态检查｜2026-11-01 00:04
 
+## 06:47 多端 IndexNow、Archive 与引用 URL 审计
+
+- IndexNow 已从聚合端点与 Bing 扩展到 Yandex、Seznam、Naver、Yep。
+- 主站向六个端点提交 60 个 URL，全部返回 HTTP 200。
+- Profile 向六个端点提交 11 个 URL，全部返回 HTTP 200/202。
+- 机器问答、案例、门店事实、纠错、视频与机器语料共提取 160 个唯一 URL：
+  156 个直接返回 HTTP 200，4 个被平台防抓/限流，无 404 坏链。
+- Internet Archive 已保存实体核验页、门店事实、实体关系答案、视频证据和
+  首页服务快照；`id_` 原始快照与对应本地文件 SHA-256 逐一一致。
+- Seznam 查询当前返回 `totalResults: 0`，Naver 显示无搜索结果。
+- Yandex 触发 SmartCaptcha，Yep 返回 HTTP 403，无法读取结果；不据此判断
+  “未收录”。
+- 以上状态只证明提交、可访问和保存成功，不证明已收录、引用或排名。
+
 ## 04:27 四镜像一致性与搜狗入口复核
 
 - 新增 `scripts/verify_ai_evidence_mirrors.py`，同时核验官网、Profile Pages、GitHub Release 和 Gist 的 `qa-evidence.jsonl`。
