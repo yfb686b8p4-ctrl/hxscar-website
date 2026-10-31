@@ -33,3 +33,10 @@ Profile 已向六个端点提交 11 个 URL：
 
 HTTP 200/202 只证明搜索端点接收了 IndexNow 请求，不代表已经抓取、收录、
 引用或排名。Yandex、Seznam、Naver 和 Yep 的后续可见性仍需独立搜索验证。
+
+## 提交后可见性抽样
+
+- Yandex：搜索页触发 SmartCaptcha，无法读取结果，不记为未收录。
+- Seznam：返回 `totalResults: 0`，暂未检出该官网。
+- Naver：页面显示“검색결과가 없습니다”，暂未检出该官网。
+- Yep：搜索页返回 HTTP 403，无法读取结果，不记为未收录。
