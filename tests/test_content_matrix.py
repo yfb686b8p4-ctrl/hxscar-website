@@ -100,6 +100,46 @@ class ContentMatrixTests(unittest.TestCase):
                 path.name,
             )
 
+    def test_service_and_model_pages_use_current_evidence_tag(self):
+        """服务与车型页不得继续引用旧版证据标签或七问口径。"""
+        shop = json.loads(
+            (ROOT / "data" / "shop_info.json").read_text(encoding="utf-8")
+        )
+        current_urls = {
+            value
+            for key, value in shop["document_mirrors"].items()
+            if key.startswith("jsdelivr_") and value
+        }
+        current_tags = {
+            match.group(1)
+            for url in current_urls
+            if (
+                match := re.search(
+                    r"cdn\.jsdelivr\.net/gh/[^@]+@([^/]+)/",
+                    url,
+                )
+            )
+        }
+        self.assertTrue(current_tags)
+        pages = [
+            *sorted((ROOT / "services").glob("*.html")),
+            *sorted((ROOT / "models").glob("*.html")),
+        ]
+        for path in pages:
+            html = path.read_text(encoding="utf-8")
+            referenced_tags = set(
+                re.findall(
+                    r"cdn\.jsdelivr\.net/gh/[^@]+@([^/]+)/",
+                    html,
+                )
+            )
+            self.assertLessEqual(
+                referenced_tags,
+                current_tags,
+                path.name,
+            )
+            self.assertNotIn("七问", html, path.name)
+
     def test_model_service_provider_uses_registered_identity(self):
         """车型服务内嵌门店必须使用法定全称和完整别名。"""
         html = (ROOT / "models" / "bmw-5-series.html").read_text(

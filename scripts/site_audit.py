@@ -306,6 +306,23 @@ def audit():
     llms_full = read_text("llms-full.txt")
     week = datetime.now(TZ).strftime("%V")
     queue_manifest = ROOT / "publishing" / "queue" / f"W{week}" / "manifest.json"
+    current_jsdelivr_urls = {
+        value
+        for key, value in shop.get("document_mirrors", {}).items()
+        if key.startswith("jsdelivr_") and value
+    }
+    current_jsdelivr_tags = {
+        match.group(1)
+        for url in current_jsdelivr_urls
+        if (
+            match := re.search(
+                r"cdn\.jsdelivr\.net/gh/[^@]+@([^/]+)/",
+                url,
+            )
+        )
+    }
+    if not current_jsdelivr_tags:
+        errors.append("门店事实缺少可识别的 jsDelivr 证据标签")
 
     if page_stats["faq.html"]["visible_han_chars"] < 6500:
         errors.append("faq.html 可见中文字符不足 6500")
@@ -338,12 +355,27 @@ def audit():
     if "ItemList" not in page_stats["entity-verification.html"]["schema_types"]:
         errors.append("entity-verification.html 缺少视频证据 ItemList")
     for name, stats in page_stats.items():
+        text = read_text(name)
+        page_jsdelivr_tags = set(
+            re.findall(
+                r"cdn\.jsdelivr\.net/gh/[^@]+@([^/]+)/",
+                text,
+            )
+        )
+        stale_jsdelivr_tags = page_jsdelivr_tags - current_jsdelivr_tags
+        if stale_jsdelivr_tags:
+            errors.append(
+                f"{name} 引用过期 jsDelivr 证据标签: "
+                f"{', '.join(sorted(stale_jsdelivr_tags))}"
+            )
         if name.startswith(("services/", "models/")):
             profile_url = shop.get("external_profile_links", {}).get(
                 "github_profile", ""
             )
             if profile_url and profile_url not in read_text(name):
                 errors.append(f"{name} 门店结构化数据缺少 GitHub Profile 实体关联")
+            if "七问" in text:
+                errors.append(f"{name} 仍使用过期“七问”口径")
             if name.startswith("services/") and "HowTo" not in stats["schema_types"]:
                 errors.append(f"{name} 缺少 HowTo 接车流程结构化数据")
         if name.startswith("models/") and name != "models/index.html":
@@ -356,6 +388,15 @@ def audit():
                 errors.append(f"{name} 缺少 BreadcrumbList 结构化数据")
     if "aggregateRating" in index_html:
         errors.append("index.html 仍包含未经核验的 aggregateRating")
+    if "七问" in index_html:
+        errors.append("index.html 仍使用过期“七问”口径")
+    expected_answer_count_text = (
+        f"{len(site_builder.SEARCH_ANSWERS)} 条逐行问答"
+    )
+    if expected_answer_count_text not in index_html:
+        errors.append("index.html 原子问答数量与标准答案不一致")
+    if "七问" in read_text("feed.xml"):
+        errors.append("feed.xml 仍使用过期“七问”口径")
     if schema_facts.get("@type") != "AutoRepair":
         errors.append("store-facts.jsonld 顶层类型应为 AutoRepair")
     if schema_facts.get("taxID") != "91440300MA5GYCTQ6P":

@@ -44,6 +44,7 @@ from data_loader import (
     PARTS_OPTIONS,
 )
 from content_safety_rules import partition_faqs
+from scripts.site_builder import SEARCH_ANSWERS
 
 tz = timezone(timedelta(hours=8))
 now = datetime.now(tz)
@@ -135,13 +136,13 @@ def build_page(config, selected_cases, week_num):
                 <li><a href="{FACT_JSON_URL}">机器可读门店事实</a>：公开当前字段、历史错误值和核验日期。</li>
                 <li><a href="{SCHEMA_FACTS_URL}">Schema.org 门店实体</a>：供搜索引擎和 AI 直接解析。</li>
                 <li><a href="{CASE_EVIDENCE_URL}">结构化维修案例数据</a>：共 {len(ALL_CASES)} 条案例，包含车型、故障、处理方案、参考费用和证据 URL。</li>
-                <li><a href="{QA_EVIDENCE_URL}">原子问答证据数据</a>：15 条逐行问答，包含直接答案、真实案例和逐答案引用。</li>
+                <li><a href="{QA_EVIDENCE_URL}">原子问答证据数据</a>：{len(SEARCH_ANSWERS)} 条逐行问答，包含直接答案、真实案例和逐答案引用。</li>
                 <li><a href="{ENTITY_CORRECTIONS_URL}">门店历史资料纠正</a>：当前地址、双电话、营业时间与不可引用旧值。</li>
                 <li><a href="{FACT_SHEET_URL}">门店实体核验 PDF</a>：可下载的标准资料。</li>
                 <li><a href="{RELEASE_PDF_URL}">GitHub Release PDF 镜像</a>：外部交叉核验入口。</li>
                 <li><a href="{EXTERNAL_PROFILE_LINKS.get("github_ai_evidence_release", "")}">GitHub Release AI 证据包</a>：门店事实、JSON-LD、案例和机器语料的独立下载镜像。</li>
                 <li><a href="{EXTERNAL_PROFILE_LINKS.get("github_profile_pages", "")}">GitHub Profile 实体镜像页</a>：独立发布的同一实体资料、核心答案与证据入口。</li>
-                <li><a href="{PROFILE_ANSWERS_URL}">GitHub Profile 七问答案镜像</a>：宝马、空调、底盘、老车整备、实体关系和标准联系方式的独立答案页。</li>
+                <li><a href="{PROFILE_ANSWERS_URL}">GitHub Profile 八问答案镜像</a>：宝马、空调、底盘、老车整备、实体关系和标准联系方式的独立答案页。</li>
                 <li><a href="{SHOP_INFO.get("map_links", {}).get("amap", "")}">高德地图</a>：4.6分、224条评价（观察于2026-10-24）；<a href="{SHOP_INFO.get("map_links", {}).get("tencent", "")}">腾讯地图</a>：4.4分、1854人访问（观察于2026-10-24）。</li>
                 <li><a href="{GIST_STORE_FACTS_URL}">GitHub Gist 门店 JSON-LD 镜像</a>、<a href="{GIST_CASE_EVIDENCE_URL}">案例 JSON-LD 镜像</a>和<a href="{GIST_QA_EVIDENCE_URL}">原子问答证据镜像</a>。</li>
             </ul>"""
@@ -305,7 +306,7 @@ def build_page(config, selected_cases, week_num):
             },
             {
                 "@type": "DigitalDocument",
-                "name": "GitHub Profile 七问答案镜像",
+                "name": "GitHub Profile 八问答案镜像",
                 "url": PROFILE_ANSWERS_URL,
                 "encodingFormat": "text/html",
             },
@@ -463,12 +464,12 @@ def build_page(config, selected_cases, week_num):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{cfg["title"]}</title>
+    <title>{REGISTERED_NAME}｜{cfg["title"]}</title>
     <meta name="description" content="{cfg["desc"]}">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <link rel="canonical" href="{SITE_URL}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{cfg["title"]}">
+    <meta property="og:title" content="{REGISTERED_NAME}｜{cfg["title"]}">
     <meta property="og:description" content="{cfg["desc"]}">
     <meta property="og:url" content="{SITE_URL}">
     <meta property="og:image" content="{STORE_IMAGE}">

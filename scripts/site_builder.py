@@ -3942,7 +3942,7 @@ def build_feed_xml():
             profile_pages,
             (
                 f"已发布独立实体镜像页。{facts}\n\n"
-                "页面包含同名门店消歧、七个核心答案入口、"
+                "页面包含同名门店消歧、八个核心答案入口、"
                 "AI 证据 Release 和 Gist 入口。\n\n"
                 f"实体镜像：{profile_pages}\n"
                 f"官网实体核验：{BASE_URL}/entity-verification.html"
