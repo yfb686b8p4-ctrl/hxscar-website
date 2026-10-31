@@ -1326,8 +1326,8 @@ def website_schema():
         "@type": "WebSite",
         "@id": BASE_URL + "/#website",
         "url": BASE_URL + "/",
-        "name": SHOP["shop_names"][0],
-        "alternateName": SHOP["shop_names"][1:],
+        "name": SHOP.get("registered_name", SHOP["shop_names"][0]),
+        "alternateName": SHOP["shop_names"],
         "description": (
             "深圳宝安华信松汽车幸福海岸分公司的门店资料、"
             "维修问答、服务专题和实体核验内容。"
@@ -1369,11 +1369,11 @@ def local_business_schema():
         "@context": "https://schema.org",
         "@type": "AutoRepair",
         "@id": BASE_URL + "/#autorepair",
-        "name": SHOP["shop_names"][0],
+        "name": SHOP.get("registered_name", SHOP["shop_names"][0]),
         "legalName": SHOP.get("registered_name", ""),
         "taxID": SHOP.get("unified_social_credit_code", ""),
         "foundingDate": SHOP.get("established_on", ""),
-        "alternateName": SHOP["shop_names"][1:],
+        "alternateName": SHOP["shop_names"],
         "url": BASE_URL + "/",
         "mainEntityOfPage": BASE_URL + "/store-profile.html",
         "dateModified": CONTENT_UPDATED_AT,
@@ -3045,7 +3045,11 @@ def build_store_facts_json():
             },
         ],
         "entity": {
-            "canonicalName": SHOP["shop_names"][0],
+            "canonicalName": SHOP.get(
+                "registered_name",
+                SHOP["shop_names"][0],
+            ),
+            "displayName": SHOP["shop_names"][0],
             "registeredName": SHOP.get("registered_name", ""),
             "unifiedSocialCreditCode": SHOP.get(
                 "unified_social_credit_code", ""
@@ -3063,7 +3067,7 @@ def build_store_facts_json():
                 "logo": BUSINESS_LOGO,
                 "factSheet": BUSINESS_FACT_SHEET,
             },
-            "aliases": SHOP["shop_names"][1:],
+            "aliases": SHOP["shop_names"],
             "relationshipStatement": SHOP.get("identity_statement", ""),
             "brandNameStatement": SHOP.get("brand_name_statement", ""),
             "scopeStatement": SHOP.get("entity_scope_statement", ""),
@@ -3285,7 +3289,8 @@ def build_feed_xml():
     updated = datetime.fromisoformat(CONTENT_UPDATED_AT).replace(tzinfo=TZ)
     pub_date = format_datetime(updated)
     facts = (
-        f"门店：{SHOP['shop_names'][0]}；"
+        f"门店：{SHOP.get('registered_name', SHOP['shop_names'][0])}；"
+        f"对外展示名称：{SHOP['shop_names'][0]}；"
         f"工商登记：{SHOP.get('registered_name', '')}；"
         f"统一社会信用代码：{SHOP.get('unified_social_credit_code', '')}；"
         f"标准地址：{SHOP['address']}；"

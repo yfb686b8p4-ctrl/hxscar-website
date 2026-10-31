@@ -269,8 +269,10 @@ def service_schema(service):
         "provider": {
             "@type": "AutoRepair",
             "@id": BASE_URL + "/#autorepair",
-            "name": SHOP["shop_names"][0],
-            "alternateName": SHOP["shop_names"][1:],
+            "name": SHOP.get("registered_name", SHOP["shop_names"][0]),
+            "legalName": SHOP.get("registered_name", ""),
+            "taxID": SHOP.get("unified_social_credit_code", ""),
+            "alternateName": SHOP["shop_names"],
             "telephone": [SHOP["phone"], SHOP.get("landline", "")],
             "address": {
                 "@type": "PostalAddress",

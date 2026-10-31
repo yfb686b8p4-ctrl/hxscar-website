@@ -170,6 +170,22 @@ class SiteBuilderGeoTests(unittest.TestCase):
     def test_schema_links_both_verified_map_entities(self):
         """结构化数据必须同时关联高德和腾讯的已核验 POI。"""
         schema = site_builder.local_business_schema()
+        self.assertEqual(
+            schema["name"],
+            site_builder.SHOP["registered_name"],
+        )
+        self.assertEqual(
+            schema["legalName"],
+            site_builder.SHOP["registered_name"],
+        )
+        self.assertIn(
+            "老周修车",
+            schema["alternateName"],
+        )
+        self.assertIn(
+            "华信松汽车服务有限公司（幸福海岸分公司）",
+            schema["alternateName"],
+        )
         self.assertIn(
             site_builder.SHOP["map_links"]["amap"],
             schema["sameAs"],
@@ -1060,6 +1076,14 @@ class SiteBuilderGeoTests(unittest.TestCase):
     def test_entity_corrections_json_is_small_and_machine_readable(self):
         """实体纠错文件必须直接给出当前值并隔离历史错误值。"""
         data = json.loads(site_builder.build_entity_corrections_json())
+        self.assertEqual(
+            data["entity"]["canonicalName"],
+            site_builder.SHOP["registered_name"],
+        )
+        self.assertEqual(
+            data["entity"]["displayName"],
+            site_builder.SHOP["shop_names"][0],
+        )
         self.assertEqual(
             data["canonicalUrl"],
             site_builder.ENTITY_CORRECTIONS_DATA,

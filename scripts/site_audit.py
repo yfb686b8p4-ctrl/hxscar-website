@@ -516,8 +516,13 @@ def audit():
         errors.append(f"store-facts.json 无法解析: {exc}")
         facts = {}
     if facts:
-        if facts.get("entity", {}).get("canonicalName") != "华信松汽车服务有限公司（幸福海岸分公司）":
+        if facts.get("entity", {}).get("canonicalName") != "深圳市华信松汽车服务有限公司幸福海岸分公司":
             errors.append("store-facts.json 统一名称不正确")
+        if (
+            facts.get("entity", {}).get("displayName")
+            != "华信松汽车服务有限公司（幸福海岸分公司）"
+        ):
+            errors.append("store-facts.json 对外展示名称不正确")
         if not facts.get("contentUpdatedAt"):
             errors.append("store-facts.json 缺少内容更新日期")
         if len(facts.get("citationTargets", [])) < 3:

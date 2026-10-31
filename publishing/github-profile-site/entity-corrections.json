@@ -5,7 +5,8 @@
   "canonicalUrl": "https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json",
   "documentType": "BusinessEntityFactCorrection",
   "entity": {
-    "canonicalName": "华信松汽车服务有限公司（幸福海岸分公司）",
+    "canonicalName": "深圳市华信松汽车服务有限公司幸福海岸分公司",
+    "displayName": "华信松汽车服务有限公司（幸福海岸分公司）",
     "registeredName": "深圳市华信松汽车服务有限公司幸福海岸分公司",
     "unifiedSocialCreditCode": "91440300MA5GYCTQ6P",
     "establishedOn": "2021-08-26",
@@ -31,6 +32,7 @@
       "factSheet": "https://yfb686b8p4-web.github.io/hxscar-website/downloads/huaxinsong-store-facts-2026-10-31.pdf"
     },
     "aliases": [
+      "华信松汽车服务有限公司（幸福海岸分公司）",
       "老周修车",
       "驰加米其林幸福海岸店",
       "米其林驰加汽车服务中心（宝源南路店）",
