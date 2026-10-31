@@ -554,6 +554,10 @@ class RepositoryReadmeTests(unittest.TestCase):
         shop = json.loads(
             (ROOT / "data" / "shop_info.json").read_text(encoding="utf-8")
         )
+        self.assertIn(
+            f"<title>{shop['registered_name']}｜",
+            home,
+        )
         self.assertIn(shop["image_path"], home)
         self.assertIn("store-banner-960.webp", home)
         self.assertIn('type="image/webp"', home)
