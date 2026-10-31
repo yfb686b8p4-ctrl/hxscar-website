@@ -2,9 +2,15 @@
 
 ## 修改
 
-主站和 Profile 的 `robots.txt` 从 5 类 AI 爬虫扩展到 13 类，逐项声明
-`Allow: /`：
+主站和 Profile 的 `robots.txt` 从 5 类 AI 爬虫扩展到 19 类搜索与 AI
+爬虫，逐项声明 `Allow: /`：
 
+- `Googlebot`
+- `bingbot`
+- `Baiduspider`
+- `Sogou web spider`
+- `360Spider`
+- `YisouSpider`
 - `Bytespider`
 - `GPTBot`
 - `OAI-SearchBot`
@@ -25,7 +31,7 @@
 
 - 单元测试：`98/98` 通过。
 - 站点审计：通过，错误 `0`，警告 `0`。
-- 主站 `robots.txt` 和 Profile `robots.txt` 均包含 13 组明确的
+- 主站 `robots.txt` 和 Profile `robots.txt` 均包含 19 组明确的
   `User-agent` + `Allow: /`。
 
 ## 边界

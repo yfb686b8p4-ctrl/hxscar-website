@@ -190,6 +190,12 @@ class RepositoryReadmeTests(unittest.TestCase):
         for path in robots_files:
             text = path.read_text(encoding="utf-8")
             for crawler in (
+                "Googlebot",
+                "bingbot",
+                "Baiduspider",
+                "Sogou web spider",
+                "360Spider",
+                "YisouSpider",
                 "Bytespider",
                 "GPTBot",
                 "OAI-SearchBot",

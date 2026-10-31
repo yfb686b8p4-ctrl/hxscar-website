@@ -4261,7 +4261,13 @@ def main():
     entity_verification_html = build_entity_verification_page()
     answer_pages = build_answer_pages()
     sitemap = build_sitemap()
-    ai_crawlers = (
+    allowed_crawlers = (
+        "Googlebot",
+        "bingbot",
+        "Baiduspider",
+        "Sogou web spider",
+        "360Spider",
+        "YisouSpider",
         "Bytespider",
         "GPTBot",
         "OAI-SearchBot",
@@ -4279,7 +4285,7 @@ def main():
     robots = (
         "\n\n".join(
             f"User-agent: {crawler}\nAllow: /"
-            for crawler in ai_crawlers
+            for crawler in allowed_crawlers
         )
         + "\n\nUser-agent: *\nAllow: /\n\n"
         + f"Sitemap: {BASE_URL}/sitemap-index.xml\n"
