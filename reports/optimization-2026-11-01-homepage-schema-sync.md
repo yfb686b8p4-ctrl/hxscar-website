@@ -19,6 +19,8 @@ jsDelivr 镜像；`WebSite` 也存在同类名称漂移。其他生成页虽然�
 - 12 个车型页的 `Service.provider` 同步使用法定全称、信用代码和完整别名。
 - GitHub Profile README 与 AI 证据 Release 正文改用当前 Gist Raw 入口，
   并增加视频证据和 Jina Reader 文本镜像。
+- Profile Pages 的标题、H1、README 和 `llms.txt` 主标题前移法定全称，
+  “老周修车”保留为副标题和别名。
 - 新增回归测试，确保首页实体名称、站点名称和视频证据订阅不会回退。
 
 ## 验证

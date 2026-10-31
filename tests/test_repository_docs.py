@@ -294,6 +294,14 @@ class RepositoryReadmeTests(unittest.TestCase):
         )
         self.assertEqual(business["name"], shop["registered_name"])
         self.assertEqual(website["name"], shop["registered_name"] + "实体镜像")
+        self.assertIn(
+            f"<title>{shop['registered_name']}｜",
+            html,
+        )
+        self.assertIn(
+            f"<h1>{shop['registered_name']}</h1>",
+            html,
+        )
         question_names = [
             item["name"]
             for item in faq["mainEntity"]
