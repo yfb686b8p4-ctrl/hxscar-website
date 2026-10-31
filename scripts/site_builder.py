@@ -1142,12 +1142,19 @@ def douyin_video_evidence_schema():
                     "url": douyin_video_url(video),
                     "about": video["category"],
                     "creator": {
-                        "@type": "Organization",
-                        "name": "深圳华信松老周修车",
-                        "sameAs": SHOP.get(
-                            "external_profile_links",
-                            {},
-                        ).get("douyin", ""),
+                        "@type": "AutoRepair",
+                        "@id": BASE_URL + "/#autorepair",
+                        "name": SHOP.get(
+                            "registered_name",
+                            SHOP["shop_names"][0],
+                        ),
+                        "sameAs": [
+                            BASE_URL + "/",
+                            SHOP.get(
+                                "external_profile_links",
+                                {},
+                            ).get("douyin", ""),
+                        ],
                     },
                 },
             }

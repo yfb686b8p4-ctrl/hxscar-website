@@ -158,6 +158,20 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertTrue(
             all(video["@type"] == "VideoObject" for video in videos)
         )
+        self.assertTrue(
+            all(
+                video["creator"]["@id"]
+                == site_builder.BASE_URL + "/#autorepair"
+                for video in videos
+            )
+        )
+        self.assertTrue(
+            all(
+                video["creator"]["name"]
+                == site_builder.SHOP["registered_name"]
+                for video in videos
+            )
+        )
         identity = next(
             item
             for item in site_builder.SEARCH_ANSWERS

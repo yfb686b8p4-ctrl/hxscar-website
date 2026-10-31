@@ -49,6 +49,8 @@
 - Profile Pages 新增 `douyin-video-evidence.json` 独立副本，并通过 head、
   `subjectOf`、`llms.txt` 和 sitemap 自引用。
 - 回归测试校验 Profile 视频证据文件与主站字节一致。
+- 每个 `VideoObject.creator` 直接使用主站 `AutoRepair` 的稳定 `@id`，
+  并把官网和抖音主页同时列入 `sameAs`。
 - 每日线上检查增加该 JSON，线上检查从 45 项扩展到 46 项。
 
 ## 文件哈希
