@@ -52,6 +52,7 @@
 - 每个 `VideoObject.creator` 直接使用主站 `AutoRepair` 的稳定 `@id`，
   并把官网和抖音主页同时列入 `sameAs`。
 - 每日线上检查增加该 JSON，线上检查从 45 项扩展到 46 项。
+- Profile IndexNow 从 10 个 URL 扩展到 11 个，新增视频证据 JSON。
 
 ## 文件哈希
 

@@ -22,6 +22,7 @@ class SubmitProfileIndexNowTests(unittest.TestCase):
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/",
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html",
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/qa-evidence.jsonl",
+                "https://yfb686b8p4-web.github.io/yfb686b8p4-web/douyin-video-evidence.json",
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/entity-corrections.json",
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/robots.txt",
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/llms.txt",
