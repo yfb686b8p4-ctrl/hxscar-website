@@ -31,6 +31,24 @@ class AuditEvidenceUrlsTests(unittest.TestCase):
         for status in (0, 400, 403, 404, 500):
             self.assertFalse(audit_evidence_urls.is_success(status))
 
+    def test_platform_blocks_are_separate_from_broken_links(self):
+        for status in (401, 403, 405, 429):
+            self.assertTrue(audit_evidence_urls.is_blocked(status))
+        for status in (0, 200, 206, 301, 404, 500):
+            self.assertFalse(audit_evidence_urls.is_blocked(status))
+        self.assertTrue(
+            audit_evidence_urls.is_blocked(
+                404,
+                "https://web.archive.org/web/1/example",
+            )
+        )
+        self.assertTrue(
+            audit_evidence_urls.is_blocked(
+                0,
+                "https://r.jina.ai/https://example.com",
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

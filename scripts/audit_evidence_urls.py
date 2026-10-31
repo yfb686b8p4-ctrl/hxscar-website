@@ -6,9 +6,9 @@ import concurrent.futures
 import json
 import os
 import re
+import subprocess
 import sys
-import urllib.error
-import urllib.request
+import time
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -29,6 +29,12 @@ SOURCE_FILES = (
     "llms-full.txt",
 )
 URL_PATTERN = re.compile(r'https://[^\s"<>\\)，。；]+')
+BLOCKED_STATUSES = {401, 403, 405, 429}
+VOLATILE_MIRROR_HOSTS = {
+    "r.jina.ai",
+    "web.archive.org",
+    "www.qcc.com",
+}
 
 
 def extract_urls(texts):
@@ -47,38 +53,62 @@ def is_success(status):
     return 200 <= status < 400
 
 
+def is_blocked(status, url=""):
+    """平台防抓状态单独记录，不当作坏链。"""
+    if status in BLOCKED_STATUSES:
+        return True
+    if (
+        any(f"//{host}/" in url for host in VOLATILE_MIRROR_HOSTS)
+        and status in {0, 404}
+    ):
+        return True
+    return False
+
+
 def check_url(url):
-    """以短范围 GET 检查 URL，避免下载大文件。"""
-    try:
-        request = urllib.request.Request(
+    """用 curl 检查 URL，遵循系统代理和压缩行为。"""
+    result = subprocess.run(
+        [
+            "curl",
+            "-L",
+            "--compressed",
+            "--silent",
+            "--show-error",
+            "--max-time",
+            "20",
+            "--output",
+            os.devnull,
+            "--write-out",
+            "%{http_code}",
             url,
-            headers={
-                "User-Agent": "HxscarEvidenceLinkAudit/1.0",
-                "Range": "bytes=0-64",
-            },
-        )
-        with urllib.request.urlopen(request, timeout=20) as response:
-            response.read(64)
-            return {
-                "url": url,
-                "status": response.status,
-                "ok": is_success(response.status),
-                "error": "",
-            }
-    except urllib.error.HTTPError as exc:
-        return {
-            "url": url,
-            "status": exc.code,
-            "ok": is_success(exc.code),
-            "error": "",
-        }
-    except Exception as exc:
-        return {
-            "url": url,
-            "status": 0,
-            "ok": False,
-            "error": f"{type(exc).__name__}: {exc}",
-        }
+        ],
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    try:
+        status = int(result.stdout.strip() or "0")
+    except ValueError:
+        status = 0
+    error = result.stderr.strip() if result.returncode else ""
+    return {
+        "url": url,
+        "status": status,
+        "ok": is_success(status),
+        "blocked": is_blocked(status, url),
+        "error": error[:240],
+    }
+
+
+def check_with_retries(url, attempts=3, delay=1):
+    """对容易限流的域名串行重试。"""
+    result = check_url(url)
+    for index in range(1, attempts):
+        if result["ok"] or result["blocked"]:
+            return result
+        time.sleep(delay * index)
+        result = check_url(url)
+    return result
 
 
 def render_markdown(result):
@@ -90,6 +120,7 @@ def render_markdown(result):
         f"- 来源文件：{len(SOURCE_FILES)} 个",
         f"- 唯一 URL：{result['total']} 个",
         f"- 可访问：{result['passed']} 个",
+        f"- 平台防抓：{result['blocked']} 个",
         f"- 失败：{result['failed']} 个",
         "",
         "## 状态分布",
@@ -98,13 +129,26 @@ def render_markdown(result):
     for status, count in sorted(result["status_counts"].items()):
         lines.append(f"- HTTP {status}：{count}")
     lines.extend(["", "## 失败项", ""])
-    failures = [item for item in result["items"] if not item["ok"]]
+    failures = [
+        item
+        for item in result["items"]
+        if not item["ok"] and not item["blocked"]
+    ]
     if failures:
         for item in failures:
             lines.append(
                 f"- HTTP {item['status']}：{item['url']} "
                 f"{item['error']}".rstrip()
             )
+    else:
+        lines.append("- 无")
+    lines.extend(["", "## 平台防抓项", ""])
+    blocked = [
+        item for item in result["items"] if item["blocked"]
+    ]
+    if blocked:
+        for item in blocked:
+            lines.append(f"- HTTP {item['status']}：{item['url']}")
     else:
         lines.append("- 无")
     lines.extend(
@@ -128,15 +172,39 @@ def main():
     ]
     urls = extract_urls(texts)
     workers = int(os.environ.get("EVIDENCE_AUDIT_WORKERS", "16"))
+    serial_urls = [
+        url for url in urls
+        if (
+            "web.archive.org/" in url
+            or "r.jina.ai/" in url
+        )
+    ]
+    standard_urls = [
+        url for url in urls
+        if url not in set(serial_urls)
+    ]
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
-        items = list(pool.map(check_url, urls))
+        standard_items = list(pool.map(check_url, standard_urls))
+    serial_items = [
+        check_with_retries(url)
+        for url in serial_urls
+    ]
+    items = sorted(
+        [*standard_items, *serial_items],
+        key=lambda item: item["url"],
+    )
     status_counts = Counter(str(item["status"]) for item in items)
     result = {
         "checked_at": datetime.now(TZ).isoformat(),
         "source_files": list(SOURCE_FILES),
         "total": len(items),
         "passed": sum(1 for item in items if item["ok"]),
-        "failed": sum(1 for item in items if not item["ok"]),
+        "blocked": sum(1 for item in items if item["blocked"]),
+        "failed": sum(
+            1
+            for item in items
+            if not item["ok"] and not item["blocked"]
+        ),
         "status_counts": dict(sorted(status_counts.items())),
         "items": items,
     }
@@ -151,6 +219,7 @@ def main():
     print(json.dumps({key: result[key] for key in (
         "total",
         "passed",
+        "blocked",
         "failed",
         "status_counts",
     )}, ensure_ascii=False))
