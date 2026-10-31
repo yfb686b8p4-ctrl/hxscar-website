@@ -140,8 +140,10 @@ class SiteBuilderGeoTests(unittest.TestCase):
             for answer in site_builder.SEARCH_ANSWERS
             if answer["anchor"] == "same-address-history"
         )
-        self.assertIn("门牌", item["question"])
-        self.assertIn("不能仅凭", item["answer"])
+        self.assertIn("轿之林", item["question"])
+        self.assertIn("不是同一商事主体", item["answer"])
+        self.assertIn("92440300MA5F133M2E", item["answer"])
+        self.assertIn("2023-07-18", item["answer"])
         self.assertIn(
             site_builder.SHOP["unified_social_credit_code"],
             item["answer"],
@@ -151,8 +153,8 @@ class SiteBuilderGeoTests(unittest.TestCase):
         html = site_builder.build_answer_pages()[
             site_builder.ROOT / site_builder.answer_detail_path(item)
         ]
-        self.assertIn("同地址历史登记主体", html)
-        self.assertIn("不延伸到", html)
+        self.assertIn("92440300MA5F133M2E", html)
+        self.assertIn("轿之林", html)
 
     def test_douyin_video_evidence_is_machine_readable_and_cited(self):
         """豆包已引用的七条视频必须进入机器数据和实体答案引用。"""

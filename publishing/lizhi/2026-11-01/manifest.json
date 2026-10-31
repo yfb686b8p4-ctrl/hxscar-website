@@ -17,12 +17,12 @@
       "sha256": "ac0e78ed691c74f222b1ff05f4dbf3690706eac8fc35e947e8e863b8826f37c0"
     },
     "sample-answers.jsonl": {
-      "bytes": 46613,
-      "sha256": "c511c4db8141313b525d9e13e361487c6d30964018a6ed696e60c42e4c8614a4"
+      "bytes": 46985,
+      "sha256": "0d0ad182c23b0fa268a4b604a5353f96a526d7a69ca77f1a00a25b7a21e066ee"
     },
     "sample-answers.csv": {
-      "bytes": 9993,
-      "sha256": "6bcd9b4ac108728d6850e6a0ac6c0cb4b473fe737d2f802419c7228e2abe1168"
+      "bytes": 10272,
+      "sha256": "7408988fcac62ea778771a67d1446a6ee24e34c5234051cffa64e537c73beb82"
     },
     "sample-safe-faq.jsonl": {
       "bytes": 57239,

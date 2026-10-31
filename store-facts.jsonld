@@ -134,25 +134,25 @@
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店事实 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v3/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v4/store-facts.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店 JSON-LD 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v3/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v4/store-facts.jsonld",
       "encodingFormat": "application/ld+json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店纠错 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v3/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v4/entity-corrections.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 原子问答证据镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v3/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v4/qa-evidence.jsonl",
       "encodingFormat": "application/x-ndjson"
     },
     {
@@ -428,7 +428,7 @@
     {
       "@type": "PropertyValue",
       "name": "同一门牌历史登记说明",
-      "value": "同一门牌在不同年份可能先后登记不同商事主体。第三方页面出现同一地址的旧汽车服务中心登记记录，只能说明该地址曾被历史主体登记，不能据此把当前“老周修车”并入旧主体。本资料中的“老周修车”仅指截至2026-10-31由统一社会信用代码91440300MA5GYCTQ6P对应门店经营团队使用的对外称呼，不延伸到同地址历史登记主体、其他同名门店或其他分公司。"
+      "value": "同一门牌在不同年份可能先后登记不同商事主体。第三方公开工商资料于2026-11-01显示，同一地址曾登记“深圳市宝安区轿之林汽车服务中心”（统一社会信用代码92440300MA5F133M2E，核准注销日期2023-07-18）。该历史个体户与当前的深圳市华信松汽车服务有限公司幸福海岸分公司（统一社会信用代码91440300MA5GYCTQ6P，成立日期2021-08-26）是不同商事主体，不能互相替代。本资料中的“老周修车”仅指截至2026-10-31由当前华信松门店经营团队使用的对外称呼，不延伸到同址历史登记主体、其他同名门店或其他分公司。"
     },
     {
       "@type": "PropertyValue",
