@@ -1,6 +1,6 @@
 ﻿check_id,platform,session_mode,query,category,mentioned,identity_relation,address_ok,phone_ok,hours_ok,position,cited_source,sentiment,answer_summary,notes
-guard-entity,豆包,fresh,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,correct,False,False,False,,12篇资料,正面,确认华信松幸福海岸分公司与老周修车为同一家但地址简略且未给当前电话和营业时间,Profile七问发布后全新对话复测；实体关系正确；地址不完整，电话与营业时间缺失
-guard-entity,元宝,fresh,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,wrong,False,False,False,,34篇资料,中性,仍认为无法确认同一家并继续引用2024年报电话13537862708,Profile七问发布后全新对话复测；实体关系错误；地址简略；电话错误；营业时间缺失
+guard-entity,豆包,fresh,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,correct,False,False,False,,11篇资料,正面,确认华信松幸福海岸分公司与老周修车为同一家但只给到7栋104、105且未给当前双电话和营业时间,CDN证据与法定全称发布后全新对话复测；实体关系正确；完整资料仍缺失
+guard-entity,元宝,fresh,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,wrong,False,False,False,,42篇资料,中性,明确判断不是同一家并同时引用13537862708、18129802698和13923454895等历史号码,CDN证据与法定全称发布后全新对话复测；实体关系错误且引用数由34增至42
 guard-bmw,豆包,fresh,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,True,not_applicable,,,,1,24篇资料,正面,第1位推荐老周修车并介绍宝马全系维修保养与底盘整备能力,进入Top1
 guard-bmw,元宝,fresh,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,15篇资料,中性,推荐宝盛宝粤华胜等门店但未提及本店,未进入候选
 guard-aircon,豆包,fresh,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,True,not_applicable,,,,1,27篇资料,正面,第1位推荐老周修车并给出空调检漏诊断流程与电话,进入Top1
