@@ -58,3 +58,17 @@
   或外部镜像。
 - 结论：历史主体区分保持正确，但“老周修车是当前华信松门店对外称呼”
   仍未进入普通检索候选，不能记为完整通过。
+
+## 最终发布验证
+
+- 主站提交：`9df1e68 修正轿之林状态冲突并记录精确复测`。
+- GitHub Pages build、report-build-status 与 deploy 均成功。
+- 线上 13 个核心 URL：`13/13` HTTP 200。
+- 主站 IndexNow：六端点均接收 61 个 URL。
+- Profile Pages：提交 `39624a6`，构建与 deploy 成功；六端点均接收 11 个 URL。
+- GitHub Release、Gist、Profile Pages 与 jsDelivr
+  `ai-evidence-cdn-2026-11-01-v5` 已同步。
+- 六方问答镜像一致性检查通过：16 行、16 个唯一 ID、唯一 SHA-256
+  `a4792a0b29cb68e93de98ecbbd55a42d27ec3823ad95406801b3d6dc24597e8c`。
+- Release 可见正文已更新为完整 `ENTITY_FACTS.md`，含当前双电话、同址历史
+  主体和状态字段冲突说明。

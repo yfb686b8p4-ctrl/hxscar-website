@@ -119,7 +119,7 @@ class DailyControlTests(unittest.TestCase):
         self.assertIn(
             "https://github.com/yfb686b8p4-web/hxscar-website/"
             "releases/download/ai-evidence-2026-11-01/"
-            "qa-evidence.jsonl?v=20261101-map-reputation",
+            "qa-evidence.jsonl?v=20261101-v5",
             checks,
         )
         self.assertIn(
@@ -152,13 +152,13 @@ class DailyControlTests(unittest.TestCase):
         self.assertIn(
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "qa-evidence.jsonl?v=20261101-cdn-tag",
+            "qa-evidence.jsonl?v=20261101-cdn-v5",
             checks,
         )
         self.assertIn(
             "https://github.com/yfb686b8p4-web/hxscar-website/"
             "releases/download/ai-evidence-2026-11-01/"
-            "entity-corrections.json?v=20261101-map-reputation",
+            "entity-corrections.json?v=20261101-v5",
             checks,
         )
 

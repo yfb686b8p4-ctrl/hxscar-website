@@ -44,7 +44,7 @@ MIRRORS = [
         "url": (
             "https://github.com/yfb686b8p4-web/hxscar-website/"
             "releases/download/ai-evidence-2026-11-01/"
-            "qa-evidence.jsonl?v=20261101-map-reputation"
+            "qa-evidence.jsonl?v=20261101-v5"
         ),
     },
     {
@@ -52,7 +52,7 @@ MIRRORS = [
         "url": (
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "qa-evidence.jsonl?v=20261101-cdn-tag"
+            "qa-evidence.jsonl?v=20261101-cdn-v5"
         ),
     },
     {
@@ -89,7 +89,7 @@ FACT_MIRRORS = [
         "url": (
             "https://github.com/yfb686b8p4-web/hxscar-website/"
             "releases/download/ai-evidence-2026-11-01/"
-            "store-facts.json?v=20261101-map-reputation"
+            "store-facts.json?v=20261101-v5"
         ),
     },
     {
@@ -106,7 +106,7 @@ FACT_MIRRORS = [
         "url": (
             "https://github.com/yfb686b8p4-web/hxscar-website/"
             "releases/download/ai-evidence-2026-11-01/"
-            "store-facts.jsonld?v=20261101-map-reputation"
+            "store-facts.jsonld?v=20261101-v5"
         ),
     },
     {
@@ -115,7 +115,7 @@ FACT_MIRRORS = [
         "url": (
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "store-facts.jsonld?v=20261101-cdn-tag"
+            "store-facts.jsonld?v=20261101-cdn-v5"
         ),
     },
     {
@@ -161,7 +161,7 @@ CORRECTION_MIRRORS = [
         "url": (
             "https://github.com/yfb686b8p4-web/hxscar-website/"
             "releases/download/ai-evidence-2026-11-01/"
-            "entity-corrections.json?v=20261101-map-reputation"
+            "entity-corrections.json?v=20261101-v5"
         ),
     },
     {
@@ -169,7 +169,7 @@ CORRECTION_MIRRORS = [
         "url": (
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "entity-corrections.json?v=20261101-cdn-tag"
+            "entity-corrections.json?v=20261101-cdn-v5"
         ),
     },
     {
