@@ -364,6 +364,8 @@ class RepositoryReadmeTests(unittest.TestCase):
         self.assertIn("douyin-video-evidence.json", html)
         self.assertIn("douyin-video-evidence.json", answers_html)
         self.assertIn("douyin-video-evidence.json", llms)
+        self.assertIn("r.jina.ai", html)
+        self.assertIn("r.jina.ai", llms)
         self.assertIn("entity-corrections.json", llms)
         self.assertIn("entity-facts-2026-11-01.md", llms)
         self.assertIn("image-sitemap.xml", llms)

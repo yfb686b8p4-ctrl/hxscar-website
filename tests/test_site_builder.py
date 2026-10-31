@@ -181,6 +181,20 @@ class SiteBuilderGeoTests(unittest.TestCase):
             schema_urls,
         )
 
+    def test_entity_page_exposes_text_reader_mirrors(self):
+        """实体核验页必须提供可被检索系统直接读取的纯文本镜像。"""
+        page = site_builder.build_entity_verification_page()
+        html = site_builder.build_answer_pages()[
+            site_builder.ROOT / "answers" / "identity.html"
+        ]
+        for url in (
+            site_builder.JINA_ENTITY_READER,
+            site_builder.JINA_VIDEO_READER,
+            site_builder.JINA_FACTS_READER,
+        ):
+            self.assertIn(url, page)
+        self.assertIn(site_builder.JINA_ENTITY_READER, html)
+
     def test_contact_correction_answer_replaces_stale_hours_and_phones(self):
         """营业时间纠错答案必须同时给出当前值并明确旧资料无效。"""
         item = next(

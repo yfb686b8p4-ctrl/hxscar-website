@@ -40,6 +40,7 @@
 - GitHub Gist：https://gist.github.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b
 - GitHub Gist 原子问答证据：https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl
 - 豆包已引用的抖音维修视频证据：https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
+- 实体核验纯文本阅读镜像：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html
 
 ## 事实边界
 

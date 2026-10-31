@@ -11,7 +11,7 @@
 | faq.html | 7010 | 3 | WebSite, AutoRepair, FAQPage |
 | cases.html | 8572 | 3 | WebSite, AutoRepair, ItemList |
 | store-profile.html | 2692 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
-| entity-verification.html | 1632 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
+| entity-verification.html | 1665 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
 | answers.html | 7648 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | answers/air-conditioning.html | 995 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/aircon-diagnosis.html | 987 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |

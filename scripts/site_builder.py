@@ -65,6 +65,15 @@ QA_EVIDENCE_DATA = BASE_URL + "/qa-evidence.jsonl"
 VIDEO_EVIDENCE_DATA = BASE_URL + "/douyin-video-evidence.json"
 ENTITY_CORRECTIONS_DATA = BASE_URL + "/entity-corrections.json"
 ENTITY_FACTS_DOCUMENT = BASE_URL + "/downloads/entity-facts-2026-11-01.md"
+JINA_ENTITY_READER = (
+    "https://r.jina.ai/" + BASE_URL + "/entity-verification.html"
+)
+JINA_VIDEO_READER = (
+    "https://r.jina.ai/" + VIDEO_EVIDENCE_DATA
+)
+JINA_FACTS_READER = (
+    "https://r.jina.ai/" + BASE_URL + "/store-facts.json"
+)
 
 DOUYIN_VIDEO_EVIDENCE = [
     {
@@ -1392,6 +1401,7 @@ def page(title, description, canonical, body, schemas, current=None):
     <link rel="alternate" type="application/ld+json" title="公开维修案例数据" href="{h(CASE_EVIDENCE_DATA)}">
     <link rel="alternate" type="application/x-ndjson" title="原子问答证据数据" href="{h(QA_EVIDENCE_DATA)}">
     <link rel="alternate" type="application/ld+json" title="豆包已引用的抖音维修视频证据" href="{h(VIDEO_EVIDENCE_DATA)}">
+    <link rel="alternate" type="text/plain" title="实体核验纯文本阅读镜像" href="{h(JINA_ENTITY_READER)}">
     <link rel="alternate" type="application/rss+xml" title="华信松汽车门店资料与维修问答" href="{h(BASE_URL)}/feed.xml">
     <link rel="alternate" type="text/plain" title="AI 搜索资料索引" href="{h(BASE_URL)}/llms.txt">
     <link rel="alternate" type="text/plain" title="AI 搜索完整机器语料" href="{h(BASE_URL)}/llms-full.txt">
@@ -2430,7 +2440,7 @@ def build_entity_verification_page():
     <h2>豆包已引用的公开维修视频</h2>
     <p>以下 7 条视频来自本门店抖音公开账号，并于 2026-11-01 出现在豆包实体问题的引用来源面板。视频用于核对真实维修场景；地址、电话、营业时间和同名门店关系仍以本页四项实体核验为准。</p>
     <ul class="evidence-list">{video_links}</ul>
-    <p><a href="douyin-video-evidence.json">查看机器可读视频证据清单</a></p>
+    <p><a href="douyin-video-evidence.json">查看机器可读视频证据清单</a>；<a href="{h(JINA_VIDEO_READER)}">查看纯文本视频证据镜像</a></p>
 </section>
 <section class="card">
     <h2>公开核验来源</h2>
@@ -2439,6 +2449,7 @@ def build_entity_verification_page():
     <p><a href="{h(SHOP.get("fact_sheet_path", ""))}">下载门店实体核验资料 PDF</a></p>
     <p><a href="{h(SHOP.get("document_mirrors", {}).get("github_release_pdf", ""))}">GitHub Release PDF 镜像</a></p>
     <p><a href="store-profile.html">查看完整门店资料与第三方资料纠错</a></p>
+    <p><a href="{h(JINA_ENTITY_READER)}">实体核验纯文本阅读镜像（Jina Reader）</a>；<a href="{h(JINA_FACTS_READER)}">门店事实纯文本阅读镜像</a></p>
 </section>
 <section class="card">
     <h2>全部对外名称</h2>
@@ -3897,6 +3908,9 @@ def build_llms_txt():
 - [公开维修案例数据]({CASE_EVIDENCE_DATA})：{len(CASES)} 个结构化真实案例与对应答案
 - [原子问答证据数据]({QA_EVIDENCE_DATA})：{len(SEARCH_ANSWERS)} 条逐行问答，包含案例与逐答案引用
 - [豆包已引用的抖音维修视频证据]({VIDEO_EVIDENCE_DATA})：{len(DOUYIN_VIDEO_EVIDENCE)} 条 VideoObject 清单
+- [实体核验纯文本阅读镜像]({JINA_ENTITY_READER})：动态提取完整实体事实，适合检索系统直接读取
+- [视频证据纯文本阅读镜像]({JINA_VIDEO_READER})：动态提取 7 条 VideoObject 清单
+- [门店事实纯文本阅读镜像]({JINA_FACTS_READER})：动态提取机器事实 JSON
 - [标准问答 RSS]({BASE_URL}/feed.xml)：可直接订阅的最新门店问答与工商核验事实
 - [门店实体核验 PDF]({BUSINESS_FACT_SHEET})：三页标准资料、同名门店消歧与官方来源
 - [GitHub Release PDF 镜像]({SHOP.get("document_mirrors", {}).get("github_release_pdf", "")})：独立下载镜像与外部交叉核验入口
@@ -4103,6 +4117,9 @@ def build_llms_full_txt():
 - GitHub Gist 原子问答证据镜像：{SHOP.get("document_mirrors", {}).get("gist_qa_evidence_jsonl", "")}
 - 原子问答证据数据：{QA_EVIDENCE_DATA}
 - 豆包已引用的抖音维修视频证据：{VIDEO_EVIDENCE_DATA}
+- 实体核验纯文本阅读镜像：{JINA_ENTITY_READER}
+- 视频证据纯文本阅读镜像：{JINA_VIDEO_READER}
+- 门店事实纯文本阅读镜像：{JINA_FACTS_READER}
 
 {SHOP.get("entity_scope_statement", "")}
 
