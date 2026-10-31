@@ -5,24 +5,24 @@
   "status": "prepared_not_sent",
   "website": "https://yfb686b8p4-web.github.io/hxscar-website/",
   "counts": {
-    "answers": 15,
+    "answers": 16,
     "safeFaqs": 77,
     "blockedFaqs": 65,
     "cases": 56,
-    "totalQa": 92
+    "totalQa": 93
   },
   "files": {
     "application.md": {
       "bytes": 3039,
-      "sha256": "ccd2179d162e6f299b0b2920f6eee1bcab922cdb33644e50634f0a6582c89ea9"
+      "sha256": "ac0e78ed691c74f222b1ff05f4dbf3690706eac8fc35e947e8e863b8826f37c0"
     },
     "sample-answers.jsonl": {
-      "bytes": 32609,
-      "sha256": "2e2382b1c0d3c521d9eeea4275f94217a9f17beabd398380492c9eef1cdd6b35"
+      "bytes": 46613,
+      "sha256": "cb3f048b2c0e5f3b8628ba03bba6f1f754b04aa9ec9bd3422901f4350ee93dfa"
     },
     "sample-answers.csv": {
-      "bytes": 9008,
-      "sha256": "8797c9ae2806b0000501f55d53ad0b87f89a805fd8ab00cf85a6aae77b0a9e3d"
+      "bytes": 9993,
+      "sha256": "6bcd9b4ac108728d6850e6a0ac6c0cb4b473fe737d2f802419c7228e2abe1168"
     },
     "sample-safe-faq.jsonl": {
       "bytes": 57239,

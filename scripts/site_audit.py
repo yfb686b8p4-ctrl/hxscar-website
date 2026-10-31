@@ -211,8 +211,12 @@ def audit():
         errors.append(f"车型专题页数量应为 12，实际为 {len(model_pages)}")
     if len(case_pages) != 3:
         errors.append(f"独立案例页数量应为 3，实际为 {len(case_pages)}")
-    if len(answer_pages) != 15:
-        errors.append(f"独立答案页数量应为 15，实际为 {len(answer_pages)}")
+    expected_answer_pages = len(site_builder.SEARCH_ANSWERS)
+    if len(answer_pages) != expected_answer_pages:
+        errors.append(
+            "独立答案页数量应为 "
+            f"{expected_answer_pages}，实际为 {len(answer_pages)}"
+        )
     if not answer_hub.is_file():
         errors.append("缺少答案索引页 answers/index.html")
 

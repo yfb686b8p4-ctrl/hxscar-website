@@ -17,8 +17,14 @@ class VerifyAiEvidenceMirrorsTests(unittest.TestCase):
     def test_local_qa_evidence_passes_structure_checks(self):
         payload = (ROOT / "qa-evidence.jsonl").read_bytes()
         result = verify_ai_evidence_mirrors.evaluate_qa_payload(payload)
-        self.assertEqual(result["rows"], 15)
-        self.assertEqual(result["unique_ids"], 15)
+        self.assertEqual(
+            result["rows"],
+            verify_ai_evidence_mirrors.EXPECTED_QA_ROWS,
+        )
+        self.assertEqual(
+            result["unique_ids"],
+            verify_ai_evidence_mirrors.EXPECTED_QA_ROWS,
+        )
         self.assertGreaterEqual(result["with_cases"], 12)
         self.assertGreaterEqual(result["min_citations"], 15)
         self.assertEqual(result["errors"], [])

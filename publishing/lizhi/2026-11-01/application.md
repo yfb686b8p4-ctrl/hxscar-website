@@ -25,7 +25,7 @@
   8. https://yfb686b8p4-web.github.io/hxscar-website/answers/contact-correction.html
 - 是否有其他已经合作网站：暂未与立知建立合作
 - 已经合作网站 URL：无
-- 可提供数据量：92 条问答（15 条独立标准答案、77 条证据边界内 FAQ）及 56 条真实维修案例
+- 可提供数据量：93 条问答（16 条独立标准答案、77 条证据边界内 FAQ）及 56 条真实维修案例
 
 可核验资料：
 

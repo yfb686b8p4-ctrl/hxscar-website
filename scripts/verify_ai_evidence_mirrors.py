@@ -19,6 +19,7 @@ from content_safety_rules import unverified_claim_markers
 REPORT_JSON = ROOT / "reports" / "mirror-consistency-2026-11-01.json"
 REPORT_MD = ROOT / "reports" / "mirror-consistency-2026-11-01.md"
 TZ = timezone(timedelta(hours=8))
+EXPECTED_QA_ROWS = 16
 MIRRORS = [
     {
         "name": "本地构建",
@@ -234,8 +235,10 @@ def evaluate_qa_payload(payload):
         if row.get("caseEvidence"):
             with_cases += 1
         min_citations = min(min_citations, len(citations))
-    if len(rows) != 15:
-        errors.append(f"问答数量应为 15，实际为 {len(rows)}")
+    if len(rows) != EXPECTED_QA_ROWS:
+        errors.append(
+            f"问答数量应为 {EXPECTED_QA_ROWS}，实际为 {len(rows)}"
+        )
     if len(set(ids)) != len(ids):
         errors.append("Question @id 存在重复")
     return {
@@ -261,8 +264,11 @@ def evaluate_fact_payload(payload, kind):
         entity = data.get("entity", {})
         if entity.get("unifiedSocialCreditCode") != "91440300MA5GYCTQ6P":
             errors.append("门店事实统一社会信用代码不正确")
-        if len(data.get("answers", [])) != 15:
-            errors.append("门店事实答案数量不是 15")
+        if len(data.get("answers", [])) != EXPECTED_QA_ROWS:
+            errors.append(
+                "门店事实答案数量不是 "
+                f"{EXPECTED_QA_ROWS}"
+            )
     elif kind == "jsonld":
         if data.get("@type") != "AutoRepair":
             errors.append("JSON-LD 顶层类型不是 AutoRepair")
@@ -419,7 +425,7 @@ def verify_mirrors():
     consistent = (
         len(hashes) == 1
         and all(not item["errors"] for item in results)
-        and all(item["rows"] == 15 for item in results)
+        and all(item["rows"] == EXPECTED_QA_ROWS for item in results)
         and len(fact_hashes["facts"]) == 1
         and len(fact_hashes["jsonld"]) == 1
         and all(not item["errors"] for item in fact_results)
@@ -429,7 +435,7 @@ def verify_mirrors():
     return {
         "checked_at": datetime.now(TZ).date().isoformat(),
         "consistent": consistent,
-        "expected_rows": 15,
+        "expected_rows": EXPECTED_QA_ROWS,
         "unique_hashes": len(hashes),
         "consistencyErrors": consistency_errors,
         "mirrors": results,

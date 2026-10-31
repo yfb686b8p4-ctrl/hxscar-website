@@ -133,6 +133,27 @@ class SiteBuilderGeoTests(unittest.TestCase):
             normalized_answer,
         )
 
+    def test_same_address_history_answer_disambiguates_legal_entities(self):
+        """同址历史登记必须与当前经营主体明确区分。"""
+        item = next(
+            answer
+            for answer in site_builder.SEARCH_ANSWERS
+            if answer["anchor"] == "same-address-history"
+        )
+        self.assertIn("门牌", item["question"])
+        self.assertIn("不能仅凭", item["answer"])
+        self.assertIn(
+            site_builder.SHOP["unified_social_credit_code"],
+            item["answer"],
+        )
+        self.assertIn(site_builder.SHOP["phone"], item["answer"])
+        self.assertIn(site_builder.SHOP["landline"], item["answer"])
+        html = site_builder.build_answer_pages()[
+            site_builder.ROOT / site_builder.answer_detail_path(item)
+        ]
+        self.assertIn("同地址历史登记主体", html)
+        self.assertIn("不延伸到", html)
+
     def test_douyin_video_evidence_is_machine_readable_and_cited(self):
         """豆包已引用的七条视频必须进入机器数据和实体答案引用。"""
         payload = json.loads(
@@ -1127,6 +1148,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(site_builder.SHOP["disambiguation_notice"], html)
         self.assertIn("13923454895", html)
         self.assertIn("13537862708", html)
+        self.assertIn(site_builder.SHOP["premises_history_notice"], html)
         self.assertIn("宝源南路276号", html)
         self.assertIn(
             "工商聚合页出现13537862708，是幸福海岸店当前电话吗？",

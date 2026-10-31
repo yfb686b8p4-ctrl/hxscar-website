@@ -36,9 +36,15 @@ class LizhiApplicationTests(unittest.TestCase):
             cases,
         )
         counts = manifest["counts"]
-        self.assertEqual(counts["answers"], 15)
+        self.assertEqual(
+            counts["answers"],
+            len(facts["answers"]),
+        )
         self.assertEqual(counts["safeFaqs"], 77)
-        self.assertEqual(counts["totalQa"], 92)
+        self.assertEqual(
+            counts["totalQa"],
+            len(facts["answers"]) + counts["safeFaqs"],
+        )
         self.assertEqual(counts["cases"], 56)
         self.assertEqual(counts["blockedFaqs"], 65)
         self.assertEqual(manifest["status"], "prepared_not_sent")

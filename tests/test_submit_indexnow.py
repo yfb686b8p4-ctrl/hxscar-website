@@ -4,7 +4,7 @@
 
 import unittest
 
-from scripts import submit_indexnow
+from scripts import site_builder, submit_indexnow
 
 
 class SubmitIndexNowTests(unittest.TestCase):
@@ -67,7 +67,7 @@ class SubmitIndexNowTests(unittest.TestCase):
         )
         self.assertEqual(
             sum("/hxscar-website/answers/" in url for url in urls),
-            16,
+            len(site_builder.SEARCH_ANSWERS) + 1,
         )
         self.assertEqual(
             sum("/hxscar-website/cases/" in url for url in urls),

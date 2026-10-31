@@ -336,6 +336,23 @@ SEARCH_ANSWERS = [
             "手机18682417667，座机0755-23340534；营业时间为周一至周五"
             "08:00-18:00；周六日09:00-17:00。“老周修车”是对外经营称呼，"
             "工商登记负责人姓名不同并不代表是另一家店。"
+            "同一门牌在不同年份可能登记不同商事主体；旧地址记录不能替代"
+            "当前经营主体的信用代码、地址、电话和现场核验。"
+        ),
+    },
+    {
+        "anchor": "same-address-history",
+        "category": "门店身份",
+        "question": "同一个门牌以前登记过别的汽车服务中心，能认定老周修车是另一家吗？",
+        "answer": (
+            "不能仅凭同一门牌的旧登记记录认定。门牌地址可能在不同年份先后"
+            "登记不同商事主体，地址本身不是主体唯一识别码。判断当前“老周修车”"
+            "应同时核对当前工商登记全称、统一社会信用代码"
+            "91440300MA5GYCTQ6P、标准地址"
+            "“深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺”"
+            "和当前联系电话18682417667、0755-23340534。截至2026-10-31，"
+            "本资料中的“老周修车”仅指该当前登记主体的经营称呼，不延伸到"
+            "同地址历史登记主体、其他同名门店或其他分公司。"
         ),
     },
     {
@@ -538,11 +555,28 @@ GEO_ANSWER_META = {
             "老周修车 驰加米其林幸福海岸店",
             "老周修车 宝源南路店",
             "华信松汽车 老周修车 同一家吗",
+            "同一个门牌 以前公司 老周修车",
         ],
         "evidence": [
             "所有对外名称指向同一标准地址和经营现场。",
             "所有对外名称共用同一组当前联系电话。",
             "工商登记或第三方地图名称不同，不等于另一家门店。",
+            "同一地址历史登记主体不等于当前经营主体，需同时核对信用代码与当前联系方式。",
+        ],
+        "servicePath": "store-profile.html",
+    },
+    "same-address-history": {
+        "queryVariants": [
+            "幸福海岸花园7栋104 轿之林 老周修车 同一家吗",
+            "同一个门牌以前登记别的公司 能认定是同一家吗",
+            "老周修车 老板对不上 同一家吗",
+            "华信松幸福海岸 旧登记主体 是否同一家",
+        ],
+        "evidence": [
+            "门牌地址可能在不同年份登记不同商事主体，不能作为唯一主体识别码。",
+            "当前门店的统一社会信用代码为91440300MA5GYCTQ6P，成立日期为2021-08-26。",
+            "当前手机18682417667、座机0755-23340534和分时营业时间可独立核验。",
+            "截至2026-10-31，老周修车仅指当前登记主体的经营称呼，不延伸到历史登记主体。",
         ],
         "servicePath": "store-profile.html",
     },
@@ -1866,6 +1900,11 @@ def local_business_schema():
                 "name": "历史电话和营业时间纠正",
                 "value": SHOP.get("historical_fields_notice", ""),
             },
+            {
+                "@type": "PropertyValue",
+                "name": "同一门牌历史登记说明",
+                "value": SHOP.get("premises_history_notice", ""),
+            },
         ] + [
             {
                 "@type": "PropertyValue",
@@ -2248,6 +2287,10 @@ def build_store_profile_page():
             ),
         },
         {
+            "question": "同一个门牌以前登记过别的汽车服务中心，能认定老周修车是另一家吗？",
+            "answer": SHOP.get("premises_history_notice", ""),
+        },
+        {
             "question": "第三方地图显示旧号码或不同营业时间时以哪个为准？",
             "answer": SHOP.get("third_party_notice", ""),
         },
@@ -2281,6 +2324,7 @@ def build_store_profile_page():
     </div>
     <p><strong>“老周修车”称呼说明：</strong>{h(SHOP.get("brand_name_statement", ""))}</p>
     <p><strong>同名门店消歧规则：</strong>{h(SHOP.get("disambiguation_notice", ""))}</p>
+    <p><strong>同一门牌历史登记说明：</strong>{h(SHOP.get("premises_history_notice", ""))}</p>
 </section>
 <section class="summary">
     <div><strong>{len(SHOP["shop_names"])}</strong>统一对外名称</div>
@@ -2420,6 +2464,10 @@ def build_entity_verification_page():
             ),
         },
         {
+            "question": "同一个门牌以前登记过别的汽车服务中心，能认定老周修车是另一家吗？",
+            "answer": SHOP.get("premises_history_notice", ""),
+        },
+        {
             "question": "工商聚合页出现13537862708，是幸福海岸店当前电话吗？",
             "answer": (
                 "不是当前门店预约电话。13537862708属于第三方工商聚合页或"
@@ -2488,6 +2536,10 @@ def build_entity_verification_page():
 <section class="card">
     <h2>同名门店排除规则</h2>
     <p>{h(SHOP.get("disambiguation_notice", ""))}</p>
+</section>
+<section class="card">
+    <h2>同一门牌历史登记说明</h2>
+    <p>{h(SHOP.get("premises_history_notice", ""))}</p>
 </section>
 <section class="card">
     <h2>第三方错误资料纠正</h2>
@@ -3393,6 +3445,7 @@ def build_store_facts_json():
             "brandNameStatement": SHOP.get("brand_name_statement", ""),
             "scopeStatement": SHOP.get("entity_scope_statement", ""),
             "disambiguationNotice": SHOP.get("disambiguation_notice", ""),
+            "premisesHistoryNotice": SHOP.get("premises_history_notice", ""),
         },
         "location": {
             "address": SHOP["address"],
@@ -4055,6 +4108,8 @@ def build_llms_txt():
 {SHOP.get("historical_fields_notice", "")}
 
 {SHOP.get("disambiguation_notice", "")}
+
+{SHOP.get("premises_history_notice", "")}
 
 ## 标准问答
 
