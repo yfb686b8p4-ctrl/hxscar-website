@@ -16,10 +16,10 @@
     "gist_case_evidence_json": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/case-evidence.json",
     "gist_entity_corrections_json": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/entity-corrections.json",
     "gist_qa_evidence_jsonl": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl",
-    "jsdelivr_store_facts_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json",
-    "jsdelivr_store_facts_jsonld": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld",
-    "jsdelivr_entity_corrections_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json",
-    "jsdelivr_qa_evidence_jsonl": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+    "jsdelivr_store_facts_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json",
+    "jsdelivr_store_facts_jsonld": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld",
+    "jsdelivr_entity_corrections_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json",
+    "jsdelivr_qa_evidence_jsonl": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
   },
   "citationTargets": [
     {
@@ -64,19 +64,19 @@
     },
     {
       "name": "jsDelivr 门店事实 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
     },
     {
       "name": "jsDelivr 门店 JSON-LD 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
     },
     {
       "name": "jsDelivr 门店纠错 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
     },
     {
       "name": "jsDelivr 原子问答证据镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
     },
     {
       "name": "门店实体核验 PDF",
@@ -307,19 +307,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -404,19 +404,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -501,19 +501,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -597,19 +597,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -693,19 +693,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -789,19 +789,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -887,19 +887,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -983,19 +983,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -1080,19 +1080,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -1176,19 +1176,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -1272,19 +1272,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -1368,19 +1368,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "对应服务或车型专题",
@@ -1465,19 +1465,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "完整门店资料",
@@ -1566,19 +1566,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "完整门店资料",
@@ -1669,19 +1669,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
         },
         {
           "name": "完整门店资料",

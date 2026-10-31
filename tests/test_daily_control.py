@@ -128,12 +128,14 @@ class DailyControlTests(unittest.TestCase):
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@main/qa-evidence.jsonl",
+            "hxscar-website@ai-evidence-cdn-2026-11-01/"
+            "qa-evidence.jsonl",
             checks,
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@main/store-facts.json",
+            "hxscar-website@ai-evidence-cdn-2026-11-01/"
+            "store-facts.json",
             checks,
         )
         self.assertIn(

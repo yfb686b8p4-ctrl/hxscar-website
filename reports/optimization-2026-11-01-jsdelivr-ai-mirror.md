@@ -12,24 +12,26 @@
 
 ## 已发布镜像
 
-- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json`
-- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld`
-- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json`
-- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl`
+- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json`
+- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld`
+- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json`
+- `https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl`
 
 ## 发布前交叉核验
 
 - 四个地址均返回 HTTP 200。
 - `store-facts.json` SHA-256：
-  `96896ee2118f6f35e0c4e2695706e80c187b5b7da629a4e86b16f36e06a8b5c2`
+  `d925307e56be4300e73a043f10fa04e45862e6f618f94b3aadc3940983fcdd89`
 - `store-facts.jsonld` SHA-256：
-  `743b96df5d212dd8318ae08babedb6f39bd727ecf25b5a779af54710cbda113b`
+  `5457df8896b02b7819d6cd0d37a2d1e063c9275791c9783acd798d2880ff83d7`
 - `entity-corrections.json` SHA-256：
-  `e87bdb786d037869d62ff2da2ba9e4748527ce6d72f7bb6332473b93547ba8cf`
+  `24729570d529a84b4f0247b799bf4572b22485fb90474457a913bd18e3981515`
 - `qa-evidence.jsonl` SHA-256：
-  `3f383cfda4aef3ff4106b57bbb18cc082fe3fc35633600066f045c13eef05748`
+  `e052e3d8bdef60e82e88db840b131f9e2a20aa3731fd2685ac83ceae433fe983`
 - 上述 CDN 文件与本地文件 SHA-256 逐一一致。
 - CDN 响应通过 Cloudflare 提供，支持 HTTPS 和跨域读取。
+- 使用不可变 Git 标签 `ai-evidence-cdn-2026-11-01`，避免 `@main`
+  缓存漂移和自引用循环。
 
 ## 官网接入
 

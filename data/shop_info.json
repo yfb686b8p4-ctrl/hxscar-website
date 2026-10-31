@@ -51,10 +51,10 @@
     "gist_case_evidence_json": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/case-evidence.json",
     "gist_entity_corrections_json": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/entity-corrections.json",
     "gist_qa_evidence_jsonl": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl",
-    "jsdelivr_store_facts_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.json",
-    "jsdelivr_store_facts_jsonld": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/store-facts.jsonld",
-    "jsdelivr_entity_corrections_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/entity-corrections.json",
-    "jsdelivr_qa_evidence_jsonl": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@main/qa-evidence.jsonl"
+    "jsdelivr_store_facts_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.json",
+    "jsdelivr_store_facts_jsonld": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/store-facts.jsonld",
+    "jsdelivr_entity_corrections_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/entity-corrections.json",
+    "jsdelivr_qa_evidence_jsonl": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01/qa-evidence.jsonl"
   },
   "douyin_id": "SZ2018080808",
   "entity_scope_statement": "本资料所称“华信松汽车”均特指位于深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺的深圳市华信松汽车服务有限公司幸福海岸分公司，不延伸到其他同名、同品牌或同集团门店。",
