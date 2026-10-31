@@ -6,8 +6,8 @@
   字段冲突说明。
 - PDF SHA-256：
   `0adbd6d391c32bb5f039029f8653478eb5c860f1660a0a1e7439bbb418a28b73`。
-- GitHub Release PDF 附件已替换并逐字节一致；主站附件将在下一次 Pages
-  deploy 后验证。
+- GitHub Release PDF 附件已替换并逐字节一致；主站 Pages `c92b3ff`
+  deploy 成功后，线上附件与本地文件逐字节一致，13/13 核心 URL 通过。
 - PDF 文本和页面渲染均已检查，无裁切、重叠、乱码或黑块。
 
 ## 08:20 证据链接代理回退审计
