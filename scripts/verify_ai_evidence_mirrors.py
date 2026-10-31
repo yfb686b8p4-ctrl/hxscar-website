@@ -51,7 +51,7 @@ MIRRORS = [
         "url": (
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "qa-evidence.jsonl"
+            "qa-evidence.jsonl?v=20261101-cdn-tag"
         ),
     },
     {
@@ -114,7 +114,7 @@ FACT_MIRRORS = [
         "url": (
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "store-facts.jsonld"
+            "store-facts.jsonld?v=20261101-cdn-tag"
         ),
     },
     {
@@ -168,7 +168,7 @@ CORRECTION_MIRRORS = [
         "url": (
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
             "7923ef0b18ffbcce04a8b6758254a06b/raw/"
-            "entity-corrections.json"
+            "entity-corrections.json?v=20261101-cdn-tag"
         ),
     },
     {

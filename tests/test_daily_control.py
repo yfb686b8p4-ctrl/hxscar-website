@@ -150,7 +150,8 @@ class DailyControlTests(unittest.TestCase):
         )
         self.assertIn(
             "https://gist.githubusercontent.com/yfb686b8p4-web/"
-            "7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl",
+            "7923ef0b18ffbcce04a8b6758254a06b/raw/"
+            "qa-evidence.jsonl?v=20261101-cdn-tag",
             checks,
         )
         self.assertIn(
