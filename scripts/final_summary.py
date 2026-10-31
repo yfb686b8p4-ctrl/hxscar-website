@@ -297,6 +297,9 @@ def render_markdown(summary, write=False):
     else:
         lines.append("- 未读取到冲刺期间提交。")
     lines.extend(["", "## 下一步人工动作", ""])
+    lines.append(
+        "- 完整操作清单：`reports/owner-actions-2026-11-01.md`"
+    )
     if summary["manual_actions"]:
         for item in summary["manual_actions"]:
             platforms = "、".join(item["platforms"])
