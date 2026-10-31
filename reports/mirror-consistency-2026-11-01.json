@@ -10,7 +10,7 @@
       "url": "",
       "path": "qa-evidence.jsonl",
       "bytes": 68250,
-      "sha256": "a4792a0b29cb68e93de98ecbbd55a42d27ec3823ad95406801b3d6dc24597e8c",
+      "sha256": "d4fb9647fdb095613356db199a656bcd4f238f710f3a0db9df9f535f031035a6",
       "rows": 16,
       "unique_ids": 16,
       "with_cases": 12,
@@ -22,7 +22,7 @@
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/qa-evidence.jsonl",
       "path": "",
       "bytes": 68250,
-      "sha256": "a4792a0b29cb68e93de98ecbbd55a42d27ec3823ad95406801b3d6dc24597e8c",
+      "sha256": "d4fb9647fdb095613356db199a656bcd4f238f710f3a0db9df9f535f031035a6",
       "rows": 16,
       "unique_ids": 16,
       "with_cases": 12,
@@ -34,7 +34,7 @@
       "url": "https://yfb686b8p4-web.github.io/yfb686b8p4-web/qa-evidence.jsonl",
       "path": "",
       "bytes": 68250,
-      "sha256": "a4792a0b29cb68e93de98ecbbd55a42d27ec3823ad95406801b3d6dc24597e8c",
+      "sha256": "d4fb9647fdb095613356db199a656bcd4f238f710f3a0db9df9f535f031035a6",
       "rows": 16,
       "unique_ids": 16,
       "with_cases": 12,
@@ -46,7 +46,7 @@
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/qa-evidence.jsonl?v=20261101-v5",
       "path": "",
       "bytes": 68250,
-      "sha256": "a4792a0b29cb68e93de98ecbbd55a42d27ec3823ad95406801b3d6dc24597e8c",
+      "sha256": "d4fb9647fdb095613356db199a656bcd4f238f710f3a0db9df9f535f031035a6",
       "rows": 16,
       "unique_ids": 16,
       "with_cases": 12,
@@ -58,7 +58,7 @@
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl?v=20261101-cdn-v5",
       "path": "",
       "bytes": 68250,
-      "sha256": "a4792a0b29cb68e93de98ecbbd55a42d27ec3823ad95406801b3d6dc24597e8c",
+      "sha256": "d4fb9647fdb095613356db199a656bcd4f238f710f3a0db9df9f535f031035a6",
       "rows": 16,
       "unique_ids": 16,
       "with_cases": 12,
@@ -67,10 +67,10 @@
     },
     {
       "name": "jsDelivr",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v5/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/qa-evidence.jsonl",
       "path": "",
       "bytes": 68250,
-      "sha256": "a4792a0b29cb68e93de98ecbbd55a42d27ec3823ad95406801b3d6dc24597e8c",
+      "sha256": "d4fb9647fdb095613356db199a656bcd4f238f710f3a0db9df9f535f031035a6",
       "rows": 16,
       "unique_ids": 16,
       "with_cases": 12,
@@ -85,7 +85,7 @@
       "url": "",
       "path": "store-facts.json",
       "bytes": 107977,
-      "sha256": "52529bdfe3f574567a9b10dab5d7d66a45c19681ebc43a39415cb3733f6fb8c3",
+      "sha256": "69982cacc5dc1216002e138ca906d5af9d62dd30d4c123f165f6e5cc9b081d71",
       "errors": []
     },
     {
@@ -94,7 +94,7 @@
       "url": "",
       "path": "store-facts.jsonld",
       "bytes": 20482,
-      "sha256": "96b16f7a53361402a0cdec8ad88f1dd76a280677899b6e85b77ff4cabdce840e",
+      "sha256": "d296cc90c9559362dd4bd40db53dc38d32ecc0164846ec7ff4d79a94e7173631",
       "errors": []
     },
     {
@@ -103,7 +103,7 @@
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json",
       "path": "",
       "bytes": 107977,
-      "sha256": "52529bdfe3f574567a9b10dab5d7d66a45c19681ebc43a39415cb3733f6fb8c3",
+      "sha256": "69982cacc5dc1216002e138ca906d5af9d62dd30d4c123f165f6e5cc9b081d71",
       "errors": []
     },
     {
@@ -112,7 +112,7 @@
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.json?v=20261101-v5",
       "path": "",
       "bytes": 107977,
-      "sha256": "52529bdfe3f574567a9b10dab5d7d66a45c19681ebc43a39415cb3733f6fb8c3",
+      "sha256": "69982cacc5dc1216002e138ca906d5af9d62dd30d4c123f165f6e5cc9b081d71",
       "errors": []
     },
     {
@@ -121,7 +121,7 @@
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/store-facts.jsonld",
       "path": "",
       "bytes": 20482,
-      "sha256": "96b16f7a53361402a0cdec8ad88f1dd76a280677899b6e85b77ff4cabdce840e",
+      "sha256": "d296cc90c9559362dd4bd40db53dc38d32ecc0164846ec7ff4d79a94e7173631",
       "errors": []
     },
     {
@@ -130,7 +130,7 @@
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.jsonld?v=20261101-v5",
       "path": "",
       "bytes": 20482,
-      "sha256": "96b16f7a53361402a0cdec8ad88f1dd76a280677899b6e85b77ff4cabdce840e",
+      "sha256": "d296cc90c9559362dd4bd40db53dc38d32ecc0164846ec7ff4d79a94e7173631",
       "errors": []
     },
     {
@@ -139,25 +139,25 @@
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/store-facts.jsonld?v=20261101-cdn-v5",
       "path": "",
       "bytes": 20482,
-      "sha256": "96b16f7a53361402a0cdec8ad88f1dd76a280677899b6e85b77ff4cabdce840e",
+      "sha256": "d296cc90c9559362dd4bd40db53dc38d32ecc0164846ec7ff4d79a94e7173631",
       "errors": []
     },
     {
       "name": "jsDelivr门店事实",
       "kind": "facts",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v5/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/store-facts.json",
       "path": "",
       "bytes": 107977,
-      "sha256": "52529bdfe3f574567a9b10dab5d7d66a45c19681ebc43a39415cb3733f6fb8c3",
+      "sha256": "69982cacc5dc1216002e138ca906d5af9d62dd30d4c123f165f6e5cc9b081d71",
       "errors": []
     },
     {
       "name": "jsDelivr门店JSON-LD",
       "kind": "jsonld",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v5/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/store-facts.jsonld",
       "path": "",
       "bytes": 20482,
-      "sha256": "96b16f7a53361402a0cdec8ad88f1dd76a280677899b6e85b77ff4cabdce840e",
+      "sha256": "d296cc90c9559362dd4bd40db53dc38d32ecc0164846ec7ff4d79a94e7173631",
       "errors": []
     }
   ],
@@ -167,7 +167,7 @@
       "url": "",
       "path": "entity-corrections.json",
       "bytes": 11709,
-      "sha256": "50f7ad045e9bd378d12a840ea277fb491d01a983ecf733245f297ede625092ae",
+      "sha256": "5b662f48eb88c0e3b49b41b5ea87a38cd2745a357b355511dc9ad4d29da46886",
       "errors": []
     },
     {
@@ -175,7 +175,7 @@
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json",
       "path": "",
       "bytes": 11709,
-      "sha256": "50f7ad045e9bd378d12a840ea277fb491d01a983ecf733245f297ede625092ae",
+      "sha256": "5b662f48eb88c0e3b49b41b5ea87a38cd2745a357b355511dc9ad4d29da46886",
       "errors": []
     },
     {
@@ -183,7 +183,7 @@
       "url": "https://yfb686b8p4-web.github.io/yfb686b8p4-web/entity-corrections.json",
       "path": "",
       "bytes": 11709,
-      "sha256": "50f7ad045e9bd378d12a840ea277fb491d01a983ecf733245f297ede625092ae",
+      "sha256": "5b662f48eb88c0e3b49b41b5ea87a38cd2745a357b355511dc9ad4d29da46886",
       "errors": []
     },
     {
@@ -191,7 +191,7 @@
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-corrections.json?v=20261101-v5",
       "path": "",
       "bytes": 11709,
-      "sha256": "50f7ad045e9bd378d12a840ea277fb491d01a983ecf733245f297ede625092ae",
+      "sha256": "5b662f48eb88c0e3b49b41b5ea87a38cd2745a357b355511dc9ad4d29da46886",
       "errors": []
     },
     {
@@ -199,15 +199,15 @@
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/entity-corrections.json?v=20261101-cdn-v5",
       "path": "",
       "bytes": 11709,
-      "sha256": "50f7ad045e9bd378d12a840ea277fb491d01a983ecf733245f297ede625092ae",
+      "sha256": "5b662f48eb88c0e3b49b41b5ea87a38cd2745a357b355511dc9ad4d29da46886",
       "errors": []
     },
     {
       "name": "jsDelivr门店纠错JSON",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v5/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/entity-corrections.json",
       "path": "",
       "bytes": 11709,
-      "sha256": "50f7ad045e9bd378d12a840ea277fb491d01a983ecf733245f297ede625092ae",
+      "sha256": "5b662f48eb88c0e3b49b41b5ea87a38cd2745a357b355511dc9ad4d29da46886",
       "errors": []
     }
   ],

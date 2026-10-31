@@ -29,9 +29,16 @@
 - PDF：3 页，已重新渲染检查，新 SHA-256
   `2e162eceacbbfe0c4399d3ce8764e0d6c569cacbe181b6aed9025f14ed3b6f8b`。
 
-## 待发布
+## 发布验证
 
-- 提交主站与 Profile。
-- 创建并推送 jsDelivr v6 标签。
-- 更新 Release、Gist、Profile Pages 和 PDF Release 附件。
-- 完成六方镜像一致性、IndexNow 和线上 URL 验证。
+- 主站提交：`1c64666`；Profile 提交：`50b2d0e`。
+- 主站与 Profile Pages 的 build、report-build-status 和 deploy 均成功。
+- jsDelivr 标签 `ai-evidence-cdn-2026-11-01-v6` 已创建并推送。
+- GitHub Release、Gist、Profile Pages、PDF Release 附件和 jsDelivr v6
+  已同步。
+- 六方问答镜像一致性检查通过：16 行、16 个唯一 ID、唯一 SHA-256。
+- 主站六端 IndexNow 各接收 62 个 URL；Profile 六端各接收 11 个 URL。
+- 线上 Profile 答案页检出 `numberOfItems: 8`、`92440300MA5F133M2E`
+  和 `same-address-history`；Profile `llms.txt` 检出八个直接答案和 16 条
+  原子问答证据。
+- 线上 PDF 与本地文件 SHA-256 一致。

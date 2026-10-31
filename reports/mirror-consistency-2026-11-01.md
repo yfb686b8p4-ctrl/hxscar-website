@@ -10,37 +10,37 @@
 
 | 镜像 | 行数 | 唯一ID | 带案例 | 最少引用 | SHA-256 | 状态 |
 |---|---:|---:|---:|---:|---|---|
-| 本地构建 | 16 | 16 | 12 | 20 | `a4792a0b29cb68e9…` | 通过 |
-| 官网 | 16 | 16 | 12 | 20 | `a4792a0b29cb68e9…` | 通过 |
-| Profile Pages | 16 | 16 | 12 | 20 | `a4792a0b29cb68e9…` | 通过 |
-| GitHub Release | 16 | 16 | 12 | 20 | `a4792a0b29cb68e9…` | 通过 |
-| GitHub Gist | 16 | 16 | 12 | 20 | `a4792a0b29cb68e9…` | 通过 |
-| jsDelivr | 16 | 16 | 12 | 20 | `a4792a0b29cb68e9…` | 通过 |
+| 本地构建 | 16 | 16 | 12 | 20 | `d4fb9647fdb09561…` | 通过 |
+| 官网 | 16 | 16 | 12 | 20 | `d4fb9647fdb09561…` | 通过 |
+| Profile Pages | 16 | 16 | 12 | 20 | `d4fb9647fdb09561…` | 通过 |
+| GitHub Release | 16 | 16 | 12 | 20 | `d4fb9647fdb09561…` | 通过 |
+| GitHub Gist | 16 | 16 | 12 | 20 | `d4fb9647fdb09561…` | 通过 |
+| jsDelivr | 16 | 16 | 12 | 20 | `d4fb9647fdb09561…` | 通过 |
 
 ## 门店事实与实体镜像
 
 | 镜像 | 类型 | SHA-256 | 状态 |
 |---|---|---|---|
-| 本地门店事实 | facts | `52529bdfe3f57456…` | 通过 |
-| 本地门店JSON-LD | jsonld | `96b16f7a53361402…` | 通过 |
-| 官网门店事实 | facts | `52529bdfe3f57456…` | 通过 |
-| Release门店事实 | facts | `52529bdfe3f57456…` | 通过 |
-| 官网门店JSON-LD | jsonld | `96b16f7a53361402…` | 通过 |
-| Release门店JSON-LD | jsonld | `96b16f7a53361402…` | 通过 |
-| Gist门店JSON-LD | jsonld | `96b16f7a53361402…` | 通过 |
-| jsDelivr门店事实 | facts | `52529bdfe3f57456…` | 通过 |
-| jsDelivr门店JSON-LD | jsonld | `96b16f7a53361402…` | 通过 |
+| 本地门店事实 | facts | `69982cacc5dc1216…` | 通过 |
+| 本地门店JSON-LD | jsonld | `d296cc90c9559362…` | 通过 |
+| 官网门店事实 | facts | `69982cacc5dc1216…` | 通过 |
+| Release门店事实 | facts | `69982cacc5dc1216…` | 通过 |
+| 官网门店JSON-LD | jsonld | `d296cc90c9559362…` | 通过 |
+| Release门店JSON-LD | jsonld | `d296cc90c9559362…` | 通过 |
+| Gist门店JSON-LD | jsonld | `d296cc90c9559362…` | 通过 |
+| jsDelivr门店事实 | facts | `69982cacc5dc1216…` | 通过 |
+| jsDelivr门店JSON-LD | jsonld | `d296cc90c9559362…` | 通过 |
 
 ## 门店历史资料纠正镜像
 
 | 镜像 | SHA-256 | 状态 |
 |---|---|---|
-| 本地门店纠错JSON | `50f7ad045e9bd378…` | 通过 |
-| 官网门店纠错JSON | `50f7ad045e9bd378…` | 通过 |
-| Profile门店纠错JSON | `50f7ad045e9bd378…` | 通过 |
-| Release门店纠错JSON | `50f7ad045e9bd378…` | 通过 |
-| Gist门店纠错JSON | `50f7ad045e9bd378…` | 通过 |
-| jsDelivr门店纠错JSON | `50f7ad045e9bd378…` | 通过 |
+| 本地门店纠错JSON | `5b662f48eb88c0e3…` | 通过 |
+| 官网门店纠错JSON | `5b662f48eb88c0e3…` | 通过 |
+| Profile门店纠错JSON | `5b662f48eb88c0e3…` | 通过 |
+| Release门店纠错JSON | `5b662f48eb88c0e3…` | 通过 |
+| Gist门店纠错JSON | `5b662f48eb88c0e3…` | 通过 |
+| jsDelivr门店纠错JSON | `5b662f48eb88c0e3…` | 通过 |
 
 ## 错误
 

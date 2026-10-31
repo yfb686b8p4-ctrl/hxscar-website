@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T07:40:43.694929+08:00",
+  "generated_at": "2026-11-01T07:51:19.436425+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -280,8 +280,10 @@
     },
     "online_checks_passed": 47,
     "online_checks_total": 47,
-    "source_repo": "4191143\t修复机器语料与Profile的问答数量漂移（2 项未提交）",
-    "deploy_repo": "4191143\t修复机器语料与Profile的问答数量漂移（干净）"
+    "evidence_link_total": 163,
+    "evidence_link_failed": 0,
+    "source_repo": "1c64666\t扩展Profile八问镜像并切换v6证据标签（8 项未提交）",
+    "deploy_repo": "1c64666\t扩展Profile八问镜像并切换v6证据标签（干净）"
   },
   "platform_blocks": [
     {
@@ -435,8 +437,6 @@
     }
   ],
   "commits": [
-    "027ccaf 修复最终汇总测试覆盖正式报告的副作用",
-    "5658649 刷新最终线上状态与冲刺汇总",
     "51f1e7e 将Profile可见主标题统一为工商法定全称",
     "a2824f0 新增机器证据链接审计与154项可访问性报告",
     "fa0ddc6 接入Internet Archive实体与机器事实保真快照",
@@ -474,7 +474,9 @@
     "1ffcb18 补充最终汇总中的PDF与链接审计",
     "c12963f 记录双Release正文与Latest状态同步",
     "3030cc4 新增AI搜索证据政策与资料纠错规则页",
-    "4191143 修复机器语料与Profile的问答数量漂移"
+    "4191143 修复机器语料与Profile的问答数量漂移",
+    "be245ee 刷新证据政策与计数修复后的日报",
+    "1c64666 扩展Profile八问镜像并切换v6证据标签"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"

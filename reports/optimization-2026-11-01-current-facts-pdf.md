@@ -32,8 +32,8 @@
 - `store-facts-2026-10-31` Release 标题与正文已同步为当前门店事实；
   `ai-evidence-2026-11-01` 已设为仓库 Latest Release，两处正文均包含
   当前双电话、轿之林历史主体和状态字段冲突说明。
-- 主站 Pages `c92b3ff` deploy 成功后，线上 PDF 与本地文件逐字节一致；
-  主站 13/13 核心 URL 同步通过。
+- 主站 Pages `1c64666` deploy 成功后，v6 线上 PDF 与本地文件逐字节一致；
+  主站优先 URL 10/10 通过。
 
 ## 文件
 

@@ -19,6 +19,7 @@ MARKDOWN_PATH = REPORTS / f"final-summary-{DATE}.md"
 PLAN_PATH = DAILY_DIR / f"{DATE}-plan.json"
 RESULTS_PATH = DAILY_DIR / f"{DATE}-results.csv"
 RECHECK_PATH = REPORTS / f"recheck-{DATE}.json"
+LINK_AUDIT_PATH = REPORTS / f"evidence-link-audit-{DATE}.json"
 
 
 def load_json(path):
@@ -102,6 +103,11 @@ def build_summary():
     audit = load_json(REPORTS / "site-audit.json")
     publishing = load_json(ROOT / "publishing" / "status.json")
     tasks = load_json(DAILY_DIR / "latest-tasks.json")
+    link_audit = (
+        load_json(LINK_AUDIT_PATH)
+        if LINK_AUDIT_PATH.exists()
+        else {}
+    )
     rechecks = (
         load_json(RECHECK_PATH).get("rechecks", [])
         if RECHECK_PATH.exists()
@@ -164,6 +170,8 @@ def build_summary():
             "online_checks_total": status.get("site", {}).get(
                 "http_total", 0
             ),
+            "evidence_link_total": link_audit.get("total", 0),
+            "evidence_link_failed": link_audit.get("failed", 0),
             "source_repo": format_repo_state(
                 status.get("source_repo", {})
             ),
@@ -271,7 +279,11 @@ def render_markdown(summary, write=False):
             f"- 站点审计：{'通过' if technical['site_audit_passed'] else '未通过'}",
             f"- 审计内容：{json.dumps(technical['site_audit_counts'], ensure_ascii=False)}",
             f"- 线上核心检查：{technical['online_checks_passed']}/{technical['online_checks_total']}",
-            "- 证据链接审计：162 个唯一 URL，0 个确认坏链",
+            (
+                "- 证据链接审计："
+                f"{technical.get('evidence_link_total', 0)} 个唯一 URL，"
+                f"{technical.get('evidence_link_failed', 0)} 个确认坏链"
+            ),
             (
                 "- 实体核验 PDF：3 页；SHA-256 "
                 "`2e162eceacbbfe0c4399d3ce8764e0d6c569cacbe181b6aed9025f14ed3b6f8b`"
