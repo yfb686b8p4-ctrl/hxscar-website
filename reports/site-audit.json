@@ -13,9 +13,9 @@
   },
   "pages": {
     "index.html": {
-      "bytes": 63057,
-      "han_chars": 8045,
-      "visible_han_chars": 4880,
+      "bytes": 64337,
+      "han_chars": 8092,
+      "visible_han_chars": 4929,
       "json_ld_blocks": 3,
       "schema_types": [
         "AutoRepair",

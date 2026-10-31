@@ -601,10 +601,10 @@ class RepositoryReadmeTests(unittest.TestCase):
         self.assertNotIn("GitHub Profile 五问答案镜像", home)
         self.assertIn("4.6分、224条评价", home)
         self.assertIn("4.4分、1854人访问", home)
-        self.assertIn('"@type": "WebSite"', home)
-        self.assertIn('"@id": "https://yfb686b8p4-web.github.io/hxscar-website/#website"', home)
+        self.assertIn('"@type":"WebSite"', home)
+        self.assertIn('"@id":"https://yfb686b8p4-web.github.io/hxscar-website/#website"', home)
         self.assertIn(
-            '"publisher": {"@id": "https://yfb686b8p4-web.github.io/hxscar-website/#autorepair"}',
+            '"publisher":{"@id":"https://yfb686b8p4-web.github.io/hxscar-website/#autorepair"}',
             home,
         )
         schemas = [

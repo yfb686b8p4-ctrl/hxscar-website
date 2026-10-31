@@ -282,6 +282,44 @@ class SiteBuilderGeoTests(unittest.TestCase):
             site_builder.SHOP["hours"],
         )
 
+    def test_homepage_entity_schema_uses_single_source_of_truth(self):
+        """首页 JSON-LD 必须直接复用当前门店与站点实体生成器。"""
+        html = site_builder.refresh_home_entity_schema()
+        schemas = [
+            json.loads(raw)
+            for raw in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>',
+                html,
+                re.S,
+            )
+        ]
+        business = next(
+            schema
+            for schema in schemas
+            if schema.get("@type") == "AutoRepair"
+        )
+        website = next(
+            schema
+            for schema in schemas
+            if schema.get("@type") == "WebSite"
+        )
+        self.assertEqual(
+            business["name"],
+            site_builder.SHOP["registered_name"],
+        )
+        self.assertEqual(
+            website["name"],
+            site_builder.SHOP["registered_name"],
+        )
+        subject_urls = {
+            item.get("url")
+            for item in business.get("subjectOf", [])
+        }
+        self.assertIn(
+            site_builder.VIDEO_EVIDENCE_DATA,
+            subject_urls,
+        )
+
     def test_map_reputation_is_sourced_not_self_rating(self):
         """第三方地图评分必须标注来源和日期，不能伪装成自评。"""
         schema = site_builder.local_business_schema()

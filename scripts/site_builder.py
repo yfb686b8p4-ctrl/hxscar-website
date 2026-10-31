@@ -5,6 +5,7 @@
 import html
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
@@ -4171,6 +4172,37 @@ def build_llms_full_txt():
 """
 
 
+def refresh_home_entity_schema():
+    """用当前单一事实源刷新首页内嵌的门店与站点 JSON-LD。"""
+    path = ROOT / "index.html"
+    source = path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        r'<script type="application/ld\+json">(.*?)</script>',
+        re.S,
+    )
+
+    def replace_schema(match):
+        try:
+            data = json.loads(match.group(1))
+        except json.JSONDecodeError:
+            return match.group(0)
+        if not isinstance(data, dict):
+            return match.group(0)
+        if data.get("@type") == "AutoRepair":
+            schema = local_business_schema()
+        elif data.get("@type") == "WebSite":
+            schema = website_schema()
+        else:
+            return match.group(0)
+        return (
+            '<script type="application/ld+json">'
+            + json_script(schema)
+            + "</script>"
+        )
+
+    return pattern.sub(replace_schema, source)
+
+
 def main():
     """生成全部静态文件并输出统计。"""
     answers_html = build_answers_page()
@@ -4204,6 +4236,7 @@ Sitemap: {BASE_URL}/sitemap.xml
 Sitemap: {BASE_URL}/image-sitemap.xml
 """
     outputs = {
+        ROOT / "index.html": refresh_home_entity_schema(),
         ROOT / "answers.html": answers_html,
         ROOT / "faq.html": faq_html,
         ROOT / "cases.html": cases_html,
