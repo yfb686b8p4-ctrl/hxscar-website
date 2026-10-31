@@ -1,5 +1,19 @@
 # 搜索索引状态检查｜2026-11-01 00:04
 
+## 07:20 同址历史主体消歧 v3 镜像
+
+- 新增独立答案页 `answers/same-address-history.html`，标准答案从 15 条增至
+  16 条，搜狗立知申请包同步为 93 条问答。
+- 主站最终部署提交 `3f9d5eb` 的 build 与 deploy 均成功，线上核心 URL
+  13/13 返回 HTTP 200。
+- GitHub Release、Gist、Profile Pages 与 jsDelivr v3 已同步；六方问答镜像
+  一致性检查通过，16 行、16 个唯一 ID。
+- 主站 IndexNow 六端点均接收 61 个 URL；Profile 六端点均接收 11 个 URL。
+- 元宝同址历史主体专项复测已能区分旧主体和当前主体，但普通核心问法仍
+  使用旧营业时间，且 34 篇来源仍未读取本店官网。
+- IndexNow、Release 与 jsDelivr 成功只证明提交、发布和可访问，不证明收录、
+  引用或排名。
+
 ## 06:47 多端 IndexNow、Archive 与引用 URL 审计
 
 - IndexNow 已从聚合端点与 Bing 扩展到 Yandex、Seznam、Naver、Yep。
