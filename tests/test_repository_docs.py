@@ -87,9 +87,11 @@ class RepositoryReadmeTests(unittest.TestCase):
             "answers/chassis.html",
             "answers/restoration.html",
             "answers/contact-correction.html",
+            "answers/same-address-history.html",
         ):
             self.assertIn(answer_url, text)
-        self.assertIn("## 七个直接答案", text)
+        self.assertIn("## 直接答案", text)
+        self.assertIn("同一门牌历史登记说明", text)
         self.assertIn("当前手机为18682417667", text)
         self.assertIn("已进入豆包引用来源的抖音视频", text)
         self.assertIn("entity-corrections.json", text)
