@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T08:00:31.007002+08:00",
+  "generated_at": "2026-11-01T08:08:16.279261+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -282,8 +282,8 @@
     "online_checks_total": 47,
     "evidence_link_total": 163,
     "evidence_link_failed": 0,
-    "source_repo": "3d6fdb5\t统一服务车型页证据版本与八问口径（11 项未提交）",
-    "deploy_repo": "3d6fdb5\t统一服务车型页证据版本与八问口径（干净）"
+    "source_repo": "b2638f9\t扩展已索引Gist的四项服务推荐答案（3 项未提交）",
+    "deploy_repo": "b2638f9\t扩展已索引Gist的四项服务推荐答案（干净）"
   },
   "platform_blocks": [
     {
@@ -437,8 +437,6 @@
     }
   ],
   "commits": [
-    "7afafc0 增加Archive二次保真快照与最新入口",
-    "fd16747 区分证据链接坏链与平台防抓限流",
     "22f0266 扩展实体答案与视频证据的Archive快照",
     "a72d76d 扩展IndexNow至六个搜索端点并完成全量提交",
     "6cd7bcd 在AI证据Release记录六端点IndexNow提交",
@@ -476,7 +474,9 @@
     "e8d4758 刷新v6最终汇总与163项证据链接审计",
     "34a7207 记录证据政策页线上视觉与索引验证",
     "075fedb 将证据政策纳入标准问答RSS",
-    "3d6fdb5 统一服务车型页证据版本与八问口径"
+    "3d6fdb5 统一服务车型页证据版本与八问口径",
+    "210b7f1 记录证据版本统一后的发布与线上验证",
+    "b2638f9 扩展已索引Gist的四项服务推荐答案"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"
