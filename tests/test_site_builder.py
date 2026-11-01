@@ -992,6 +992,32 @@ class SiteBuilderGeoTests(unittest.TestCase):
             "奔驰E300L空调一边冷一边热",
             article["keywords"],
         )
+        archive_case = next(
+            item
+            for item in site_builder.CASES
+            if item["issue"] == "宝马730Li后排空调不出冷风，前排出风正常"
+        )
+        archive_html = pages[
+            site_builder.ROOT / site_builder.case_study_path(archive_case)
+        ]
+        self.assertIn("Internet Archive 独立保存版本", archive_html)
+        archive_schemas = [
+            json.loads(raw)
+            for raw in re.findall(
+                r'<script type="application/ld\+json">(.*?)</script>',
+                archive_html,
+                re.S,
+            )
+        ]
+        archive_article = next(
+            schema
+            for schema in archive_schemas
+            if schema.get("@type") == "Article"
+        )
+        self.assertIn(
+            archive_case["archive_url"],
+            archive_article["citation"],
+        )
         for issue in (
             "宝马525Li气门室盖垫漏油维修",
             "宝马540i 3.0T烧机油，3000km加1L",

@@ -57,7 +57,7 @@ https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a0
 - `qa-evidence.jsonl`：16 条逐行 Question 数据，每条包含直接答案、案例和逐答案引用
 - `llms.txt`：AI 搜索资料索引
 - `llms-full.txt`：证据边界内的标准搜索问答、77 组安全 FAQ 与维修案例语料
-- jsDelivr 不可变镜像标签：`ai-evidence-cdn-2026-11-01-v8`
+- jsDelivr 不可变镜像标签：`ai-evidence-cdn-2026-11-01-v9`
 
 ## 核验入口
 

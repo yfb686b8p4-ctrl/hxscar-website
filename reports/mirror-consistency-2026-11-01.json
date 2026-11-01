@@ -67,7 +67,7 @@
     },
     {
       "name": "jsDelivr",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/qa-evidence.jsonl",
       "path": "",
       "bytes": 74806,
       "sha256": "63bb35275b7736b7cb9abdb0259947ef67a5a01d50a43d21f109c5953f25abbf",
@@ -145,7 +145,7 @@
     {
       "name": "jsDelivr门店事实",
       "kind": "facts",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/store-facts.json",
       "path": "",
       "bytes": 120730,
       "sha256": "f72d83be9770974c52e45fe47b967bbad78a787360cbcb8eec59d2b45744895e",
@@ -154,7 +154,7 @@
     {
       "name": "jsDelivr门店JSON-LD",
       "kind": "jsonld",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/store-facts.jsonld",
       "path": "",
       "bytes": 21494,
       "sha256": "cd1631d47a9377cf9d17286df80ea5f9564c67ac14901558b11406b62d478e69",
@@ -204,7 +204,7 @@
     },
     {
       "name": "jsDelivr门店纠错JSON",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/entity-corrections.json",
       "path": "",
       "bytes": 13769,
       "sha256": "6fdc249ae01fffb844078ad66a5551c109bec1856397bf8640e646681076cc08",

@@ -50,10 +50,10 @@
 | cases/bmw-525li-valve-cover-gasket.html | 663 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 | cases/bmw-530li-chassis-bushing.html | 714 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 | cases/bmw-540i-b58-oil-consumption.html | 669 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
-| cases/bmw-730li-rear-evaporator-leak.html | 685 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
+| cases/bmw-730li-rear-evaporator-leak.html | 695 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 | cases/bmw-x5-e70-oil-consumption.html | 742 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 | cases/mercedes-e300l-ac-temperature.html | 697 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
-| cases/volkswagen-touareg-chassis-bushing.html | 731 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
+| cases/volkswagen-touareg-chassis-bushing.html | 741 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 
 ## 错误
 

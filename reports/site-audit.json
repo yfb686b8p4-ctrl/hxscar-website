@@ -546,7 +546,7 @@
       ]
     },
     "cases/bmw-525li-valve-cover-gasket.html": {
-      "bytes": 31764,
+      "bytes": 31769,
       "han_chars": 3098,
       "visible_han_chars": 663,
       "json_ld_blocks": 4,
@@ -558,7 +558,7 @@
       ]
     },
     "cases/bmw-530li-chassis-bushing.html": {
-      "bytes": 32214,
+      "bytes": 32219,
       "han_chars": 3185,
       "visible_han_chars": 714,
       "json_ld_blocks": 4,
@@ -570,7 +570,7 @@
       ]
     },
     "cases/bmw-540i-b58-oil-consumption.html": {
-      "bytes": 31951,
+      "bytes": 31956,
       "han_chars": 3074,
       "visible_han_chars": 669,
       "json_ld_blocks": 4,
@@ -582,9 +582,9 @@
       ]
     },
     "cases/bmw-730li-rear-evaporator-leak.html": {
-      "bytes": 31995,
-      "han_chars": 3129,
-      "visible_han_chars": 685,
+      "bytes": 32362,
+      "han_chars": 3139,
+      "visible_han_chars": 695,
       "json_ld_blocks": 4,
       "schema_types": [
         "WebSite",
@@ -594,7 +594,7 @@
       ]
     },
     "cases/bmw-x5-e70-oil-consumption.html": {
-      "bytes": 32526,
+      "bytes": 32531,
       "han_chars": 3211,
       "visible_han_chars": 742,
       "json_ld_blocks": 4,
@@ -606,7 +606,7 @@
       ]
     },
     "cases/mercedes-e300l-ac-temperature.html": {
-      "bytes": 32025,
+      "bytes": 32030,
       "han_chars": 3152,
       "visible_han_chars": 697,
       "json_ld_blocks": 4,
@@ -618,9 +618,9 @@
       ]
     },
     "cases/volkswagen-touareg-chassis-bushing.html": {
-      "bytes": 32231,
-      "han_chars": 3213,
-      "visible_han_chars": 731,
+      "bytes": 32606,
+      "han_chars": 3223,
+      "visible_han_chars": 741,
       "json_ld_blocks": 4,
       "schema_types": [
         "WebSite",

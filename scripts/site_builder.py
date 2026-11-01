@@ -2195,6 +2195,13 @@ def build_case_study_pages():
         symptoms = case.get("solution", "")
         treatment = case.get("price", "")
         cost = case.get("result", "")
+        archive_url = case.get("archive_url", "")
+        archive_markup = (
+            f'<p><strong>网页快照：</strong><a href="{h(archive_url)}">'
+            "Internet Archive 独立保存版本</a></p>"
+            if archive_url
+            else ""
+        )
         related = case_related_answers(case)
         related_links = " · ".join(
             f'<a href="../{h(answer_detail_path(answer))}">'
@@ -2258,7 +2265,16 @@ def build_case_study_pages():
     <p><strong>联系电话：</strong>手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}</p>
     <p><strong>营业时间：</strong>{h(SHOP.get("hours", ""))}</p>
     <p><strong>核验入口：</strong><a href="../entity-verification.html">实体核验</a> · <a href="../store-facts.json">机器可读门店事实</a> · <a href="../cases.html#case-{case_number}">案例库第 {case_number} 条</a></p>
+{archive_markup}
 </section>"""
+        article_citations = [
+            CASE_EVIDENCE_DATA,
+            BASE_URL + f"/cases.html#case-{case_number}",
+            BASE_URL + "/entity-verification.html",
+            BASE_URL + "/store-facts.json",
+        ]
+        if archive_url:
+            article_citations.append(archive_url)
         article = {
             "@context": "https://schema.org",
             "@type": "Article",
@@ -2288,12 +2304,7 @@ def build_case_study_pages():
                 "@id": BASE_URL + "/cases.html",
                 "url": BASE_URL + "/cases.html",
             },
-            "citation": [
-                CASE_EVIDENCE_DATA,
-                BASE_URL + f"/cases.html#case-{case_number}",
-                BASE_URL + "/entity-verification.html",
-                BASE_URL + "/store-facts.json",
-            ],
+            "citation": article_citations,
             "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["#direct-answer"],
@@ -3458,6 +3469,7 @@ def build_case_evidence_json():
                     evidence_url if case_study_path(case) else ""
                 ),
                 "evidenceUrl": evidence_url,
+                "archiveUrl": case.get("archive_url", ""),
                 "relatedAnswerUrls": [
                     answer_detail_url(answer)
                     for answer in case_related_answers(case)
@@ -4502,6 +4514,8 @@ def build_llms_full_txt():
         ]
         if case_study_path(item):
             lines.append(f"- 独立案例页：{case_study_url(item)}")
+        if item.get("archive_url"):
+            lines.append(f"- Internet Archive 网页快照：{item['archive_url']}")
         case_blocks.append("\n".join(lines))
     case_sections = "\n\n".join(case_blocks)
     repair_values = "\n".join(f"- {value}" for value in SHOP["repair_values"])

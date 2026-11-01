@@ -146,25 +146,25 @@
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店事实 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/store-facts.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店 JSON-LD 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/store-facts.jsonld",
       "encodingFormat": "application/ld+json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店纠错 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/entity-corrections.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 原子问答证据镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v8/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/qa-evidence.jsonl",
       "encodingFormat": "application/x-ndjson"
     },
     {
