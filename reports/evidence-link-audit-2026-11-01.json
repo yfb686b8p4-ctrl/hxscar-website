@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T07:49:35.172782+08:00",
+  "checked_at": "2026-11-01T08:35:18.740323+08:00",
   "source_files": [
     "qa-evidence.jsonl",
     "case-evidence.json",
@@ -10,13 +10,14 @@
     "feed.xml",
     "llms-full.txt"
   ],
-  "total": 163,
-  "passed": 153,
-  "blocked": 10,
+  "total": 167,
+  "passed": 156,
+  "blocked": 11,
   "failed": 0,
   "status_counts": {
     "0": 9,
-    "200": 153,
+    "200": 156,
+    "403": 1,
     "405": 1
   },
   "items": [
@@ -29,7 +30,7 @@
       "via": "直连"
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/entity-corrections.json",
       "status": 200,
       "ok": true,
       "blocked": false,
@@ -37,7 +38,7 @@
       "via": "直连"
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/qa-evidence.jsonl",
       "status": 200,
       "ok": true,
       "blocked": false,
@@ -45,7 +46,7 @@
       "via": "直连"
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/store-facts.json",
       "status": 200,
       "ok": true,
       "blocked": false,
@@ -53,12 +54,20 @@
       "via": "直连"
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/store-facts.jsonld",
       "status": 200,
       "ok": true,
       "blocked": false,
       "error": "",
       "via": "直连"
+    },
+    {
+      "url": "https://gist.github.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb",
+      "status": 200,
+      "ok": true,
+      "blocked": false,
+      "error": "",
+      "via": "代理"
     },
     {
       "url": "https://gist.github.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b",
@@ -67,6 +76,22 @@
       "blocked": false,
       "error": "",
       "via": "代理"
+    },
+    {
+      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
+      "status": 200,
+      "ok": true,
+      "blocked": false,
+      "error": "",
+      "via": "直连"
+    },
+    {
+      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
+      "status": 200,
+      "ok": true,
+      "blocked": false,
+      "error": "",
+      "via": "直连"
     },
     {
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/case-evidence.json",
@@ -106,7 +131,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/case-evidence.json",
@@ -114,7 +139,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-corrections.json",
@@ -130,7 +155,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "直连"
+      "via": "代理"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/llms-full.txt",
@@ -138,7 +163,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "直连"
+      "via": "代理"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.json",
@@ -154,7 +179,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/store-facts-2026-10-31/huaxinsong-store-facts-2026-10-31.pdf",
@@ -162,7 +187,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01",
@@ -178,7 +203,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "直连"
+      "via": "代理"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/yfb686b8p4-web",
@@ -205,11 +230,19 @@
       "via": "直连"
     },
     {
+      "url": "https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894",
+      "status": 403,
+      "ok": false,
+      "blocked": true,
+      "error": "",
+      "via": "直连"
+    },
+    {
       "url": "https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json",
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20006 milliseconds",
+      "error": "curl: (28) Connection timed out after 20004 milliseconds",
       "via": "直连"
     },
     {
@@ -217,7 +250,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20005 milliseconds",
+      "error": "curl: (28) Connection timed out after 20004 milliseconds",
       "via": "直连"
     },
     {
@@ -225,7 +258,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20006 milliseconds",
+      "error": "curl: (28) Connection timed out after 20005 milliseconds",
       "via": "直连"
     },
     {
@@ -241,7 +274,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20010 milliseconds",
+      "error": "curl: (28) Connection timed out after 20004 milliseconds",
       "via": "直连"
     },
     {
@@ -249,7 +282,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20008 milliseconds",
+      "error": "curl: (28) Connection timed out after 20004 milliseconds",
       "via": "直连"
     },
     {
@@ -257,7 +290,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20006 milliseconds",
+      "error": "curl: (28) Connection timed out after 20001 milliseconds",
       "via": "直连"
     },
     {
@@ -265,7 +298,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20010 milliseconds",
+      "error": "curl: (28) Connection timed out after 20004 milliseconds",
       "via": "直连"
     },
     {
@@ -273,7 +306,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20008 milliseconds",
+      "error": "curl: (28) Connection timed out after 20004 milliseconds",
       "via": "直连"
     },
     {
@@ -281,7 +314,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20002 milliseconds",
+      "error": "curl: (28) Connection timed out after 20008 milliseconds",
       "via": "直连"
     },
     {

@@ -23,13 +23,21 @@
 - 目标：把 `13537862708`、`18129802698`、`13923454895` 标注为历史/非当前
   预约电话；不要修改信用代码、负责人、成立日期、年报等法定事实。
 - 当前电话：`18682417667`、`0755-23340534`。
-- 同址说明：轿之林历史个体户和当前华信松是不同商事主体；其注销/在业
-  状态字段互相冲突，必须以国家企业信用信息公示系统为准。
+- 最新复测：08:33 元宝已能正确区分经营部
+  `92440300L4607119X2` 与当前分公司 `91440300MA5GYCTQ6P`，
+  并正确说明经营部于2025-03-21从南山区搬到幸福海岸104铺。
+- 仍待人工修正：08:20 核心普通问法只是“很可能是同一间店、两块牌子”，
+  元宝仍要求用户自行核对，并继续使用旧电话 `13537862708`。
+- 同址说明：轿之林历史个体户、华信松汽车配件经营部和当前华信松分公司
+  是不同登记主体；同址或同经营者不能推定股权、债务、会员卡或维修单承继。
+  轿之林注销/在业状态字段互相冲突，必须以国家企业信用信息公示系统为准。
 - 说明模板：`publishing/queue/W44/p0-business-directories.md`
 - 证据：
   - [实体核验](https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
   - [机器事实](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json)
   - [纠错JSON](https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json)
+  - [同址关联登记专项答案](https://yfb686b8p4-web.github.io/hxscar-website/answers/same-address-history.html)
+  - [启信宝历史个体经营部](https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894)
 
 ### 3. 搜狗：网站收录申诉与立知邮件
 

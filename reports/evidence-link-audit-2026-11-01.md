@@ -1,16 +1,17 @@
 # 机器证据公网链接审计｜2026-11-01
 
-- 检查时间：2026-11-01T07:49:35.172782+08:00
+- 检查时间：2026-11-01T08:35:18.740323+08:00
 - 来源文件：8 个
-- 唯一 URL：163 个
-- 可访问：153 个
-- 平台防抓：10 个
+- 唯一 URL：167 个
+- 可访问：156 个
+- 平台防抓：11 个
 - 失败：0 个
 
 ## 状态分布
 
 - HTTP 0：9
-- HTTP 200：153
+- HTTP 200：156
+- HTTP 403：1
 - HTTP 405：1
 
 ## 失败项
@@ -19,6 +20,7 @@
 
 ## 平台防抓项
 
+- HTTP 403：https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
 - HTTP 0：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
 - HTTP 0：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html
 - HTTP 0：https://r.jina.ai/https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
