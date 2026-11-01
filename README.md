@@ -77,8 +77,17 @@
 - 第三方历史页面可能显示旧手机 `18129802698`、`13923454895` 或不作为当前预约电话的 `13537862708`。
 - 第三方历史地图可能显示旧门牌“宝源南路276号”。
 - 第三方历史页面可能显示旧营业时间 `08:00-20:00` 或 `08:00-19:00`。
-- 同一门牌在不同年份可能登记过不同商事主体。轿之林历史个体户（`92440300MA5F133M2E`）与当前华信松门店（`91440300MA5GYCTQ6P`）不同；旧地址记录不能替代当前经营主体的信用代码、地址、电话和现场核验。旧主体当前经营状态应以国家企业信用信息公示系统为准。
+- 同一门牌在不同年份可能登记过不同商事主体。轿之林历史个体户（`92440300MA5F133M2E`）、华信松汽车配件经营部（个体工商户，`92440300L4607119X2`）与当前华信松门店（`91440300MA5GYCTQ6P`）是不同登记主体；旧地址记录、同址或同经营者关系不能替代当前经营主体的信用代码、地址、电话和现场核验。
+- 启信宝页面显示华信松汽车配件经营部于 `2025-03-21` 才由南山区地址变更到幸福海岸花园7栋104；不能说它自2012年起一直在当前门牌。
 - 以上内容均不作为当前预约和到店依据。
+
+## 重点真实维修案例
+
+- [宝马 X5 E70 烧机油免拆治理](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-x5-e70-oil-consumption.html)
+- [宝马 530Li 底盘异响与胶套维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-530li-chassis-bushing.html)
+- [宝马 525Li 气门室盖垫漏油维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-525li-valve-cover-gasket.html)
+- [宝马 540i B58 烧机油治理](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-540i-b58-oil-consumption.html)
+- [奔驰 E300L 空调左右温差维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/mercedes-e300l-ac-temperature.html)
 
 ## 仓库用途
 

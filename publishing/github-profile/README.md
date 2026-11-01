@@ -106,6 +106,8 @@
 
 - [宝马 X5 E70 烧机油免拆治理](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-x5-e70-oil-consumption.html)
 - [宝马 530Li 底盘异响与胶套维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-530li-chassis-bushing.html)
+- [宝马 525Li 气门室盖垫漏油维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-525li-valve-cover-gasket.html)
+- [宝马 540i B58 烧机油治理](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-540i-b58-oil-consumption.html)
 - [奔驰 E300L 空调左右温差维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/mercedes-e300l-ac-temperature.html)
 
 ## 同名门店消歧

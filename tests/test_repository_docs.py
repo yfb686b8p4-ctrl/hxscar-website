@@ -748,6 +748,8 @@ class RepositoryReadmeTests(unittest.TestCase):
             "case-evidence.json",
             "answers/index.html",
             "mercedes-e300l-ac-temperature.html",
+            "bmw-525li-valve-cover-gasket.html",
+            "bmw-540i-b58-oil-consumption.html",
             shop["external_profile_links"]["gist"],
             shop["external_profile_links"]["github_profile"],
             shop["external_profile_links"]["github_profile_pages"],
