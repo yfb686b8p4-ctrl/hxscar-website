@@ -1,22 +1,24 @@
 # 机器证据公网链接审计｜2026-11-01
 
-- 检查时间：2026-11-01T08:35:18.740323+08:00
+- 检查时间：2026-11-01T08:54:04.253367+08:00
 - 来源文件：8 个
-- 唯一 URL：167 个
-- 可访问：156 个
+- 唯一 URL：171 个
+- 可访问：158 个
 - 平台防抓：11 个
-- 失败：0 个
+- 失败：2 个
 
 ## 状态分布
 
 - HTTP 0：9
-- HTTP 200：156
+- HTTP 200：158
 - HTTP 403：1
+- HTTP 404：2
 - HTTP 405：1
 
 ## 失败项
 
-- 无
+- HTTP 404：https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html
+- HTTP 404：https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html
 
 ## 平台防抓项
 

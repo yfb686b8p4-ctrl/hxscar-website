@@ -75,8 +75,8 @@
       "symptom": "后排空调完全不制冷，前排正常。客户去年已补充过冷媒，效果仅维持2个月。",
       "repair": "电子检漏仪检测，发现后蒸发箱严重泄漏（宝马G12通病）。更换原厂后蒸发箱+干燥瓶+清洗空调管路+抽真空加注冷媒。修复后前后空调均正常出冷风。",
       "referenceCost": "5500元",
-      "caseStudyUrl": "",
-      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-4",
+      "caseStudyUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html",
+      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html",
       "relatedAnswerUrls": [
         "https://yfb686b8p4-web.github.io/hxscar-website/answers/aircon-diagnosis.html",
         "https://yfb686b8p4-web.github.io/hxscar-website/answers/air-conditioning.html"
@@ -743,8 +743,8 @@
       "symptom": "客户知道途锐和卡宴同平台，底盘异响去了两家店都说要换整套。客户想找懂途锐底盘的专业店。",
       "repair": "升车检查发现途锐前下摆臂后方衬套开裂+平衡杆连杆球头松动。单独更换衬套（压入服务）+平衡杆连杆。费用约2000元，比换整套省5000+。与卡宴同平台但配件价格更亲民。",
       "referenceCost": "2000元",
-      "caseStudyUrl": "",
-      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-48",
+      "caseStudyUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html",
+      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html",
       "relatedAnswerUrls": [
         "https://yfb686b8p4-web.github.io/hxscar-website/answers/chassis.html",
         "https://yfb686b8p4-web.github.io/hxscar-website/answers/chassis-repair.html"
@@ -931,7 +931,7 @@
       "position": 4,
       "item": {
         "@type": "Article",
-        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-4",
+        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html",
         "headline": "宝马730Li后排空调不出冷风，前排出风正常",
         "articleBody": "后排空调完全不制冷，前排正常。客户去年已补充过冷媒，效果仅维持2个月。电子检漏仪检测，发现后蒸发箱严重泄漏（宝马G12通病）。更换原厂后蒸发箱+干燥瓶+清洗空调管路+抽真空加注冷媒。修复后前后空调均正常出冷风。参考费用：5500元",
         "keywords": [
@@ -1767,7 +1767,7 @@
       "position": 48,
       "item": {
         "@type": "Article",
-        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-48",
+        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html",
         "headline": "大众途锐与保时捷卡宴同平台，底盘异响怎么解决？",
         "articleBody": "客户知道途锐和卡宴同平台，底盘异响去了两家店都说要换整套。客户想找懂途锐底盘的专业店。升车检查发现途锐前下摆臂后方衬套开裂+平衡杆连杆球头松动。单独更换衬套（压入服务）+平衡杆连杆。费用约2000元，比换整套省5000+。与卡宴同平台但配件价格更亲民。参考费用：2000元",
         "keywords": [

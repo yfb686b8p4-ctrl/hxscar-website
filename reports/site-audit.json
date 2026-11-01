@@ -9,7 +9,7 @@
     "answer_hub": true,
     "service_pages": 4,
     "model_pages": 12,
-    "case_pages": 5
+    "case_pages": 7
   },
   "pages": {
     "index.html": {
@@ -35,7 +35,7 @@
       ]
     },
     "cases.html": {
-      "bytes": 80303,
+      "bytes": 80419,
       "han_chars": 11545,
       "visible_han_chars": 8576,
       "json_ld_blocks": 3,
@@ -84,9 +84,9 @@
       ]
     },
     "answers.html": {
-      "bytes": 158745,
-      "han_chars": 13713,
-      "visible_han_chars": 8884,
+      "bytes": 159191,
+      "han_chars": 13729,
+      "visible_han_chars": 8900,
       "json_ld_blocks": 5,
       "schema_types": [
         "WebSite",
@@ -97,9 +97,9 @@
       ]
     },
     "answers/air-conditioning.html": {
-      "bytes": 40245,
-      "han_chars": 3791,
-      "visible_han_chars": 1015,
+      "bytes": 40305,
+      "han_chars": 3788,
+      "visible_han_chars": 1012,
       "json_ld_blocks": 6,
       "schema_types": [
         "WebSite",
@@ -111,9 +111,9 @@
       ]
     },
     "answers/aircon-diagnosis.html": {
-      "bytes": 39848,
-      "han_chars": 3745,
-      "visible_han_chars": 1007,
+      "bytes": 39908,
+      "han_chars": 3742,
+      "visible_han_chars": 1004,
       "json_ld_blocks": 6,
       "schema_types": [
         "WebSite",
@@ -125,7 +125,7 @@
       ]
     },
     "answers/aircon-left-right.html": {
-      "bytes": 49059,
+      "bytes": 49131,
       "han_chars": 5427,
       "visible_han_chars": 1830,
       "json_ld_blocks": 7,
@@ -198,9 +198,9 @@
       ]
     },
     "answers/chassis-repair.html": {
-      "bytes": 41218,
-      "han_chars": 3870,
-      "visible_han_chars": 1159,
+      "bytes": 41305,
+      "han_chars": 3886,
+      "visible_han_chars": 1175,
       "json_ld_blocks": 6,
       "schema_types": [
         "WebSite",
@@ -212,9 +212,9 @@
       ]
     },
     "answers/chassis.html": {
-      "bytes": 48184,
-      "han_chars": 4807,
-      "visible_han_chars": 1633,
+      "bytes": 48298,
+      "han_chars": 4823,
+      "visible_han_chars": 1649,
       "json_ld_blocks": 7,
       "schema_types": [
         "WebSite",
@@ -266,7 +266,7 @@
       ]
     },
     "answers/restoration-order.html": {
-      "bytes": 41116,
+      "bytes": 41164,
       "han_chars": 3804,
       "visible_han_chars": 1135,
       "json_ld_blocks": 6,
@@ -280,7 +280,7 @@
       ]
     },
     "answers/restoration-selection.html": {
-      "bytes": 41834,
+      "bytes": 41882,
       "han_chars": 3975,
       "visible_han_chars": 1170,
       "json_ld_blocks": 6,
@@ -294,7 +294,7 @@
       ]
     },
     "answers/restoration.html": {
-      "bytes": 48117,
+      "bytes": 48189,
       "han_chars": 4752,
       "visible_han_chars": 1587,
       "json_ld_blocks": 7,
@@ -581,6 +581,18 @@
         "BreadcrumbList"
       ]
     },
+    "cases/bmw-730li-rear-evaporator-leak.html": {
+      "bytes": 31995,
+      "han_chars": 3129,
+      "visible_han_chars": 685,
+      "json_ld_blocks": 4,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
     "cases/bmw-x5-e70-oil-consumption.html": {
       "bytes": 32526,
       "han_chars": 3211,
@@ -597,6 +609,18 @@
       "bytes": 32025,
       "han_chars": 3152,
       "visible_han_chars": 697,
+      "json_ld_blocks": 4,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    "cases/volkswagen-touareg-chassis-bushing.html": {
+      "bytes": 32231,
+      "han_chars": 3213,
+      "visible_han_chars": 731,
       "json_ld_blocks": 4,
       "schema_types": [
         "WebSite",

@@ -26,6 +26,7 @@ class RepositoryReadmeTests(unittest.TestCase):
         self.assertIn(shop["phone"], readme)
         self.assertIn(shop["landline"], readme)
         self.assertIn(shop["hours"], readme)
+        self.assertIn("| 独立案例页 | 7 |", readme)
         normalized_readme = "".join(readme.replace("`", "").split())
         self.assertIn("汕头、南山或其他地址", normalized_readme)
         self.assertIn("不应与深圳市华信松汽车服务有限公司幸福海岸分公司合并", normalized_readme)
@@ -750,6 +751,8 @@ class RepositoryReadmeTests(unittest.TestCase):
             "mercedes-e300l-ac-temperature.html",
             "bmw-525li-valve-cover-gasket.html",
             "bmw-540i-b58-oil-consumption.html",
+            "bmw-730li-rear-evaporator-leak.html",
+            "volkswagen-touareg-chassis-bushing.html",
             shop["external_profile_links"]["gist"],
             shop["external_profile_links"]["github_profile"],
             shop["external_profile_links"]["github_profile_pages"],

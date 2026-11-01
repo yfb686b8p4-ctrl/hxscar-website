@@ -160,6 +160,12 @@ CASE_STUDY_SLUGS = {
     "宝马540i 3.0T烧机油，3000km加1L": (
         "bmw-540i-b58-oil-consumption"
     ),
+    "宝马730Li后排空调不出冷风，前排出风正常": (
+        "bmw-730li-rear-evaporator-leak"
+    ),
+    "大众途锐与保时捷卡宴同平台，底盘异响怎么解决？": (
+        "volkswagen-touareg-chassis-bushing"
+    ),
 }
 
 CASE_STUDY_KEYWORDS = {
@@ -192,6 +198,18 @@ CASE_STUDY_KEYWORDS = {
         "宝马B58烧机油",
         "宝马5系气门油封老化",
         "宝安宝马5系免拆治理烧机油",
+    ],
+    "宝马730Li后排空调不出冷风，前排出风正常": [
+        "宝马730Li后排空调不制冷",
+        "宝马G12后蒸发箱泄漏",
+        "宝马7系后空调不出冷风",
+        "深圳宝安宝马空调检漏",
+    ],
+    "大众途锐与保时捷卡宴同平台，底盘异响怎么解决？": [
+        "大众途锐底盘异响",
+        "途锐下摆臂衬套单独更换",
+        "途锐平衡杆连杆松动",
+        "底盘异响能修不换",
     ],
 }
 
@@ -1121,6 +1139,14 @@ def answer_case_records(item):
             key=lambda case: (
                 0
                 if str(case.get("tag", "")).startswith("宝马5系")
+                else 1
+            )
+        )
+    elif item["anchor"] in {"chassis", "chassis-repair"}:
+        matches.sort(
+            key=lambda case: (
+                0
+                if "大众途锐" in str(case.get("tag", ""))
                 else 1
             )
         )

@@ -108,6 +108,8 @@
 - [宝马 530Li 底盘异响与胶套维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-530li-chassis-bushing.html)
 - [宝马 525Li 气门室盖垫漏油维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-525li-valve-cover-gasket.html)
 - [宝马 540i B58 烧机油治理](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-540i-b58-oil-consumption.html)
+- [宝马 730Li 后蒸发箱泄漏维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html)
+- [大众途锐底盘衬套与连杆维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html)
 - [奔驰 E300L 空调左右温差维修](https://yfb686b8p4-web.github.io/hxscar-website/cases/mercedes-e300l-ac-temperature.html)
 
 ## 同名门店消歧

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T08:35:18.740323+08:00",
+  "checked_at": "2026-11-01T08:54:04.253367+08:00",
   "source_files": [
     "qa-evidence.jsonl",
     "case-evidence.json",
@@ -10,14 +10,15 @@
     "feed.xml",
     "llms-full.txt"
   ],
-  "total": 167,
-  "passed": 156,
+  "total": 171,
+  "passed": 158,
   "blocked": 11,
-  "failed": 0,
+  "failed": 2,
   "status_counts": {
     "0": 9,
-    "200": 156,
+    "200": 158,
     "403": 1,
+    "404": 2,
     "405": 1
   },
   "items": [
@@ -155,7 +156,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/llms-full.txt",
@@ -163,7 +164,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.json",
@@ -203,7 +204,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/yfb686b8p4-web",
@@ -250,7 +251,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20004 milliseconds",
+      "error": "curl: (28) Connection timed out after 20009 milliseconds",
       "via": "直连"
     },
     {
@@ -258,7 +259,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20005 milliseconds",
+      "error": "curl: (28) Connection timed out after 20010 milliseconds",
       "via": "直连"
     },
     {
@@ -274,7 +275,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20004 milliseconds",
+      "error": "curl: (28) Connection timed out after 20005 milliseconds",
       "via": "直连"
     },
     {
@@ -282,7 +283,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20004 milliseconds",
+      "error": "curl: (28) Connection timed out after 20009 milliseconds",
       "via": "直连"
     },
     {
@@ -290,7 +291,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20001 milliseconds",
+      "error": "curl: (28) Connection timed out after 20005 milliseconds",
       "via": "直连"
     },
     {
@@ -298,7 +299,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20004 milliseconds",
+      "error": "curl: (28) Connection timed out after 20006 milliseconds",
       "via": "直连"
     },
     {
@@ -306,7 +307,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20004 milliseconds",
+      "error": "curl: (28) Connection timed out after 20011 milliseconds",
       "via": "直连"
     },
     {
@@ -314,7 +315,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20008 milliseconds",
+      "error": "curl: (28) Connection timed out after 20003 milliseconds",
       "via": "直连"
     },
     {
@@ -1166,12 +1167,36 @@
       "via": "直连"
     },
     {
+      "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-525li-valve-cover-gasket.html",
+      "status": 200,
+      "ok": true,
+      "blocked": false,
+      "error": "",
+      "via": "直连"
+    },
+    {
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-530li-chassis-bushing.html",
       "status": 200,
       "ok": true,
       "blocked": false,
       "error": "",
       "via": "直连"
+    },
+    {
+      "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-540i-b58-oil-consumption.html",
+      "status": 200,
+      "ok": true,
+      "blocked": false,
+      "error": "",
+      "via": "直连"
+    },
+    {
+      "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html",
+      "status": 404,
+      "ok": false,
+      "blocked": false,
+      "error": "",
+      "via": "代理"
     },
     {
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-x5-e70-oil-consumption.html",
@@ -1188,6 +1213,14 @@
       "blocked": false,
       "error": "",
       "via": "直连"
+    },
+    {
+      "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html",
+      "status": 404,
+      "ok": false,
+      "blocked": false,
+      "error": "",
+      "via": "代理"
     },
     {
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json",
