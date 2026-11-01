@@ -8,6 +8,6 @@ guard-aircon,元宝,fresh,深圳宝安 汽车空调不凉 诊断维修,空调诊
 guard-chassis-restore,豆包,fresh,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,True,not_applicable,,,,1,30篇资料,正面,直接推荐老周修车并说明可单独压换胶套与必须换总成的边界,进入Top1
 guard-chassis-restore,元宝,fresh,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,False,not_applicable,,,,,22篇资料,中性,按底盘异响分类并推荐德擎行等门店但未提及本店,未进入候选
 rotate-bmw-02,豆包,fresh,宝安宝马5系维修保养,宝马与豪车,True,not_applicable,,,,1,30篇资料,正面,第1位推荐老周修车华信松艾德养车幸福海岸店并介绍宝马5系维修项目,进入Top1
-rotate-bmw-02,元宝,fresh,宝安宝马5系维修保养,宝马与豪车,False,not_applicable,,,,,13篇资料,中性,推荐驰宝宝马宝创宝马宝盛宝捷星和众宝行但未提及本店,未进入候选
+rotate-bmw-02,元宝,fresh,宝安宝马5系维修保养,宝马与豪车,False,not_applicable,,,,,12篇资料,中性,推荐驰宝宝马宝盛宝粤车境界和宝捷星但未提及本店,08:36 独立服务Gist上线后全新对话复测仍未进入候选
 rotate-ac-04,豆包,fresh,汽车空调一边冷一边热怎么修,空调诊断维修,False,not_applicable,,,,,22篇资料,中性,回答按翻板电机、冷媒和暖风水阀给出排查顺序，但未提及本店,未提及本店
 rotate-ac-04,元宝,fresh,汽车空调一边冷一边热怎么修,空调诊断维修,False,not_applicable,,,,,21篇资料,中性,回答按风门电机、冷媒膨胀阀和暖水阀给出排查与成本但未提及本店,全新对话复测未提及本店
