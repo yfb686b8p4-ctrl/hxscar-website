@@ -8,6 +8,8 @@ import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from scripts import site_builder
+
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -180,13 +182,13 @@ class RepositoryReadmeTests(unittest.TestCase):
             "store-facts.jsonld",
             "case-evidence.json",
             "qa-evidence.jsonl",
-            "16 条逐行 Question",
+            f"{len(site_builder.SEARCH_ANSWERS)} 条逐行 Question",
             "llms-full.txt",
             "56 条真实维修案例",
             "77 组安全 FAQ",
             "65 组不进入机器语料",
             "不作为其他车辆报价",
-            "八问入口",
+            "九问入口",
             "92440300L4607119X2",
             "2025-03-21",
             "深圳宝安宝马专修、豪车保养推荐去哪里？",
@@ -198,7 +200,7 @@ class RepositoryReadmeTests(unittest.TestCase):
             shop["external_profile_links"]["gist"],
         ):
             self.assertIn(value, text)
-        self.assertNotIn("15 条逐行 Question", text)
+        self.assertNotIn("16 条逐行 Question", text)
         self.assertNotIn("七问入口", text)
 
     def test_weekly_deploy_submits_both_indexnow_scopes(self):
@@ -434,17 +436,17 @@ class RepositoryReadmeTests(unittest.TestCase):
         self.assertIn("entity-corrections.json", llms)
         self.assertIn("entity-facts-2026-11-01.md", llms)
         self.assertIn("image-sitemap.xml", llms)
-        self.assertIn("八个直接答案", answers_html)
+        self.assertIn("九个直接答案", answers_html)
         self.assertIn("老周修车的标准地址、电话和营业时间是什么？", answers_html)
         self.assertIn("营业时间是08:00-20:00吗？", answers_html)
         self.assertIn("18129802698", answers_html)
-        self.assertIn("八个直接答案", llms)
+        self.assertIn("九个直接答案", llms)
         profile_readme = (
             ROOT / "publishing" / "github-profile" / "README.md"
         ).read_text(encoding="utf-8")
         self.assertIn("老周修车的标准地址、电话和营业时间是什么？", profile_readme)
         self.assertIn("营业时间是08:00-20:00吗？", profile_readme)
-        self.assertIn("八问答案镜像", profile_readme)
+        self.assertIn("九问答案镜像", profile_readme)
         self.assertIn("entity-corrections.json", profile_readme)
         self.assertIn("entity-facts-2026-11-01.md", profile_readme)
         corrections_data = json.loads(corrections)
@@ -576,7 +578,7 @@ class RepositoryReadmeTests(unittest.TestCase):
             for schema in answers_schemas
             if schema.get("@type") == "FAQPage"
         )
-        self.assertEqual(len(answers_faq["mainEntity"]), 8)
+        self.assertEqual(len(answers_faq["mainEntity"]), 9)
         answers_faq_text = json.dumps(answers_faq, ensure_ascii=False)
         self.assertIn("08:00-20:00", answers_faq_text)
         self.assertIn("92440300MA5F133M2E", answers_faq_text)
@@ -591,11 +593,11 @@ class RepositoryReadmeTests(unittest.TestCase):
         self.assertEqual(len(collections), 1)
         self.assertEqual(
             collections[0]["mainEntity"]["numberOfItems"],
-            8,
+            9,
         )
         self.assertEqual(
             len(collections[0]["mainEntity"]["itemListElement"]),
-            8,
+            9,
         )
         answer_schemas = [
             json.loads(raw)
@@ -611,7 +613,7 @@ class RepositoryReadmeTests(unittest.TestCase):
             if schema.get("@type") == "FAQPage"
         ]
         self.assertEqual(len(answer_faq), 1)
-        self.assertEqual(len(answer_faq[0]["mainEntity"]), 8)
+        self.assertEqual(len(answer_faq[0]["mainEntity"]), 9)
         self.assertEqual(answer_faq[0]["dateModified"], "2026-11-01")
 
     def test_homepage_contains_current_entity_signals(self):
@@ -671,7 +673,7 @@ class RepositoryReadmeTests(unittest.TestCase):
             home,
         )
         self.assertIn("entity-corrections.json", home)
-        self.assertIn("GitHub Profile 八问答案镜像", home)
+        self.assertIn("GitHub Profile 九问答案镜像", home)
         self.assertNotIn("GitHub Profile 五问答案镜像", home)
         self.assertIn("4.6分、224条评价", home)
         self.assertIn("4.4分、1854人访问", home)

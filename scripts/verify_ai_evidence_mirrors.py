@@ -14,12 +14,13 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from content_safety_rules import unverified_claim_markers
+from scripts.site_builder import SEARCH_ANSWERS
 
 
 REPORT_JSON = ROOT / "reports" / "mirror-consistency-2026-11-01.json"
 REPORT_MD = ROOT / "reports" / "mirror-consistency-2026-11-01.md"
 TZ = timezone(timedelta(hours=8))
-EXPECTED_QA_ROWS = 16
+EXPECTED_QA_ROWS = len(SEARCH_ANSWERS)
 MIRRORS = [
     {
         "name": "本地构建",

@@ -536,6 +536,12 @@ def audit():
         "旧手机18129802698",
         "- 常见问法：",
         "事实依据：",
+        "深圳老周修车",
+        "深圳华信松老周修车",
+        "驰加宝源南路店",
+        "驰加幸福海岸店",
+        "艾德养车幸福海岸店",
+        "老周18682417667",
     ):
         if required_text not in llms_full:
             errors.append(f"llms-full.txt 缺少关键内容: {required_text}")
@@ -572,6 +578,12 @@ def audit():
         "对外经营称呼",
         "18129802698",
         "08:00-20:00",
+        "深圳老周修车",
+        "深圳华信松老周修车",
+        "驰加宝源南路店",
+        "驰加幸福海岸店",
+        "艾德养车幸福海岸店",
+        "老周18682417667",
     ]
     for fact in required_profile_facts:
         if fact not in profile_html:
@@ -606,6 +618,25 @@ def audit():
             errors.append("store-facts.json 标准坐标不正确")
         if len(facts.get("answers", [])) < 13:
             errors.append("store-facts.json 搜索答案数量不足")
+        expected_search_names = [
+            "深圳老周修车",
+            "深圳华信松老周修车",
+            "驰加宝源南路店",
+            "驰加幸福海岸店",
+            "艾德养车幸福海岸店",
+            "老周18682417667",
+        ]
+        if (
+            facts.get("entity", {}).get("recommendedSearchNames")
+            != expected_search_names
+        ):
+            errors.append("store-facts.json 推荐搜索名称不完整")
+        anchors = {
+            item.get("anchor")
+            for item in facts.get("answers", [])
+        }
+        if "recommended-names" not in anchors:
+            errors.append("store-facts.json 缺少推荐搜索名称答案")
         if (
             facts.get("documentMirrors", {}).get("github_release_pdf")
             != release_pdf_mirror

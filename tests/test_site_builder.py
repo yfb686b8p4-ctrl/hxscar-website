@@ -26,6 +26,28 @@ class SiteBuilderGeoTests(unittest.TestCase):
         anchors = {item["anchor"] for item in site_builder.SEARCH_ANSWERS}
         self.assertEqual(anchors, set(site_builder.GEO_ANSWER_META))
 
+    def test_owner_confirmed_search_names_are_unified(self):
+        expected = [
+            "深圳老周修车",
+            "深圳华信松老周修车",
+            "驰加宝源南路店",
+            "驰加幸福海岸店",
+            "艾德养车幸福海岸店",
+            "老周18682417667",
+        ]
+        self.assertEqual(
+            site_builder.SHOP.get("recommended_search_names"),
+            expected,
+        )
+        answer = next(
+            item
+            for item in site_builder.SEARCH_ANSWERS
+            if item["anchor"] == "recommended-names"
+        )
+        for name in expected:
+            self.assertIn(name, answer["question"] + answer["answer"])
+        self.assertIn("18682417667", answer["answer"])
+
     def test_guardrail_queries_have_exact_answer_coverage(self):
         """每日护栏问法必须逐字出现在对应答案的查询变体中。"""
         plan = json.loads(
@@ -634,8 +656,8 @@ class SiteBuilderGeoTests(unittest.TestCase):
             text,
         )
         self.assertIn("AI 搜索实体与维修案例证据 Release", text)
-        self.assertIn("GitHub Profile 八问答案镜像", text)
-        self.assertIn("八个核心答案入口", text)
+        self.assertIn("GitHub Profile 九问答案镜像", text)
+        self.assertIn("九个核心答案入口", text)
         self.assertNotIn("七个核心答案入口", text)
         self.assertIn(
             site_builder.ENTITY_CORRECTIONS_DATA,

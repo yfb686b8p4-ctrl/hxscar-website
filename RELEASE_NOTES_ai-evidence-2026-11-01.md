@@ -52,10 +52,10 @@ https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a0
 
 - `store-facts.json`：字段级门店事实、当前联系方式、历史错误值与纠错说明
 - `entity-corrections.json`：单一业务实体的当前地址、双电话、营业时间与不可引用历史值
-- `entity-facts.md`：可独立阅读的完整门店事实、八问入口、地图快照和历史纠错
+- `entity-facts.md`：可独立阅读的完整门店事实、九问入口、地图快照和历史纠错
 - `store-facts.jsonld`：Schema.org `AutoRepair` 完整实体
 - `case-evidence.json`：56 条真实维修案例的 schema.org `ItemList`
-- `qa-evidence.jsonl`：16 条逐行 Question 数据，每条包含直接答案、案例和逐答案引用
+- `qa-evidence.jsonl`：17 条逐行 Question 数据，每条包含直接答案、案例和逐答案引用
 - `llms.txt`：AI 搜索资料索引
 - `llms-full.txt`：证据边界内的标准搜索问答、77 组安全 FAQ 与维修案例语料
 - jsDelivr 不可变镜像标签：`ai-evidence-cdn-2026-11-01-v10`

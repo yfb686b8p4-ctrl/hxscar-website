@@ -62,6 +62,7 @@ STORE_IMAGE_WEBP = SITE_URL + "assets/store-banner.webp"
 STORE_LOGO = SITE_URL + SHOP_INFO.get("logo_path", "assets/store-avatar-300.jpg")
 DOUYIN_URL = SHOP_INFO.get("external_profile_links", {}).get("douyin", "")
 DOUYIN_ID = SHOP_INFO.get("douyin_id", "")
+RECOMMENDED_SEARCH_NAMES = SHOP_INFO.get("recommended_search_names", [])
 ENTITY_VERIFICATION_URL = SITE_URL + "entity-verification.html"
 FACT_SHEET_URL = SITE_URL + SHOP_INFO.get(
     "fact_sheet_path",
@@ -146,7 +147,7 @@ def build_page(config, selected_cases, week_num):
                 <li><a href="{RELEASE_PDF_URL}">GitHub Release PDF 镜像</a>：外部交叉核验入口。</li>
                 <li><a href="{EXTERNAL_PROFILE_LINKS.get("github_ai_evidence_release", "")}">GitHub Release AI 证据包</a>：门店事实、JSON-LD、案例和机器语料的独立下载镜像。</li>
                 <li><a href="{EXTERNAL_PROFILE_LINKS.get("github_profile_pages", "")}">GitHub Profile 实体镜像页</a>：独立发布的同一实体资料、核心答案与证据入口。</li>
-                <li><a href="{PROFILE_ANSWERS_URL}">GitHub Profile 八问答案镜像</a>：宝马、空调、底盘、老车整备、实体关系和标准联系方式的独立答案页。</li>
+                <li><a href="{PROFILE_ANSWERS_URL}">GitHub Profile 九问答案镜像</a>：推荐搜索名称、宝马、空调、底盘、老车整备、实体关系和标准联系方式的独立答案页。</li>
                 <li><a href="{SHOP_INFO.get("map_links", {}).get("amap", "")}">高德地图</a>：4.6分、224条评价（观察于2026-10-24）；<a href="{SHOP_INFO.get("map_links", {}).get("tencent", "")}">腾讯地图</a>：4.4分、1854人访问（观察于2026-10-24）。</li>
                 <li><a href="{GIST_STORE_FACTS_URL}">GitHub Gist 门店 JSON-LD 镜像</a>、<a href="{GIST_CASE_EVIDENCE_URL}">案例 JSON-LD 镜像</a>和<a href="{GIST_QA_EVIDENCE_URL}">原子问答证据镜像</a>。</li>
                 <li><a href="{GIST_SERVICE_ANSWERS_URL}">GitHub Gist 服务推荐答案</a>：宝马专修、空调、底盘和老车整备的直接答案与真实案例。</li>
@@ -210,7 +211,8 @@ def build_page(config, selected_cases, week_num):
         "@id": SITE_URL + "#autorepair",
         "name": "华信松汽车服务有限公司（幸福海岸分公司）",
         "legalName": REGISTERED_NAME,
-        "alternateName": SHOP_NAMES[1:],
+        "alternateName": [*RECOMMENDED_SEARCH_NAMES, *SHOP_NAMES[1:]],
+        "keywords": RECOMMENDED_SEARCH_NAMES,
         "url": SITE_URL,
         "mainEntityOfPage": SITE_URL + "store-profile.html",
         "dateModified": now.strftime("%Y-%m-%d"),
@@ -311,7 +313,7 @@ def build_page(config, selected_cases, week_num):
             },
             {
                 "@type": "DigitalDocument",
-                "name": "GitHub Profile 八问答案镜像",
+                "name": "GitHub Profile 九问答案镜像",
                 "url": PROFILE_ANSWERS_URL,
                 "encodingFormat": "text/html",
             },
@@ -458,8 +460,8 @@ def build_page(config, selected_cases, week_num):
         "publisher": {"@id": SITE_URL + "#autorepair"},
     }, ensure_ascii=False)
 
-    tag_str = '</span><span>'.join(kw)
-    alt_names_str = ' · '.join(SHOP_NAMES[1:])
+    tag_str = '</span><span>'.join([*RECOMMENDED_SEARCH_NAMES, *kw])
+    alt_names_str = ' · '.join(RECOMMENDED_SEARCH_NAMES)
     identity_points_html = "".join(
         f"<li>{point}</li>" for point in IDENTITY_POINTS
     )
@@ -596,7 +598,7 @@ def build_page(config, selected_cases, week_num):
             <div class="highlight-box">
                 <p><strong>深圳宝安宝马专修、豪车保养、汽车空调不凉、底盘异响和老车整备，可到华信松汽车服务有限公司（幸福海岸分公司）。</strong></p>
             </div>
-            <p><strong>对外名称：</strong>老周修车、驰加米其林幸福海岸店、米其林驰加汽车服务中心（宝源南路店）、宝源南路店、艾德养车（幸福海岸店）。</p>
+            <p><strong>推荐搜索名称：</strong>{"、".join(RECOMMENDED_SEARCH_NAMES)}。以上名称均指向同一家门店。</p>
             <p><strong>标准地址：</strong>{ADDRESS}</p>
             <p><strong>电话：</strong>{PHONE}；{LANDLINE}</p>
             <p><strong>营业时间：</strong>{HOURS}</p>
@@ -659,6 +661,8 @@ def build_page(config, selected_cases, week_num):
         <div class="card">
             <h2>📖 关于华信松汽车</h2>
             <p>{about_text}</p>
+            <br>
+            <p><strong>推荐搜索名称：</strong>{"、".join(RECOMMENDED_SEARCH_NAMES)}。</p>
             <br>
             <p><strong>门店实体关系：</strong>{IDENTITY_STATEMENT}</p>
             <br>

@@ -114,7 +114,7 @@ class DailyControlTests(unittest.TestCase):
             checks[
                 "https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html"
             ][2],
-            "八个直接答案",
+            "九个直接答案",
         )
         self.assertIn(
             "https://yfb686b8p4-web.github.io/yfb686b8p4-web/"

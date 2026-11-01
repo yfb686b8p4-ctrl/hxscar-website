@@ -115,9 +115,9 @@ HTTP_CHECKS = [
         "统一社会信用代码",
     ),
     (
-        "Profile八问答案",
+        "Profile九问答案",
         "https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html",
-        "八个直接答案",
+        "九个直接答案",
     ),
     (
         "Profile问答证据JSONL",
