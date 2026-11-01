@@ -86,7 +86,10 @@ class SiteBuilderGeoTests(unittest.TestCase):
                 for source in site_builder.answer_evidence_sources(item)
             }
             self.assertTrue(
-                any("/cases.html#case-" in url for url in urls),
+                any(
+                    "/cases.html#case-" in url or "/cases/" in url
+                    for url in urls
+                ),
                 item["anchor"],
             )
 
@@ -499,8 +502,15 @@ class SiteBuilderGeoTests(unittest.TestCase):
             "sm": "http://www.sitemaps.org/schemas/sitemap/0.9",
             "image": "http://www.google.com/schemas/sitemap-image/1.1",
         }
-        self.assertEqual(len(root.findall("sm:url", namespace)), 10)
-        self.assertEqual(len(root.findall(".//image:image", namespace)), 14)
+        expected_case_pages = len(site_builder.CASE_STUDY_SLUGS)
+        self.assertEqual(
+            len(root.findall("sm:url", namespace)),
+            3 + len(site_builder.CORE_SERVICE_PATHS) + expected_case_pages,
+        )
+        self.assertEqual(
+            len(root.findall(".//image:image", namespace)),
+            7 + len(site_builder.CORE_SERVICE_PATHS) + expected_case_pages,
+        )
         image_urls = {
             node.text
             for node in root.findall(".//image:loc", namespace)
@@ -519,7 +529,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
             for case in site_builder.CASES
             if site_builder.case_study_path(case)
         }
-        self.assertEqual(len(case_urls), 3)
+        self.assertEqual(len(case_urls), len(site_builder.CASE_STUDY_SLUGS))
         self.assertTrue(case_urls.issubset(page_urls))
 
     def test_sitemap_index_exposes_content_and_images(self):
@@ -943,7 +953,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
     def test_key_cases_have_standalone_article_pages(self):
         """重点真实案例应可独立引用，而不是只存在于长列表锚点。"""
         pages = site_builder.build_case_study_pages()
-        self.assertEqual(len(pages), 3)
+        self.assertEqual(len(pages), len(site_builder.CASE_STUDY_SLUGS))
         case = next(
             item
             for item in site_builder.CASES
@@ -982,6 +992,17 @@ class SiteBuilderGeoTests(unittest.TestCase):
             "奔驰E300L空调一边冷一边热",
             article["keywords"],
         )
+        for issue in (
+            "宝马525Li气门室盖垫漏油维修",
+            "宝马540i 3.0T烧机油，3000km加1L",
+        ):
+            case = next(
+                item for item in site_builder.CASES
+                if item["issue"] == issue
+            )
+            path = site_builder.ROOT / site_builder.case_study_path(case)
+            self.assertIn(path, pages)
+            self.assertIn(issue, pages[path])
         self.assertEqual(
             article["isPartOf"]["@type"],
             "CollectionPage",
@@ -998,23 +1019,24 @@ class SiteBuilderGeoTests(unittest.TestCase):
                 if isinstance(item, dict)
             )
         )
-        answer = next(
-            item
-            for item in site_builder.SEARCH_ANSWERS
-            if item["anchor"] == "aircon-left-right"
-        )
         source_urls = {
-            item["url"]
-            for item in site_builder.answer_evidence_sources(answer)
+            source["url"]
+            for answer in site_builder.SEARCH_ANSWERS
+            for source in site_builder.answer_evidence_sources(answer)
         }
-        self.assertIn(site_builder.case_study_url(case), source_urls)
+        case_urls = {
+            site_builder.case_study_url(case)
+            for case in site_builder.CASES
+            if site_builder.case_study_path(case)
+        }
+        self.assertTrue(case_urls.issubset(source_urls))
         sitemap = ET.fromstring(site_builder.build_sitemap())
         namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         locations = {
             node.text
             for node in sitemap.findall("sm:url/sm:loc", namespace)
         }
-        self.assertIn(site_builder.case_study_url(case), locations)
+        self.assertTrue(case_urls.issubset(locations))
 
     def test_answer_hub_exposes_collection_and_every_detail(self):
         """答案目录必须可访问，并列出全部独立答案。"""

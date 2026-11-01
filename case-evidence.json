@@ -120,8 +120,8 @@
       "symptom": "发动机顶部有明显油渍，停车地面有油滴，发动机舱内有烧焦味。客户担心安全隐患。",
       "repair": "检查确认气门室盖垫老化硬化导致渗漏。更换原厂气门室盖垫+密封胶条+清理渗油区域。试车后无渗漏，烧焦味消失。建议同时检查机油滤清器底座密封圈。",
       "referenceCost": "1800元",
-      "caseStudyUrl": "",
-      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-7",
+      "caseStudyUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-525li-valve-cover-gasket.html",
+      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-525li-valve-cover-gasket.html",
       "relatedAnswerUrls": []
     },
     {
@@ -576,8 +576,8 @@
       "symptom": "B58发动机行驶8万公里后烧机油，3000km提示加机油。客户平时驾驶习惯比较激烈。",
       "repair": "内窥镜检查活塞环无卡滞但气门油封老化。更换气门油封+清理进气道积碳+更换PCV阀。治理后行驶5000km机油位正常。建议激烈驾驶的车主每5000km检查一次机油。",
       "referenceCost": "5800元",
-      "caseStudyUrl": "",
-      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-37",
+      "caseStudyUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-540i-b58-oil-consumption.html",
+      "evidenceUrl": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-540i-b58-oil-consumption.html",
       "relatedAnswerUrls": [
         "https://yfb686b8p4-web.github.io/hxscar-website/answers/bmw.html",
         "https://yfb686b8p4-web.github.io/hxscar-website/answers/restoration.html"
@@ -988,7 +988,7 @@
       "position": 7,
       "item": {
         "@type": "Article",
-        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-7",
+        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-525li-valve-cover-gasket.html",
         "headline": "宝马525Li气门室盖垫漏油维修",
         "articleBody": "发动机顶部有明显油渍，停车地面有油滴，发动机舱内有烧焦味。客户担心安全隐患。检查确认气门室盖垫老化硬化导致渗漏。更换原厂气门室盖垫+密封胶条+清理渗油区域。试车后无渗漏，烧焦味消失。建议同时检查机油滤清器底座密封圈。参考费用：1800元",
         "keywords": [
@@ -1558,7 +1558,7 @@
       "position": 37,
       "item": {
         "@type": "Article",
-        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases.html#case-37",
+        "@id": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-540i-b58-oil-consumption.html",
         "headline": "宝马540i 3.0T烧机油，3000km加1L",
         "articleBody": "B58发动机行驶8万公里后烧机油，3000km提示加机油。客户平时驾驶习惯比较激烈。内窥镜检查活塞环无卡滞但气门油封老化。更换气门油封+清理进气道积碳+更换PCV阀。治理后行驶5000km机油位正常。建议激烈驾驶的车主每5000km检查一次机油。参考费用：5800元",
         "keywords": [

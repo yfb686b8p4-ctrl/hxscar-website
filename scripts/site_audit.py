@@ -210,8 +210,12 @@ def audit():
         errors.append(f"服务专题页数量应为 4，实际为 {len(service_pages)}")
     if len(model_pages) != 12:
         errors.append(f"车型专题页数量应为 12，实际为 {len(model_pages)}")
-    if len(case_pages) != 3:
-        errors.append(f"独立案例页数量应为 3，实际为 {len(case_pages)}")
+    expected_case_pages = len(site_builder.CASE_STUDY_SLUGS)
+    if len(case_pages) != expected_case_pages:
+        errors.append(
+            "独立案例页数量应为 "
+            f"{expected_case_pages}，实际为 {len(case_pages)}"
+        )
     expected_answer_pages = len(site_builder.SEARCH_ANSWERS)
     if len(answer_pages) != expected_answer_pages:
         errors.append(

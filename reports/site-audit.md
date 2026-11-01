@@ -13,11 +13,11 @@
 | store-profile.html | 3451 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
 | entity-verification.html | 2651 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
 | evidence-policy.html | 1344 | 4 | WebSite, AboutPage, FAQPage, BreadcrumbList |
-| answers.html | 8893 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers.html | 8884 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | answers/air-conditioning.html | 1015 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/aircon-diagnosis.html | 1007 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/aircon-left-right.html | 1830 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/bmw-5-series.html | 1592 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
+| answers/bmw-5-series.html | 1569 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
 | answers/bmw-selection.html | 1021 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/bmw.html | 1504 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
 | answers/chassis-bushing.html | 1156 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
@@ -47,7 +47,9 @@
 | models/porsche-cayenne.html | 1570 | 5 | WebSite, AutoRepair, Service, BreadcrumbList, FAQPage |
 | models/porsche-macan.html | 1389 | 5 | WebSite, AutoRepair, Service, BreadcrumbList, FAQPage |
 | models/volkswagen-touareg.html | 1188 | 5 | WebSite, AutoRepair, Service, BreadcrumbList, FAQPage |
+| cases/bmw-525li-valve-cover-gasket.html | 663 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 | cases/bmw-530li-chassis-bushing.html | 714 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
+| cases/bmw-540i-b58-oil-consumption.html | 669 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 | cases/bmw-x5-e70-oil-consumption.html | 742 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 | cases/mercedes-e300l-ac-temperature.html | 697 | 4 | WebSite, AutoRepair, Article, BreadcrumbList |
 

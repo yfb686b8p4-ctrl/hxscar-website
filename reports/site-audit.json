@@ -9,7 +9,7 @@
     "answer_hub": true,
     "service_pages": 4,
     "model_pages": 12,
-    "case_pages": 3
+    "case_pages": 5
   },
   "pages": {
     "index.html": {
@@ -35,7 +35,7 @@
       ]
     },
     "cases.html": {
-      "bytes": 80195,
+      "bytes": 80303,
       "han_chars": 11545,
       "visible_han_chars": 8576,
       "json_ld_blocks": 3,
@@ -84,9 +84,9 @@
       ]
     },
     "answers.html": {
-      "bytes": 158737,
-      "han_chars": 13722,
-      "visible_han_chars": 8893,
+      "bytes": 158745,
+      "han_chars": 13713,
+      "visible_han_chars": 8884,
       "json_ld_blocks": 5,
       "schema_types": [
         "WebSite",
@@ -140,9 +140,9 @@
       ]
     },
     "answers/bmw-5-series.html": {
-      "bytes": 48171,
-      "han_chars": 5125,
-      "visible_han_chars": 1592,
+      "bytes": 48120,
+      "han_chars": 5102,
+      "visible_han_chars": 1569,
       "json_ld_blocks": 7,
       "schema_types": [
         "WebSite",
@@ -545,10 +545,34 @@
         "FAQPage"
       ]
     },
+    "cases/bmw-525li-valve-cover-gasket.html": {
+      "bytes": 31764,
+      "han_chars": 3098,
+      "visible_han_chars": 663,
+      "json_ld_blocks": 4,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
     "cases/bmw-530li-chassis-bushing.html": {
       "bytes": 32214,
       "han_chars": 3185,
       "visible_han_chars": 714,
+      "json_ld_blocks": 4,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    "cases/bmw-540i-b58-oil-consumption.html": {
+      "bytes": 31951,
+      "han_chars": 3074,
+      "visible_han_chars": 669,
       "json_ld_blocks": 4,
       "schema_types": [
         "WebSite",

@@ -154,6 +154,12 @@ CASE_STUDY_SLUGS = {
     "奔驰E300L空调制冷不足，右边比左边凉": (
         "mercedes-e300l-ac-temperature"
     ),
+    "宝马525Li气门室盖垫漏油维修": (
+        "bmw-525li-valve-cover-gasket"
+    ),
+    "宝马540i 3.0T烧机油，3000km加1L": (
+        "bmw-540i-b58-oil-consumption"
+    ),
 }
 
 CASE_STUDY_KEYWORDS = {
@@ -174,6 +180,18 @@ CASE_STUDY_KEYWORDS = {
         "奔驰W213空调左右温差",
         "奔驰温度风门电机故障",
         "奔驰空调系统学习",
+    ],
+    "宝马525Li气门室盖垫漏油维修": [
+        "宝马525Li气门室盖漏油",
+        "宝马F18发动机漏油",
+        "宝马气门室盖垫更换",
+        "宝安宝马5系漏油维修",
+    ],
+    "宝马540i 3.0T烧机油，3000km加1L": [
+        "宝马540i烧机油",
+        "宝马B58烧机油",
+        "宝马5系气门油封老化",
+        "宝安宝马5系免拆治理烧机油",
     ],
 }
 
@@ -1095,6 +1113,14 @@ def answer_case_records(item):
             key=lambda case: (
                 0
                 if "右边比左边凉" in str(case.get("issue", ""))
+                else 1
+            )
+        )
+    elif item["anchor"] == "bmw-5-series":
+        matches.sort(
+            key=lambda case: (
+                0
+                if str(case.get("tag", "")).startswith("宝马5系")
                 else 1
             )
         )

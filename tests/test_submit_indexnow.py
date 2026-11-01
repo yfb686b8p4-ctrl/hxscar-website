@@ -75,7 +75,7 @@ class SubmitIndexNowTests(unittest.TestCase):
         )
         self.assertEqual(
             sum("/hxscar-website/cases/" in url for url in urls),
-            3,
+            len(site_builder.CASE_STUDY_SLUGS),
         )
         self.assertEqual(
             sum("/hxscar-website/services/" in url for url in urls),
