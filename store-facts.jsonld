@@ -54,6 +54,12 @@
       "encodingFormat": "application/x-ndjson"
     },
     {
+      "@type": "DigitalDocument",
+      "name": "GitHub Gist 服务推荐答案",
+      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/bff58190a7a7e2ca8d30f152d4bafff59f404d58/SERVICE_ANSWERS.md",
+      "encodingFormat": "text/markdown"
+    },
+    {
       "@type": "DataFeed",
       "name": "GitHub Release 门店事实 JSON 镜像",
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.json",

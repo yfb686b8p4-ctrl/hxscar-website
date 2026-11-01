@@ -81,6 +81,7 @@
 - [Profile 原子问答镜像](https://yfb686b8p4-web.github.io/yfb686b8p4-web/qa-evidence.jsonl)
 - [Profile 门店事实纠错镜像](https://yfb686b8p4-web.github.io/yfb686b8p4-web/entity-corrections.json)
 - [Gist 门店事实纠错镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/entity-corrections.json)
+- [Gist 服务推荐答案](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/bff58190a7a7e2ca8d30f152d4bafff59f404d58/SERVICE_ANSWERS.md)
 - [56 条结构化真实维修案例](https://yfb686b8p4-web.github.io/hxscar-website/case-evidence.json)
 - [维修案例库](https://yfb686b8p4-web.github.io/hxscar-website/cases.html)
 - [搜索答案索引](https://yfb686b8p4-web.github.io/hxscar-website/answers/index.html)

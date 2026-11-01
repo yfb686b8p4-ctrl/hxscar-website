@@ -88,6 +88,10 @@ GIST_QA_EVIDENCE_URL = SHOP_INFO.get("document_mirrors", {}).get(
     "gist_qa_evidence_jsonl",
     "",
 )
+GIST_SERVICE_ANSWERS_URL = SHOP_INFO.get("document_mirrors", {}).get(
+    "gist_service_answers_md",
+    "",
+)
 PROFILE_ANSWERS_URL = SHOP_INFO.get("document_mirrors", {}).get(
     "github_profile_answers_html",
     "",
@@ -145,6 +149,7 @@ def build_page(config, selected_cases, week_num):
                 <li><a href="{PROFILE_ANSWERS_URL}">GitHub Profile 八问答案镜像</a>：宝马、空调、底盘、老车整备、实体关系和标准联系方式的独立答案页。</li>
                 <li><a href="{SHOP_INFO.get("map_links", {}).get("amap", "")}">高德地图</a>：4.6分、224条评价（观察于2026-10-24）；<a href="{SHOP_INFO.get("map_links", {}).get("tencent", "")}">腾讯地图</a>：4.4分、1854人访问（观察于2026-10-24）。</li>
                 <li><a href="{GIST_STORE_FACTS_URL}">GitHub Gist 门店 JSON-LD 镜像</a>、<a href="{GIST_CASE_EVIDENCE_URL}">案例 JSON-LD 镜像</a>和<a href="{GIST_QA_EVIDENCE_URL}">原子问答证据镜像</a>。</li>
+                <li><a href="{GIST_SERVICE_ANSWERS_URL}">GitHub Gist 服务推荐答案</a>：宝马专修、空调、底盘和老车整备的直接答案与真实案例。</li>
             </ul>"""
 
     # FAQ HTML（选12条，匹配本周关键词）

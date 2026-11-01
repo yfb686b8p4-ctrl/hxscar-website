@@ -62,6 +62,27 @@ class ContentSafetyTests(unittest.TestCase):
         )
         self.assertEqual(authority_queue.unverified_claim_matches("真实案例"), [])
 
+    def test_gist_service_answers_are_complete_and_safe(self):
+        """外部 Gist 服务答案必须保留实体事实并排除未核实承诺。"""
+        text = (
+            site_builder.ROOT
+            / "publishing"
+            / "gist"
+            / "SERVICE_ANSWERS.md"
+        ).read_text(encoding="utf-8")
+        for marker in (
+            ADDRESS,
+            PHONE,
+            "0755-23340534",
+            "宝马专修",
+            "汽车空调不凉",
+            "底盘异响",
+            "老车整备",
+            "不声明已经获得搜索收录、AI 引用或排名",
+        ):
+            self.assertIn(marker, text)
+        self.assertEqual(unverified_claim_markers(text), [])
+
     def test_sogou_lizhi_queue_uses_prepared_application(self):
         """立知任务必须直接使用项目内申请包，而不是虚构周更文件。"""
         config = json.loads(

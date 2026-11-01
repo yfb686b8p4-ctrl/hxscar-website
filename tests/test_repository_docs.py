@@ -638,6 +638,10 @@ class RepositoryReadmeTests(unittest.TestCase):
             shop["document_mirrors"]["github_ai_evidence_store_facts_json"],
             home,
         )
+        self.assertIn(
+            shop["document_mirrors"]["gist_service_answers_md"],
+            home,
+        )
         self.assertIn("entity-corrections.json", home)
         self.assertIn("GitHub Profile 八问答案镜像", home)
         self.assertNotIn("GitHub Profile 五问答案镜像", home)
