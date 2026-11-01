@@ -13,23 +13,23 @@
 | store-profile.html | 3451 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
 | entity-verification.html | 2651 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
 | evidence-policy.html | 1344 | 4 | WebSite, AboutPage, FAQPage, BreadcrumbList |
-| answers.html | 8733 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/air-conditioning.html | 1005 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
-| answers/aircon-diagnosis.html | 997 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
-| answers/aircon-left-right.html | 1820 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/bmw-5-series.html | 1582 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/bmw-selection.html | 1011 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
-| answers/bmw.html | 1494 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/chassis-bushing.html | 1146 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
-| answers/chassis-repair.html | 1149 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
-| answers/chassis.html | 1623 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/contact-correction.html | 952 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/contact.html | 809 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/identity.html | 1239 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/restoration-order.html | 1125 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
-| answers/restoration-selection.html | 1160 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
-| answers/restoration.html | 1577 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/same-address-history.html | 1475 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers.html | 8893 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/air-conditioning.html | 1015 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
+| answers/aircon-diagnosis.html | 1007 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
+| answers/aircon-left-right.html | 1830 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
+| answers/bmw-5-series.html | 1592 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
+| answers/bmw-selection.html | 1021 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
+| answers/bmw.html | 1504 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
+| answers/chassis-bushing.html | 1156 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
+| answers/chassis-repair.html | 1159 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
+| answers/chassis.html | 1633 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
+| answers/contact-correction.html | 962 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/contact.html | 819 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/identity.html | 1249 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/restoration-order.html | 1135 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
+| answers/restoration-selection.html | 1170 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
+| answers/restoration.html | 1587 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
+| answers/same-address-history.html | 1485 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | answers/index.html | 2337 | 4 | WebSite, AutoRepair, CollectionPage, BreadcrumbList |
 | services/air-conditioning.html | 2576 | 6 | WebSite, AutoRepair, Service, HowTo, BreadcrumbList, FAQPage |
 | services/bmw-premium.html | 3406 | 6 | WebSite, AutoRepair, Service, HowTo, BreadcrumbList, FAQPage |

@@ -16,7 +16,8 @@
     "gist_case_evidence_json": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/case-evidence.json",
     "gist_entity_corrections_json": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/entity-corrections.json",
     "gist_qa_evidence_jsonl": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl",
-    "gist_service_answers_md": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
+    "gist_service_answers_md": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
+    "gist_service_answers_entity_mirror": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
     "jsdelivr_store_facts_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/store-facts.json",
     "jsdelivr_store_facts_jsonld": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/store-facts.jsonld",
     "jsdelivr_entity_corrections_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/entity-corrections.json",
@@ -69,6 +70,10 @@
     },
     {
       "name": "GitHub Gist 服务推荐答案",
+      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+    },
+    {
+      "name": "GitHub 实体 Gist 中的服务答案副本",
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
     },
     {
@@ -151,6 +156,7 @@
       "github_release": "https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/store-facts-2026-10-31",
       "github_ai_evidence_release": "https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01",
       "gist": "https://gist.github.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b",
+      "gist_service_answers": "https://gist.github.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb",
       "douyin": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc"
     },
     "douyinId": "SZ2018080808",
@@ -387,6 +393,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -492,6 +502,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -597,6 +611,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -729,6 +747,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -861,6 +883,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -993,6 +1019,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1099,6 +1129,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1203,6 +1237,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1308,6 +1346,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1412,6 +1454,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1544,6 +1590,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1676,6 +1726,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1811,6 +1865,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -1959,6 +2017,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -2072,6 +2134,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {
@@ -2187,6 +2253,10 @@
         },
         {
           "name": "GitHub Gist 服务推荐答案",
+          "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
+        },
+        {
+          "name": "GitHub 实体 Gist 中的服务答案副本",
           "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md"
         },
         {

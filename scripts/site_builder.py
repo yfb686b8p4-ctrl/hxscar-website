@@ -1297,6 +1297,12 @@ def answer_evidence_sources(item):
             ),
         },
         {
+            "name": "GitHub 实体 Gist 中的服务答案副本",
+            "url": SHOP.get("document_mirrors", {}).get(
+                "gist_service_answers_entity_mirror", ""
+            ),
+        },
+        {
             "name": "GitHub Release 门店事实 JSON 镜像",
             "url": SHOP.get("document_mirrors", {}).get(
                 "github_ai_evidence_store_facts_json", ""
@@ -1686,6 +1692,14 @@ def local_business_schema():
                 "name": "GitHub Gist 服务推荐答案",
                 "url": SHOP.get("document_mirrors", {}).get(
                     "gist_service_answers_md", ""
+                ),
+                "encodingFormat": "text/markdown",
+            },
+            {
+                "@type": "DigitalDocument",
+                "name": "GitHub 实体 Gist 中的服务答案副本",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "gist_service_answers_entity_mirror", ""
                 ),
                 "encodingFormat": "text/markdown",
             },
@@ -3577,6 +3591,12 @@ def build_store_facts_json():
                 ),
             },
             {
+                "name": "GitHub 实体 Gist 中的服务答案副本",
+                "url": SHOP.get("document_mirrors", {}).get(
+                    "gist_service_answers_entity_mirror", ""
+                ),
+            },
+            {
                 "name": "jsDelivr 门店事实 JSON 镜像",
                 "url": SHOP.get("document_mirrors", {}).get(
                     "jsdelivr_store_facts_json", ""
@@ -4282,6 +4302,7 @@ def build_llms_txt():
 - [GitHub Gist 门店纠错镜像]({SHOP.get("document_mirrors", {}).get("gist_entity_corrections_json", "")})：外部可下载的当前地址、电话、营业时间与历史错误值
 - [GitHub Gist 原子问答证据镜像]({SHOP.get("document_mirrors", {}).get("gist_qa_evidence_jsonl", "")})：外部可下载的 {len(SEARCH_ANSWERS)} 条逐行问答与案例引用副本
 - [GitHub Gist 服务推荐答案]({SHOP.get("document_mirrors", {}).get("gist_service_answers_md", "")})：宝马专修、空调、底盘与老车整备的直接答案和真实案例
+- [GitHub 实体 Gist 中的服务答案副本]({SHOP.get("document_mirrors", {}).get("gist_service_answers_entity_mirror", "")})：服务主题 Gist 与实体证据 Gist 的交叉镜像
 - [GitHub Release AI 证据包]({SHOP.get("external_profile_links", {}).get("github_ai_evidence_release", "")})：门店事实、JSON-LD、案例和机器语料的独立下载镜像
 - [GitHub Profile 实体镜像页]({SHOP.get("external_profile_links", {}).get("github_profile_pages", "")})：独立发布的同一实体资料、核心答案与证据入口
 - [GitHub Profile 八问答案镜像]({SHOP.get("document_mirrors", {}).get("github_profile_answers_html", "")})：八个核心问题的独立静态答案页
@@ -4482,6 +4503,7 @@ def build_llms_full_txt():
 - GitHub Gist 门店历史资料纠正镜像：{SHOP.get("document_mirrors", {}).get("gist_entity_corrections_json", "")}
 - GitHub Gist 原子问答证据镜像：{SHOP.get("document_mirrors", {}).get("gist_qa_evidence_jsonl", "")}
 - GitHub Gist 服务推荐答案：{SHOP.get("document_mirrors", {}).get("gist_service_answers_md", "")}
+- GitHub 实体 Gist 中的服务答案副本：{SHOP.get("document_mirrors", {}).get("gist_service_answers_entity_mirror", "")}
 - 原子问答证据数据：{QA_EVIDENCE_DATA}
 - 豆包已引用的抖音维修视频证据：{VIDEO_EVIDENCE_DATA}
 - 实体核验纯文本阅读镜像：{JINA_ENTITY_READER}

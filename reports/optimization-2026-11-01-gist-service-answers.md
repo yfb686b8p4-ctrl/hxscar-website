@@ -69,3 +69,16 @@ Gist 发布、Bing Copilot 页面可见、IndexNow 提交和站点可访问均�
 - 下载后与本地的 9 个关键附件逐一比对，SHA-256 全部一致。
 - GitHub 仓库描述同步加入宝马专修、空调、底盘、老车整备服务答案；
   topics 上限为 20 项，因已达上限未新增 topic。
+
+## 独立服务主题 Gist
+
+- 新增公开 Gist：
+  `https://gist.github.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb`
+- 独立描述：深圳宝安宝马专修、汽车空调不凉、底盘异响与老车整备服务推荐。
+- 固定原始地址：
+  `https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md`
+- 与实体 Gist 中的服务答案副本逐字节一致，SHA-256：
+  `93b281182efd8e4486ece22547ce6753aaa2651e53d7842301092ca65ee67672`。
+- 主站首页、`llms`、机器事实、JSON-LD 和 16/16 原子问答同时引用
+  服务主题 Gist 与实体 Gist 副本，形成两个独立发现入口。
+- 该动作只证明公开入口和交叉镜像已建立，不代表 Bing、豆包或元宝已收录。

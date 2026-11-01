@@ -56,6 +56,12 @@
     {
       "@type": "DigitalDocument",
       "name": "GitHub Gist 服务推荐答案",
+      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
+      "encodingFormat": "text/markdown"
+    },
+    {
+      "@type": "DigitalDocument",
+      "name": "GitHub 实体 Gist 中的服务答案副本",
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
       "encodingFormat": "text/markdown"
     },

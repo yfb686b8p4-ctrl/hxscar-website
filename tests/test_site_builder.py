@@ -1555,11 +1555,22 @@ class SiteBuilderGeoTests(unittest.TestCase):
         gist_service_answers = site_builder.SHOP["document_mirrors"][
             "gist_service_answers_md"
         ]
+        gist_service_entity_mirror = site_builder.SHOP[
+            "document_mirrors"
+        ]["gist_service_answers_entity_mirror"]
         self.assertIn(gist_qa, site_builder.build_llms_txt())
         self.assertIn(gist_qa, site_builder.build_llms_full_txt())
         self.assertIn(gist_service_answers, site_builder.build_llms_txt())
         self.assertIn(
             gist_service_answers,
+            site_builder.build_llms_full_txt(),
+        )
+        self.assertIn(
+            gist_service_entity_mirror,
+            site_builder.build_llms_txt(),
+        )
+        self.assertIn(
+            gist_service_entity_mirror,
             site_builder.build_llms_full_txt(),
         )
         self.assertIn(
@@ -1585,6 +1596,20 @@ class SiteBuilderGeoTests(unittest.TestCase):
         )
         self.assertIn(
             gist_service_answers,
+            {
+                item["url"]
+                for item in schema["subjectOf"]
+            },
+        )
+        self.assertIn(
+            gist_service_entity_mirror,
+            {
+                item["url"]
+                for item in facts["citationTargets"]
+            },
+        )
+        self.assertIn(
+            gist_service_entity_mirror,
             {
                 item["url"]
                 for item in schema["subjectOf"]
