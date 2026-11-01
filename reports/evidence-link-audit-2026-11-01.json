@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T08:54:04.253367+08:00",
+  "checked_at": "2026-11-01T09:00:12.596539+08:00",
   "source_files": [
     "qa-evidence.jsonl",
     "case-evidence.json",
@@ -11,14 +11,13 @@
     "llms-full.txt"
   ],
   "total": 171,
-  "passed": 158,
+  "passed": 160,
   "blocked": 11,
-  "failed": 2,
+  "failed": 0,
   "status_counts": {
     "0": 9,
-    "200": 158,
+    "200": 160,
     "403": 1,
-    "404": 2,
     "405": 1
   },
   "items": [
@@ -132,7 +131,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "直连"
+      "via": "代理"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/case-evidence.json",
@@ -172,7 +171,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "直连"
+      "via": "代理"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.jsonld",
@@ -188,7 +187,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "直连"
+      "via": "代理"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/ai-evidence-2026-11-01",
@@ -196,7 +195,7 @@
       "ok": true,
       "blocked": false,
       "error": "",
-      "via": "直连"
+      "via": "代理"
     },
     {
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/store-facts-2026-10-31",
@@ -243,7 +242,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20004 milliseconds",
+      "error": "curl: (28) Connection timed out after 20003 milliseconds",
       "via": "直连"
     },
     {
@@ -251,7 +250,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20009 milliseconds",
+      "error": "curl: (28) Connection timed out after 20006 milliseconds",
       "via": "直连"
     },
     {
@@ -259,7 +258,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20010 milliseconds",
+      "error": "curl: (28) Connection timed out after 20006 milliseconds",
       "via": "直连"
     },
     {
@@ -275,7 +274,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20005 milliseconds",
+      "error": "curl: (28) Connection timed out after 20006 milliseconds",
       "via": "直连"
     },
     {
@@ -283,7 +282,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20009 milliseconds",
+      "error": "curl: (28) Connection timed out after 20003 milliseconds",
       "via": "直连"
     },
     {
@@ -291,7 +290,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20005 milliseconds",
+      "error": "curl: (28) Connection timed out after 20006 milliseconds",
       "via": "直连"
     },
     {
@@ -307,7 +306,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20011 milliseconds",
+      "error": "curl: (28) Connection timed out after 20006 milliseconds",
       "via": "直连"
     },
     {
@@ -315,7 +314,7 @@
       "status": 0,
       "ok": false,
       "blocked": true,
-      "error": "curl: (28) Connection timed out after 20003 milliseconds",
+      "error": "curl: (28) Connection timed out after 20006 milliseconds",
       "via": "直连"
     },
     {
@@ -1192,11 +1191,11 @@
     },
     {
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-x5-e70-oil-consumption.html",
@@ -1216,11 +1215,11 @@
     },
     {
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html",
-      "status": 404,
-      "ok": false,
+      "status": 200,
+      "ok": true,
       "blocked": false,
       "error": "",
-      "via": "代理"
+      "via": "直连"
     },
     {
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json",
