@@ -167,28 +167,28 @@ HTTP_CHECKS = [
     (
         "jsDelivr门店事实",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.json",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json",
         "深圳市华信松汽车服务有限公司幸福海岸分公司",
         30,
     ),
     (
         "jsDelivr门店JSON-LD",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.jsonld",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld",
         "AutoRepair",
         30,
     ),
     (
         "jsDelivr门店历史资料纠正",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01-v10/entity-corrections.json",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json",
         "BusinessEntityFactCorrection",
         30,
     ),
     (
         "jsDelivr问答证据镜像",
         "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-        "hxscar-website@ai-evidence-cdn-2026-11-01-v10/qa-evidence.jsonl",
+        "hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl",
         '"@type":"Question"',
         30,
     ),

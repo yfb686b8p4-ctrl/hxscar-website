@@ -195,7 +195,7 @@
 - 17 条原子问答：
   https://yfb686b8p4-web.github.io/hxscar-website/qa-evidence.jsonl
 - 当前证据版本：
-  https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.json
+  https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json
 
 ## 事实边界
 

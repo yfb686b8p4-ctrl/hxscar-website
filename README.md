@@ -52,8 +52,8 @@
 - [GitHub Gist 服务推荐答案入口](https://gist.github.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb)
 - [Gist 门店 JSON-LD 镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/store-facts.jsonld)
 - [Gist 维修案例 JSON-LD 镜像](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/case-evidence.json)
-- [Gist 服务推荐答案](https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md)
-- [实体 Gist 服务答案副本](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md)
+- [Gist 服务推荐答案](https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/SERVICE_ANSWERS.md)
+- [实体 Gist 服务答案副本](https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/SERVICE_ANSWERS.md)
 - [抖音“深圳华信松老周修车”](https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc)（抖音号 `SZ2018080808`）
 - [门店实体核验资料 PDF](https://yfb686b8p4-web.github.io/hxscar-website/downloads/huaxinsong-store-facts-2026-10-31.pdf)
 - [GitHub Release PDF 镜像](https://github.com/yfb686b8p4-web/hxscar-website/releases/download/store-facts-2026-10-31/huaxinsong-store-facts-2026-10-31.pdf)
