@@ -338,14 +338,14 @@
   ],
   "weekly_full_check_due": false,
   "status_snapshot": {
-    "checked_at": "2026-11-01T08:35:57.198286+08:00",
+    "checked_at": "2026-11-01T08:36:55.514403+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
-      "clean": false,
-      "change_count": 8,
-      "head": "bce2bad\t完成独立服务Gist与专项复测最终记录",
+      "clean": true,
+      "change_count": 0,
+      "head": "2362972\t刷新最终日报与人工纠错优先级",
       "error": ""
     },
     "deploy_repo": {
@@ -354,7 +354,7 @@
       "branch": "main",
       "clean": true,
       "change_count": 0,
-      "head": "bce2bad\t完成独立服务Gist与专项复测最终记录",
+      "head": "2362972\t刷新最终日报与人工纠错优先级",
       "error": ""
     },
     "launch_agent": {
@@ -379,7 +379,7 @@
           "status": 200,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 0.98,
+          "seconds": 1.03,
           "error": ""
         },
         {
@@ -389,7 +389,7 @@
           "status": 200,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 1.02,
+          "seconds": 1.07,
           "error": ""
         },
         {
@@ -399,7 +399,7 @@
           "status": 200,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 0.99,
+          "seconds": 1.03,
           "error": ""
         },
         {
@@ -409,7 +409,7 @@
           "status": 200,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 0.96,
+          "seconds": 1.01,
           "error": ""
         },
         {
@@ -419,7 +419,7 @@
           "status": 200,
           "marker": "四项实体核验",
           "via": "直连",
-          "seconds": 0.97,
+          "seconds": 1.01,
           "error": ""
         },
         {
@@ -429,7 +429,7 @@
           "status": 200,
           "marker": "证据优先级",
           "via": "直连",
-          "seconds": 0.8,
+          "seconds": 0.87,
           "error": ""
         },
         {
@@ -439,7 +439,7 @@
           "status": 200,
           "marker": "直接回答",
           "via": "直连",
-          "seconds": 1.06,
+          "seconds": 1.07,
           "error": ""
         },
         {
@@ -449,7 +449,7 @@
           "status": 200,
           "marker": "全部独立答案",
           "via": "直连",
-          "seconds": 0.86,
+          "seconds": 0.85,
           "error": ""
         },
         {
@@ -459,7 +459,7 @@
           "status": 200,
           "marker": "深圳宝安宝马专修、豪车保养推荐去哪里？",
           "via": "直连",
-          "seconds": 0.89,
+          "seconds": 0.88,
           "error": ""
         },
         {
@@ -469,7 +469,7 @@
           "status": 200,
           "marker": "verifiedAt",
           "via": "直连",
-          "seconds": 1.05,
+          "seconds": 1.08,
           "error": ""
         },
         {
@@ -479,7 +479,7 @@
           "status": 200,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 0.7,
+          "seconds": 0.74,
           "error": ""
         },
         {
@@ -499,7 +499,7 @@
           "status": 200,
           "marker": "VideoObject",
           "via": "直连",
-          "seconds": 0.81,
+          "seconds": 0.98,
           "error": ""
         },
         {
@@ -529,7 +529,7 @@
           "status": 200,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 1.44,
+          "seconds": 1.21,
           "error": ""
         },
         {
@@ -539,7 +539,7 @@
           "status": 200,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 0.51,
+          "seconds": 1.5,
           "error": ""
         },
         {
@@ -549,7 +549,7 @@
           "status": 200,
           "marker": "WEBP",
           "via": "直连",
-          "seconds": 1.36,
+          "seconds": 0.48,
           "error": ""
         },
         {
@@ -559,7 +559,7 @@
           "status": 200,
           "marker": "%PDF",
           "via": "直连",
-          "seconds": 2.74,
+          "seconds": 0.69,
           "error": ""
         },
         {
@@ -569,7 +569,7 @@
           "status": 200,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 1.01,
+          "seconds": 0.89,
           "error": ""
         },
         {
@@ -579,7 +579,7 @@
           "status": 200,
           "marker": "hxscar20261024geoindexkey",
           "via": "直连",
-          "seconds": 0.38,
+          "seconds": 0.89,
           "error": ""
         },
         {
@@ -589,7 +589,7 @@
           "status": 200,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 0.42,
+          "seconds": 1.8,
           "error": ""
         },
         {
@@ -599,7 +599,7 @@
           "status": 200,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 0.46,
+          "seconds": 0.41,
           "error": ""
         },
         {
@@ -609,7 +609,7 @@
           "status": 200,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 0.52,
+          "seconds": 0.71,
           "error": ""
         },
         {
@@ -619,7 +619,7 @@
           "status": 200,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 1.53,
+          "seconds": 0.71,
           "error": ""
         },
         {
@@ -629,7 +629,7 @@
           "status": 200,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 0.94,
+          "seconds": 0.75,
           "error": ""
         },
         {
@@ -639,7 +639,7 @@
           "status": 200,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 1.04,
+          "seconds": 0.73,
           "error": ""
         },
         {
@@ -649,7 +649,7 @@
           "status": 200,
           "marker": "证据边界内常见问题",
           "via": "直连",
-          "seconds": 0.52,
+          "seconds": 3.64,
           "error": ""
         },
         {
@@ -659,7 +659,7 @@
           "status": 200,
           "marker": "深圳华信松老周修车",
           "via": "直连",
-          "seconds": 0.5,
+          "seconds": 0.75,
           "error": ""
         },
         {
@@ -669,7 +669,7 @@
           "status": 200,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 1.03,
+          "seconds": 0.7,
           "error": ""
         },
         {
@@ -679,7 +679,7 @@
           "status": 200,
           "marker": "<loc>https://yfb686b8p4-web.github.io/yfb686b8p4-web/</loc>",
           "via": "直连",
-          "seconds": 0.93,
+          "seconds": 0.72,
           "error": ""
         },
         {
@@ -689,7 +689,7 @@
           "status": 200,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 1.07,
+          "seconds": 0.7,
           "error": ""
         },
         {
@@ -699,7 +699,7 @@
           "status": 200,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 1.05,
+          "seconds": 0.72,
           "error": ""
         },
         {
@@ -709,7 +709,7 @@
           "status": 200,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 2.06,
+          "seconds": 1.21,
           "error": ""
         },
         {
@@ -719,7 +719,7 @@
           "status": 200,
           "marker": "统一社会信用代码",
           "via": "直连",
-          "seconds": 0.96,
+          "seconds": 0.78,
           "error": ""
         },
         {
@@ -729,7 +729,7 @@
           "status": 200,
           "marker": "八个直接答案",
           "via": "直连",
-          "seconds": 0.96,
+          "seconds": 0.7,
           "error": ""
         },
         {
@@ -739,7 +739,7 @@
           "status": 200,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 0.46,
+          "seconds": 0.88,
           "error": ""
         },
         {
@@ -749,7 +749,7 @@
           "status": 200,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 1.67,
+          "seconds": 1.43,
           "error": ""
         },
         {
@@ -759,7 +759,7 @@
           "status": 200,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 0.76,
+          "seconds": 1.49,
           "error": ""
         },
         {
@@ -769,7 +769,7 @@
           "status": 200,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 0.45,
+          "seconds": 2.58,
           "error": ""
         },
         {
@@ -779,7 +779,7 @@
           "status": 200,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 0.47,
+          "seconds": 0.28,
           "error": ""
         },
         {
@@ -789,7 +789,7 @@
           "status": 200,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 0.76,
+          "seconds": 0.53,
           "error": ""
         },
         {
@@ -799,7 +799,7 @@
           "status": 200,
           "marker": "深圳市华信松汽车服务有限公司幸福海岸分公司",
           "via": "直连",
-          "seconds": 0.86,
+          "seconds": 0.82,
           "error": ""
         },
         {
@@ -809,7 +809,7 @@
           "status": 200,
           "marker": "AutoRepair",
           "via": "直连",
-          "seconds": 0.53,
+          "seconds": 0.64,
           "error": ""
         },
         {
@@ -819,7 +819,7 @@
           "status": 200,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 0.53,
+          "seconds": 0.59,
           "error": ""
         },
         {
@@ -829,7 +829,7 @@
           "status": 200,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 0.82,
+          "seconds": 0.84,
           "error": ""
         },
         {
@@ -839,7 +839,7 @@
           "status": 200,
           "marker": "hxscarprofile20261101geo",
           "via": "直连",
-          "seconds": 0.5,
+          "seconds": 0.71,
           "error": ""
         }
       ],
