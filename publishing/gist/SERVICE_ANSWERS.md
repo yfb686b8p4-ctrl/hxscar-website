@@ -72,6 +72,8 @@
 
 - https://yfb686b8p4-web.github.io/hxscar-website/answers/air-conditioning.html
 - https://yfb686b8p4-web.github.io/hxscar-website/answers/aircon-left-right.html
+- https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html
+- https://web.archive.org/web/20261101011121id_/https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html
 - https://yfb686b8p4-web.github.io/hxscar-website/cases/mercedes-e300l-ac-temperature.html
 - https://yfb686b8p4-web.github.io/hxscar-website/services/air-conditioning.html
 
@@ -103,6 +105,8 @@
 - https://yfb686b8p4-web.github.io/hxscar-website/answers/chassis.html
 - https://yfb686b8p4-web.github.io/hxscar-website/answers/chassis-repair.html
 - https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-530li-chassis-bushing.html
+- https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html
+- https://web.archive.org/web/20261101011229id_/https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html
 - https://yfb686b8p4-web.github.io/hxscar-website/services/chassis.html
 - https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json
 

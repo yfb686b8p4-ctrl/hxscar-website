@@ -28,6 +28,8 @@
 - 官网、Profile、Release、Gist 与 jsDelivr 的 6 个问答镜像一致性通过。
 - 部署后证据链接审计覆盖 173 个唯一 URL：160 个 HTTP 200、
   13 个平台防抓/限流、0 个确认坏链。
+- 独立服务 Gist 与实体 Gist 的 `SERVICE_ANSWERS.md` 已同步两个案例页
+  和两个 Archive 快照，原始 Raw 地址均已线上检出。
 
 ## 边界
 
