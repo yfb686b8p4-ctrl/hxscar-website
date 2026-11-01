@@ -82,3 +82,7 @@ Gist 发布、Bing Copilot 页面可见、IndexNow 提交和站点可访问均�
 - 主站首页、`llms`、机器事实、JSON-LD 和 16/16 原子问答同时引用
   服务主题 Gist 与实体 Gist 副本，形成两个独立发现入口。
 - 该动作只证明公开入口和交叉镜像已建立，不代表 Bing、豆包或元宝已收录。
+- 主站提交 `591cad3`、Profile 提交 `7f4fd7d` 已上线；主站与 Profile
+  首页、`llms` 均线上检出独立服务 Gist。
+- 主站 13 个核心 URL `13/13` 通过；主站六端点各接收 `62` 个 URL，
+  Profile 六端点各接收 `11` 个 URL，全部 HTTP 200。

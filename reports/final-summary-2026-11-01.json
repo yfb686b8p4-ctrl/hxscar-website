@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T08:23:12.537515+08:00",
+  "generated_at": "2026-11-01T08:27:24.548884+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -292,8 +292,8 @@
     "online_checks_total": 47,
     "evidence_link_total": 163,
     "evidence_link_failed": 0,
-    "source_repo": "96499e8\t补充同址关联工商登记时间线并发布v7证据（13 项未提交）",
-    "deploy_repo": "96499e8\t补充同址关联工商登记时间线并发布v7证据（干净）"
+    "source_repo": "591cad3\t新增独立服务主题Gist并扩展问答引用（4 项未提交）",
+    "deploy_repo": "591cad3\t新增独立服务主题Gist并扩展问答引用（干净）"
   },
   "platform_blocks": [
     {
@@ -447,8 +447,6 @@
     }
   ],
   "commits": [
-    "bcffc28 显式允许国内主流搜索爬虫",
-    "5edbc57 记录多搜索端点提交后的可见性抽样",
     "3f597fa 将机器语料主标题统一为工商法定全称",
     "6c4b7d8 新增南山总店与幸福海岸分公司消歧问答",
     "3d3bbe0 触发GitHub Pages重新构建",
@@ -486,7 +484,9 @@
     "b2638f9 扩展已索引Gist的四项服务推荐答案",
     "c6e078f 记录Gist服务答案及主站Profile发布验证",
     "907dae6 刷新AI证据发布正文与四项服务附件",
-    "96499e8 补充同址关联工商登记时间线并发布v7证据"
+    "96499e8 补充同址关联工商登记时间线并发布v7证据",
+    "15c7b93 记录v7发布后元宝实体部分改善与最终指标",
+    "591cad3 新增独立服务主题Gist并扩展问答引用"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"
