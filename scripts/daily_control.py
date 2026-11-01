@@ -28,6 +28,8 @@ GENERATED_REPORT_PREFIXES = (
     "reports/daily/",
     "reports/final-summary-",
     "reports/evidence-link-audit-",
+    "reports/optimization-",
+    "reports/recheck-",
 )
 DEPLOY_ROOT = (
     Path.home() / "Library" / "Application Support" / "hxscar-weekly-deploy" / "repo"

@@ -42,6 +42,12 @@ class DailyControlTests(unittest.TestCase):
         self.assertTrue(
             " M reports/final-summary-2026-11-01.md"[3:].startswith(prefixes)
         )
+        self.assertTrue(
+            " M reports/optimization-2026-11-01.md"[3:].startswith(prefixes)
+        )
+        self.assertTrue(
+            " M reports/recheck-2026-11-01.json"[3:].startswith(prefixes)
+        )
         self.assertFalse(
             " M scripts/site_builder.py"[3:].startswith(prefixes)
         )
