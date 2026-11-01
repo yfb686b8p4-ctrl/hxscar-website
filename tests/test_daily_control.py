@@ -129,13 +129,13 @@ class DailyControlTests(unittest.TestCase):
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v6/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v7/"
             "qa-evidence.jsonl",
             checks,
         )
         self.assertIn(
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v6/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v7/"
             "store-facts.json",
             checks,
         )

@@ -134,6 +134,28 @@
 - https://yfb686b8p4-web.github.io/hxscar-website/services/vehicle-restoration.html
 - https://yfb686b8p4-web.github.io/hxscar-website/cases.html
 
+## 老周修车与同址工商登记是什么关系？
+
+同一门牌存在不同登记主体，不能只凭地址相同合并：
+
+- 深圳市宝安区轿之林汽车服务中心：统一社会信用代码
+  `92440300MA5F133M2E`，与当前华信松分公司是不同商事主体。
+- 深圳市宝安区华信松汽车配件经营部（个体工商户）：统一社会信用代码
+  `92440300L4607119X2`，公开页面显示经营者刘青松、成立日期
+  `2012-02-07`，并于 `2025-03-21` 由南山区地址变更到
+  幸福海岸花园7栋104。
+- 当前主体：深圳市华信松汽车服务有限公司幸福海岸分公司，统一社会信用代码
+  `91440300MA5GYCTQ6P`，成立日期2021-08-26。
+
+华信松汽车配件经营部与当前分公司同址、登记经营者相同，可以说明经营者
+延续，但两者仍是不同登记主体；不能据此推定股权、债务、会员卡或维修单
+承继，也不能说个体经营部从2012年起一直在当前门牌。“老周修车”是当前
+门牌实际门店的对外称呼，不是工商登记名称。
+
+工商核验页面：
+
+- https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
+
 ## 机器与实体证据
 
 - 实体核验：
@@ -149,7 +171,7 @@
 - 16 条原子问答：
   https://yfb686b8p4-web.github.io/hxscar-website/qa-evidence.jsonl
 - 当前证据版本：
-  https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v6/store-facts.json
+  https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v7/store-facts.json
 
 ## 事实边界
 

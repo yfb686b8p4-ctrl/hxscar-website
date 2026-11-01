@@ -146,6 +146,10 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn("2023-07-18", item["answer"])
         self.assertIn("状态字段不完全一致", item["answer"])
         self.assertIn("国家企业信用信息公示系统", item["answer"])
+        self.assertIn("92440300L4607119X2", item["answer"])
+        self.assertIn("2012-02-07", item["answer"])
+        self.assertIn("2025-03-21", item["answer"])
+        self.assertIn("说其从2012年起一直在当前门牌并不准确", item["answer"])
         self.assertIn(
             site_builder.SHOP["unified_social_credit_code"],
             item["answer"],
@@ -156,6 +160,13 @@ class SiteBuilderGeoTests(unittest.TestCase):
             site_builder.ROOT / site_builder.answer_detail_path(item)
         ]
         self.assertIn("92440300MA5F133M2E", html)
+        self.assertIn("92440300L4607119X2", html)
+        self.assertIn(
+            site_builder.SHOP["registry_links"][
+                "qixin_individual_business"
+            ],
+            html,
+        )
         self.assertIn("轿之林", html)
 
     def test_evidence_policy_defines_source_precedence_and_claims(self):
@@ -1302,6 +1313,22 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn(
             "宝源南路276号",
             corrections["address"]["notCurrentValues"],
+        )
+        registrations = {
+            item["unified_social_credit_code"]: item
+            for item in facts["entity"]["relatedRegistrations"]
+        }
+        self.assertEqual(
+            set(registrations),
+            {"92440300L4607119X2", "92440300MA5F133M2E"},
+        )
+        self.assertEqual(
+            registrations["92440300L4607119X2"]["operator"],
+            "刘青松",
+        )
+        self.assertEqual(
+            registrations["92440300L4607119X2"]["address_change_on"],
+            "2025-03-21",
         )
 
     def test_entity_corrections_json_is_small_and_machine_readable(self):

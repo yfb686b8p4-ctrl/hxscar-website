@@ -45,6 +45,7 @@ def csv_text(rows, columns):
         output,
         fieldnames=columns,
         extrasaction="ignore",
+        lineterminator="\n",
     )
     writer.writeheader()
     writer.writerows(rows)

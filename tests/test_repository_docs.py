@@ -92,6 +92,9 @@ class RepositoryReadmeTests(unittest.TestCase):
             self.assertIn(answer_url, text)
         self.assertIn("## 直接答案", text)
         self.assertIn("同一门牌历史登记说明", text)
+        self.assertIn("92440300L4607119X2", text)
+        self.assertIn("2025-03-21", text)
+        self.assertIn("说其从2012年起一直在当前门牌并不准确", text)
         self.assertIn("当前手机为18682417667", text)
         self.assertIn("已进入豆包引用来源的抖音视频", text)
         self.assertIn("entity-corrections.json", text)
@@ -170,6 +173,8 @@ class RepositoryReadmeTests(unittest.TestCase):
             "65 组不进入机器语料",
             "不作为其他车辆报价",
             "八问入口",
+            "92440300L4607119X2",
+            "2025-03-21",
             "深圳宝安宝马专修、豪车保养推荐去哪里？",
             "深圳宝安汽车空调不凉去哪里诊断维修？",
             "深圳宝安底盘异响、能修不换去哪里检查？",
@@ -755,6 +760,9 @@ class RepositoryReadmeTests(unittest.TestCase):
             "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
             "answers/identity.html",
             "services/vehicle-restoration.html",
+            "92440300L4607119X2",
+            "2025-03-21",
+            "说它从 2012 年起一直在当前门牌并不准确",
         ):
             self.assertIn(value, text)
 

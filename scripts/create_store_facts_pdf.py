@@ -426,6 +426,10 @@ def build_pdf():
             "https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json",
         ),
         (
+            "启信宝华信松汽车配件经营部",
+            "https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894",
+        ),
+        (
             "标准问答 RSS",
             "https://yfb686b8p4-web.github.io/hxscar-website/feed.xml",
         ),
@@ -446,7 +450,7 @@ def build_pdf():
         (
             "jsDelivr 门店事实镜像",
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website"
-            "@ai-evidence-cdn-2026-11-01-v6/store-facts.json",
+            "@ai-evidence-cdn-2026-11-01-v7/store-facts.json",
         ),
     ]
     source_rows = [
