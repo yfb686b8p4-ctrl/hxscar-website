@@ -182,14 +182,14 @@
       "outcome": "两个登记主体的专项消歧正确；同经营者延续正确；老周别名仍为部分正确；未读取本店官网或外部镜像"
     },
     {
-      "id": "service-dedicated-gist-recheck",
-      "title": "独立服务 Gist 上线后的宝马5系推荐复测",
+      "id": "service-case-expansion-recheck",
+      "title": "独立服务 Gist 与宝马5系案例上线后的推荐复测",
       "query": "宝安宝马5系维修保养",
-      "deployed_commit": "591cad3",
-      "measured_at": "2026-11-01T08:36:00+08:00",
+      "deployed_commit": "811e48e",
+      "measured_at": "2026-11-01T08:46:00+08:00",
       "before_summary": "元宝此前同一问题未提及本店，候选集中于宝盛、宝粤、车境界、宝捷星等门店。",
-      "after_summary": "元宝参考12篇资料，仍推荐驰宝宝马、宝盛、宝粤、车境界和宝捷星，未提及华信松、老周修车或独立服务 Gist。",
-      "outcome": "新增服务 Gist 尚未影响元宝推荐候选；服务命中与 Top1/Top3 指标不变"
+      "after_summary": "在独立服务 Gist、IndexNow 和两个宝马5系真实案例页上线后，元宝参考12篇资料，仍推荐驰宝宝马、宝盛、宝粤、车境界和宝捷星，未提及华信松、老周修车或新增案例。",
+      "outcome": "新增服务 Gist 与宝马5系案例尚未影响元宝推荐候选；服务命中与 Top1/Top3 指标不变"
     }
   ]
 }

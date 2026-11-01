@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T08:44:50.265052+08:00",
+  "generated_at": "2026-11-01T08:46:07.563476+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -278,14 +278,14 @@
       "outcome": "两个登记主体的专项消歧正确；同经营者延续正确；老周别名仍为部分正确；未读取本店官网或外部镜像"
     },
     {
-      "id": "service-dedicated-gist-recheck",
-      "title": "独立服务 Gist 上线后的宝马5系推荐复测",
+      "id": "service-case-expansion-recheck",
+      "title": "独立服务 Gist 与宝马5系案例上线后的推荐复测",
       "query": "宝安宝马5系维修保养",
-      "deployed_commit": "591cad3",
-      "measured_at": "2026-11-01T08:36:00+08:00",
+      "deployed_commit": "811e48e",
+      "measured_at": "2026-11-01T08:46:00+08:00",
       "before_summary": "元宝此前同一问题未提及本店，候选集中于宝盛、宝粤、车境界、宝捷星等门店。",
-      "after_summary": "元宝参考12篇资料，仍推荐驰宝宝马、宝盛、宝粤、车境界和宝捷星，未提及华信松、老周修车或独立服务 Gist。",
-      "outcome": "新增服务 Gist 尚未影响元宝推荐候选；服务命中与 Top1/Top3 指标不变"
+      "after_summary": "在独立服务 Gist、IndexNow 和两个宝马5系真实案例页上线后，元宝参考12篇资料，仍推荐驰宝宝马、宝盛、宝粤、车境界和宝捷星，未提及华信松、老周修车或新增案例。",
+      "outcome": "新增服务 Gist 与宝马5系案例尚未影响元宝推荐候选；服务命中与 Top1/Top3 指标不变"
     }
   ],
   "wrong_items": [
@@ -312,8 +312,8 @@
     "online_checks_total": 47,
     "evidence_link_total": 167,
     "evidence_link_failed": 0,
-    "source_repo": "8637775\t修正日报生成物导致的源码脏状态误报（干净）",
-    "deploy_repo": "8637775\t修正日报生成物导致的源码脏状态误报（干净）"
+    "source_repo": "ae43ae4\t过滤专项报告生成物的源码状态噪声（干净）",
+    "deploy_repo": "ae43ae4\t过滤专项报告生成物的源码状态噪声（干净）"
   },
   "platform_blocks": [
     {
@@ -467,8 +467,6 @@
     }
   ],
   "commits": [
-    "2dcb00e 记录 IndexNow 与 Archive 后实体关系复测",
-    "7b039b4 补全实体页法定全称与旧工商电话纠错",
     "00a7a18 新增同址历史主体消歧与独立答案页",
     "3f9d5eb 更新同址消歧外部镜像至v3标签",
     "3041cea 记录同址历史专项复测与最新指标",
@@ -506,7 +504,9 @@
     "8d9427b 完成最终复测指标汇总",
     "811e48e 新增两个宝马5系独立真实案例页",
     "a23ff84 记录宝马5系案例扩展线上验证",
-    "8637775 修正日报生成物导致的源码脏状态误报"
+    "8637775 修正日报生成物导致的源码脏状态误报",
+    "f18f291 刷新宝马案例扩展后的最终指标",
+    "ae43ae4 过滤专项报告生成物的源码状态噪声"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"
