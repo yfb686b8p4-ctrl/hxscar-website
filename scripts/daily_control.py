@@ -569,6 +569,7 @@ def write_csv(path, rows, columns):
             file,
             fieldnames=columns,
             extrasaction="ignore",
+            lineterminator="\n",
         )
         writer.writeheader()
         writer.writerows(rows)
