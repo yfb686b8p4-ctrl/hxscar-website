@@ -1018,6 +1018,11 @@ class SiteBuilderGeoTests(unittest.TestCase):
             archive_case["archive_url"],
             archive_article["citation"],
         )
+        self.assertIn("不能把“后蒸发箱泄漏”直接套用到所有G12车辆", archive_html)
+        self.assertIn(
+            "按VIN、零件目录和实车拆检确认",
+            archive_article["disambiguatingDescription"],
+        )
         for issue in (
             "宝马525Li气门室盖垫漏油维修",
             "宝马540i 3.0T烧机油，3000km加1L",

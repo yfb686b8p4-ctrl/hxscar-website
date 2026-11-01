@@ -213,6 +213,14 @@ CASE_STUDY_KEYWORDS = {
     ],
 }
 
+CASE_STUDY_CAVEATS = {
+    "宝马730Li后排空调不出冷风，前排出风正常": (
+        "不同年款和市场配置的宝马7系空调结构可能不同。本案例仅对应"
+        "该车按VIN、零件目录和实车拆检确认的实际故障，不能把"
+        "“后蒸发箱泄漏”直接套用到所有G12车辆。"
+    ),
+}
+
 SEARCH_ANSWERS = [
     {
         "anchor": "bmw",
@@ -2195,6 +2203,12 @@ def build_case_study_pages():
         symptoms = case.get("solution", "")
         treatment = case.get("price", "")
         cost = case.get("result", "")
+        caveat = CASE_STUDY_CAVEATS.get(title, "")
+        caveat_markup = (
+            f'\n    <p class="case-boundary"><strong>适用范围：</strong>{h(caveat)}</p>'
+            if caveat
+            else ""
+        )
         archive_url = case.get("archive_url", "")
         archive_markup = (
             f'<p><strong>网页快照：</strong><a href="{h(archive_url)}">'
@@ -2237,7 +2251,7 @@ def build_case_study_pages():
         <p><strong>处理方案：</strong>{h(treatment)}</p>
         <p><strong>参考费用：</strong>{h(cost)}</p>
     </div>
-    <p>该方案和费用对应本案车辆的实际检测结果，其他车辆仍需先检查故障点，再确认维修项目和费用。</p>
+    <p>该方案和费用对应本案车辆的实际检测结果，其他车辆仍需先检查故障点，再确认维修项目和费用。</p>{caveat_markup}
 </section>
 {reputation_markup}
 <section class="card">
@@ -2299,6 +2313,11 @@ def build_case_study_pages():
             "publisher": {"@id": BASE_URL + "/#autorepair"},
             "dateModified": CONTENT_UPDATED_AT,
             "mainEntityOfPage": canonical,
+            **(
+                {"disambiguatingDescription": caveat}
+                if caveat
+                else {}
+            ),
             "isPartOf": {
                 "@type": "CollectionPage",
                 "@id": BASE_URL + "/cases.html",
