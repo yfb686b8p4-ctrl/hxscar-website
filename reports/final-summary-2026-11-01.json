@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T08:38:07.649157+08:00",
+  "generated_at": "2026-11-01T08:44:50.265052+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -306,14 +306,14 @@
       "answer_hub": true,
       "service_pages": 4,
       "model_pages": 12,
-      "case_pages": 3
+      "case_pages": 5
     },
     "online_checks_passed": 47,
     "online_checks_total": 47,
     "evidence_link_total": 167,
     "evidence_link_failed": 0,
-    "source_repo": "ff138bc\t刷新最终日报与指标快照（3 项未提交）",
-    "deploy_repo": "2362972\t刷新最终日报与人工纠错优先级（干净）"
+    "source_repo": "8637775\t修正日报生成物导致的源码脏状态误报（干净）",
+    "deploy_repo": "8637775\t修正日报生成物导致的源码脏状态误报（干净）"
   },
   "platform_blocks": [
     {
@@ -467,10 +467,6 @@
     }
   ],
   "commits": [
-    "1505b08 增加首页服务Archive快照并刷新链接审计",
-    "060a80d 记录南山总店与幸福海岸门店消歧复测",
-    "6f30a07 记录六端IndexNow与Archive索引证据",
-    "909b3ce 刷新南山消歧后的日报与最终汇总",
     "2dcb00e 记录 IndexNow 与 Archive 后实体关系复测",
     "7b039b4 补全实体页法定全称与旧工商电话纠错",
     "00a7a18 新增同址历史主体消歧与独立答案页",
@@ -506,7 +502,11 @@
     "018d6e9 记录独立服务Gist上线与最终审计",
     "bce2bad 完成独立服务Gist与专项复测最终记录",
     "2362972 刷新最终日报与人工纠错优先级",
-    "ff138bc 刷新最终日报与指标快照"
+    "ff138bc 刷新最终日报与指标快照",
+    "8d9427b 完成最终复测指标汇总",
+    "811e48e 新增两个宝马5系独立真实案例页",
+    "a23ff84 记录宝马5系案例扩展线上验证",
+    "8637775 修正日报生成物导致的源码脏状态误报"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"
