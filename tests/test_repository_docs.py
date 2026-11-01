@@ -753,6 +753,8 @@ class RepositoryReadmeTests(unittest.TestCase):
             "bmw-540i-b58-oil-consumption.html",
             "bmw-730li-rear-evaporator-leak.html",
             "volkswagen-touareg-chassis-bushing.html",
+            "web.archive.org/web/20261101011121id_/",
+            "web.archive.org/web/20261101011229id_/",
             shop["external_profile_links"]["gist"],
             shop["external_profile_links"]["github_profile"],
             shop["external_profile_links"]["github_profile_pages"],
