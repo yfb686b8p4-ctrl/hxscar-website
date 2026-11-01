@@ -1074,9 +1074,9 @@ def render_markdown(summary):
         f"- AI答案引用来源率：{display_rate(guardrails.get('citation_rate', 0), guardrails['completed'])}",
         f"- 门店实体关系正确率：{display_rate(guardrails['entity_correct_rate'], guardrails['entity_completed'])}",
         f"- 地址、电话、营业时间完整正确率：{display_rate(guardrails['full_info_correct_rate'], guardrails['entity_completed'])}",
-        f"- 服务推荐命中率：{display_rate(guardrails['service_hit_rate'], guardrails['service_completed'])}",
-        f"- 服务推荐 Top1 率：{display_rate(guardrails.get('service_top1_rate', 0), guardrails['service_completed'])}",
-        f"- 服务推荐 Top3 率：{display_rate(guardrails.get('service_top3_rate', 0), guardrails['service_completed'])}",
+        f"- 服务推荐命中率：{display_rate(metrics['service_hit_rate'], metrics['service_completed'])}",
+        f"- 服务推荐 Top1 率：{display_rate(metrics.get('service_top1_rate', 0), metrics['service_completed'])}",
+        f"- 服务推荐 Top3 率：{display_rate(metrics.get('service_top3_rate', 0), metrics['service_completed'])}",
         f"- 轮换探测：{rotating['completed']}/{rotating['total']} 完成，"
         f"提及 {rotating['mentioned']} 项",
         "",

@@ -488,6 +488,60 @@ class DailyControlTests(unittest.TestCase):
         self.assertIn("最近退出码 暂无记录", markdown)
         self.assertNotIn("最近退出码 None", markdown)
 
+    def test_service_rates_use_all_records_not_guardrail_subset(self):
+        """日报 Top1/Top3 必须使用全量服务样本，避免与最终汇总口径冲突。"""
+        metrics = daily_control.calculate_metrics([])
+        metrics.update(
+            {
+                "completed": 12,
+                "total": 12,
+                "service_completed": 10,
+                "service_hits": 4,
+                "service_hit_rate": 40.0,
+                "service_top1": 4,
+                "service_top1_rate": 40.0,
+                "service_top3": 4,
+                "service_top3_rate": 40.0,
+            }
+        )
+        guardrails = dict(metrics)
+        guardrails.update(
+            {
+                "completed": 8,
+                "total": 8,
+                "service_completed": 6,
+                "service_hits": 3,
+                "service_hit_rate": 50.0,
+                "service_top1_rate": 50.0,
+                "service_top3_rate": 50.0,
+            }
+        )
+        markdown = daily_control.render_markdown(
+            {
+                "date": "2026-11-01",
+                "generated_at": "2026-11-01T09:00:00+08:00",
+                "metrics": metrics,
+                "guardrail_metrics": guardrails,
+                "changes": {
+                    "previous_date": None,
+                    "metric_changes": {},
+                    "fixed": [],
+                    "new_errors": [],
+                },
+                "status": {
+                    "launch_agent": {},
+                    "site": {"http": []},
+                    "source_repo": {},
+                    "deploy_repo": {},
+                },
+                "tasks": [],
+                "records": [],
+            }
+        )
+        self.assertIn("- 服务推荐命中率：40.0%", markdown)
+        self.assertIn("- 服务推荐 Top1 率：40.0%", markdown)
+        self.assertIn("- 服务推荐 Top3 率：40.0%", markdown)
+
 
 if __name__ == "__main__":
     unittest.main()
