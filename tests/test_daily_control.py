@@ -33,6 +33,19 @@ def record(**overrides):
 class DailyControlTests(unittest.TestCase):
     """验证每日命中、对比和任务生成。"""
 
+    def test_generated_report_files_do_not_mark_source_dirty(self):
+        """日报生成物不应让源码状态被误报为未提交代码。"""
+        prefixes = daily_control.GENERATED_REPORT_PREFIXES
+        self.assertTrue(
+            " M reports/daily/latest.json"[3:].startswith(prefixes)
+        )
+        self.assertTrue(
+            " M reports/final-summary-2026-11-01.md"[3:].startswith(prefixes)
+        )
+        self.assertFalse(
+            " M scripts/site_builder.py"[3:].startswith(prefixes)
+        )
+
     def test_bool_parser(self):
         self.assertIs(daily_control.parse_optional_bool("是"), True)
         self.assertIs(daily_control.parse_optional_bool("错误"), False)

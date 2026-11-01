@@ -24,6 +24,11 @@ PLATFORM_CONFIG_PATH = ROOT / "config" / "external_platforms.json"
 STATUS_PATH = ROOT / "publishing" / "status.json"
 AUDIT_PATH = ROOT / "reports" / "site-audit.json"
 DAILY_DIR = ROOT / "reports" / "daily"
+GENERATED_REPORT_PREFIXES = (
+    "reports/daily/",
+    "reports/final-summary-",
+    "reports/evidence-link-audit-",
+)
 DEPLOY_ROOT = (
     Path.home() / "Library" / "Application Support" / "hxscar-weekly-deploy" / "repo"
 )
@@ -271,7 +276,11 @@ def git_status(path):
     status = run(["git", "status", "--porcelain", "--branch"], cwd=path)
     log = run(["git", "log", "-1", "--format=%h%x09%s"], cwd=path)
     lines = status["stdout"].splitlines()
-    changes = lines[1:] if lines else []
+    changes = [
+        line
+        for line in (lines[1:] if lines else [])
+        if not line[3:].startswith(GENERATED_REPORT_PREFIXES)
+    ]
     first = lines[0] if lines else ""
     branch_match = re.match(r"## ([^.\s]+)", first)
     return {
