@@ -1,21 +1,26 @@
 # 搜索索引状态检查｜2026-11-01 00:04
 
-## 09:05 空调与底盘案例发布、v8 镜像与复测
+## 09:15 空调与底盘案例、Archive 快照与 v9 镜像
 
-- 主站 `38d9b6c`、`304803a` 已上线；GitHub Profile `ba969de`、
-  `a7c5343` 已上线。源仓库和部署副本统一到 `304803a`。
+- 主站 `38d9b6c`、`304803a`、`cc57e5e` 已上线；GitHub Profile
+  `ba969de`、`a7c5343`、`63d8525` 已上线。源仓库和部署副本统一到
+  `cc57e5e`。
 - 两个新增独立案例页、7/7 案例页、内容 sitemap、图片 sitemap、RSS、
   `llms` 和 Profile 问答镜像均已线上检出。
 - 线上检查 `47/47`、核心 URL `13/13` 通过；7 个独立案例页均返回
   HTTP 200。
-- 不可变证据标签升级为 `ai-evidence-cdn-2026-11-01-v8`；官网、
+- 不可变证据标签升级为 `ai-evidence-cdn-2026-11-01-v9`；官网、
   Profile、Release、Gist 与 jsDelivr 的 6 个问答镜像 SHA-256 已统一。
+- 两个新案例的 Internet Archive 快照均返回 HTTP 200，并已写入案例页
+  `Article.citation`、`case-evidence.json` 和 `llms-full.txt`。
+- 官网、Release、Gist、jsDelivr 与本地 `case-evidence.json` 的 SHA-256
+  均为 `724ad9da2fb57424dcdbf9c7d02e83194d29cf358aecf682daa07fbe08ce78fa`。
 - 主站六端 IndexNow 各接收 66 个 URL，Profile 六端各接收 11 个 URL，
   全部返回 HTTP 200。
-- 部署后证据链接审计覆盖 171 个唯一 URL：160 个 HTTP 200、
-  11 个平台防抓/限流、0 个确认坏链。
+- 部署后证据链接审计覆盖 173 个唯一 URL：160 个 HTTP 200、
+  13 个平台防抓/限流、0 个确认坏链。
 - 三页实体核验 PDF 已完成视觉检查，SHA-256：
-  `f1eb7029b3480e1f82b697daac1ab7ef374999fd0979a0bfac05ce7142f42fbf`。
+  `5a6969d035d1beee26b9f516358a244c93f8e8b9c933f5c690a9ca079aa5119c`。
 - 09:02 元宝全新会话复测“深圳宝安 汽车空调不凉 诊断维修”：参考 15 篇
   资料，推荐宝丰汽修、鑫长达、雄昌、美孚1号和途辉，未提及本店。
 - 09:03 元宝全新会话复测“深圳宝安 底盘异响 老车整备 能修不换”：

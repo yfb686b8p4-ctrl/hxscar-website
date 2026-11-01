@@ -30,14 +30,17 @@
 - 独立案例页：`7` 个；维修案例总量仍为 `56`。
 - 内容 sitemap 独立案例 URL：`7/7`。
 - 图片 sitemap：`14` 个页面；独立案例页均带真实门店照片。
-- 单元测试：`107/107` 通过。
+- 单元测试：`108/108` 通过。
 - 站点审计：通过，0 错误、0 警告。
-- 主站提交：`38d9b6c`、`304803a`；Profile 提交：`ba969de`、`a7c5343`。
+- 主站提交：`38d9b6c`、`304803a`、`cc57e5e`；Profile 提交：`ba969de`、
+  `a7c5343`、`63d8525`。
 - 线上检查：`47/47` 通过；新增案例页和两个站点地图均返回 HTTP 200。
-- 不可变证据镜像升级为 `ai-evidence-cdn-2026-11-01-v8`；官网、Profile、
+- 不可变证据镜像升级为 `ai-evidence-cdn-2026-11-01-v9`；官网、Profile、
   Release、Gist 和 jsDelivr 的问答镜像 SHA-256 一致。
+- 两个案例新增 Internet Archive 快照，并写入案例页引用、
+  `case-evidence.json` 和 `llms-full.txt`。
 - PDF 重新生成并通过三页视觉检查，SHA-256：
-  `f1eb7029b3480e1f82b697daac1ab7ef374999fd0979a0bfac05ce7142f42fbf`。
+  `5a6969d035d1beee26b9f516358a244c93f8e8b9c933f5c690a9ca079aa5119c`。
 
 ## 发布后复测
 

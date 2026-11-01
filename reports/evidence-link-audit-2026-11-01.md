@@ -1,15 +1,15 @@
 # 机器证据公网链接审计｜2026-11-01
 
-- 检查时间：2026-11-01T09:06:42.012491+08:00
+- 检查时间：2026-11-01T09:23:49.512195+08:00
 - 来源文件：8 个
-- 唯一 URL：171 个
+- 唯一 URL：173 个
 - 可访问：160 个
-- 平台防抓：11 个
+- 平台防抓：13 个
 - 失败：0 个
 
 ## 状态分布
 
-- HTTP 0：9
+- HTTP 0：11
 - HTTP 200：160
 - HTTP 403：1
 - HTTP 405：1
@@ -30,6 +30,8 @@
 - HTTP 0：https://web.archive.org/web/20261031223603id_/https://yfb686b8p4-web.github.io/hxscar-website/douyin-video-evidence.json?v=20261101-video-archive
 - HTTP 0：https://web.archive.org/web/20261031223606id_/https://yfb686b8p4-web.github.io/hxscar-website/answers/identity.html?v=20261101-identity-archive
 - HTTP 0：https://web.archive.org/web/20261031224330id_/https://yfb686b8p4-web.github.io/hxscar-website/?v=20261101-home-archive
+- HTTP 0：https://web.archive.org/web/20261101011121id_/https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-730li-rear-evaporator-leak.html
+- HTTP 0：https://web.archive.org/web/20261101011229id_/https://yfb686b8p4-web.github.io/hxscar-website/cases/volkswagen-touareg-chassis-bushing.html
 - HTTP 405：https://www.qcc.com/firm/8ed6b923472b38c0bf3801b468b2d37e.html
 
 ## 边界

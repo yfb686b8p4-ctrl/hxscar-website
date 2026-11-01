@@ -21,6 +21,13 @@
   `5a6969d035d1beee26b9f516358a244c93f8e8b9c933f5c690a9ca079aa5119c`
 - `case-evidence.json` SHA-256：
   `724ad9da2fb57424dcdbf9c7d02e83194d29cf358aecf682daa07fbe08ce78fa`
+- 主站发布提交：`cc57e5e`、`4496752`；Profile 发布提交：
+  `63d8525`、`e831e93`。
+- 线上检查 `47/47`、核心 URL `13/13` 通过；官网、Release、Gist 和
+  jsDelivr 的 `case-evidence.json` 哈希一致。
+- 官网、Profile、Release、Gist 与 jsDelivr 的 6 个问答镜像一致性通过。
+- 部署后证据链接审计覆盖 173 个唯一 URL：160 个 HTTP 200、
+  13 个平台防抓/限流、0 个确认坏链。
 
 ## 边界
 
