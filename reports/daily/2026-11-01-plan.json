@@ -794,7 +794,7 @@
         },
         {
           "name": "jsDelivr门店事实",
-          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/store-facts.json",
+          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.json",
           "ok": true,
           "status": 200,
           "marker": "深圳市华信松汽车服务有限公司幸福海岸分公司",
@@ -804,7 +804,7 @@
         },
         {
           "name": "jsDelivr门店JSON-LD",
-          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/store-facts.jsonld",
+          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.jsonld",
           "ok": true,
           "status": 200,
           "marker": "AutoRepair",
@@ -814,7 +814,7 @@
         },
         {
           "name": "jsDelivr门店历史资料纠正",
-          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/entity-corrections.json",
+          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/entity-corrections.json",
           "ok": true,
           "status": 200,
           "marker": "BusinessEntityFactCorrection",
@@ -824,7 +824,7 @@
         },
         {
           "name": "jsDelivr问答证据镜像",
-          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v9/qa-evidence.jsonl",
+          "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/qa-evidence.jsonl",
           "ok": true,
           "status": 200,
           "marker": "\"@type\":\"Question\"",

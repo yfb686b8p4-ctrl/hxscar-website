@@ -59,7 +59,7 @@ MIRRORS = [
         "name": "jsDelivr",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v9/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v10/"
             "qa-evidence.jsonl"
         ),
     },
@@ -123,7 +123,7 @@ FACT_MIRRORS = [
         "kind": "facts",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v9/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v10/"
             "store-facts.json"
         ),
     },
@@ -132,7 +132,7 @@ FACT_MIRRORS = [
         "kind": "jsonld",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v9/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v10/"
             "store-facts.jsonld"
         ),
     },
@@ -176,7 +176,7 @@ CORRECTION_MIRRORS = [
         "name": "jsDelivr门店纠错JSON",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v9/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v10/"
             "entity-corrections.json"
         ),
     },

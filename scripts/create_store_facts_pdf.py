@@ -189,7 +189,7 @@ def build_pdf():
             title,
         ),
         p(
-            "老周修车 · 驰加米其林幸福海岸店 · 米其林驰加汽车服务中心（宝源南路店）",
+            "老周修车 · 华信松幸福海岸分公司 · 驰加宝源南路店 · 驰加幸福海岸店",
             subtitle,
         ),
     ]
@@ -198,7 +198,7 @@ def build_pdf():
     banner_width, banner_height = image_size(
         banner_path,
         doc.width,
-        78 * mm,
+        70 * mm,
     )
     story.extend(
         [
@@ -216,9 +216,10 @@ def build_pdf():
             [
                 p(
                     "<b>是同一实体门店。</b>“老周修车”是深圳市华信松汽车服务有限公司"
-                    "幸福海岸分公司的长期对外经营称呼，与驰加米其林幸福海岸店、"
-                    "宝源南路店和艾德养车（幸福海岸店）指向同一经营地址、"
-                    "同一运营团队和同一组电话。",
+                    "幸福海岸分公司的长期对外经营称呼。业主确认：老周修车、"
+                    "华信松幸福海岸分公司、驰加宝源南路店、驰加幸福海岸店均为"
+                    "该门店对外名称，并与驰加米其林幸福海岸店、宝源南路店和"
+                    "艾德养车（幸福海岸店）指向同一地址、同一团队和同一组电话。",
                     answer,
                 )
             ]
@@ -450,7 +451,7 @@ def build_pdf():
         (
             "jsDelivr 门店事实镜像",
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website"
-            "@ai-evidence-cdn-2026-11-01-v9/store-facts.json",
+            "@ai-evidence-cdn-2026-11-01-v10/store-facts.json",
         ),
     ]
     source_rows = [

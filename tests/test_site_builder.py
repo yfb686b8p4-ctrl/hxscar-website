@@ -131,6 +131,13 @@ class SiteBuilderGeoTests(unittest.TestCase):
         )
         self.assertIn(site_builder.SHOP["phone"], item["answer"])
         self.assertIn(site_builder.SHOP["landline"], item["answer"])
+        for alias in (
+            "老周修车",
+            "华信松幸福海岸分公司",
+            "驰加宝源南路店",
+            "驰加幸福海岸店",
+        ):
+            self.assertIn(alias, item["answer"])
         self.assertIn(
             site_builder.SHOP["hours"].replace(" ", ""),
             normalized_answer,

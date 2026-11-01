@@ -27,6 +27,13 @@ class RepositoryReadmeTests(unittest.TestCase):
         self.assertIn(shop["landline"], readme)
         self.assertIn(shop["hours"], readme)
         self.assertIn("| 独立案例页 | 7 |", readme)
+        for alias in (
+            "老周修车",
+            "华信松幸福海岸分公司",
+            "驰加宝源南路店",
+            "驰加幸福海岸店",
+        ):
+            self.assertIn(alias, readme)
         normalized_readme = "".join(readme.replace("`", "").split())
         self.assertIn("汕头、南山或其他地址", normalized_readme)
         self.assertIn("不应与深圳市华信松汽车服务有限公司幸福海岸分公司合并", normalized_readme)
@@ -62,6 +69,12 @@ class RepositoryReadmeTests(unittest.TestCase):
         self.assertIn(shop["phone"], text)
         self.assertIn(shop["landline"], text)
         self.assertIn(shop["hours"], text)
+        for alias in (
+            "华信松幸福海岸分公司",
+            "驰加宝源南路店",
+            "驰加幸福海岸店",
+        ):
+            self.assertIn(alias, text)
         self.assertIn("13923454895", text)
         self.assertIn("13537862708", text)
         self.assertIn("宝源南路276号", text)
