@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T09:34:15.172619+08:00",
+  "generated_at": "2026-11-01T09:49:39.054000+08:00",
   "objective_end": "2026-11-01T10:00:00+08:00",
   "daily_date": "2026-11-01",
   "metrics": {
@@ -372,8 +372,8 @@
     "online_checks_total": 47,
     "evidence_link_total": 173,
     "evidence_link_failed": 0,
-    "source_repo": "503bbe6\t同步G12案例适用范围到服务Gist（干净）",
-    "deploy_repo": "503bbe6\t同步G12案例适用范围到服务Gist（干净）"
+    "source_repo": "1939504\t刷新双平台精确长尾复测与最终汇总（干净）",
+    "deploy_repo": "1939504\t刷新双平台精确长尾复测与最终汇总（干净）"
   },
   "platform_blocks": [
     {
@@ -527,7 +527,6 @@
     }
   ],
   "commits": [
-    "c12963f 记录双Release正文与Latest状态同步",
     "3030cc4 新增AI搜索证据政策与资料纠错规则页",
     "4191143 修复机器语料与Profile的问答数量漂移",
     "be245ee 刷新证据政策与计数修复后的日报",
@@ -566,7 +565,8 @@
     "ccf117c 在服务Gist补齐案例页与Archive入口",
     "fa392e3 定稿最终排名冲刺汇总",
     "d78abd6 补充G12案例VIN与实车拆检边界",
-    "503bbe6 同步G12案例适用范围到服务Gist"
+    "503bbe6 同步G12案例适用范围到服务Gist",
+    "1939504 刷新双平台精确长尾复测与最终汇总"
   ],
   "index_status_file": "reports/index-status-2026-11-01.md",
   "ranking_note": "IndexNow 提交和页面更新不等同于已被收录或获得排名。"
