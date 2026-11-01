@@ -4,6 +4,7 @@
 
 import json
 import csv
+import hashlib
 import subprocess
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -20,6 +21,7 @@ PLAN_PATH = DAILY_DIR / f"{DATE}-plan.json"
 RESULTS_PATH = DAILY_DIR / f"{DATE}-results.csv"
 RECHECK_PATH = REPORTS / f"recheck-{DATE}.json"
 LINK_AUDIT_PATH = REPORTS / f"evidence-link-audit-{DATE}.json"
+PDF_PATH = ROOT / "downloads" / "huaxinsong-store-facts-2026-10-31.pdf"
 
 
 def load_json(path):
@@ -274,6 +276,11 @@ def render_markdown(summary, write=False):
     else:
         lines.append("- 暂无发布后复测记录。")
     lines.extend(["", "## 技术验证", ""])
+    pdf_sha = (
+        hashlib.sha256(PDF_PATH.read_bytes()).hexdigest()
+        if PDF_PATH.is_file()
+        else "文件缺失"
+    )
     lines.extend(
         [
             f"- 站点审计：{'通过' if technical['site_audit_passed'] else '未通过'}",
@@ -286,7 +293,7 @@ def render_markdown(summary, write=False):
             ),
             (
                 "- 实体核验 PDF：3 页；SHA-256 "
-                "`2e162eceacbbfe0c4399d3ce8764e0d6c569cacbe181b6aed9025f14ed3b6f8b`"
+                f"`{pdf_sha}`"
             ),
             f"- 源仓库：{format_repo_state(technical['source_repo'])}",
             f"- 部署副本：{format_repo_state(technical['deploy_repo'])}",
