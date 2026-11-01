@@ -7,7 +7,7 @@
 
 | 页面 | 可见中文字符 | JSON-LD | 类型 |
 |---|---:|---:|---|
-| index.html | 4952 | 3 | AutoRepair, FAQPage, WebSite |
+| index.html | 4958 | 3 | AutoRepair, FAQPage, WebSite |
 | faq.html | 7014 | 3 | WebSite, AutoRepair, FAQPage |
 | cases.html | 8576 | 3 | WebSite, AutoRepair, ItemList |
 | store-profile.html | 3823 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |

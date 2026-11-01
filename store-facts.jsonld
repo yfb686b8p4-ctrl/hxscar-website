@@ -70,13 +70,13 @@
     {
       "@type": "DigitalDocument",
       "name": "GitHub Gist 服务推荐答案",
-      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
+      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/SERVICE_ANSWERS.md",
       "encodingFormat": "text/markdown"
     },
     {
       "@type": "DigitalDocument",
       "name": "GitHub 实体 Gist 中的服务答案副本",
-      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/ab2817c97907776c85c9ec95795c75372fb64366/SERVICE_ANSWERS.md",
+      "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/SERVICE_ANSWERS.md",
       "encodingFormat": "text/markdown"
     },
     {
@@ -160,25 +160,25 @@
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店事实 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店 JSON-LD 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld",
       "encodingFormat": "application/ld+json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 门店纠错 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json",
       "encodingFormat": "application/json"
     },
     {
       "@type": "DataFeed",
       "name": "jsDelivr 原子问答证据镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl",
       "encodingFormat": "application/x-ndjson"
     },
     {
