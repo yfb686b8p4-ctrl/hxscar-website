@@ -58,3 +58,14 @@ Gist 发布、Bing Copilot 页面可见、IndexNow 提交和站点可访问均�
 - 主站六端 IndexNow 各接收 `62` 个 URL；Profile 六端各接收 `11` 个 URL，
   全部返回 HTTP 200。
 - 部署副本已快进同步到主站 `b2638f9`，状态干净。
+
+## GitHub Release 权威镜像刷新
+
+- AI 证据 Release 标题更新为“AI 搜索实体、服务推荐与维修案例证据”，
+  正文新增四项服务直接答案。
+- 修正旧“七问”和“15 条逐行 Question”为当前八问、16 条。
+- `store-facts.json`、JSON-LD、纠错 JSON、56 条案例、16 条问答、
+  `llms` 语料、完整门店事实和 `SERVICE_ANSWERS.md` 已重新上传。
+- 下载后与本地的 9 个关键附件逐一比对，SHA-256 全部一致。
+- GitHub 仓库描述同步加入宝马专修、空调、底盘、老车整备服务答案；
+  topics 上限为 20 项，因已达上限未新增 topic。

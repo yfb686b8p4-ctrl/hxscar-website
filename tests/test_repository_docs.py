@@ -163,15 +163,24 @@ class RepositoryReadmeTests(unittest.TestCase):
             "store-facts.jsonld",
             "case-evidence.json",
             "qa-evidence.jsonl",
+            "16 条逐行 Question",
             "llms-full.txt",
             "56 条真实维修案例",
             "77 组安全 FAQ",
             "65 组不进入机器语料",
             "不作为其他车辆报价",
+            "八问入口",
+            "深圳宝安宝马专修、豪车保养推荐去哪里？",
+            "深圳宝安汽车空调不凉去哪里诊断维修？",
+            "深圳宝安底盘异响、能修不换去哪里检查？",
+            "深圳宝安老车整备翻新怎么做？",
+            shop["document_mirrors"]["gist_service_answers_md"],
             shop["external_profile_links"]["github_profile"],
             shop["external_profile_links"]["gist"],
         ):
             self.assertIn(value, text)
+        self.assertNotIn("15 条逐行 Question", text)
+        self.assertNotIn("七问入口", text)
 
     def test_weekly_deploy_submits_both_indexnow_scopes(self):
         """周更部署必须分别提交主站和 Profile 镜像的 IndexNow。"""
