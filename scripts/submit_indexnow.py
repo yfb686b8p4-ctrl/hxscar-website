@@ -73,6 +73,8 @@ def selected_urls():
         if path in PRIORITY_PATHS or path.startswith(
             "/hxscar-website/answers/"
         ) or path.startswith(
+            "/hxscar-website/aliases/"
+        ) or path.startswith(
             "/hxscar-website/cases/"
         ) or path.startswith(
             "/hxscar-website/services/"

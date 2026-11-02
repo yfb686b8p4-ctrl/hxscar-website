@@ -74,6 +74,10 @@ class SubmitIndexNowTests(unittest.TestCase):
             len(site_builder.SEARCH_ANSWERS) + 1,
         )
         self.assertEqual(
+            sum("/hxscar-website/aliases/" in url for url in urls),
+            len(site_builder.ALIAS_PAGE_CONFIGS) + 1,
+        )
+        self.assertEqual(
             sum("/hxscar-website/cases/" in url for url in urls),
             len(site_builder.CASE_STUDY_SLUGS),
         )

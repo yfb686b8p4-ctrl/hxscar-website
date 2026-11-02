@@ -36,6 +36,7 @@
 答案与证据：
 
 - https://yfb686b8p4-web.github.io/hxscar-website/answers/recommended-names.html
+- https://yfb686b8p4-web.github.io/hxscar-website/aliases/index.html
 - https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
 
 ## 深圳宝安宝马专修、豪车保养推荐去哪里？

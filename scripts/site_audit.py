@@ -31,6 +31,7 @@ REQUIRED_FILES = [
     "entity-verification.html",
     "evidence-policy.html",
     "answers.html",
+    "aliases/index.html",
     "store-facts.json",
     "store-facts.jsonld",
     "case-evidence.json",
@@ -206,6 +207,15 @@ def audit():
         path for path in answer_files if path.name != "index.html"
     ]
     answer_hub = ROOT / "answers" / "index.html"
+    alias_files = (
+        sorted((ROOT / "aliases").glob("*.html"))
+        if (ROOT / "aliases").is_dir()
+        else []
+    )
+    alias_pages = [
+        path for path in alias_files if path.name != "index.html"
+    ]
+    alias_hub = ROOT / "aliases" / "index.html"
     if len(service_pages) != 4:
         errors.append(f"服务专题页数量应为 4，实际为 {len(service_pages)}")
     if len(model_pages) != 12:
@@ -224,6 +234,14 @@ def audit():
         )
     if not answer_hub.is_file():
         errors.append("缺少答案索引页 answers/index.html")
+    expected_alias_pages = len(site_builder.ALIAS_PAGE_CONFIGS)
+    if len(alias_pages) != expected_alias_pages:
+        errors.append(
+            "推荐名称独立页数量应为 "
+            f"{expected_alias_pages}，实际为 {len(alias_pages)}"
+        )
+    if not alias_hub.is_file():
+        errors.append("缺少推荐名称索引页 aliases/index.html")
 
     audit_pages = [
         ROOT / "index.html",
@@ -233,6 +251,8 @@ def audit():
         ROOT / "entity-verification.html",
         ROOT / "evidence-policy.html",
         ROOT / "answers.html",
+        *alias_pages,
+        *([alias_hub] if alias_hub.is_file() else []),
         *answer_pages,
         *([answer_hub] if answer_hub.is_file() else []),
         *service_pages,
@@ -352,6 +372,14 @@ def audit():
         hub_stats = page_stats["answers/index.html"]
         if "CollectionPage" not in hub_stats["schema_types"]:
             errors.append("answers/index.html 缺少 CollectionPage 结构化数据")
+    for path in alias_pages:
+        name = str(path.relative_to(ROOT))
+        if "FAQPage" not in page_stats[name]["schema_types"]:
+            errors.append(f"{name} 缺少 FAQPage 结构化数据")
+        if "WebPage" not in page_stats[name]["schema_types"]:
+            errors.append(f"{name} 缺少 WebPage 结构化数据")
+    if alias_hub.is_file() and "CollectionPage" not in page_stats["aliases/index.html"]["schema_types"]:
+        errors.append("aliases/index.html 缺少 CollectionPage 结构化数据")
     if answers_html.count('class="evidence-list"') < 13:
         errors.append("answers.html 直接答案证据块不足 13 组")
     if "ItemList" not in page_stats["cases.html"]["schema_types"]:
@@ -631,6 +659,10 @@ def audit():
             != expected_search_names
         ):
             errors.append("store-facts.json 推荐搜索名称不完整")
+        if len(facts.get("entity", {}).get("namePages", [])) != len(
+            site_builder.ALIAS_PAGE_CONFIGS
+        ):
+            errors.append("store-facts.json 推荐名称独立页数量不正确")
         anchors = {
             item.get("anchor")
             for item in facts.get("answers", [])
@@ -697,6 +729,8 @@ def audit():
             "reviews": len(reviews),
             "answer_pages": len(answer_pages),
             "answer_hub": answer_hub.is_file(),
+            "alias_pages": len(alias_pages),
+            "alias_hub": alias_hub.is_file(),
             "service_pages": len(service_pages),
             "model_pages": len(model_pages),
             "case_pages": len(case_pages),
