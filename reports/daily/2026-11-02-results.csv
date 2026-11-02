@@ -1,6 +1,6 @@
 ﻿check_id,platform,session_mode,query,category,mentioned,identity_relation,address_ok,phone_ok,hours_ok,position,cited_source,sentiment,answer_summary,notes
-guard-entity,豆包,fresh_required,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,,pending,,,,,,,,
-guard-entity,元宝,fresh_required,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,,pending,,,,,,,,
+guard-entity,豆包,fresh_required,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,correct,True,True,False,,电话邦、启信宝、企查查,正面,确认五个推荐名称指向同一宝安门店并给出正确地址和当前电话,2026-11-02 17:38 全新对话实体复测；营业时间仍错误显示08:00-19:00
+guard-entity,元宝,fresh_required,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,partial,True,True,False,,腾讯地图等28篇资料,部分正面,认为五个名称大概率指向同一门店并给出正确地址和当前手机,2026-11-02 17:40 全新对话实体复测；关系仍为“大概率”，营业时间仍错误显示08:00-20:00
 guard-bmw,豆包,fresh_required,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,,not_applicable,,,,,,,,
 guard-bmw,元宝,fresh_required,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,,not_applicable,,,,,,,,
 guard-aircon,豆包,fresh_required,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,,not_applicable,,,,,,,,

@@ -678,7 +678,7 @@ def parse_results(path, plan):
             or planned.get("session_mode")
             or "legacy"
         ).strip().lower()
-        usable_session = session_mode in {"fresh", "legacy"}
+        usable_session = session_mode in {"fresh", "fresh_required", "legacy"}
         if mentioned is None:
             status = "pending"
         elif usable_session:
@@ -871,8 +871,23 @@ def compare_results(records, previous):
         before = old_records[key]
         after = new_records[key]
         label = f"{key[1]}｜{after['query']}"
+        improvements = []
         if not before.get("effective_hit") and after.get("effective_hit"):
-            fixed.append(label)
+            improvements.append("达到有效命中")
+        if (
+            before.get("identity_relation") != "correct"
+            and after.get("identity_relation") == "correct"
+        ):
+            improvements.append("实体关系正确")
+        for field, field_label in (
+            ("address_ok", "地址正确"),
+            ("phone_ok", "电话正确"),
+            ("hours_ok", "营业时间正确"),
+        ):
+            if before.get(field) is False and after.get(field) is True:
+                improvements.append(field_label)
+        if improvements:
+            fixed.append(f"{label}：{'、'.join(improvements)}")
         elif before.get("effective_hit") and not after.get("effective_hit"):
             new_errors.append(label)
     stable_records = [

@@ -285,6 +285,36 @@ class DailyControlTests(unittest.TestCase):
         self.assertEqual(len(changes["fixed"]), 1)
         self.assertEqual(len(changes["new_errors"]), 1)
 
+    def test_comparison_reports_partial_field_improvement(self):
+        old = [
+            record(
+                effective_hit=False,
+                address_ok=False,
+                phone_ok=False,
+                hours_ok=False,
+            )
+        ]
+        new = [
+            record(
+                effective_hit=False,
+                address_ok=True,
+                phone_ok=True,
+                hours_ok=False,
+            )
+        ]
+        changes = daily_control.compare_results(
+            new,
+            {
+                "date": "2026-10-22",
+                "records": old,
+                "metrics": daily_control.calculate_metrics(old),
+            },
+        )
+        self.assertEqual(len(changes["fixed"]), 1)
+        self.assertIn("地址正确", changes["fixed"][0])
+        self.assertIn("电话正确", changes["fixed"][0])
+        self.assertNotIn("营业时间正确", changes["fixed"][0])
+
     def test_pending_baseline_is_not_compared_as_zero(self):
         changes = daily_control.compare_results(
             [record()],
@@ -428,6 +458,34 @@ class DailyControlTests(unittest.TestCase):
             records[0]["notes"].count("会话未使用全新对话，结果不计入指标"),
             1,
         )
+
+    def test_fresh_required_session_is_counted(self):
+        plan = {
+            "rows": [
+                {
+                    "check_id": "guard-entity",
+                    "platform": "豆包",
+                    "session_mode": "fresh_required",
+                    "query": "门店关系",
+                    "category": "门店身份",
+                    "rotating": False,
+                }
+            ]
+        }
+        with TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "results.csv"
+            path.write_text(
+                "check_id,platform,session_mode,query,category,"
+                "mentioned,identity_relation,address_ok,phone_ok,"
+                "hours_ok,position,cited_source,sentiment,"
+                "answer_summary,notes\n"
+                "guard-entity,豆包,fresh_required,门店关系,门店身份,"
+                "True,correct,True,True,True,,官网,正面,回答,测试\n",
+                encoding="utf-8",
+            )
+            records = daily_control.parse_results(path, plan)
+        self.assertEqual(records[0]["status"], "completed")
+        self.assertTrue(records[0]["effective_hit"])
 
     def test_parse_results_keeps_unfilled_rows_pending(self):
         plan = {
