@@ -14,12 +14,12 @@
 | entity-verification.html | 2699 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
 | evidence-policy.html | 1344 | 4 | WebSite, AboutPage, FAQPage, BreadcrumbList |
 | answers.html | 9442 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| aliases/aide-xingfuhai.html | 1009 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| aliases/cijia-baoyuan-south.html | 993 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| aliases/cijia-xingfuhai.html | 995 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| aliases/laozhou-18682417667.html | 965 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| aliases/shenzhen-huaxinsong-laozhou.html | 1007 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| aliases/shenzhen-laozhou.html | 998 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| aliases/aide-xingfuhai.html | 1417 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| aliases/cijia-baoyuan-south.html | 1390 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| aliases/cijia-xingfuhai.html | 1397 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| aliases/laozhou-18682417667.html | 1346 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| aliases/shenzhen-huaxinsong-laozhou.html | 1413 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| aliases/shenzhen-laozhou.html | 1395 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | aliases/index.html | 562 | 3 | WebSite, AutoRepair, CollectionPage |
 | answers/air-conditioning.html | 1012 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/aircon-diagnosis.html | 1004 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |

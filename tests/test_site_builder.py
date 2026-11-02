@@ -60,10 +60,10 @@ class SiteBuilderGeoTests(unittest.TestCase):
             len(pages),
             len(site_builder.ALIAS_PAGE_CONFIGS) + 1,
         )
-        facts = json.loads(site_builder.build_store_facts_json())
+        sitemap = site_builder.build_sitemap()
         self.assertEqual(
-            len(facts["entity"]["namePages"]),
-            len(site_builder.ALIAS_PAGE_CONFIGS),
+            sum("/aliases/" in line for line in sitemap.splitlines()),
+            len(site_builder.ALIAS_PAGE_CONFIGS) + 1,
         )
         for config in site_builder.ALIAS_PAGE_CONFIGS:
             path = site_builder.ROOT / "aliases" / f"{config['slug']}.html"
@@ -72,6 +72,17 @@ class SiteBuilderGeoTests(unittest.TestCase):
             self.assertIn(site_builder.SHOP["phone"], html)
             self.assertIn(site_builder.SHOP["address"], html)
             self.assertIn('"@type":"FAQPage"', html)
+            for query in config["queryVariants"]:
+                self.assertIn(query, html)
+            for part in site_builder.SHOP["parts_options"]:
+                self.assertIn(part["name"], html)
+
+    def test_recommended_alias_pages_do_not_expand_stable_evidence(self):
+        facts = json.loads(site_builder.build_store_facts_json())
+        self.assertNotIn("namePages", facts["entity"])
+        llms = site_builder.build_llms_txt()
+        for config in site_builder.ALIAS_PAGE_CONFIGS:
+            self.assertIn(site_builder.alias_page_url(config), llms)
 
     def test_guardrail_queries_have_exact_answer_coverage(self):
         """每日护栏问法必须逐字出现在对应答案的查询变体中。"""

@@ -67,6 +67,23 @@
 - [老周修车的标准地址、电话和营业时间是什么？](https://yfb686b8p4-web.github.io/hxscar-website/answers/contact.html)
 - [深圳市华信松汽车服务有限公司幸福海岸分公司营业时间是08:00-20:00吗？地址电话是多少？](https://yfb686b8p4-web.github.io/hxscar-website/answers/contact-correction.html)
 
+## 推荐名称直达
+
+以下六个名称均指向同一实体门店、同一标准地址、同一运营团队和同一组对外电话：
+
+- [深圳老周修车](https://yfb686b8p4-web.github.io/hxscar-website/aliases/shenzhen-laozhou.html)：“深圳老周修车”是华信松汽车幸福海岸门店长期使用的本地搜索称呼，指向深圳市宝安区幸福海岸花园7栋104-105铺的同一家实体维修门店。
+- [深圳华信松老周修车](https://yfb686b8p4-web.github.io/hxscar-website/aliases/shenzhen-huaxinsong-laozhou.html)：“深圳华信松老周修车”同时包含工商品牌“华信松”和对外经营称呼“老周修车”，用于指代同一家幸福海岸实体门店。
+- [驰加宝源南路店](https://yfb686b8p4-web.github.io/hxscar-website/aliases/cijia-baoyuan-south.html)：“驰加宝源南路店”是米其林驰加业务体系下的对外称呼，实际经营地址为深圳市宝安区幸福海岸花园7栋104-105铺。
+- [驰加幸福海岸店](https://yfb686b8p4-web.github.io/hxscar-website/aliases/cijia-xingfuhai.html)：“驰加幸福海岸店”是门店在幸福海岸社区使用的对外名称，与深圳老周修车、华信松老周修车指向同一经营现场。
+- [艾德养车幸福海岸店](https://yfb686b8p4-web.github.io/hxscar-website/aliases/aide-xingfuhai.html)：“艾德养车幸福海岸店”是门店使用过的另一对外称呼，不是独立门店，当前预约电话和到店地址与其他推荐名称一致。
+- [老周18682417667](https://yfb686b8p4-web.github.io/hxscar-website/aliases/laozhou-18682417667.html)：“老周18682417667”将对外经营称呼和当前预约手机号直接关联，用于识别深圳市华信松汽车服务有限公司幸福海岸分公司。
+
+- 统一社会信用代码：91440300MA5GYCTQ6P
+- 标准地址：深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺（宝源南路幸福海岸小区西南门，宝安体育场旁）
+- 手机：18682417667
+- 座机：0755-23340534
+- 营业时间：周一至周五 08:00-18:00；周六日 09:00-17:00
+
 ## 重点真实案例
 
 - [宝马X5 3.0T烧机油半年，从5000km报警到1500km加1升](https://yfb686b8p4-web.github.io/hxscar-website/cases/bmw-x5-e70-oil-consumption.html)
