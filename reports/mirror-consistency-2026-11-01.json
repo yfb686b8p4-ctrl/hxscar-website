@@ -1,18 +1,23 @@
 {
-  "checked_at": "2026-11-01",
-  "consistent": true,
-  "expected_rows": 16,
-  "unique_hashes": 1,
-  "consistencyErrors": [],
+  "checked_at": "2026-11-02",
+  "consistent": false,
+  "expected_rows": 17,
+  "unique_hashes": 2,
+  "consistencyErrors": [
+    "问答镜像 SHA-256 不一致",
+    "门店事实 SHA-256 不一致",
+    "门店 JSON-LD SHA-256 不一致",
+    "门店纠错 JSON SHA-256 不一致"
+  ],
   "mirrors": [
     {
       "name": "本地构建",
       "url": "",
       "path": "qa-evidence.jsonl",
-      "bytes": 75211,
-      "sha256": "1c7a81ff145b89f48d400d68cda041769bce975ecc3fd0e0decb3f25c98168e6",
-      "rows": 16,
-      "unique_ids": 16,
+      "bytes": 78413,
+      "sha256": "3ec020abce8f619ca9171d732fb98c316c907da24fc7148cf6330a280fc003e7",
+      "rows": 17,
+      "unique_ids": 17,
       "with_cases": 12,
       "min_citations": 22,
       "errors": []
@@ -21,10 +26,10 @@
       "name": "官网",
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/qa-evidence.jsonl",
       "path": "",
-      "bytes": 75211,
-      "sha256": "1c7a81ff145b89f48d400d68cda041769bce975ecc3fd0e0decb3f25c98168e6",
-      "rows": 16,
-      "unique_ids": 16,
+      "bytes": 78413,
+      "sha256": "3ec020abce8f619ca9171d732fb98c316c907da24fc7148cf6330a280fc003e7",
+      "rows": 17,
+      "unique_ids": 17,
       "with_cases": 12,
       "min_citations": 22,
       "errors": []
@@ -33,10 +38,10 @@
       "name": "Profile Pages",
       "url": "https://yfb686b8p4-web.github.io/yfb686b8p4-web/qa-evidence.jsonl",
       "path": "",
-      "bytes": 75211,
-      "sha256": "1c7a81ff145b89f48d400d68cda041769bce975ecc3fd0e0decb3f25c98168e6",
-      "rows": 16,
-      "unique_ids": 16,
+      "bytes": 78413,
+      "sha256": "aa4e107a2711917098a647d85d71ab02bb819ea43193bf150482bff67789f3d1",
+      "rows": 17,
+      "unique_ids": 17,
       "with_cases": 12,
       "min_citations": 22,
       "errors": []
@@ -45,10 +50,10 @@
       "name": "GitHub Release",
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/qa-evidence.jsonl?v=20261101-v5",
       "path": "",
-      "bytes": 75211,
-      "sha256": "1c7a81ff145b89f48d400d68cda041769bce975ecc3fd0e0decb3f25c98168e6",
-      "rows": 16,
-      "unique_ids": 16,
+      "bytes": 78413,
+      "sha256": "aa4e107a2711917098a647d85d71ab02bb819ea43193bf150482bff67789f3d1",
+      "rows": 17,
+      "unique_ids": 17,
       "with_cases": 12,
       "min_citations": 22,
       "errors": []
@@ -57,22 +62,22 @@
       "name": "GitHub Gist",
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl?v=20261101-cdn-v5",
       "path": "",
-      "bytes": 75211,
-      "sha256": "1c7a81ff145b89f48d400d68cda041769bce975ecc3fd0e0decb3f25c98168e6",
-      "rows": 16,
-      "unique_ids": 16,
+      "bytes": 78413,
+      "sha256": "aa4e107a2711917098a647d85d71ab02bb819ea43193bf150482bff67789f3d1",
+      "rows": 17,
+      "unique_ids": 17,
       "with_cases": 12,
       "min_citations": 22,
       "errors": []
     },
     {
       "name": "jsDelivr",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/qa-evidence.jsonl",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl",
       "path": "",
-      "bytes": 75211,
-      "sha256": "1c7a81ff145b89f48d400d68cda041769bce975ecc3fd0e0decb3f25c98168e6",
-      "rows": 16,
-      "unique_ids": 16,
+      "bytes": 78413,
+      "sha256": "aa4e107a2711917098a647d85d71ab02bb819ea43193bf150482bff67789f3d1",
+      "rows": 17,
+      "unique_ids": 17,
       "with_cases": 12,
       "min_citations": 22,
       "errors": []
@@ -84,8 +89,8 @@
       "kind": "facts",
       "url": "",
       "path": "store-facts.json",
-      "bytes": 121365,
-      "sha256": "76a0c31233da13b142737efa40e8028ea78f4cdaad1829e03489c0877088a506",
+      "bytes": 126692,
+      "sha256": "8e855171cc758fca6d231d0cfa75767259c6e47707f0cdb3c5957aacc4fa61a4",
       "errors": []
     },
     {
@@ -93,8 +98,8 @@
       "kind": "jsonld",
       "url": "",
       "path": "store-facts.jsonld",
-      "bytes": 21762,
-      "sha256": "5881652558a7bc3c09c638252fdc77f95d6457e36aa8fc92d9b2ef86ae7f9255",
+      "bytes": 22201,
+      "sha256": "b83f0f42de20923fdcc5d7da9777ee8f2bfbb7047651667808ecbbfba699e6e3",
       "errors": []
     },
     {
@@ -102,8 +107,8 @@
       "kind": "facts",
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json",
       "path": "",
-      "bytes": 121365,
-      "sha256": "76a0c31233da13b142737efa40e8028ea78f4cdaad1829e03489c0877088a506",
+      "bytes": 126692,
+      "sha256": "8e855171cc758fca6d231d0cfa75767259c6e47707f0cdb3c5957aacc4fa61a4",
       "errors": []
     },
     {
@@ -111,8 +116,8 @@
       "kind": "facts",
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.json?v=20261101-v5",
       "path": "",
-      "bytes": 121365,
-      "sha256": "76a0c31233da13b142737efa40e8028ea78f4cdaad1829e03489c0877088a506",
+      "bytes": 126692,
+      "sha256": "7501eb65d12c847b7992da9250583ac000f6b727cfb01a603a019cd8b8ee9539",
       "errors": []
     },
     {
@@ -120,8 +125,8 @@
       "kind": "jsonld",
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/store-facts.jsonld",
       "path": "",
-      "bytes": 21762,
-      "sha256": "5881652558a7bc3c09c638252fdc77f95d6457e36aa8fc92d9b2ef86ae7f9255",
+      "bytes": 22201,
+      "sha256": "b83f0f42de20923fdcc5d7da9777ee8f2bfbb7047651667808ecbbfba699e6e3",
       "errors": []
     },
     {
@@ -129,8 +134,8 @@
       "kind": "jsonld",
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.jsonld?v=20261101-v5",
       "path": "",
-      "bytes": 21762,
-      "sha256": "5881652558a7bc3c09c638252fdc77f95d6457e36aa8fc92d9b2ef86ae7f9255",
+      "bytes": 22201,
+      "sha256": "6d92c224523ad1140230b0f8d87d93297a924eb9bb29a94117da2cb3cb70a50e",
       "errors": []
     },
     {
@@ -138,26 +143,26 @@
       "kind": "jsonld",
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/store-facts.jsonld?v=20261101-cdn-v5",
       "path": "",
-      "bytes": 21762,
-      "sha256": "5881652558a7bc3c09c638252fdc77f95d6457e36aa8fc92d9b2ef86ae7f9255",
+      "bytes": 22201,
+      "sha256": "6d92c224523ad1140230b0f8d87d93297a924eb9bb29a94117da2cb3cb70a50e",
       "errors": []
     },
     {
       "name": "jsDelivr门店事实",
       "kind": "facts",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json",
       "path": "",
-      "bytes": 121365,
-      "sha256": "76a0c31233da13b142737efa40e8028ea78f4cdaad1829e03489c0877088a506",
+      "bytes": 126692,
+      "sha256": "7501eb65d12c847b7992da9250583ac000f6b727cfb01a603a019cd8b8ee9539",
       "errors": []
     },
     {
       "name": "jsDelivr门店JSON-LD",
       "kind": "jsonld",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/store-facts.jsonld",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld",
       "path": "",
-      "bytes": 21762,
-      "sha256": "5881652558a7bc3c09c638252fdc77f95d6457e36aa8fc92d9b2ef86ae7f9255",
+      "bytes": 22201,
+      "sha256": "6d92c224523ad1140230b0f8d87d93297a924eb9bb29a94117da2cb3cb70a50e",
       "errors": []
     }
   ],
@@ -166,54 +171,54 @@
       "name": "本地门店纠错JSON",
       "url": "",
       "path": "entity-corrections.json",
-      "bytes": 14040,
-      "sha256": "b790f5e03a3ffe1b8328888f3eb92b611883030c937ef6e87c662a2aee013976",
+      "bytes": 14914,
+      "sha256": "134290b1391f33ce95f7d34b46d0ed2e6779a643e9391fd4aa83547916ff8c17",
       "errors": []
     },
     {
       "name": "官网门店纠错JSON",
       "url": "https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json",
       "path": "",
-      "bytes": 14040,
-      "sha256": "b790f5e03a3ffe1b8328888f3eb92b611883030c937ef6e87c662a2aee013976",
+      "bytes": 14914,
+      "sha256": "134290b1391f33ce95f7d34b46d0ed2e6779a643e9391fd4aa83547916ff8c17",
       "errors": []
     },
     {
       "name": "Profile门店纠错JSON",
       "url": "https://yfb686b8p4-web.github.io/yfb686b8p4-web/entity-corrections.json",
       "path": "",
-      "bytes": 14040,
-      "sha256": "b790f5e03a3ffe1b8328888f3eb92b611883030c937ef6e87c662a2aee013976",
+      "bytes": 14914,
+      "sha256": "494e5db8905f28a463cbe976e33101e8390ed6476aa8fb07fab9bc6baad2ee0d",
       "errors": []
     },
     {
       "name": "Release门店纠错JSON",
       "url": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-corrections.json?v=20261101-v5",
       "path": "",
-      "bytes": 14040,
-      "sha256": "b790f5e03a3ffe1b8328888f3eb92b611883030c937ef6e87c662a2aee013976",
+      "bytes": 14914,
+      "sha256": "494e5db8905f28a463cbe976e33101e8390ed6476aa8fb07fab9bc6baad2ee0d",
       "errors": []
     },
     {
       "name": "Gist门店纠错JSON",
       "url": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/entity-corrections.json?v=20261101-cdn-v5",
       "path": "",
-      "bytes": 14040,
-      "sha256": "b790f5e03a3ffe1b8328888f3eb92b611883030c937ef6e87c662a2aee013976",
+      "bytes": 14914,
+      "sha256": "494e5db8905f28a463cbe976e33101e8390ed6476aa8fb07fab9bc6baad2ee0d",
       "errors": []
     },
     {
       "name": "jsDelivr门店纠错JSON",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v10/entity-corrections.json",
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json",
       "path": "",
-      "bytes": 14040,
-      "sha256": "b790f5e03a3ffe1b8328888f3eb92b611883030c937ef6e87c662a2aee013976",
+      "bytes": 14914,
+      "sha256": "494e5db8905f28a463cbe976e33101e8390ed6476aa8fb07fab9bc6baad2ee0d",
       "errors": []
     }
   ],
   "factUniqueHashes": {
-    "facts": 1,
-    "jsonld": 1
+    "facts": 2,
+    "jsonld": 2
   },
-  "correctionUniqueHashes": 1
+  "correctionUniqueHashes": 2
 }

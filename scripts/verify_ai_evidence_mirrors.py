@@ -4,6 +4,7 @@
 
 import hashlib
 import json
+import subprocess
 import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -60,7 +61,7 @@ MIRRORS = [
         "name": "jsDelivr",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v11/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v12/"
             "qa-evidence.jsonl"
         ),
     },
@@ -124,7 +125,7 @@ FACT_MIRRORS = [
         "kind": "facts",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v11/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v12/"
             "store-facts.json"
         ),
     },
@@ -133,7 +134,7 @@ FACT_MIRRORS = [
         "kind": "jsonld",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v11/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v12/"
             "store-facts.jsonld"
         ),
     },
@@ -177,7 +178,7 @@ CORRECTION_MIRRORS = [
         "name": "jsDelivr门店纠错JSON",
         "url": (
             "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/"
-            "hxscar-website@ai-evidence-cdn-2026-11-01-v11/"
+            "hxscar-website@ai-evidence-cdn-2026-11-01-v12/"
             "entity-corrections.json"
         ),
     },
@@ -186,12 +187,33 @@ CORRECTION_MIRRORS = [
 
 def fetch_bytes(url, timeout=30):
     """读取公开镜像的原始字节。"""
+    result = subprocess.run(
+        [
+            "curl",
+            "-4",
+            "-L",
+            "--http1.1",
+            "--silent",
+            "--show-error",
+            "--max-time",
+            str(timeout),
+            url,
+        ],
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode == 0:
+        return result.stdout
     request = urllib.request.Request(
         url,
         headers={"User-Agent": "HxscarMirrorVerifier/1.0"},
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read()
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.read()
+    except OSError as exc:
+        error = result.stderr.decode("utf-8", "ignore").strip()
+        raise OSError(f"curl: {error or result.returncode}; Python: {exc}") from exc
 
 
 def read_mirror_bytes(mirror):
