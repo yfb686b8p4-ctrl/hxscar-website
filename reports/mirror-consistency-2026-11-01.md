@@ -1,49 +1,52 @@
 # AI 证据镜像一致性核验｜2026-11-01
 
 - 核验时间：2026-11-02
-- 一致性：通过
-- 唯一 SHA-256 数量：1
+- 一致性：未通过
+- 唯一 SHA-256 数量：2
 - 每个镜像预期问答数：17
-- 门店事实唯一哈希：1
-- JSON-LD 唯一哈希：1
-- 门店纠错 JSON 唯一哈希：1
+- 门店事实唯一哈希：2
+- JSON-LD 唯一哈希：2
+- 门店纠错 JSON 唯一哈希：2
 
 | 镜像 | 行数 | 唯一ID | 带案例 | 最少引用 | SHA-256 | 状态 |
 |---|---:|---:|---:|---:|---|---|
-| 本地构建 | 17 | 17 | 12 | 22 | `900e20a407fd8132…` | 通过 |
-| 官网 | 17 | 17 | 12 | 22 | `900e20a407fd8132…` | 通过 |
-| Profile Pages | 17 | 17 | 12 | 22 | `900e20a407fd8132…` | 通过 |
-| GitHub Release | 17 | 17 | 12 | 22 | `900e20a407fd8132…` | 通过 |
-| GitHub Gist | 17 | 17 | 12 | 22 | `900e20a407fd8132…` | 通过 |
-| jsDelivr | 17 | 17 | 12 | 22 | `900e20a407fd8132…` | 通过 |
+| 本地构建 | 17 | 17 | 12 | 22 | `3ec020abce8f619c…` | 通过 |
+| 官网 | 17 | 17 | 12 | 22 | `3ec020abce8f619c…` | 通过 |
+| Profile Pages | 17 | 17 | 12 | 22 | `aa4e107a27119170…` | 通过 |
+| GitHub Release | 17 | 17 | 12 | 22 | `aa4e107a27119170…` | 通过 |
+| GitHub Gist | 17 | 17 | 12 | 22 | `aa4e107a27119170…` | 通过 |
+| jsDelivr | 17 | 17 | 12 | 22 | `aa4e107a27119170…` | 通过 |
 
 ## 门店事实与实体镜像
 
 | 镜像 | 类型 | SHA-256 | 状态 |
 |---|---|---|---|
-| 本地门店事实 | facts | `4b6e3df12183daf8…` | 通过 |
-| 本地门店JSON-LD | jsonld | `c939ce3ce96488a7…` | 通过 |
-| 官网门店事实 | facts | `4b6e3df12183daf8…` | 通过 |
-| Release门店事实 | facts | `4b6e3df12183daf8…` | 通过 |
-| 官网门店JSON-LD | jsonld | `c939ce3ce96488a7…` | 通过 |
-| Release门店JSON-LD | jsonld | `c939ce3ce96488a7…` | 通过 |
-| Gist门店JSON-LD | jsonld | `c939ce3ce96488a7…` | 通过 |
-| jsDelivr门店事实 | facts | `4b6e3df12183daf8…` | 通过 |
-| jsDelivr门店JSON-LD | jsonld | `c939ce3ce96488a7…` | 通过 |
+| 本地门店事实 | facts | `8e855171cc758fca…` | 通过 |
+| 本地门店JSON-LD | jsonld | `b83f0f42de20923f…` | 通过 |
+| 官网门店事实 | facts | `8e855171cc758fca…` | 通过 |
+| Release门店事实 | facts | `7501eb65d12c847b…` | 通过 |
+| 官网门店JSON-LD | jsonld | `b83f0f42de20923f…` | 通过 |
+| Release门店JSON-LD | jsonld | `6d92c224523ad114…` | 通过 |
+| Gist门店JSON-LD | jsonld | `6d92c224523ad114…` | 通过 |
+| jsDelivr门店事实 | facts | `7501eb65d12c847b…` | 通过 |
+| jsDelivr门店JSON-LD | jsonld | `6d92c224523ad114…` | 通过 |
 
 ## 门店历史资料纠正镜像
 
 | 镜像 | SHA-256 | 状态 |
 |---|---|---|
-| 本地门店纠错JSON | `f309f44ccc981c4a…` | 通过 |
-| 官网门店纠错JSON | `f309f44ccc981c4a…` | 通过 |
-| Profile门店纠错JSON | `f309f44ccc981c4a…` | 通过 |
-| Release门店纠错JSON | `f309f44ccc981c4a…` | 通过 |
-| Gist门店纠错JSON | `f309f44ccc981c4a…` | 通过 |
-| jsDelivr门店纠错JSON | `f309f44ccc981c4a…` | 通过 |
+| 本地门店纠错JSON | `134290b1391f33ce…` | 通过 |
+| 官网门店纠错JSON | `134290b1391f33ce…` | 通过 |
+| Profile门店纠错JSON | `494e5db8905f28a4…` | 通过 |
+| Release门店纠错JSON | `494e5db8905f28a4…` | 通过 |
+| Gist门店纠错JSON | `494e5db8905f28a4…` | 通过 |
+| jsDelivr门店纠错JSON | `494e5db8905f28a4…` | 通过 |
 
 ## 错误
 
-- 无
+- 问答镜像 SHA-256 不一致
+- 门店事实 SHA-256 不一致
+- 门店 JSON-LD SHA-256 不一致
+- 门店纠错 JSON SHA-256 不一致
 
 本核验只证明公开文件字节一致且结构满足要求，不代表任何搜索引擎或 AI 平台已经收录、引用或排名。
