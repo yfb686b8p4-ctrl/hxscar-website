@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-01",
+  "generated_at": "2026-11-02",
   "source": "reports/daily/latest.json",
-  "source_generated_at": "2026-11-01T01:01:25.477137+08:00",
+  "source_generated_at": "2026-11-01T10:17:09.891243+08:00",
   "overall": {
     "total": 12,
     "completed": 12,
@@ -86,7 +86,7 @@
       "keyword_id": "guard-entity",
       "query": "深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗",
       "platform": "元宝",
-      "notes": "实体关系错误；地址简略；电话错误；营业时间缺失"
+      "notes": "08:20 v7上线后全新对话复测；实体关系由错误改善为部分正确；仍使用旧电话13537862708且未完整给出地址、双电话和营业时间"
     }
   ],
   "recommended_actions": [
