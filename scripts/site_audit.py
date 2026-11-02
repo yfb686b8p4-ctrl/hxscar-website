@@ -242,6 +242,10 @@ def audit():
         )
     if not alias_hub.is_file():
         errors.append("缺少推荐名称索引页 aliases/index.html")
+    llms_index = read_text("llms.txt")
+    for config in site_builder.ALIAS_PAGE_CONFIGS:
+        if site_builder.alias_page_url(config) not in llms_index:
+            errors.append(f"llms.txt 缺少推荐名称独立页: {config['name']}")
 
     audit_pages = [
         ROOT / "index.html",
@@ -659,10 +663,6 @@ def audit():
             != expected_search_names
         ):
             errors.append("store-facts.json 推荐搜索名称不完整")
-        if len(facts.get("entity", {}).get("namePages", [])) != len(
-            site_builder.ALIAS_PAGE_CONFIGS
-        ):
-            errors.append("store-facts.json 推荐名称独立页数量不正确")
         anchors = {
             item.get("anchor")
             for item in facts.get("answers", [])

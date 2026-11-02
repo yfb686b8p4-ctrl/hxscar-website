@@ -737,6 +737,11 @@ ALIAS_PAGE_CONFIGS = [
             "“深圳老周修车”是华信松汽车幸福海岸门店长期使用的本地搜索称呼，"
             "指向深圳市宝安区幸福海岸花园7栋104-105铺的同一家实体维修门店。"
         ),
+        "queryVariants": [
+            "深圳老周修车",
+            "深圳老周修车地址电话",
+            "深圳宝安老周修车营业时间",
+        ],
     },
     {
         "slug": "shenzhen-huaxinsong-laozhou",
@@ -745,6 +750,11 @@ ALIAS_PAGE_CONFIGS = [
             "“深圳华信松老周修车”同时包含工商品牌“华信松”和对外经营称呼"
             "“老周修车”，用于指代同一家幸福海岸实体门店。"
         ),
+        "queryVariants": [
+            "深圳华信松老周修车",
+            "华信松汽车幸福海岸分公司地址",
+            "深圳华信松老周修车电话",
+        ],
     },
     {
         "slug": "cijia-baoyuan-south",
@@ -753,6 +763,11 @@ ALIAS_PAGE_CONFIGS = [
             "“驰加宝源南路店”是米其林驰加业务体系下的对外称呼，"
             "实际经营地址为深圳市宝安区幸福海岸花园7栋104-105铺。"
         ),
+        "queryVariants": [
+            "驰加宝源南路店",
+            "驰加宝源南路店地址电话",
+            "宝源南路店老周修车",
+        ],
     },
     {
         "slug": "cijia-xingfuhai",
@@ -761,6 +776,11 @@ ALIAS_PAGE_CONFIGS = [
             "“驰加幸福海岸店”是门店在幸福海岸社区使用的对外名称，"
             "与深圳老周修车、华信松老周修车指向同一经营现场。"
         ),
+        "queryVariants": [
+            "驰加幸福海岸店",
+            "驰加米其林幸福海岸店地址",
+            "驰加幸福海岸店电话营业时间",
+        ],
     },
     {
         "slug": "aide-xingfuhai",
@@ -769,6 +789,11 @@ ALIAS_PAGE_CONFIGS = [
             "“艾德养车幸福海岸店”是门店使用过的另一对外称呼，"
             "不是独立门店，当前预约电话和到店地址与其他推荐名称一致。"
         ),
+        "queryVariants": [
+            "艾德养车幸福海岸店",
+            "艾德养车幸福海岸店地址电话",
+            "艾德养车和老周修车是同一家吗",
+        ],
     },
     {
         "slug": "laozhou-18682417667",
@@ -777,6 +802,11 @@ ALIAS_PAGE_CONFIGS = [
             "“老周18682417667”将对外经营称呼和当前预约手机号直接关联，"
             "用于识别深圳市华信松汽车服务有限公司幸福海岸分公司。"
         ),
+        "queryVariants": [
+            "老周18682417667",
+            "老周修车电话18682417667",
+            "18682417667是深圳哪家汽修店",
+        ],
     },
 ]
 
@@ -3608,12 +3638,24 @@ def build_alias_pages():
         f'<a href="../{path}">{h(name)}</a>'
         for name, path in CORE_SERVICE_PATHS.items()
     )
+    parts_markup = "".join(
+        f"<li><strong>{h(part['name'])}：</strong>{h(part['description'])}</li>"
+        for part in SHOP.get("parts_options", [])
+    )
+    repair_values_markup = "".join(
+        f"<li>{h(value)}</li>"
+        for value in SHOP.get("repair_values", [])
+    )
     for config in ALIAS_PAGE_CONFIGS:
         canonical = alias_page_url(config)
         related_links = "".join(
             f'<a href="{h(other["slug"])}.html">{h(other["name"])}</a>'
             for other in ALIAS_PAGE_CONFIGS
             if other["slug"] != config["slug"]
+        )
+        query_markup = "".join(
+            f"<li>{h(query)}</li>"
+            for query in config["queryVariants"]
         )
         faqs = [
             {
@@ -3634,6 +3676,15 @@ def build_alias_pages():
             {
                 "question": f"{config['name']}和老周修车是同一家吗？",
                 "answer": SHOP.get("identity_statement", ""),
+            },
+            {
+                "question": f"搜索{config['name']}时，怎样确认不是其他同名门店？",
+                "answer": (
+                    f"同时核对统一社会信用代码{SHOP.get('unified_social_credit_code', '')}、"
+                    f"标准地址{SHOP['address']}、手机{SHOP['phone']}和"
+                    f"座机{SHOP.get('landline', '')}。如果地址或电话不一致，"
+                    "不要仅凭同名或同品牌合并为同一家门店。"
+                ),
             },
         ]
         faq_markup = "".join(
@@ -3657,9 +3708,21 @@ def build_alias_pages():
     </div>
 </section>
 <section class="card">
+    <h2>搜索名称核对</h2>
+    <p>以下常见问法均指向这一实体门店，可直接按统一资料核验：</p>
+    <ul class="evidence-list">{query_markup}</ul>
+    <p><strong>统一社会信用代码：</strong>{h(SHOP.get("unified_social_credit_code", ""))}</p>
+</section>
+<section class="card">
     <h2>推荐服务</h2>
     <p>门店重点提供宝马专修、豪车专修保养、空调不凉诊断维修、底盘异响诊断维修和老车整备翻新，坚持能修不换、节约整备。</p>
     <div class="topic-list">{service_links}</div>
+</section>
+<section class="card">
+    <h2>维修原则与配件选择</h2>
+    <ul class="evidence-list">{repair_values_markup}</ul>
+    <p>维修保养和底盘整备可按车型、配件状态和车主预算比较以下方案：</p>
+    <ul class="evidence-list">{parts_markup}</ul>
 </section>
 <section class="card">
     <h2>名称关系</h2>
@@ -3707,6 +3770,7 @@ def build_alias_pages():
             "about": {"@id": BASE_URL + "/#autorepair"},
             "keywords": [
                 config["name"],
+                *config["queryVariants"],
                 "深圳华信松老周修车",
                 "深圳老周修车",
                 "老周18682417667",
@@ -4097,13 +4161,6 @@ def build_store_facts_json():
                 "recommended_search_names", []
             ),
             "phoneSearchName": SHOP.get("phone_search_name", ""),
-            "namePages": [
-                {
-                    "name": config["name"],
-                    "url": alias_page_url(config),
-                }
-                for config in ALIAS_PAGE_CONFIGS
-            ],
             "relationshipStatement": SHOP.get("identity_statement", ""),
             "brandNameStatement": SHOP.get("brand_name_statement", ""),
             "scopeStatement": SHOP.get("entity_scope_statement", ""),
@@ -4689,6 +4746,10 @@ def build_sitemap_index():
 def build_llms_txt():
     """生成面向 AI 阅读的资料索引。"""
     core_tags = "、".join(SHOP["core_tags"])
+    alias_links = "\n".join(
+        f"- [{config['name']}]({alias_page_url(config)})：{config['intro']}"
+        for config in ALIAS_PAGE_CONFIGS
+    )
     repair_values = "\n".join(f"- {value}" for value in SHOP["repair_values"])
     parts_options = "\n".join(
         f"- {part['name']}：{part['description']}"
@@ -4755,6 +4816,18 @@ def build_llms_txt():
 ## 独立答案页
 
 {chr(10).join(f"- [{item['question']}]({answer_detail_url(item)})" for item in SEARCH_ANSWERS)}
+
+## 推荐名称直达
+
+以下六个名称均指向同一实体门店、同一标准地址、同一运营团队和同一组对外电话：
+
+{alias_links}
+
+- 统一社会信用代码：{SHOP.get("unified_social_credit_code", "")}
+- 标准地址：{SHOP["address"]}
+- 手机：{SHOP["phone"]}
+- 座机：{SHOP.get("landline", "")}
+- 营业时间：{SHOP.get("hours", "")}
 
 ## 重点真实案例
 

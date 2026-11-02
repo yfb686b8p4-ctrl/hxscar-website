@@ -350,14 +350,14 @@
   ],
   "weekly_full_check_due": true,
   "status_snapshot": {
-    "checked_at": "2026-11-02T15:31:33.585550+08:00",
+    "checked_at": "2026-11-02T17:26:21.402560+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
       "clean": false,
-      "change_count": 4,
-      "head": "1cd3df9\t记录v12全镜像一致性通过",
+      "change_count": 7,
+      "head": "78c423e\t新增六个推荐名称独立实体落地页",
       "error": ""
     },
     "deploy_repo": {
@@ -365,8 +365,8 @@
       "path": "/Users/pingguo2019/Library/Application Support/hxscar-weekly-deploy/repo",
       "branch": "main",
       "clean": false,
-      "change_count": 83,
-      "head": "1643a42\t记录v12全镜像一致性通过",
+      "change_count": 85,
+      "head": "ba5c036\t固定内容版本并优化大文件线上检查",
       "error": ""
     },
     "launch_agent": {
@@ -391,7 +391,7 @@
           "status": 206,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 11.76,
+          "seconds": 1.11,
           "error": ""
         },
         {
@@ -401,7 +401,7 @@
           "status": 206,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 1.47,
+          "seconds": 1.26,
           "error": ""
         },
         {
@@ -411,7 +411,7 @@
           "status": 206,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 1.39,
+          "seconds": 2.05,
           "error": ""
         },
         {
@@ -421,7 +421,7 @@
           "status": 206,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 1.44,
+          "seconds": 1.02,
           "error": ""
         },
         {
@@ -431,7 +431,7 @@
           "status": 206,
           "marker": "四项实体核验",
           "via": "直连",
-          "seconds": 1.39,
+          "seconds": 1.17,
           "error": ""
         },
         {
@@ -441,7 +441,7 @@
           "status": 206,
           "marker": "证据优先级",
           "via": "直连",
-          "seconds": 1.48,
+          "seconds": 1.15,
           "error": ""
         },
         {
@@ -451,7 +451,7 @@
           "status": 206,
           "marker": "直接回答",
           "via": "直连",
-          "seconds": 1.57,
+          "seconds": 1.52,
           "error": ""
         },
         {
@@ -461,7 +461,7 @@
           "status": 206,
           "marker": "全部独立答案",
           "via": "直连",
-          "seconds": 0.96,
+          "seconds": 1.49,
           "error": ""
         },
         {
@@ -471,7 +471,27 @@
           "status": 206,
           "marker": "深圳宝安宝马专修、豪车保养推荐去哪里？",
           "via": "直连",
-          "seconds": 4.42,
+          "seconds": 0.96,
+          "error": ""
+        },
+        {
+          "name": "推荐名称索引",
+          "path": "/aliases/index.html",
+          "ok": true,
+          "status": 206,
+          "marker": "六个常见搜索名称",
+          "via": "直连",
+          "seconds": 0.85,
+          "error": ""
+        },
+        {
+          "name": "推荐名称独立页",
+          "path": "/aliases/shenzhen-huaxinsong-laozhou.html",
+          "ok": true,
+          "status": 206,
+          "marker": "深圳华信松老周修车",
+          "via": "直连",
+          "seconds": 1.78,
           "error": ""
         },
         {
@@ -481,7 +501,7 @@
           "status": 206,
           "marker": "verifiedAt",
           "via": "直连",
-          "seconds": 9.52,
+          "seconds": 1.57,
           "error": ""
         },
         {
@@ -491,7 +511,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 2.38,
+          "seconds": 2.79,
           "error": ""
         },
         {
@@ -501,7 +521,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 4.02,
+          "seconds": 2.89,
           "error": ""
         },
         {
@@ -511,7 +531,7 @@
           "status": 206,
           "marker": "VideoObject",
           "via": "直连",
-          "seconds": 0.71,
+          "seconds": 5.02,
           "error": ""
         },
         {
@@ -521,7 +541,7 @@
           "status": 206,
           "marker": "91440300MA5GYCTQ6P",
           "via": "直连",
-          "seconds": 1.38,
+          "seconds": 1.49,
           "error": ""
         },
         {
@@ -531,7 +551,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 2.09,
+          "seconds": 1.4,
           "error": ""
         },
         {
@@ -541,7 +561,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 13.66,
+          "seconds": 0.71,
           "error": ""
         },
         {
@@ -551,7 +571,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 12.33,
+          "seconds": 1.56,
           "error": ""
         },
         {
@@ -561,7 +581,7 @@
           "status": 206,
           "marker": "WEBP",
           "via": "直连",
-          "seconds": 1.22,
+          "seconds": 1.36,
           "error": ""
         },
         {
@@ -571,7 +591,7 @@
           "status": 206,
           "marker": "%PDF",
           "via": "直连",
-          "seconds": 1.57,
+          "seconds": 1.64,
           "error": ""
         },
         {
@@ -581,7 +601,7 @@
           "status": 206,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 1.56,
+          "seconds": 0.79,
           "error": ""
         },
         {
@@ -591,7 +611,7 @@
           "status": 206,
           "marker": "hxscar20261024geoindexkey",
           "via": "直连",
-          "seconds": 1.39,
+          "seconds": 1.31,
           "error": ""
         },
         {
@@ -601,7 +621,7 @@
           "status": 206,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 1.08,
+          "seconds": 1.05,
           "error": ""
         },
         {
@@ -611,7 +631,7 @@
           "status": 206,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 1.18,
+          "seconds": 0.85,
           "error": ""
         },
         {
@@ -621,7 +641,7 @@
           "status": 206,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 0.85,
+          "seconds": 0.71,
           "error": ""
         },
         {
@@ -631,7 +651,7 @@
           "status": 206,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 1.01,
+          "seconds": 0.81,
           "error": ""
         },
         {
@@ -641,7 +661,7 @@
           "status": 206,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 13.27,
+          "seconds": 1.77,
           "error": ""
         },
         {
@@ -651,7 +671,7 @@
           "status": 206,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 0.96,
+          "seconds": 2.4,
           "error": ""
         },
         {
@@ -661,7 +681,7 @@
           "status": 206,
           "marker": "证据边界内常见问题",
           "via": "直连",
-          "seconds": 1.82,
+          "seconds": 1.23,
           "error": ""
         },
         {
@@ -671,7 +691,7 @@
           "status": 206,
           "marker": "深圳华信松老周修车",
           "via": "直连",
-          "seconds": 1.21,
+          "seconds": 1.04,
           "error": ""
         },
         {
@@ -681,7 +701,7 @@
           "status": 206,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 0.83,
+          "seconds": 0.77,
           "error": ""
         },
         {
@@ -691,7 +711,7 @@
           "status": 206,
           "marker": "<loc>https://yfb686b8p4-web.github.io/yfb686b8p4-web/</loc>",
           "via": "直连",
-          "seconds": 1.87,
+          "seconds": 0.74,
           "error": ""
         },
         {
@@ -701,7 +721,7 @@
           "status": 206,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 0.86,
+          "seconds": 0.79,
           "error": ""
         },
         {
@@ -711,7 +731,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 2.02,
+          "seconds": 0.75,
           "error": ""
         },
         {
@@ -721,7 +741,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 2.85,
+          "seconds": 2.23,
           "error": ""
         },
         {
@@ -731,7 +751,7 @@
           "status": 206,
           "marker": "统一社会信用代码",
           "via": "直连",
-          "seconds": 0.72,
+          "seconds": 0.74,
           "error": ""
         },
         {
@@ -741,7 +761,7 @@
           "status": 206,
           "marker": "九个直接答案",
           "via": "直连",
-          "seconds": 0.93,
+          "seconds": 2.06,
           "error": ""
         },
         {
@@ -751,18 +771,18 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 3.66,
+          "seconds": 1.12,
           "error": ""
         },
         {
           "name": "Release问答证据镜像",
           "path": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/qa-evidence.jsonl?v=20261101-v5",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "\"@type\":\"Question\"",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 30002 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 4.31,
+          "error": ""
         },
         {
           "name": "Release门店历史资料纠正",
@@ -771,7 +791,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 8.41,
+          "seconds": 1.64,
           "error": ""
         },
         {
@@ -781,7 +801,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 2.83,
+          "seconds": 0.66,
           "error": ""
         },
         {
@@ -791,18 +811,18 @@
           "status": 206,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 1.42,
+          "seconds": 0.49,
           "error": ""
         },
         {
           "name": "Release门店事实Markdown",
           "path": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-facts.md?v=20261101-entity-facts",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "当前手机为18682417667",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Connection timed out after 30004 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 1.22,
+          "error": ""
         },
         {
           "name": "jsDelivr门店事实",
@@ -811,7 +831,7 @@
           "status": 206,
           "marker": "深圳市华信松汽车服务有限公司幸福海岸分公司",
           "via": "直连",
-          "seconds": 1.69,
+          "seconds": 3.75,
           "error": ""
         },
         {
@@ -821,7 +841,7 @@
           "status": 206,
           "marker": "AutoRepair",
           "via": "直连",
-          "seconds": 0.67,
+          "seconds": 3.23,
           "error": ""
         },
         {
@@ -831,7 +851,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 2.33,
           "error": ""
         },
         {
@@ -841,7 +861,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 1.88,
+          "seconds": 1.6,
           "error": ""
         },
         {
@@ -851,12 +871,12 @@
           "status": 206,
           "marker": "hxscarprofile20261101geo",
           "via": "直连",
-          "seconds": 1.08,
+          "seconds": 0.81,
           "error": ""
         }
       ],
-      "http_passed": 45,
-      "http_total": 47,
+      "http_passed": 49,
+      "http_total": 49,
       "audit_passed": true,
       "audit": {
         "faqs": 142,
@@ -864,6 +884,8 @@
         "reviews": 30,
         "answer_pages": 17,
         "answer_hub": true,
+        "alias_pages": 6,
+        "alias_hub": true,
         "service_pages": 4,
         "model_pages": 12,
         "case_pages": 7
