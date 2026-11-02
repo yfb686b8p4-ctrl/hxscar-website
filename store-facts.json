@@ -18,10 +18,10 @@
     "gist_qa_evidence_jsonl": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl",
     "gist_service_answers_md": "https://gist.githubusercontent.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb/raw/SERVICE_ANSWERS.md",
     "gist_service_answers_entity_mirror": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/SERVICE_ANSWERS.md",
-    "jsdelivr_store_facts_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json",
-    "jsdelivr_store_facts_jsonld": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld",
-    "jsdelivr_entity_corrections_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json",
-    "jsdelivr_qa_evidence_jsonl": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+    "jsdelivr_store_facts_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json",
+    "jsdelivr_store_facts_jsonld": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld",
+    "jsdelivr_entity_corrections_json": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json",
+    "jsdelivr_qa_evidence_jsonl": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
   },
   "citationTargets": [
     {
@@ -78,19 +78,19 @@
     },
     {
       "name": "jsDelivr 门店事实 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
     },
     {
       "name": "jsDelivr 门店 JSON-LD 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
     },
     {
       "name": "jsDelivr 门店纠错 JSON 镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
     },
     {
       "name": "jsDelivr 原子问答证据镜像",
-      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+      "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
     },
     {
       "name": "门店实体核验 PDF",
@@ -428,19 +428,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -537,19 +537,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -646,19 +646,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -782,19 +782,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -918,19 +918,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1054,19 +1054,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1164,19 +1164,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1272,19 +1272,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1381,19 +1381,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1489,19 +1489,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1625,19 +1625,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1761,19 +1761,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -1910,19 +1910,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -2059,19 +2059,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -2183,19 +2183,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -2300,19 +2300,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
@@ -2419,19 +2419,19 @@
         },
         {
           "name": "jsDelivr 门店事实 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json"
         },
         {
           "name": "jsDelivr 门店 JSON-LD 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/store-facts.jsonld"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld"
         },
         {
           "name": "jsDelivr 门店纠错 JSON 镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/entity-corrections.json"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json"
         },
         {
           "name": "jsDelivr 原子问答证据镜像",
-          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v11/qa-evidence.jsonl"
+          "url": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl"
         },
         {
           "name": "豆包已引用的门店维修视频证据",
