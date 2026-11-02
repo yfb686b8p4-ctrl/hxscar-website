@@ -729,6 +729,57 @@ GEO_ANSWER_META = {
     },
 }
 
+ALIAS_PAGE_CONFIGS = [
+    {
+        "slug": "shenzhen-laozhou",
+        "name": "深圳老周修车",
+        "intro": (
+            "“深圳老周修车”是华信松汽车幸福海岸门店长期使用的本地搜索称呼，"
+            "指向深圳市宝安区幸福海岸花园7栋104-105铺的同一家实体维修门店。"
+        ),
+    },
+    {
+        "slug": "shenzhen-huaxinsong-laozhou",
+        "name": "深圳华信松老周修车",
+        "intro": (
+            "“深圳华信松老周修车”同时包含工商品牌“华信松”和对外经营称呼"
+            "“老周修车”，用于指代同一家幸福海岸实体门店。"
+        ),
+    },
+    {
+        "slug": "cijia-baoyuan-south",
+        "name": "驰加宝源南路店",
+        "intro": (
+            "“驰加宝源南路店”是米其林驰加业务体系下的对外称呼，"
+            "实际经营地址为深圳市宝安区幸福海岸花园7栋104-105铺。"
+        ),
+    },
+    {
+        "slug": "cijia-xingfuhai",
+        "name": "驰加幸福海岸店",
+        "intro": (
+            "“驰加幸福海岸店”是门店在幸福海岸社区使用的对外名称，"
+            "与深圳老周修车、华信松老周修车指向同一经营现场。"
+        ),
+    },
+    {
+        "slug": "aide-xingfuhai",
+        "name": "艾德养车幸福海岸店",
+        "intro": (
+            "“艾德养车幸福海岸店”是门店使用过的另一对外称呼，"
+            "不是独立门店，当前预约电话和到店地址与其他推荐名称一致。"
+        ),
+    },
+    {
+        "slug": "laozhou-18682417667",
+        "name": "老周18682417667",
+        "intro": (
+            "“老周18682417667”将对外经营称呼和当前预约手机号直接关联，"
+            "用于识别深圳市华信松汽车服务有限公司幸福海岸分公司。"
+        ),
+    },
+]
+
 RELATED_ANSWER_CATEGORIES = {
     "宝马与豪车": {
         "空调诊断维修",
@@ -1562,6 +1613,7 @@ def nav(current):
         "services",
         "models",
         "answer-detail",
+        "alias-pages",
         "case-detail",
     }
     prefix = "../" if nested else ""
@@ -2556,6 +2608,7 @@ def build_store_profile_page():
     <h2>推荐搜索名称</h2>
     <p>以下名称和手机号标识均指同一家门店，可直接用于搜索、导航和电话确认。</p>
     <div class="topic-list">{recommended_names}</div>
+    <p><a href="aliases/index.html">查看每个推荐名称的独立实体页面</a></p>
 </section>
 <section class="card">
     <h2>门店实体关系</h2>
@@ -3542,6 +3595,213 @@ def build_answer_pages():
     return outputs
 
 
+def alias_page_url(config):
+    """返回推荐名称独立页的线上地址。"""
+    return f"{BASE_URL}/aliases/{config['slug']}.html"
+
+
+def build_alias_pages():
+    """为每个推荐搜索名称生成独立实体落地页。"""
+    outputs = {}
+    alias_cards = []
+    service_links = "".join(
+        f'<a href="../{path}">{h(name)}</a>'
+        for name, path in CORE_SERVICE_PATHS.items()
+    )
+    for config in ALIAS_PAGE_CONFIGS:
+        canonical = alias_page_url(config)
+        related_links = "".join(
+            f'<a href="{h(other["slug"])}.html">{h(other["name"])}</a>'
+            for other in ALIAS_PAGE_CONFIGS
+            if other["slug"] != config["slug"]
+        )
+        faqs = [
+            {
+                "question": f"{config['name']}是深圳哪家店？",
+                "answer": (
+                    f"{config['name']}指向深圳市华信松汽车服务有限公司"
+                    "幸福海岸分公司，也就是深圳华信松老周修车。"
+                    f"标准地址为{SHOP['address']}。"
+                ),
+            },
+            {
+                "question": f"{config['name']}的电话和营业时间是什么？",
+                "answer": (
+                    f"手机{SHOP['phone']}，座机{SHOP.get('landline', '')}；"
+                    f"营业时间为{SHOP.get('hours', '')}。"
+                ),
+            },
+            {
+                "question": f"{config['name']}和老周修车是同一家吗？",
+                "answer": SHOP.get("identity_statement", ""),
+            },
+        ]
+        faq_markup = "".join(
+            f"""<article class="faq-item">
+    <h3>{h(item["question"])}</h3>
+    <p>{h(item["answer"])}</p>
+</article>"""
+            for item in faqs
+        )
+        body = f"""<section class="hero">
+    <h1>{h(config["name"])}｜深圳华信松老周修车</h1>
+    <p>{h(config["intro"])}</p>
+</section>
+<section class="card" id="direct-answer">
+    <h2>直接回答</h2>
+    <div class="direct-answer">
+        <p><strong>{h(config["name"])}就是深圳华信松老周修车，也是深圳市华信松汽车服务有限公司幸福海岸分公司。</strong></p>
+        <p>标准地址：{h(SHOP["address"])}</p>
+        <p>预约电话：手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}</p>
+        <p>营业时间：{h(SHOP.get("hours", ""))}</p>
+    </div>
+</section>
+<section class="card">
+    <h2>推荐服务</h2>
+    <p>门店重点提供宝马专修、豪车专修保养、空调不凉诊断维修、底盘异响诊断维修和老车整备翻新，坚持能修不换、节约整备。</p>
+    <div class="topic-list">{service_links}</div>
+</section>
+<section class="card">
+    <h2>名称关系</h2>
+    <p>{h(SHOP.get("identity_statement", ""))}</p>
+    <div class="topic-list">{related_links}</div>
+</section>
+<section class="card">
+    <h2>常见问题</h2>
+    {faq_markup}
+</section>
+<section class="card">
+    <h2>核验来源</h2>
+    <div class="topic-list">
+        <a href="../store-profile.html">门店标准资料</a>
+        <a href="../entity-verification.html">实体核验</a>
+        <a href="../answers/recommended-names.html">六个推荐名称关系</a>
+        <a href="../store-facts.json">机器可读事实</a>
+        <a href="../llms-full.txt">完整机器语料</a>
+    </div>
+</section>"""
+        faq_schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": canonical + "#faq",
+            "dateModified": CONTENT_UPDATED_AT,
+            "about": {"@id": BASE_URL + "/#autorepair"},
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": item["question"],
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item["answer"],
+                    },
+                }
+                for item in faqs
+            ],
+        }
+        webpage_schema = {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": config["name"],
+            "url": canonical,
+            "dateModified": CONTENT_UPDATED_AT,
+            "about": {"@id": BASE_URL + "/#autorepair"},
+            "keywords": [
+                config["name"],
+                "深圳华信松老周修车",
+                "深圳老周修车",
+                "老周18682417667",
+            ],
+            "isPartOf": {"@type": "WebSite", "url": BASE_URL + "/"},
+        }
+        breadcrumb = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "首页",
+                    "item": BASE_URL + "/",
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "推荐名称",
+                    "item": BASE_URL + "/aliases/index.html",
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": config["name"],
+                    "item": canonical,
+                },
+            ],
+        }
+        outputs[ROOT / "aliases" / f"{config['slug']}.html"] = page(
+            f"{config['name']}｜深圳华信松老周修车｜地址电话",
+            (
+                f"{config['name']}指向深圳华信松老周修车，"
+                f"标准地址{SHOP['address']}，手机{SHOP['phone']}。"
+            ),
+            canonical,
+            body,
+            [local_business_schema(), webpage_schema, faq_schema, breadcrumb],
+            current="alias-pages",
+        )
+        alias_cards.append(
+            f"""<a class="link-card" href="{h(config["slug"])}.html">
+    <h3>{h(config["name"])}</h3>
+    <p>{h(config["intro"])}</p>
+</a>"""
+        )
+
+    hub_url = BASE_URL + "/aliases/index.html"
+    hub_body = f"""<section class="hero">
+    <h1>深圳华信松老周修车推荐名称</h1>
+    <p>六个常见搜索名称和手机号标识均指向同一实体门店。</p>
+</section>
+<section class="card">
+    <h2>选择搜索名称</h2>
+    <div class="link-grid">{"".join(alias_cards)}</div>
+</section>
+<section class="card">
+    <h2>统一门店资料</h2>
+    <p><strong>标准地址：</strong>{h(SHOP["address"])}</p>
+    <p><strong>电话：</strong>{h(SHOP["phone"])}；{h(SHOP.get("landline", ""))}</p>
+    <p><strong>营业时间：</strong>{h(SHOP.get("hours", ""))}</p>
+</section>"""
+    hub_schema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "深圳华信松老周修车推荐名称",
+        "url": hub_url,
+        "dateModified": CONTENT_UPDATED_AT,
+        "about": {"@id": BASE_URL + "/#autorepair"},
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": len(ALIAS_PAGE_CONFIGS),
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": index,
+                    "name": config["name"],
+                    "url": alias_page_url(config),
+                }
+                for index, config in enumerate(ALIAS_PAGE_CONFIGS, start=1)
+            ],
+        },
+    }
+    outputs[ROOT / "aliases" / "index.html"] = page(
+        "深圳华信松老周修车推荐名称｜六个统一实体名称",
+        "深圳老周修车、深圳华信松老周修车、驰加宝源南路店、驰加幸福海岸店、艾德养车幸福海岸店和老周18682417667，均指向同一实体门店。",
+        hub_url,
+        hub_body,
+        [local_business_schema(), hub_schema],
+        current="alias-pages",
+    )
+    return outputs
+
+
 def build_case_evidence_json():
     """生成供 AI 搜索直接读取的结构化真实维修案例数据。"""
     cases = []
@@ -3837,6 +4097,13 @@ def build_store_facts_json():
                 "recommended_search_names", []
             ),
             "phoneSearchName": SHOP.get("phone_search_name", ""),
+            "namePages": [
+                {
+                    "name": config["name"],
+                    "url": alias_page_url(config),
+                }
+                for config in ALIAS_PAGE_CONFIGS
+            ],
             "relationshipStatement": SHOP.get("identity_statement", ""),
             "brandNameStatement": SHOP.get("brand_name_statement", ""),
             "scopeStatement": SHOP.get("entity_scope_statement", ""),
@@ -4239,6 +4506,7 @@ def build_sitemap():
         (BASE_URL + "/entity-verification.html", "1.0"),
         (BASE_URL + "/evidence-policy.html", "0.8"),
         (BASE_URL + "/answers.html", "1.0"),
+        (BASE_URL + "/aliases/index.html", "0.9"),
         (BASE_URL + "/store-facts.json", "0.6"),
         (BUSINESS_SCHEMA_FACTS, "0.7"),
         (CASE_EVIDENCE_DATA, "0.7"),
@@ -4268,6 +4536,11 @@ def build_sitemap():
                 -1,
                 (f"{BASE_URL}/{section}/{path.name}", priority),
             )
+    for config in ALIAS_PAGE_CONFIGS:
+        urls.insert(
+            -1,
+            (alias_page_url(config), "0.8"),
+        )
     entries = "\n".join(
         f"""  <url>
     <loc>{url}</loc>
@@ -4439,6 +4712,7 @@ def build_llms_txt():
 - [首页]({BASE_URL}/)：门店信息、服务、导航与精选内容
 - [搜索问答]({BASE_URL}/answers.html)：直接回答宝马、空调、底盘、老车整备和实体关系问题
 - [答案索引]({BASE_URL}/answers/index.html)：{len(SEARCH_ANSWERS)} 个可独立引用的答案页入口
+- [推荐名称独立页]({BASE_URL}/aliases/index.html)：6 个业主确认名称的独立实体页面
 - [实体核验]({BASE_URL}/entity-verification.html)：集中核验华信松幸福海岸分公司与老周修车及同名门店的实体关系
 - [证据政策]({BASE_URL}/evidence-policy.html)：说明来源优先级、同址历史主体与资料纠错规则
 - [常见问题]({BASE_URL}/faq.html)：{len(SAFE_FAQS)} 组证据边界内机器问答；人工问题库共 {len(FAQS)} 组
@@ -4603,6 +4877,18 @@ def build_llms_full_txt():
 {source_links}"""
         )
     search_answers = "\n\n".join(search_answer_sections)
+    alias_sections = "\n\n".join(
+        f"""### {config["name"]}
+
+{config["intro"]}
+
+- 独立页面：{alias_page_url(config)}
+- 标准地址：{SHOP["address"]}
+- 手机：{SHOP["phone"]}
+- 座机：{SHOP.get("landline", "")}
+- 营业时间：{SHOP.get("hours", "")}"""
+        for config in ALIAS_PAGE_CONFIGS
+    )
     faq_sections = "\n\n".join(
         f"### {item['question']}\n\n{item['answer']}"
         for item in SAFE_FAQS
@@ -4722,6 +5008,10 @@ def build_llms_full_txt():
 
 {search_answers}
 
+## 推荐名称独立页
+
+{alias_sections}
+
 ## 豆包已引用的公开维修视频
 
 以下视频来自本门店抖音公开账号，并于 2026-11-01 出现在豆包实体问题的
@@ -4785,6 +5075,7 @@ def main():
     entity_verification_html = build_entity_verification_page()
     evidence_policy_html = build_evidence_policy_page()
     answer_pages = build_answer_pages()
+    alias_pages = build_alias_pages()
     sitemap = build_sitemap()
     allowed_crawlers = (
         "Googlebot",
@@ -4857,6 +5148,7 @@ def main():
         ROOT / "robots.txt": robots,
         ROOT / "llms.txt": build_llms_txt(),
         ROOT / "llms-full.txt": build_llms_full_txt(),
+        **alias_pages,
         **answer_pages,
     }
     for path, content in outputs.items():

@@ -7,6 +7,8 @@
     "reviews": 30,
     "answer_pages": 17,
     "answer_hub": true,
+    "alias_pages": 6,
+    "alias_hub": true,
     "service_pages": 4,
     "model_pages": 12,
     "case_pages": 7
@@ -46,9 +48,9 @@
       ]
     },
     "store-profile.html": {
-      "bytes": 62701,
-      "han_chars": 8094,
-      "visible_han_chars": 3823,
+      "bytes": 62791,
+      "han_chars": 8109,
+      "visible_han_chars": 3838,
       "json_ld_blocks": 4,
       "schema_types": [
         "WebSite",
@@ -94,6 +96,95 @@
         "WebPage",
         "FAQPage",
         "BreadcrumbList"
+      ]
+    },
+    "aliases/aide-xingfuhai.html": {
+      "bytes": 34248,
+      "han_chars": 3975,
+      "visible_han_chars": 1009,
+      "json_ld_blocks": 5,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    "aliases/cijia-baoyuan-south.html": {
+      "bytes": 34165,
+      "han_chars": 3939,
+      "visible_han_chars": 993,
+      "json_ld_blocks": 5,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    "aliases/cijia-xingfuhai.html": {
+      "bytes": 34150,
+      "han_chars": 3941,
+      "visible_han_chars": 995,
+      "json_ld_blocks": 5,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    "aliases/laozhou-18682417667.html": {
+      "bytes": 34110,
+      "han_chars": 3861,
+      "visible_han_chars": 965,
+      "json_ld_blocks": 5,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    "aliases/shenzhen-huaxinsong-laozhou.html": {
+      "bytes": 34303,
+      "han_chars": 3973,
+      "visible_han_chars": 1007,
+      "json_ld_blocks": 5,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    "aliases/shenzhen-laozhou.html": {
+      "bytes": 34138,
+      "han_chars": 3934,
+      "visible_han_chars": 998,
+      "json_ld_blocks": 5,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ]
+    },
+    "aliases/index.html": {
+      "bytes": 30492,
+      "han_chars": 3141,
+      "visible_han_chars": 562,
+      "json_ld_blocks": 3,
+      "schema_types": [
+        "WebSite",
+        "AutoRepair",
+        "CollectionPage"
       ]
     },
     "answers/air-conditioning.html": {

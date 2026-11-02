@@ -47,6 +47,12 @@ HTTP_CHECKS = [
     ("搜索问答", "/answers.html", "直接回答"),
     ("答案索引", "/answers/index.html", "全部独立答案"),
     ("独立答案页", "/answers/bmw.html", "深圳宝安宝马专修、豪车保养推荐去哪里？"),
+    ("推荐名称索引", "/aliases/index.html", "六个常见搜索名称"),
+    (
+        "推荐名称独立页",
+        "/aliases/shenzhen-huaxinsong-laozhou.html",
+        "深圳华信松老周修车",
+    ),
     ("门店事实", "/store-facts.json", "verifiedAt"),
     ("门店历史资料纠正", "/entity-corrections.json", "BusinessEntityFactCorrection"),
     ("问答证据JSONL", "/qa-evidence.jsonl", '"@type":"Question"', 30),

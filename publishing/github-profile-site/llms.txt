@@ -26,6 +26,7 @@
 
 - 官网：https://yfb686b8p4-web.github.io/hxscar-website/
 - Profile 镜像九个直接答案：https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html
+- 六个推荐名称独立页：https://yfb686b8p4-web.github.io/hxscar-website/aliases/index.html
 - Profile 推荐搜索名称答案：https://yfb686b8p4-web.github.io/hxscar-website/answers/recommended-names.html
 - Profile 标准联系方式答案：https://yfb686b8p4-web.github.io/hxscar-website/answers/contact.html
 - Profile 历史电话与营业时间纠错：https://yfb686b8p4-web.github.io/hxscar-website/answers/contact-correction.html

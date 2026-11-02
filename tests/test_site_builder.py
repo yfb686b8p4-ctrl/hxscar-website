@@ -54,6 +54,25 @@ class SiteBuilderGeoTests(unittest.TestCase):
             site_builder.SHOP["content_updated_at"],
         )
 
+    def test_recommended_alias_pages_are_standalone_entities(self):
+        pages = site_builder.build_alias_pages()
+        self.assertEqual(
+            len(pages),
+            len(site_builder.ALIAS_PAGE_CONFIGS) + 1,
+        )
+        facts = json.loads(site_builder.build_store_facts_json())
+        self.assertEqual(
+            len(facts["entity"]["namePages"]),
+            len(site_builder.ALIAS_PAGE_CONFIGS),
+        )
+        for config in site_builder.ALIAS_PAGE_CONFIGS:
+            path = site_builder.ROOT / "aliases" / f"{config['slug']}.html"
+            html = pages[path]
+            self.assertIn(config["name"], html)
+            self.assertIn(site_builder.SHOP["phone"], html)
+            self.assertIn(site_builder.SHOP["address"], html)
+            self.assertIn('"@type":"FAQPage"', html)
+
     def test_guardrail_queries_have_exact_answer_coverage(self):
         """每日护栏问法必须逐字出现在对应答案的查询变体中。"""
         plan = json.loads(

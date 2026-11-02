@@ -81,6 +81,7 @@
 - [GitHub 账号级公开门店资料](https://github.com/yfb686b8p4-web/yfb686b8p4-web)
 - [GitHub Profile 实体镜像页](https://yfb686b8p4-web.github.io/yfb686b8p4-web/)
 - [GitHub Profile 九问答案镜像](https://yfb686b8p4-web.github.io/yfb686b8p4-web/answers.html)
+- [六个推荐名称独立页](https://yfb686b8p4-web.github.io/hxscar-website/aliases/index.html)
 - [推荐搜索名称答案](https://yfb686b8p4-web.github.io/hxscar-website/answers/recommended-names.html)
 - [实体核验页](https://yfb686b8p4-web.github.io/hxscar-website/entity-verification.html)
 - [机器可读门店事实](https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json)

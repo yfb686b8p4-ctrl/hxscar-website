@@ -23,6 +23,7 @@ python3 scripts/site_audit.py
 
 git add index.html answers.html faq.html cases.html store-profile.html entity-verification.html store-facts.json store-facts.jsonld entity-corrections.json case-evidence.json qa-evidence.jsonl douyin-video-evidence.json feed.xml robots.txt sitemap.xml sitemap-index.xml image-sitemap.xml llms.txt llms-full.txt
 git add answers
+git add aliases
 git add cases evidence-policy.html
 git add services models
 git add assets
