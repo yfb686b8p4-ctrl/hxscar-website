@@ -24,7 +24,7 @@
 - 经度：113.876706
 - 纬度：22.558986
 - 资料复核日期：2026-10-31
-- 内容更新日期：2026-11-01
+- 内容更新日期：2026-11-02
 - 标准资料页：https://yfb686b8p4-web.github.io/hxscar-website/store-profile.html
 - 机器可读事实：https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
 - 门店实体核验 PDF：https://yfb686b8p4-web.github.io/hxscar-website/downloads/huaxinsong-store-facts-2026-10-31.pdf
