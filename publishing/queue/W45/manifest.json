@@ -28,7 +28,7 @@
       "objective": "统一门店名称、地址、电话、营业时间和主营业务",
       "action_url": "https://ditu.amap.com/",
       "task_file": "publishing/queue/W45/p0-amap.md",
-      "source_file": "platform_content/W45/map_W45.md",
+      "source_file": "",
       "url": "",
       "notes": "2026-10-31复核公开详情页触发高德验证码拦截，未能直接确认审核结果，状态维持review。2026-10-26 12:01已在高德网页版“地点报错”提交现有POI B0H3LSJZZC纠错：名称、地址、电话保持原值，目标营业时间改为周一至周五08:00-18:00、周六日09:00-17:00，并明确要求不要新建重复门店。页面返回“反馈提交成功”；尚未审核生效，公开页在复核前可能继续显示08:00-20:00。"
     },
@@ -40,7 +40,7 @@
       "objective": "认领并完善门店信息，增加服务标签和真实照片",
       "action_url": "https://bsy.baidu.com/",
       "task_file": "publishing/queue/W45/p0-baidu-map.md",
-      "source_file": "platform_content/W45/map_W45.md",
+      "source_file": "",
       "url": "",
       "notes": ""
     },
@@ -52,7 +52,7 @@
       "objective": "统一门店名称、地址、电话和营业时间",
       "action_url": "https://map.qq.com/",
       "task_file": "publishing/queue/W45/p0-tencent-map.md",
-      "source_file": "platform_content/W45/map_W45.md",
+      "source_file": "",
       "url": "",
       "notes": "2026-11-01 01:31复核：腾讯位置服务控制台显示“老周修车”个人开发者账号，但进入地图商户中心后仍被微信扫码或手机验证码登录弹层遮挡，无法读取或提交POI资料。需本人完成登录后，按2026-10-24回执要求重新提交地址，并复查营业时间为工作日08:00-18:00、周末09:00-17:00。2026-10-24原驳回原因：地址重复添加行政前缀，实际显示成“广东省深圳市宝安区深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。"
     },
@@ -66,7 +66,7 @@
       "task_file": "publishing/queue/W45/p0-sogou-lizhi.md",
       "source_file": "publishing/lizhi/2026-11-01/application.md",
       "url": "https://zhanzhang.sogou.com/index.php/landingPage/lizhiRecruit",
-      "notes": "2026-11-01 07:35复核：搜狗资源平台公开招募立知TOP1问答合作，申请需由站点方发送邮件至zzpt@tencent.com，主题为【立知合作申请】站点名称，评估期7-10个自然日。已生成16条标准答案、77条安全FAQ、56条真实案例，共93条问答的申请包；邮件尚未以门店名义发送，需账号所有人确认后提交。另有公开“网站收录/申诉”说明页，写明一次提交一个完整URL、20-30个工作日观察期且不保证收录，当前抓取页未显示可提交表单；账号本人仍需从可交互页面验证或使用站长平台sitemap。"
+      "notes": "2026-11-02复核：搜狗资源平台公开招募立知TOP1问答合作，申请需由站点方发送邮件至zzpt@tencent.com，主题为【立知合作申请】站点名称，评估期7-10个自然日。已生成17条标准答案、77条安全FAQ、56条真实案例，共94条问答的申请包；邮件尚未以门店名义发送，需账号所有人确认后提交。另有公开“网站收录/申诉”说明页，写明一次提交一个完整URL、20-30个工作日观察期且不保证收录，当前抓取页未显示可提交表单；账号本人仍需从可交互页面验证或使用站长平台sitemap。"
     },
     {
       "id": "toutiao-search",
@@ -112,7 +112,7 @@
       "objective": "更新门店介绍、服务项目、真实案例和评价回复",
       "action_url": "https://e.dianping.com/",
       "task_file": "publishing/queue/W45/p0-dianping.md",
-      "source_file": "platform_content/W45/dianping_W45.md",
+      "source_file": "",
       "url": "",
       "notes": ""
     },
@@ -124,7 +124,7 @@
       "objective": "完善门店资料、服务套餐和真实施工图片",
       "action_url": "https://e.meituan.com/",
       "task_file": "publishing/queue/W45/p0-meituan.md",
-      "source_file": "platform_content/W45/meituan_W45.md",
+      "source_file": "",
       "url": "",
       "notes": ""
     },
@@ -136,7 +136,7 @@
       "objective": "持续发布维修案例短视频，统一门店名称、位置、地址、电话和营业时间",
       "action_url": "https://life.douyin.com/",
       "task_file": "publishing/queue/W45/p0-douyin.md",
-      "source_file": "platform_content/W45/douyin_W45.md",
+      "source_file": "",
       "url": "https://www.douyin.com/user/MS4wLjABAAAAj7V9rUT6DV8sQJvJklaLTMeibC-pZZY9qnMtIM9I-hc",
       "notes": "2026-11-01 05:46复核豆包12篇引用来源：7条抖音视频被直接引用，是豆包确认实体关系的主要站外证据之一。已在W44任务中加入这7条视频链接、统一置顶评论和标准事实尾注，并新增强调“同一家门店”的实体说明视频0。需账号本人短信验证后，优先为已引用视频补评论/文案，再发布实体说明视频。主页简介仍未完整展示标准地址、双电话和营业时间。"
     },
@@ -148,7 +148,7 @@
       "objective": "发布车型维修、整备和避坑内容，统一门店名称",
       "action_url": "https://business.xiaohongshu.com/",
       "task_file": "publishing/queue/W45/p1-xiaohongshu.md",
-      "source_file": "platform_content/W45/xiaohongshu_W45.md",
+      "source_file": "",
       "url": "",
       "notes": ""
     },
@@ -160,7 +160,7 @@
       "objective": "维护商家资料、服务项目和本地服务范围",
       "action_url": "https://www.58.com/",
       "task_file": "publishing/queue/W45/p2-58.md",
-      "source_file": "platform_content/W45/58tongcheng_W45.md",
+      "source_file": "",
       "url": "",
       "notes": ""
     }
