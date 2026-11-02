@@ -360,6 +360,8 @@ def fetch_url(url, expected, timeout=30):
             "--show-error",
             "--max-time",
             str(timeout),
+            "--range",
+            "0-131071",
             "--write-out",
             "\n__HXSCAR_STATUS__%{http_code}",
         ]

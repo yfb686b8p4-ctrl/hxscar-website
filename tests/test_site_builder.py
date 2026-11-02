@@ -48,6 +48,12 @@ class SiteBuilderGeoTests(unittest.TestCase):
             self.assertIn(name, answer["question"] + answer["answer"])
         self.assertIn("18682417667", answer["answer"])
 
+    def test_content_update_date_is_stable_until_explicitly_changed(self):
+        self.assertEqual(
+            site_builder.CONTENT_UPDATED_AT,
+            site_builder.SHOP["content_updated_at"],
+        )
+
     def test_guardrail_queries_have_exact_answer_coverage(self):
         """每日护栏问法必须逐字出现在对应答案的查询变体中。"""
         plan = json.loads(
