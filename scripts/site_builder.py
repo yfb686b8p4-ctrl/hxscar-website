@@ -40,7 +40,10 @@ FAQS = load_json("faqs.json")
 SAFE_FAQS, BLOCKED_FAQS = partition_faqs(FAQS)
 CASES = load_json("cases.json")
 VERIFIED_AT = SHOP.get("verified_at", datetime.now(TZ).date().isoformat())
-CONTENT_UPDATED_AT = datetime.now(TZ).date().isoformat()
+CONTENT_UPDATED_AT = SHOP.get(
+    "content_updated_at",
+    datetime.now(TZ).date().isoformat(),
+)
 
 CORE_SERVICE_PATHS = {
     "宝马专修豪车保养": "services/bmw-premium.html",
