@@ -1,12 +1,12 @@
-# AI 搜索每日效果简报｜2026-11-02
+# AI 搜索每日效果简报｜2026-11-03
 
-- 生成时间：2026-11-02T17:43:26.635588+08:00
-- 今日结论：已完成 2 项搜索检查，有效命中 0 项。
-- 完成检查：2/12，待补测 10，已排除 0
-- 护栏有效命中率：0.0%
-- AI答案引用来源率：100.0%
-- 门店实体关系正确率：50.0%
-- 地址、电话、营业时间完整正确率：0.0%
+- 生成时间：2026-11-03T03:21:59.058602+08:00
+- 今日结论：基础状态检查完成，搜索结果尚未实测。
+- 完成检查：0/12，待补测 12，已排除 0
+- 护栏有效命中率：待检测
+- AI答案引用来源率：待检测
+- 门店实体关系正确率：待检测
+- 地址、电话、营业时间完整正确率：待检测
 - 服务推荐命中率：待检测
 - 服务推荐 Top1 率：待检测
 - 服务推荐 Top3 率：待检测
@@ -14,37 +14,42 @@
 
 ## 与上一份日报相比
 
-- 对比日期：2026-11-01
-- 有效命中率变化：-37.5 个百分点
-- 实体关系正确率变化：+0.0 个百分点
-- 完整资料正确率变化：+0.0 个百分点
-- AI引用来源率变化：+0.0 个百分点
+- 对比日期：2026-11-02；今天尚无已完成的护栏结果，暂不计算升降幅。
 
 ## 今天确认改善
 
-- 元宝｜深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗：地址正确、电话正确
-- 豆包｜深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗：地址正确、电话正确
+- 无
 
 ## 新增或仍然错误
 
-- 豆包｜深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗：实体=correct，营业时间=错误｜2026-11-02 17:38 全新对话实体复测；营业时间仍错误显示08:00-19:00
-- 元宝｜深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗：实体=partial，营业时间=错误｜2026-11-02 17:40 全新对话实体复测；关系仍为“大概率”，营业时间仍错误显示08:00-20:00
+- 无
 
 ## 运行状态
 
-- 线上页面：49/49 通过
+- 线上页面：35/49 通过
 - 最近站点审计：通过
 - 自动部署：已加载，最近退出码 0
-- 源仓库：65c2a1a	修正每日实测会话统计并记录豆包元宝复测，干净
+- 源仓库：f363a7e	同步GitHub API发布提交，干净
 - 部署副本：ba5c036	固定内容版本并优化大文件线上检查，有未提交改动
 
 ## 待执行任务
 
-- P0｜修正门店营业时间，并核验引用来源。｜平台：豆包，需用户确认
-- 持续待办：13 项，详见 `reports/daily/latest-tasks.json`
-- 已关闭：identity-fields-地址-电话-营业时间
-已延后关闭：service-宝马与豪车、service-底盘与老车整备、service-空调诊断维修（对应检查尚未完成）
+- 持续待办：12 项，详见 `reports/daily/latest-tasks.json`
+已延后关闭：entity-identity、identity-fields-营业时间（对应检查尚未完成）
 
 ## 运行异常
 
-- 无
+- 搜索问答：失败 直连 curl: curl: (28) Operation timed out after 963784 milliseconds with 98304 out of 131072 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 409168 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- 问答证据JSONL：失败 直连 curl: curl: (28) Operation timed out after 962778 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410164 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- 标准问答RSS：失败 直连 curl: curl: (28) Operation timed out after 962739 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410177 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- 门店品牌图：失败 直连 curl: curl: (28) Connection timed out after 962452 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410165 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- 门店外观图：失败 直连 curl: curl: (28) Connection timed out after 962407 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410189 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- 门店响应式外观图：失败 直连 curl: curl: (28) Operation timed out after 962284 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to yfb686b8p4-web.github.io:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- Release问答证据镜像：失败 直连 curl: curl: (28) Operation timed out after 1031059 milliseconds with 39810 out of 78413 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 737002 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- Gist问答证据镜像：失败 直连 curl: curl: (28) Operation timed out after 1031173 milliseconds with 32768 out of 78413 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 738010 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- Release门店事实Markdown：失败 直连 curl: curl: (28) Connection timed out after 1030287 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 737057 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- jsDelivr门店事实：失败 直连 curl: curl: (28) Operation timed out after 1030613 milliseconds with 20744 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 737054 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- jsDelivr门店JSON-LD：失败 直连 curl: curl: (28) Connection timed out after 1030111 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 738006 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- jsDelivr门店历史资料纠正：失败 直连 curl: curl: (28) Connection timed out after 1029357 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 738015 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- jsDelivr问答证据镜像：失败 直连 curl: curl: (6) Could not resolve host: cdn.jsdelivr.net；直连 Python: <urlopen error [Errno 8] nodename nor servname provided, or not known>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn.jsdelivr.net:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
+- Profile IndexNow验证：失败 直连 curl: curl: (6) Could not resolve host: yfb686b8p4-web.github.io；直连 Python: <urlopen error [Errno 8] nodename nor servname provided, or not known>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to yfb686b8p4-web.github.io:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
