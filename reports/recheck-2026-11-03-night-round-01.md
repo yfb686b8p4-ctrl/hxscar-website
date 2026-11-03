@@ -47,6 +47,13 @@
 - 单元测试：116/116通过。
 - 站点审计：0错误、0警告。
 - 公开生成文件中的旧腾讯PID：0处（测试断言中的负向检查除外）。
+- GitHub API原子发布远端提交：`057cebe`。
+- 主站IndexNow：74个URL，聚合、Bing、Yandex、Seznam、Naver均HTTP 200，
+  Yep HTTP 202。
+- Profile IndexNow：11个URL，聚合、Bing、Yandex、Seznam、Naver均HTTP 200，
+  Yep HTTP 202。
+- 线上门店资料页已确认不包含旧PID，并显示“公开索引待生效”。
+- 线上机器事实的腾讯地图POI ID为空，未再指向已失效地点。
 
 ## 结论
 
