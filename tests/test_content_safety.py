@@ -62,6 +62,33 @@ class ContentSafetyTests(unittest.TestCase):
         )
         self.assertEqual(authority_queue.unverified_claim_matches("真实案例"), [])
 
+    def test_committed_publish_queues_have_content_sources(self):
+        """已生成队列不得留下找不到内容源的空白任务。"""
+        queue_root = site_builder.ROOT / "publishing" / "queue"
+        manifests = sorted(queue_root.glob("W*/manifest.json"))
+        self.assertTrue(manifests)
+        for manifest_path in manifests:
+            manifest = json.loads(
+                manifest_path.read_text(encoding="utf-8")
+            )
+            for task in manifest["tasks"]:
+                self.assertTrue(
+                    task["source_file"],
+                    f"{manifest_path.parent.name}:{task['id']}",
+                )
+                self.assertTrue(
+                    (site_builder.ROOT / task["source_file"]).is_file(),
+                    f"{manifest_path.parent.name}:{task['id']}",
+                )
+                task_text = (
+                    site_builder.ROOT / task["task_file"]
+                ).read_text(encoding="utf-8")
+                self.assertNotIn(
+                    "未找到本周内容源",
+                    task_text,
+                    f"{manifest_path.parent.name}:{task['id']}",
+                )
+
     def test_gist_service_answers_are_complete_and_safe(self):
         """外部 Gist 服务答案必须保留实体事实并排除未核实承诺。"""
         text = (
