@@ -94,6 +94,12 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn("两层关系必须分开回答", supplement)
         self.assertIn("不能合并为同一法人或同一信用代码", supplement)
         self.assertIn("18129802698", supplement)
+        profile = site_builder.build_store_profile_page()
+        self.assertIn("08:00-19:00或宝源南路276号", profile)
+        self.assertIn("13537862708和13923454895", profile)
+        meta = site_builder.answer_meta_description(identity, limit=500)
+        self.assertIn("宝源南路276号", meta)
+        self.assertIn("13537862708", meta)
         for text in (
             site_builder.build_llms_txt(),
             site_builder.build_llms_full_txt(),
@@ -101,6 +107,7 @@ class SiteBuilderGeoTests(unittest.TestCase):
             self.assertIn("两层核验口径", text)
             self.assertIn("92440300L4607119X2", text)
             self.assertIn("13537862708", text)
+            self.assertIn("福海街道宝源南路276号", text)
 
     def test_guardrail_queries_have_exact_answer_coverage(self):
         """每日护栏问法必须逐字出现在对应答案的查询变体中。"""
