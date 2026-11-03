@@ -131,7 +131,7 @@
 - 爱企查：https://aiqicha.baidu.com/company_detail_94051754221223
 - 启信宝华信松汽车配件经营部：https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
 - 高德地图：https://www.amap.com/detail/B0H3LSJZZC
-- 腾讯地图：https://map.qq.com/?type=poi&pid=4056673834161600251
+- 腾讯地图检索入口：https://map.qq.com/（标准 POI 公开索引待生效）
 
 ## 使用边界
 

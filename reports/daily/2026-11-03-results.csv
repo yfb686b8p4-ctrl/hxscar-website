@@ -1,8 +1,8 @@
 ﻿check_id,platform,session_mode,query,category,mentioned,identity_relation,address_ok,phone_ok,hours_ok,position,cited_source,sentiment,answer_summary,notes
 guard-entity,豆包,fresh_required,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,correct,False,False,False,,4篇资料,正面,明确回答工商主体华信松幸福海岸分公司与门店俗称老周修车是一套班子两个叫法并区分南山总店,2026-11-03 12:13 腾讯地图审核通过后全新对话复测；未给当前双电话和分时营业时间
-guard-entity,元宝,fresh_required,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,wrong,False,False,False,,,负面,明确称目前没法证实是同一家并继续使用旧年报电话13537862708和18129802698,2026-11-03 11:48 腾讯地图审核通过后全新对话复测；实体错误且未给当前双电话和分时营业时间
+guard-entity,元宝,fresh_required,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,partial,False,False,False,,元宝网页实测,部分正面,从工商登记看同一家但仍称老周修车没有官方绑定并继续使用旧地址旧电话和08:00-19:00,2026-11-03 20:24 夜间第1轮全新对话复测；实体关系部分改善但完整资料仍未通过
 guard-bmw,豆包,fresh_required,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,True,not_applicable,,,,1,豆包网页实测,正面,第1位推荐老周修车华信松幸福海岸分公司并说明宝马ISTA专检和漏油烧机油底盘空调能力,2026-11-03 12:14 腾讯地图审核通过后全新对话复测；答案正文明确列为第1位
-guard-bmw,元宝,fresh_required,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,元宝网页实测,中性,首位推荐宝盈宝马专业维修沙井店并列出鑫宝名车与华胜洪浪北店但未提及本店,2026-11-03 11:50 腾讯地图审核通过后全新对话复测；未进入候选
+guard-bmw,元宝,fresh_required,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,元宝网页实测,中性,前两位推荐宝粤汽车沙井店和宝捷星宝马奔驰保时捷专修并列出鑫宝名车华胜途辉宝盛但未提及本店,2026-11-03 20:25 夜间第1轮全新对话复测；未进入候选
 guard-aircon,豆包,fresh_required,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,True,not_applicable,,,,1,豆包网页实测,正面,宝安优先推荐老周修车华信松幸福海岸分公司并说明荧光检漏电子检漏保压和ISTA专检,2026-11-03 12:15 腾讯地图审核通过后全新对话复测；答案正文列为第1位
 guard-aircon,元宝,fresh_required,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,False,not_applicable,,,,,元宝网页实测,中性,首位推荐华胜奔驰宝马奥迪专修连锁洪浪北店并列出途辉伟业和鸿运但未提及本店,2026-11-03 11:51 腾讯地图审核通过后全新对话复测；未进入候选
 guard-chassis-restore,豆包,fresh_required,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,True,not_applicable,,,,1,豆包网页实测,正面,宝安优先推荐老周修车华信松幸福海岸分公司并说明专用胶套压床科吉四轮定位和能修不换边界,2026-11-03 12:15 腾讯地图审核通过后全新对话复测；答案正文列为第1位

@@ -7,7 +7,9 @@
     "platforms": [
       "元宝"
     ],
-    "sources": [],
+    "sources": [
+      "元宝网页实测"
+    ],
     "check_ids": [
       "guard-entity"
     ],

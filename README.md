@@ -60,7 +60,7 @@
 - [企查查工商登记页](https://www.qcc.com/firm/8ed6b923472b38c0bf3801b468b2d37e.html)
 - [爱企查工商登记页](https://aiqicha.baidu.com/company_detail_94051754221223)
 - [高德地图 POI](https://www.amap.com/detail/B0H3LSJZZC)
-- [腾讯地图 POI](https://map.qq.com/?type=poi&pid=4056673834161600251)
+- [腾讯地图检索入口](https://map.qq.com/)（标准 POI 公开索引待生效）
 
 ## 同名门店消歧
 

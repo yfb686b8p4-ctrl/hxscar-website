@@ -387,8 +387,8 @@ class SiteBuilderGeoTests(unittest.TestCase):
         self.assertIn("宝源南路276号", description)
         self.assertFalse(description.endswith(("，", ",", "；", ";")))
 
-    def test_schema_links_both_verified_map_entities(self):
-        """结构化数据必须同时关联高德和腾讯的已核验 POI。"""
+    def test_schema_links_only_publicly_verified_map_entities(self):
+        """结构化数据只能关联当前公开可核验的地图实体。"""
         schema = site_builder.local_business_schema()
         self.assertEqual(
             schema["name"],
@@ -410,9 +410,20 @@ class SiteBuilderGeoTests(unittest.TestCase):
             site_builder.SHOP["map_links"]["amap"],
             schema["sameAs"],
         )
-        self.assertIn(
+        self.assertNotIn(
+            "4056673834161600251",
+            str(schema),
+        )
+        self.assertNotIn(
             site_builder.SHOP["map_links"]["tencent"],
             schema["sameAs"],
+        )
+        self.assertEqual(
+            [
+                item["propertyID"]
+                for item in schema["identifier"]
+            ],
+            ["高德地图 POI", "统一社会信用代码"],
         )
         mirror_urls = {
             item.get("url")
@@ -428,13 +439,10 @@ class SiteBuilderGeoTests(unittest.TestCase):
                 site_builder.SHOP["document_mirrors"][key],
                 mirror_urls,
             )
-        self.assertEqual(
-            schema["hasMap"],
-            [
-                site_builder.SHOP["map_links"]["amap"],
-                site_builder.SHOP["map_links"]["tencent"],
-            ],
-        )
+        expected_maps = [site_builder.SHOP["map_links"]["amap"]]
+        if site_builder.SHOP["map_ids"].get("tencent"):
+            expected_maps.append(site_builder.SHOP["map_links"]["tencent"])
+        self.assertEqual(schema["hasMap"], expected_maps)
         self.assertEqual(
             schema["openingHours"],
             site_builder.SHOP["hours"],

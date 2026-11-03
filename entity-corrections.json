@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "verifiedAt": "2026-10-31",
-  "contentUpdatedAt": "2026-11-02",
+  "contentUpdatedAt": "2026-11-03",
   "canonicalUrl": "https://yfb686b8p4-web.github.io/hxscar-website/entity-corrections.json",
   "documentType": "BusinessEntityFactCorrection",
   "entity": {
@@ -168,7 +168,7 @@
       "longitude": 113.876706
     },
     "amapPoi": "B0H3LSJZZC",
-    "tencentPoi": "4056673834161600251"
+    "tencentPoi": ""
   },
   "correctedFields": [
     {
