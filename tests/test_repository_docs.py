@@ -496,13 +496,10 @@ class RepositoryReadmeTests(unittest.TestCase):
         )
         self.assertEqual(store[0]["dateModified"], "2026-11-01")
         self.assertEqual(store[0]["taxID"], shop["unified_social_credit_code"])
-        self.assertEqual(
-            store[0]["hasMap"],
-            [
-                shop["map_links"]["amap"],
-                shop["map_links"]["tencent"],
-            ],
-        )
+        expected_maps = [shop["map_links"]["amap"]]
+        if shop["map_ids"].get("tencent"):
+            expected_maps.append(shop["map_links"]["tencent"])
+        self.assertEqual(store[0]["hasMap"], expected_maps)
         self.assertEqual(store[0]["openingHours"], shop["hours"])
         self.assertNotIn("aggregateRating", store[0])
         reputation = {

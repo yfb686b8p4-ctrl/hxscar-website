@@ -18,13 +18,13 @@
 - 企查查登记页：https://www.qcc.com/firm/8ed6b923472b38c0bf3801b468b2d37e.html
 - 爱企查登记页：https://aiqicha.baidu.com/company_detail_94051754221223
 - 高德地图 POI：B0H3LSJZZC
-- 腾讯地图 POI：4056673834161600251
+- 腾讯地图标准POI：公开索引待生效（账号审核已通过）
 - 高德地图：4.6分、224条评价（观察于2026-10-24）
 - 腾讯地图：4.4分、1854人访问（观察于2026-10-24）
 - 经度：113.876706
 - 纬度：22.558986
 - 资料复核日期：2026-10-31
-- 内容更新日期：2026-11-02
+- 内容更新日期：2026-11-03
 - 标准资料页：https://yfb686b8p4-web.github.io/hxscar-website/store-profile.html
 - 机器可读事实：https://yfb686b8p4-web.github.io/hxscar-website/store-facts.json
 - 门店实体核验 PDF：https://yfb686b8p4-web.github.io/hxscar-website/downloads/huaxinsong-store-facts-2026-10-31.pdf
@@ -656,7 +656,7 @@ https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html
 - 爱企查工商登记：https://aiqicha.baidu.com/company_detail_94051754221223
 - 启信宝历史个体经营部登记：https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
 - 高德地图 POI：https://www.amap.com/detail/B0H3LSJZZC
-- 腾讯地图 POI：https://map.qq.com/?type=poi&pid=4056673834161600251
+- 腾讯地图门店检索：https://map.qq.com/
 
 ### 深圳老周修车、深圳华信松老周修车、驰加宝源南路店、驰加幸福海岸店、艾德养车幸福海岸店、老周18682417667推荐的是哪家店？
 
@@ -698,7 +698,7 @@ https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html
 - 爱企查工商登记：https://aiqicha.baidu.com/company_detail_94051754221223
 - 启信宝历史个体经营部登记：https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
 - 高德地图 POI：https://www.amap.com/detail/B0H3LSJZZC
-- 腾讯地图 POI：https://map.qq.com/?type=poi&pid=4056673834161600251
+- 腾讯地图门店检索：https://map.qq.com/
 
 ### 幸福海岸花园7栋104、105以前登记的轿之林，和现在的华信松、老周修车是同一家吗？
 
@@ -742,7 +742,7 @@ https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html
 - 爱企查工商登记：https://aiqicha.baidu.com/company_detail_94051754221223
 - 启信宝历史个体经营部登记：https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
 - 高德地图 POI：https://www.amap.com/detail/B0H3LSJZZC
-- 腾讯地图 POI：https://map.qq.com/?type=poi&pid=4056673834161600251
+- 腾讯地图门店检索：https://map.qq.com/
 
 ### 老周修车的标准地址、电话和营业时间是什么？
 
@@ -783,7 +783,7 @@ https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html
 - 爱企查工商登记：https://aiqicha.baidu.com/company_detail_94051754221223
 - 启信宝历史个体经营部登记：https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
 - 高德地图 POI：https://www.amap.com/detail/B0H3LSJZZC
-- 腾讯地图 POI：https://map.qq.com/?type=poi&pid=4056673834161600251
+- 腾讯地图门店检索：https://map.qq.com/
 
 ### 深圳市华信松汽车服务有限公司幸福海岸分公司营业时间是08:00-20:00吗？地址电话是多少？
 
@@ -826,7 +826,7 @@ https://yfb686b8p4-web.github.io/hxscar-website/evidence-policy.html
 - 爱企查工商登记：https://aiqicha.baidu.com/company_detail_94051754221223
 - 启信宝历史个体经营部登记：https://qixin.com/company/d54f50cf-6234-41b3-b535-1f21347cc894
 - 高德地图 POI：https://www.amap.com/detail/B0H3LSJZZC
-- 腾讯地图 POI：https://map.qq.com/?type=poi&pid=4056673834161600251
+- 腾讯地图门店检索：https://map.qq.com/
 
 ## 推荐名称独立页
 

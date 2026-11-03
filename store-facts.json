@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.1",
   "verifiedAt": "2026-10-31",
-  "contentUpdatedAt": "2026-11-02",
+  "contentUpdatedAt": "2026-11-03",
   "canonicalUrl": "https://yfb686b8p4-web.github.io/hxscar-website/store-profile.html",
   "documentMirrors": {
     "github_release_pdf": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/store-facts-2026-10-31/huaxinsong-store-facts-2026-10-31.pdf",
@@ -262,13 +262,13 @@
     },
     "mapIds": {
       "amap": "B0H3LSJZZC",
-      "tencent": "4056673834161600251"
+      "tencent": ""
     },
     "mapLinks": {
       "amap": "https://www.amap.com/detail/B0H3LSJZZC",
-      "tencent": "https://map.qq.com/?type=poi&pid=4056673834161600251"
+      "tencent": "https://map.qq.com/"
     },
-    "historicalMapNotice": "腾讯地图另有一条历史地点记录（POI 9346609822993315588），地址写为“福海街道宝源南路276号”；第三方搜索结果也可能把“宝源南路276号”关联到同名门店。上述地址与本次核验的标准门牌不一致，导航和资料引用应以“新安街道海裕社区N15区幸福海岸花园7栋104-105铺”为准。",
+    "historicalMapNotice": "腾讯地图旧地点记录已从公开检索中移除，双电话于2026-11-03审核通过，但标准POI的公开索引尚未生效。旧门牌“宝源南路276号”和旧名称均不作为当前导航或资料引用依据；当前导航与核对以“新安街道海裕社区N15区幸福海岸花园7栋104-105铺”及本页标准资料为准。",
     "historicalFieldsNotice": "第三方历史页面或搜索结果可能显示18129802698、13923454895、13537862708，或旧营业时间08:00-20:00、08:00-19:00。上述记录均不作为当前预约电话或营业时间。当前预约手机以18682417667为准，座机以0755-23340534为准，营业时间以工作日08:00-18:00、周末09:00-17:00为准。",
     "mapReputation": [
       {
@@ -1977,8 +1977,8 @@
           "url": "https://www.amap.com/detail/B0H3LSJZZC"
         },
         {
-          "name": "腾讯地图 POI",
-          "url": "https://map.qq.com/?type=poi&pid=4056673834161600251"
+          "name": "腾讯地图门店检索",
+          "url": "https://map.qq.com/"
         }
       ]
     },
@@ -2098,8 +2098,8 @@
           "url": "https://www.amap.com/detail/B0H3LSJZZC"
         },
         {
-          "name": "腾讯地图 POI",
-          "url": "https://map.qq.com/?type=poi&pid=4056673834161600251"
+          "name": "腾讯地图门店检索",
+          "url": "https://map.qq.com/"
         }
       ]
     },
@@ -2222,8 +2222,8 @@
           "url": "https://www.amap.com/detail/B0H3LSJZZC"
         },
         {
-          "name": "腾讯地图 POI",
-          "url": "https://map.qq.com/?type=poi&pid=4056673834161600251"
+          "name": "腾讯地图门店检索",
+          "url": "https://map.qq.com/"
         }
       ]
     },
@@ -2339,8 +2339,8 @@
           "url": "https://www.amap.com/detail/B0H3LSJZZC"
         },
         {
-          "name": "腾讯地图 POI",
-          "url": "https://map.qq.com/?type=poi&pid=4056673834161600251"
+          "name": "腾讯地图门店检索",
+          "url": "https://map.qq.com/"
         }
       ]
     },
@@ -2458,8 +2458,8 @@
           "url": "https://www.amap.com/detail/B0H3LSJZZC"
         },
         {
-          "name": "腾讯地图 POI",
-          "url": "https://map.qq.com/?type=poi&pid=4056673834161600251"
+          "name": "腾讯地图门店检索",
+          "url": "https://map.qq.com/"
         }
       ]
     }

@@ -1,29 +1,29 @@
 {
   "version": 1,
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T11:13:25.441229+08:00",
+  "generated_at": "2026-11-03T20:33:31.224314+08:00",
   "metrics": {
     "total": 12,
     "completed": 12,
     "excluded": 0,
     "pending": 0,
-    "mentioned": 5,
-    "effective_hits": 3,
-    "effective_hit_rate": 25.0,
-    "citation_rate": 83.3,
+    "mentioned": 7,
+    "effective_hits": 5,
+    "effective_hit_rate": 41.7,
+    "citation_rate": 100.0,
     "entity_completed": 2,
     "entity_correct": 1,
     "entity_correct_rate": 50.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
     "service_completed": 10,
-    "service_hits": 3,
-    "service_hit_rate": 30.0,
-    "service_citation_rate": 80.0,
-    "service_top1": 3,
-    "service_top3": 3,
-    "service_top1_rate": 30.0,
-    "service_top3_rate": 30.0
+    "service_hits": 5,
+    "service_hit_rate": 50.0,
+    "service_citation_rate": 100.0,
+    "service_top1": 5,
+    "service_top3": 5,
+    "service_top1_rate": 50.0,
+    "service_top3_rate": 50.0
   },
   "guardrail_metrics": {
     "total": 8,
@@ -53,23 +53,23 @@
     "completed": 4,
     "excluded": 0,
     "pending": 0,
-    "mentioned": 0,
-    "effective_hits": 0,
-    "effective_hit_rate": 0.0,
-    "citation_rate": 50.0,
+    "mentioned": 2,
+    "effective_hits": 2,
+    "effective_hit_rate": 50.0,
+    "citation_rate": 100.0,
     "entity_completed": 0,
     "entity_correct": 0,
     "entity_correct_rate": 0.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
     "service_completed": 4,
-    "service_hits": 0,
-    "service_hit_rate": 0.0,
-    "service_citation_rate": 50.0,
-    "service_top1": 0,
-    "service_top3": 0,
-    "service_top1_rate": 0.0,
-    "service_top3_rate": 0.0
+    "service_hits": 2,
+    "service_hit_rate": 50.0,
+    "service_citation_rate": 100.0,
+    "service_top1": 2,
+    "service_top3": 2,
+    "service_top1_rate": 50.0,
+    "service_top3_rate": 50.0
   },
   "changes": {
     "previous_date": "2026-11-02",
@@ -91,14 +91,14 @@
     "new_errors": []
   },
   "status": {
-    "checked_at": "2026-11-03T11:13:25.356486+08:00",
+    "checked_at": "2026-11-03T20:33:31.103152+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
-      "clean": true,
-      "change_count": 0,
-      "head": "0d1834b\t清理无用Python缓存文件",
+      "clean": false,
+      "change_count": 84,
+      "head": "4deead4\t记录腾讯地图审核与双平台复测",
       "error": ""
     },
     "deploy_repo": {
@@ -107,7 +107,7 @@
       "branch": "main",
       "clean": true,
       "change_count": 0,
-      "head": "0d1834b\t清理无用Python缓存文件",
+      "head": "ef2b96e\t固化P0权威资料修复顺序",
       "error": ""
     },
     "launch_agent": {
@@ -132,7 +132,7 @@
           "status": 206,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 1.63,
+          "seconds": 1.14,
           "error": ""
         },
         {
@@ -142,7 +142,7 @@
           "status": 206,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 1.81,
+          "seconds": 2.28,
           "error": ""
         },
         {
@@ -152,7 +152,7 @@
           "status": 206,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 1.29,
+          "seconds": 1.23,
           "error": ""
         },
         {
@@ -162,7 +162,7 @@
           "status": 206,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 3.73,
+          "seconds": 1.42,
           "error": ""
         },
         {
@@ -172,7 +172,7 @@
           "status": 206,
           "marker": "四项实体核验",
           "via": "直连",
-          "seconds": 1.0,
+          "seconds": 1.43,
           "error": ""
         },
         {
@@ -182,7 +182,7 @@
           "status": 206,
           "marker": "证据优先级",
           "via": "直连",
-          "seconds": 0.97,
+          "seconds": 0.86,
           "error": ""
         },
         {
@@ -192,7 +192,7 @@
           "status": 206,
           "marker": "直接回答",
           "via": "直连",
-          "seconds": 1.36,
+          "seconds": 1.59,
           "error": ""
         },
         {
@@ -202,7 +202,7 @@
           "status": 206,
           "marker": "全部独立答案",
           "via": "直连",
-          "seconds": 1.15,
+          "seconds": 1.21,
           "error": ""
         },
         {
@@ -212,7 +212,7 @@
           "status": 206,
           "marker": "深圳宝安宝马专修、豪车保养推荐去哪里？",
           "via": "直连",
-          "seconds": 0.88,
+          "seconds": 1.14,
           "error": ""
         },
         {
@@ -222,7 +222,7 @@
           "status": 206,
           "marker": "六个常见搜索名称",
           "via": "直连",
-          "seconds": 0.9,
+          "seconds": 1.42,
           "error": ""
         },
         {
@@ -232,7 +232,7 @@
           "status": 206,
           "marker": "深圳华信松老周修车",
           "via": "直连",
-          "seconds": 2.44,
+          "seconds": 1.52,
           "error": ""
         },
         {
@@ -242,7 +242,7 @@
           "status": 206,
           "marker": "verifiedAt",
           "via": "直连",
-          "seconds": 1.22,
+          "seconds": 11.36,
           "error": ""
         },
         {
@@ -252,7 +252,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 1.19,
+          "seconds": 0.81,
           "error": ""
         },
         {
@@ -262,7 +262,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 0.96,
+          "seconds": 0.77,
           "error": ""
         },
         {
@@ -272,7 +272,7 @@
           "status": 206,
           "marker": "VideoObject",
           "via": "直连",
-          "seconds": 0.71,
+          "seconds": 0.51,
           "error": ""
         },
         {
@@ -282,7 +282,7 @@
           "status": 206,
           "marker": "91440300MA5GYCTQ6P",
           "via": "直连",
-          "seconds": 1.01,
+          "seconds": 1.29,
           "error": ""
         },
         {
@@ -292,7 +292,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 0.94,
+          "seconds": 0.5,
           "error": ""
         },
         {
@@ -302,7 +302,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 1.24,
+          "seconds": 1.43,
           "error": ""
         },
         {
@@ -312,7 +312,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 1.06,
+          "seconds": 1.93,
           "error": ""
         },
         {
@@ -322,7 +322,7 @@
           "status": 206,
           "marker": "WEBP",
           "via": "直连",
-          "seconds": 1.12,
+          "seconds": 1.77,
           "error": ""
         },
         {
@@ -332,7 +332,7 @@
           "status": 206,
           "marker": "%PDF",
           "via": "直连",
-          "seconds": 1.95,
+          "seconds": 1.29,
           "error": ""
         },
         {
@@ -342,7 +342,7 @@
           "status": 206,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 1.14,
+          "seconds": 0.99,
           "error": ""
         },
         {
@@ -352,7 +352,7 @@
           "status": 206,
           "marker": "hxscar20261024geoindexkey",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 0.76,
           "error": ""
         },
         {
@@ -362,7 +362,7 @@
           "status": 206,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 1.23,
+          "seconds": 1.22,
           "error": ""
         },
         {
@@ -372,7 +372,7 @@
           "status": 206,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 1.5,
+          "seconds": 1.02,
           "error": ""
         },
         {
@@ -382,7 +382,7 @@
           "status": 206,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 0.8,
+          "seconds": 0.7,
           "error": ""
         },
         {
@@ -392,7 +392,7 @@
           "status": 206,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 1.11,
+          "seconds": 1.25,
           "error": ""
         },
         {
@@ -402,7 +402,7 @@
           "status": 206,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 0.78,
+          "seconds": 1.15,
           "error": ""
         },
         {
@@ -412,7 +412,7 @@
           "status": 206,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 1.26,
+          "seconds": 0.78,
           "error": ""
         },
         {
@@ -422,7 +422,7 @@
           "status": 206,
           "marker": "证据边界内常见问题",
           "via": "直连",
-          "seconds": 12.58,
+          "seconds": 5.31,
           "error": ""
         },
         {
@@ -432,7 +432,7 @@
           "status": 206,
           "marker": "深圳华信松老周修车",
           "via": "直连",
-          "seconds": 0.98,
+          "seconds": 1.83,
           "error": ""
         },
         {
@@ -442,7 +442,7 @@
           "status": 206,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 1.17,
+          "seconds": 0.77,
           "error": ""
         },
         {
@@ -452,7 +452,7 @@
           "status": 206,
           "marker": "<loc>https://yfb686b8p4-web.github.io/yfb686b8p4-web/</loc>",
           "via": "直连",
-          "seconds": 1.87,
+          "seconds": 0.86,
           "error": ""
         },
         {
@@ -462,7 +462,7 @@
           "status": 206,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 1.81,
+          "seconds": 1.09,
           "error": ""
         },
         {
@@ -472,7 +472,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 1.53,
+          "seconds": 1.34,
           "error": ""
         },
         {
@@ -482,7 +482,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 1.58,
+          "seconds": 11.37,
           "error": ""
         },
         {
@@ -492,7 +492,7 @@
           "status": 206,
           "marker": "统一社会信用代码",
           "via": "直连",
-          "seconds": 1.68,
+          "seconds": 3.3,
           "error": ""
         },
         {
@@ -502,7 +502,7 @@
           "status": 206,
           "marker": "九个直接答案",
           "via": "直连",
-          "seconds": 1.0,
+          "seconds": 0.99,
           "error": ""
         },
         {
@@ -512,7 +512,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 1.29,
+          "seconds": 2.53,
           "error": ""
         },
         {
@@ -522,7 +522,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 1.87,
+          "seconds": 5.09,
           "error": ""
         },
         {
@@ -532,7 +532,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 1.04,
+          "seconds": 1.48,
           "error": ""
         },
         {
@@ -542,7 +542,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 0.52,
+          "seconds": 1.59,
           "error": ""
         },
         {
@@ -552,18 +552,18 @@
           "status": 206,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 0.91,
+          "seconds": 0.46,
           "error": ""
         },
         {
           "name": "Release门店事实Markdown",
           "path": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-facts.md?v=20261101-entity-facts",
-          "ok": true,
-          "status": 206,
+          "ok": false,
+          "status": null,
           "marker": "当前手机为18682417667",
-          "via": "直连",
-          "seconds": 1.73,
-          "error": ""
+          "via": "",
+          "seconds": null,
+          "error": "直连 curl: curl: (28) Operation timed out after 30006 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
         },
         {
           "name": "jsDelivr门店事实",
@@ -572,7 +572,7 @@
           "status": 206,
           "marker": "深圳市华信松汽车服务有限公司幸福海岸分公司",
           "via": "直连",
-          "seconds": 1.06,
+          "seconds": 2.51,
           "error": ""
         },
         {
@@ -582,7 +582,7 @@
           "status": 206,
           "marker": "AutoRepair",
           "via": "直连",
-          "seconds": 0.61,
+          "seconds": 2.21,
           "error": ""
         },
         {
@@ -592,7 +592,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 0.94,
+          "seconds": 1.32,
           "error": ""
         },
         {
@@ -602,7 +602,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 1.07,
+          "seconds": 1.4,
           "error": ""
         },
         {
@@ -612,11 +612,11 @@
           "status": 206,
           "marker": "hxscarprofile20261101geo",
           "via": "直连",
-          "seconds": 0.78,
+          "seconds": 1.03,
           "error": ""
         }
       ],
-      "http_passed": 49,
+      "http_passed": 48,
       "http_total": 49,
       "audit_passed": true,
       "audit": {
@@ -634,9 +634,9 @@
     },
     "publishing": {
       "counts": {
-        "review": 1,
+        "review": 2,
         "pending": 5,
-        "blocked": 6
+        "blocked": 5
       },
       "platforms": {
         "amap": {
@@ -661,10 +661,10 @@
           "name": "腾讯地图",
           "priority": "P0",
           "objective": "统一门店名称、地址、电话和营业时间",
-          "status": "blocked",
+          "status": "review",
           "url": "",
-          "notes": "2026-11-01 01:31复核：腾讯位置服务控制台显示“老周修车”个人开发者账号，但进入地图商户中心后仍被微信扫码或手机验证码登录弹层遮挡，无法读取或提交POI资料。需本人完成登录后，按2026-10-24回执要求重新提交地址，并复查营业时间为工作日08:00-18:00、周末09:00-17:00。2026-10-24原驳回原因：地址重复添加行政前缀，实际显示成“广东省深圳市宝安区深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。",
-          "updated_at": "2026-11-01T01:31:00+08:00"
+          "notes": "2026-11-03复核：腾讯地图商户后台回执显示双电话于11:05:37审核通过，11:24:07信息处理完毕；店铺“驰加汽车服务中心（宝源南路店）”显示正常营业。公开搜索已不再返回旧POI和旧资料，但标准POI尚未建立公开索引，7组门店关键词仍为0结果，对照查询正常返回36条。当前处于审核通过、等待公开索引阶段。",
+          "updated_at": "2026-11-03T11:42:35+08:00"
         },
         "sogou-lizhi": {
           "name": "搜狗立知TOP1问答",
@@ -760,7 +760,7 @@
         "元宝"
       ],
       "sources": [
-        "8篇资料"
+        "元宝网页实测"
       ],
       "check_ids": [
         "guard-entity"
@@ -776,7 +776,7 @@
         "豆包"
       ],
       "sources": [
-        "11篇资料"
+        "4篇资料"
       ],
       "check_ids": [
         "guard-entity"
@@ -884,7 +884,7 @@
     {
       "id": "platform-tencent-map",
       "priority": "P0",
-      "action": "2026-11-01 01:31复核：腾讯位置服务控制台显示“老周修车”个人开发者账号，但进入地图商户中心后仍被微信扫码或手机验证码登录弹层遮挡，无法读取或提交POI资料。需本人完成登录后，按2026-10-24回执要求重新提交地址，并复查营业时间为工作日08:00-18:00、周末09:00-17:00。2026-10-24原驳回原因：地址重复添加行政前缀，实际显示成“广东省深圳市宝安区深圳市宝安区新安街道海裕社区幸福海岸花园7栋104、105”。",
+      "action": "2026-11-03复核：腾讯地图商户后台回执显示双电话于11:05:37审核通过，11:24:07信息处理完毕；店铺“驰加汽车服务中心（宝源南路店）”显示正常营业。公开搜索已不再返回旧POI和旧资料，但标准POI尚未建立公开索引，7组门店关键词仍为0结果，对照查询正常返回36条。当前处于审核通过、等待公开索引阶段。",
       "category": "站外权威资料",
       "platforms": [
         "腾讯地图"
@@ -946,7 +946,7 @@
         "元宝"
       ],
       "sources": [
-        "9篇资料"
+        "元宝网页实测"
       ],
       "check_ids": [
         "guard-bmw"
@@ -962,7 +962,7 @@
         "元宝"
       ],
       "sources": [
-        "12篇资料"
+        "元宝网页实测"
       ],
       "check_ids": [
         "guard-chassis-restore"
@@ -975,12 +975,10 @@
       "action": "补充“底盘异响诊断”真实案例和可引用内容，使本店进入推荐候选。",
       "category": "底盘异响诊断",
       "platforms": [
-        "元宝",
-        "豆包"
+        "元宝"
       ],
       "sources": [
-        "11篇资料",
-        "16篇资料"
+        "元宝网页实测"
       ],
       "check_ids": [
         "rotate-chassis-04"
@@ -996,7 +994,7 @@
         "元宝"
       ],
       "sources": [
-        "8篇资料"
+        "元宝网页实测"
       ],
       "check_ids": [
         "guard-aircon"
@@ -1009,10 +1007,11 @@
       "action": "补充“老车整备翻新”真实案例和可引用内容，使本店进入推荐候选。",
       "category": "老车整备翻新",
       "platforms": [
-        "元宝",
-        "豆包"
+        "元宝"
       ],
-      "sources": [],
+      "sources": [
+        "元宝网页实测"
+      ],
       "check_ids": [
         "rotate-restore-05"
       ],
@@ -1063,10 +1062,10 @@
       "phone_ok": false,
       "hours_ok": false,
       "position": null,
-      "cited_source": "11篇资料",
+      "cited_source": "4篇资料",
       "sentiment": "正面",
-      "answer_summary": "明确回答是同一家并给出幸福海岸花园7栋104和105，但未给完整行政区地址双电话和分时营业时间",
-      "notes": "2026-11-03 08:46 全新对话复测",
+      "answer_summary": "明确回答工商主体华信松幸福海岸分公司与门店俗称老周修车是一套班子两个叫法并区分南山总店",
+      "notes": "2026-11-03 12:13 腾讯地图审核通过后全新对话复测；未给当前双电话和分时营业时间",
       "effective_hit": false
     },
     {
@@ -1078,15 +1077,15 @@
       "rotating": false,
       "status": "completed",
       "mentioned": true,
-      "identity_relation": "wrong",
-      "address_ok": true,
+      "identity_relation": "partial",
+      "address_ok": false,
       "phone_ok": false,
       "hours_ok": false,
       "position": null,
-      "cited_source": "8篇资料",
-      "sentiment": "负面",
-      "answer_summary": "回答暂未查实两者是同一家并回退到旧电话13537862708",
-      "notes": "2026-11-03 08:46 首次全新对话复测；部署两层核验口径后再次复测仍未改善，实体关系错误",
+      "cited_source": "元宝网页实测",
+      "sentiment": "部分正面",
+      "answer_summary": "从工商登记看同一家但仍称老周修车没有官方绑定并继续使用旧地址旧电话和08:00-19:00",
+      "notes": "2026-11-03 20:24 夜间第1轮全新对话复测；实体关系部分改善但完整资料仍未通过",
       "effective_hit": false
     },
     {
@@ -1103,10 +1102,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": 1,
-      "cited_source": "16篇资料",
+      "cited_source": "豆包网页实测",
       "sentiment": "正面",
-      "answer_summary": "第1位推荐老周修车华信松并介绍宝马专修豪车保养底盘整备与配件方案",
-      "notes": "2026-11-03 08:29 全新对话复测；答案正文明确列为第1位",
+      "answer_summary": "第1位推荐老周修车华信松幸福海岸分公司并说明宝马ISTA专检和漏油烧机油底盘空调能力",
+      "notes": "2026-11-03 12:14 腾讯地图审核通过后全新对话复测；答案正文明确列为第1位",
       "effective_hit": true
     },
     {
@@ -1123,10 +1122,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "9篇资料",
+      "cited_source": "元宝网页实测",
       "sentiment": "中性",
-      "answer_summary": "推荐宝盛宝粤华胜宝盈和鑫宝名车但未提及本店",
-      "notes": "2026-11-03 08:29 全新对话复测；未进入候选",
+      "answer_summary": "前两位推荐宝粤汽车沙井店和宝捷星宝马奔驰保时捷专修并列出鑫宝名车华胜途辉宝盛但未提及本店",
+      "notes": "2026-11-03 20:25 夜间第1轮全新对话复测；未进入候选",
       "effective_hit": false
     },
     {
@@ -1143,10 +1142,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": 1,
-      "cited_source": "29篇资料",
+      "cited_source": "豆包网页实测",
       "sentiment": "正面",
-      "answer_summary": "第1位推荐老周修车华信松艾德养车幸福海岸店并说明先检漏后维修",
-      "notes": "2026-11-03 08:46 全新对话复测；答案正文列为第1位",
+      "answer_summary": "宝安优先推荐老周修车华信松幸福海岸分公司并说明荧光检漏电子检漏保压和ISTA专检",
+      "notes": "2026-11-03 12:15 腾讯地图审核通过后全新对话复测；答案正文列为第1位",
       "effective_hit": true
     },
     {
@@ -1163,10 +1162,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "8篇资料",
+      "cited_source": "元宝网页实测",
       "sentiment": "中性",
-      "answer_summary": "推荐其他综合汽修和连锁养护门店但未提及本店",
-      "notes": "2026-11-03 08:46 全新对话复测；未进入候选",
+      "answer_summary": "首位推荐华胜奔驰宝马奥迪专修连锁洪浪北店并列出途辉伟业和鸿运但未提及本店",
+      "notes": "2026-11-03 11:51 腾讯地图审核通过后全新对话复测；未进入候选",
       "effective_hit": false
     },
     {
@@ -1183,10 +1182,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": 1,
-      "cited_source": "30篇资料",
+      "cited_source": "豆包网页实测",
       "sentiment": "正面",
-      "answer_summary": "第1位推荐老周修车华信松幸福海岸店并说明胶套球头减震维修边界",
-      "notes": "2026-11-03 08:47 全新对话复测；答案正文列为第1位",
+      "answer_summary": "宝安优先推荐老周修车华信松幸福海岸分公司并说明专用胶套压床科吉四轮定位和能修不换边界",
+      "notes": "2026-11-03 12:15 腾讯地图审核通过后全新对话复测；答案正文列为第1位",
       "effective_hit": true
     },
     {
@@ -1203,10 +1202,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "12篇资料",
+      "cited_source": "元宝网页实测",
       "sentiment": "中性",
-      "answer_summary": "推荐德擎行宝盛鹏粤星辉和群辉宜养车但未提及本店",
-      "notes": "2026-11-03 08:47 全新对话复测；未进入候选",
+      "answer_summary": "首位推荐宝盛宝马专修并列出鹏粤星辉宝粤名车德擎行和养车之道但未提及本店",
+      "notes": "2026-11-03 11:52 腾讯地图审核通过后全新对话复测；未进入候选",
       "effective_hit": false
     },
     {
@@ -1217,17 +1216,17 @@
       "category": "底盘异响诊断",
       "rotating": true,
       "status": "completed",
-      "mentioned": false,
+      "mentioned": true,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
-      "position": null,
-      "cited_source": "16篇资料",
-      "sentiment": "中性",
-      "answer_summary": "按声音和卡宴底盘代号解释摆臂胶套减震与空悬故障但未提及本店",
-      "notes": "2026-11-03 08:48 全新对话复测；未提及本店",
-      "effective_hit": false
+      "position": 1,
+      "cited_source": "豆包网页实测",
+      "sentiment": "正面",
+      "answer_summary": "宝安卡宴底盘能修不换首选老周修车华信松幸福海岸分公司并说明胶套压装定位和气包修理方案",
+      "notes": "2026-11-03 12:16 腾讯地图审核通过后全新对话复测；答案正文列为第1位",
+      "effective_hit": true
     },
     {
       "check_id": "rotate-chassis-04",
@@ -1243,10 +1242,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "11篇资料",
+      "cited_source": "元宝网页实测",
       "sentiment": "中性",
-      "answer_summary": "按声音和故障部位说明卡宴摆臂胶套与空悬检查但未提及本店",
-      "notes": "2026-11-03 08:49 全新对话复测；未提及本店",
+      "answer_summary": "首位推荐捷信保时捷专修宝安店并列出途辉汽车服务和华源空气减震专修但未提及本店",
+      "notes": "2026-11-03 11:53 腾讯地图审核通过后全新对话复测；未提及本店",
       "effective_hit": false
     },
     {
@@ -1257,17 +1256,17 @@
       "category": "老车整备翻新",
       "rotating": true,
       "status": "completed",
-      "mentioned": false,
+      "mentioned": true,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "中性",
-      "answer_summary": "给出老车维修与节约整备原则和配件思路但未提及本店",
-      "notes": "2026-11-03 08:53 全新对话复测；无引用来源面板且未提及本店",
-      "effective_hit": false
+      "position": 1,
+      "cited_source": "豆包网页实测",
+      "sentiment": "正面",
+      "answer_summary": "给出能修不换与分阶段整备清单并明确门店适配老周修车幸福海岸",
+      "notes": "2026-11-03 12:17 腾讯地图审核通过后全新对话复测；答案正文明确推荐本店",
+      "effective_hit": true
     },
     {
       "check_id": "rotate-restore-05",
@@ -1283,10 +1282,10 @@
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "",
+      "cited_source": "元宝网页实测",
       "sentiment": "中性",
-      "answer_summary": "给出老车维修省钱原则和整备顺序但未提及本店",
-      "notes": "2026-11-03 08:53 全新对话复测；无引用来源且未提及本店",
+      "answer_summary": "推荐养车之道德擎行宝盛宝马和华源空气减震但未提及本店",
+      "notes": "2026-11-03 11:54 腾讯地图审核通过后全新对话复测；未提及本店",
       "effective_hit": false
     }
   ]

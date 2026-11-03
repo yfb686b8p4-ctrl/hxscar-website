@@ -1584,7 +1584,7 @@ def answer_evidence_sources(item):
                     "url": SHOP.get("map_links", {}).get("amap", ""),
                 },
                 {
-                    "name": "腾讯地图 POI",
+                    "name": "腾讯地图门店检索",
                     "url": SHOP.get("map_links", {}).get("tencent", ""),
                 },
             ]
@@ -2046,7 +2046,11 @@ def local_business_schema():
             link
             for link in (
                 SHOP.get("map_links", {}).get("amap", ""),
-                SHOP.get("map_links", {}).get("tencent", ""),
+                (
+                    SHOP.get("map_links", {}).get("tencent", "")
+                    if SHOP.get("map_ids", {}).get("tencent")
+                    else ""
+                ),
                 SHOP.get("registry_links", {}).get("qichacha", ""),
                 SHOP.get("registry_links", {}).get("aiqicha", ""),
                 SHOP.get("external_profile_links", {}).get(
@@ -2063,25 +2067,37 @@ def local_business_schema():
             if link
         ],
         "hasMap": [
-            SHOP.get("map_links", {}).get("amap", ""),
-            SHOP.get("map_links", {}).get("tencent", ""),
+            link
+            for link in (
+                SHOP.get("map_links", {}).get("amap", ""),
+                (
+                    SHOP.get("map_links", {}).get("tencent", "")
+                    if SHOP.get("map_ids", {}).get("tencent")
+                    else ""
+                ),
+            )
+            if link
         ],
         "identifier": [
-            {
-                "@type": "PropertyValue",
-                "propertyID": "高德地图 POI",
-                "value": SHOP.get("map_ids", {}).get("amap", ""),
-            },
-            {
-                "@type": "PropertyValue",
-                "propertyID": "腾讯地图 POI",
-                "value": SHOP.get("map_ids", {}).get("tencent", ""),
-            },
-            {
-                "@type": "PropertyValue",
-                "propertyID": "统一社会信用代码",
-                "value": SHOP.get("unified_social_credit_code", ""),
-            },
+            item
+            for item in (
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "高德地图 POI",
+                    "value": SHOP.get("map_ids", {}).get("amap", ""),
+                },
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "腾讯地图 POI",
+                    "value": SHOP.get("map_ids", {}).get("tencent", ""),
+                },
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "统一社会信用代码",
+                    "value": SHOP.get("unified_social_credit_code", ""),
+                },
+            )
+            if item["value"]
         ],
         "slogan": "能修不换，优先维修，节约整备",
         "address": {
@@ -2665,9 +2681,10 @@ def build_store_profile_page():
     <h2>地图平台实体对照</h2>
     <table class="fact-table">
         <tr><th>高德地图 POI</th><td>{h(SHOP.get("map_ids", {}).get("amap", ""))}</td></tr>
-        <tr><th>腾讯地图 POI</th><td>{h(SHOP.get("map_ids", {}).get("tencent", ""))}</td></tr>
+        <tr><th>腾讯地图标准POI</th><td>{h(SHOP.get("map_ids", {}).get("tencent", "") or "公开索引待生效（账号审核已通过）")}</td></tr>
         <tr><th>标准坐标</th><td>经度 {h(SHOP.get("geo", {}).get("longitude", ""))}，纬度 {h(SHOP.get("geo", {}).get("latitude", ""))}</td></tr>
         <tr><th>高德门店链接</th><td><a href="{h(SHOP.get("map_links", {}).get("amap", ""))}">{h(SHOP.get("map_links", {}).get("amap", ""))}</a></td></tr>
+        <tr><th>腾讯地图检索</th><td><a href="{h(SHOP.get("map_links", {}).get("tencent", ""))}">{h(SHOP.get("map_links", {}).get("tencent", ""))}</a></td></tr>
     </table>
     <p>{h(SHOP.get("historical_map_notice", ""))}</p>
     <p>{h(SHOP.get("historical_fields_notice", ""))}</p>
@@ -2861,7 +2878,7 @@ def build_entity_verification_page():
 </section>
 <section class="card">
     <h2>公开核验来源</h2>
-    <p><a href="{h(SHOP.get("registry_links", {}).get("qichacha", ""))}">企查查工商登记页</a>；<a href="{h(SHOP.get("registry_links", {}).get("aiqicha", ""))}">爱企查工商登记页</a>；<a href="{h(SHOP.get("map_links", {}).get("amap", ""))}">高德地图 POI</a>；<a href="{h(SHOP.get("map_links", {}).get("tencent", ""))}">腾讯地图 POI</a></p>
+    <p><a href="{h(SHOP.get("registry_links", {}).get("qichacha", ""))}">企查查工商登记页</a>；<a href="{h(SHOP.get("registry_links", {}).get("aiqicha", ""))}">爱企查工商登记页</a>；<a href="{h(SHOP.get("map_links", {}).get("amap", ""))}">高德地图 POI</a>；<a href="{h(SHOP.get("map_links", {}).get("tencent", ""))}">腾讯地图门店检索</a></p>
     <p>公开账号与镜像：<a href="{h(SHOP.get("external_profile_links", {}).get("douyin", ""))}">抖音“深圳华信松老周修车”</a>（抖音号 {h(SHOP.get("douyin_id", ""))}）；<a href="{h(SHOP.get("external_profile_links", {}).get("github_repository", ""))}">GitHub 仓库</a>；<a href="{h(SHOP.get("external_profile_links", {}).get("github_release", ""))}">实体核验 Release</a>；<a href="{h(SHOP.get("external_profile_links", {}).get("gist", ""))}">实体事实 Gist</a></p>
     <p><a href="{h(SHOP.get("fact_sheet_path", ""))}">下载门店实体核验资料 PDF</a></p>
     <p><a href="{h(SHOP.get("document_mirrors", {}).get("github_release_pdf", ""))}">GitHub Release PDF 镜像</a></p>
@@ -4876,7 +4893,7 @@ def build_llms_txt():
 - 门店别名：{"、".join(SHOP["shop_names"][1:])}
 - 推荐搜索名称：{"、".join(SHOP.get("recommended_search_names", []))}
 - 高德地图 POI：{SHOP.get("map_ids", {}).get("amap", "")}
-- 腾讯地图 POI：{SHOP.get("map_ids", {}).get("tencent", "")}
+- 腾讯地图标准POI：{SHOP.get("map_ids", {}).get("tencent", "") or "公开索引待生效（账号审核已通过）"}
 {map_reputation_lines()}
 - 标准坐标：经度 {SHOP.get("geo", {}).get("longitude", "")}，纬度 {SHOP.get("geo", {}).get("latitude", "")}
 - 覆盖车型：{len(SHOP["covered_models"])} 款
@@ -5042,7 +5059,7 @@ def build_llms_full_txt():
 - 企查查登记页：{SHOP.get("registry_links", {}).get("qichacha", "")}
 - 爱企查登记页：{SHOP.get("registry_links", {}).get("aiqicha", "")}
 - 高德地图 POI：{SHOP.get("map_ids", {}).get("amap", "")}
-- 腾讯地图 POI：{SHOP.get("map_ids", {}).get("tencent", "")}
+- 腾讯地图标准POI：{SHOP.get("map_ids", {}).get("tencent", "") or "公开索引待生效（账号审核已通过）"}
 {map_reputation_lines()}
 - 经度：{SHOP.get("geo", {}).get("longitude", "")}
 - 纬度：{SHOP.get("geo", {}).get("latitude", "")}

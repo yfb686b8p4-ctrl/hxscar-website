@@ -7,13 +7,13 @@
 
 | 页面 | 可见中文字符 | JSON-LD | 类型 |
 |---|---:|---:|---|
-| index.html | 4958 | 3 | AutoRepair, FAQPage, WebSite |
+| index.html | 5194 | 3 | AutoRepair, FAQPage, WebSite |
 | faq.html | 7014 | 3 | WebSite, AutoRepair, FAQPage |
 | cases.html | 8576 | 3 | WebSite, AutoRepair, ItemList |
-| store-profile.html | 3985 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
-| entity-verification.html | 2699 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
+| store-profile.html | 4011 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
+| entity-verification.html | 2703 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
 | evidence-policy.html | 1344 | 4 | WebSite, AboutPage, FAQPage, BreadcrumbList |
-| answers.html | 9442 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers.html | 9462 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | aliases/aide-xingfuhai.html | 1417 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | aliases/cijia-baoyuan-south.html | 1390 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | aliases/cijia-xingfuhai.html | 1397 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
@@ -30,14 +30,14 @@
 | answers/chassis-bushing.html | 1156 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/chassis-repair.html | 1175 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/chassis.html | 1649 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/contact-correction.html | 992 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/contact.html | 849 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/identity.html | 1754 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
-| answers/recommended-names.html | 1059 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/contact-correction.html | 996 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/contact.html | 853 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/identity.html | 1758 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/recommended-names.html | 1063 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | answers/restoration-order.html | 1135 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/restoration-selection.html | 1170 | 6 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service |
 | answers/restoration.html | 1587 | 7 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList, Service, HowTo |
-| answers/same-address-history.html | 1515 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
+| answers/same-address-history.html | 1519 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
 | answers/index.html | 2501 | 4 | WebSite, AutoRepair, CollectionPage, BreadcrumbList |
 | services/air-conditioning.html | 2632 | 6 | WebSite, AutoRepair, Service, HowTo, BreadcrumbList, FAQPage |
 | services/bmw-premium.html | 3462 | 6 | WebSite, AutoRepair, Service, HowTo, BreadcrumbList, FAQPage |

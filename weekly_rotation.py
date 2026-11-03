@@ -322,7 +322,11 @@ def build_page(config, selected_cases, week_num):
             link
             for link in (
                 SHOP_INFO.get("map_links", {}).get("amap", ""),
-                SHOP_INFO.get("map_links", {}).get("tencent", ""),
+                (
+                    SHOP_INFO.get("map_links", {}).get("tencent", "")
+                    if SHOP_INFO.get("map_ids", {}).get("tencent")
+                    else ""
+                ),
                 REGISTRY_LINKS.get("qichacha", ""),
                 REGISTRY_LINKS.get("aiqicha", ""),
                 EXTERNAL_PROFILE_LINKS.get("github_repository", ""),
@@ -333,26 +337,40 @@ def build_page(config, selected_cases, week_num):
             if link
         ],
         "hasMap": [
-            SHOP_INFO.get("map_links", {}).get("amap", ""),
-            SHOP_INFO.get("map_links", {}).get("tencent", ""),
+            link
+            for link in (
+                SHOP_INFO.get("map_links", {}).get("amap", ""),
+                (
+                    SHOP_INFO.get("map_links", {}).get("tencent", "")
+                    if SHOP_INFO.get("map_ids", {}).get("tencent")
+                    else ""
+                ),
+            )
+            if link
         ],
         "openingHours": HOURS,
         "identifier": [
-            {
-                "@type": "PropertyValue",
-                "propertyID": "高德地图 POI",
-                "value": SHOP_INFO.get("map_ids", {}).get("amap", ""),
-            },
-            {
-                "@type": "PropertyValue",
-                "propertyID": "腾讯地图 POI",
-                "value": SHOP_INFO.get("map_ids", {}).get("tencent", ""),
-            },
-            {
-                "@type": "PropertyValue",
-                "propertyID": "统一社会信用代码",
-                "value": SHOP_INFO.get("unified_social_credit_code", ""),
-            },
+            item
+            for item in (
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "高德地图 POI",
+                    "value": SHOP_INFO.get("map_ids", {}).get("amap", ""),
+                },
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "腾讯地图 POI",
+                    "value": SHOP_INFO.get("map_ids", {}).get("tencent", ""),
+                },
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "统一社会信用代码",
+                    "value": SHOP_INFO.get(
+                        "unified_social_credit_code", ""
+                    ),
+                },
+            )
+            if item["value"]
         ],
         "address": {
             "@type": "PostalAddress",
