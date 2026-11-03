@@ -48,9 +48,9 @@
       ]
     },
     "store-profile.html": {
-      "bytes": 63337,
-      "han_chars": 8235,
-      "visible_han_chars": 3964,
+      "bytes": 63601,
+      "han_chars": 8277,
+      "visible_han_chars": 3985,
       "json_ld_blocks": 4,
       "schema_types": [
         "WebSite",
@@ -344,8 +344,8 @@
       ]
     },
     "answers/identity.html": {
-      "bytes": 45767,
-      "han_chars": 5310,
+      "bytes": 45455,
+      "han_chars": 5188,
       "visible_han_chars": 1754,
       "json_ld_blocks": 5,
       "schema_types": [

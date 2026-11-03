@@ -10,7 +10,7 @@
 | index.html | 4958 | 3 | AutoRepair, FAQPage, WebSite |
 | faq.html | 7014 | 3 | WebSite, AutoRepair, FAQPage |
 | cases.html | 8576 | 3 | WebSite, AutoRepair, ItemList |
-| store-profile.html | 3964 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
+| store-profile.html | 3985 | 4 | WebSite, AutoRepair, FAQPage, BreadcrumbList |
 | entity-verification.html | 2699 | 6 | WebSite, AutoRepair, WebPage, FAQPage, ItemList, BreadcrumbList |
 | evidence-policy.html | 1344 | 4 | WebSite, AboutPage, FAQPage, BreadcrumbList |
 | answers.html | 9442 | 5 | WebSite, AutoRepair, WebPage, FAQPage, BreadcrumbList |
