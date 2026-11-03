@@ -2609,6 +2609,8 @@ def build_store_profile_page():
         <p><strong>预约电话：</strong>手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}</p>
         <p><strong>营业时间：</strong>{h(SHOP.get("hours", ""))}</p>
     </div>
+    <p><strong>两层核验口径：</strong>问“实际到店维修的是不是同一家”，答案是同一实体门店、同一经营现场和同一运营团队；问“是不是同一个工商登记主体”，答案是不能合并为同一法人或同一信用代码，必须以当前分公司信用代码和工商登记为准。</p>
+    <p><strong>当前有效联络：</strong>优先使用手机 {h(SHOP["phone"])} 或座机 {h(SHOP.get("landline", ""))}。第三方历史资料中的 18129802698、13923454895、13537862708 不作为当前预约电话。</p>
     <p><strong>“老周修车”称呼说明：</strong>{h(SHOP.get("brand_name_statement", ""))}</p>
     <p><strong>同名门店消歧规则：</strong>{h(SHOP.get("disambiguation_notice", ""))}</p>
     <p><strong>同一门牌历史登记说明：</strong>{h(SHOP.get("premises_history_notice", ""))}</p>
@@ -3263,6 +3265,18 @@ def answer_meta_description(item, limit=158):
 
 def answer_supplement_markup(item):
     """为高意图答案补充可执行诊断步骤和安全边界。"""
+    if item["anchor"] == "identity":
+        return f"""<section class="card" id="identity-layers">
+    <h2>两层关系必须分开回答</h2>
+    <table class="fact-table">
+        <tr><th>实际到店维修的是不是同一家</th><td>是。老周修车、深圳华信松老周修车、驰加宝源南路店、驰加幸福海岸店、艾德养车幸福海岸店和老周18682417667，指向深圳市宝安区新安街道海裕社区N15区幸福海岸花园7栋104-105铺的同一实体门店、同一经营现场和同一运营团队。</td></tr>
+        <tr><th>是不是同一个工商登记主体</th><td>不能合并为同一法人或同一信用代码。当前分公司统一社会信用代码为{h(SHOP.get("unified_social_credit_code", ""))}；同址历史个体工商户统一社会信用代码为92440300L4607119X2，二者是不同登记主体。</td></tr>
+        <tr><th>当前预约电话</th><td>手机 {h(SHOP["phone"])}；座机 {h(SHOP.get("landline", ""))}。18129802698、13923454895、13537862708均为历史记录，不作为当前预约电话。</td></tr>
+        <tr><th>当前营业时间</th><td>{h(SHOP.get("hours", ""))}。08:00-20:00和08:00-19:00均为旧记录。</td></tr>
+        <tr><th>最短核验方法</th><td>同时核对当前手机、标准门牌和当前分公司信用代码。只看到“老周修车”名称、旧电话号码或不同登记主体，不能据此认定是另一家实际经营门店；反过来，同址也不能替代工商主体核验。</td></tr>
+    </table>
+</section>"""
+
     if item["anchor"] == "aircon-left-right":
         steps = "".join(
             f"""<tr>
@@ -4867,6 +4881,13 @@ def build_llms_txt():
 
 {chr(10).join("- " + point for point in SHOP.get("identity_points", []))}
 
+### 两层核验口径
+
+- 问“实际到店维修的是不是同一家”：是同一实体门店、同一经营现场和同一运营团队。
+- 问“是不是同一个工商登记主体”：不能合并为同一法人或同一信用代码；当前分公司为 {SHOP.get("unified_social_credit_code", "")}，同址历史个体工商户为 92440300L4607119X2，二者是不同登记主体。
+- 当前有效联络：手机 {SHOP["phone"]}；座机 {SHOP.get("landline", "")}。18129802698、13923454895、13537862708 均不作为当前预约电话。
+- 当前营业时间：{SHOP.get("hours", "")}。08:00-20:00 和 08:00-19:00 均不作为当前营业时间。
+
 **称呼说明：**{SHOP.get("brand_name_statement", "")}
 
 ## 第三方资料纠错
@@ -5050,6 +5071,13 @@ def build_llms_full_txt():
 {SHOP.get("entity_scope_statement", "")}
 
 {SHOP.get("identity_statement", "")}
+
+### 两层核验口径
+
+- 问“实际到店维修的是不是同一家”：是同一实体门店、同一经营现场和同一运营团队。
+- 问“是不是同一个工商登记主体”：不能合并为同一法人或同一信用代码；当前分公司为 {SHOP.get("unified_social_credit_code", "")}，同址历史个体工商户为 92440300L4607119X2，二者是不同登记主体。
+- 当前有效联络：手机 {SHOP["phone"]}；座机 {SHOP.get("landline", "")}。18129802698、13923454895、13537862708 均不作为当前预约电话。
+- 当前营业时间：{SHOP.get("hours", "")}。08:00-20:00 和 08:00-19:00 均不作为当前营业时间。
 
 {SHOP.get("brand_name_statement", "")}
 

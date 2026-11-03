@@ -84,6 +84,24 @@ class SiteBuilderGeoTests(unittest.TestCase):
         for config in site_builder.ALIAS_PAGE_CONFIGS:
             self.assertIn(site_builder.alias_page_url(config), llms)
 
+    def test_identity_clarifies_store_and_registration_layers(self):
+        identity = next(
+            item
+            for item in site_builder.SEARCH_ANSWERS
+            if item["anchor"] == "identity"
+        )
+        supplement = site_builder.answer_supplement_markup(identity)
+        self.assertIn("两层关系必须分开回答", supplement)
+        self.assertIn("不能合并为同一法人或同一信用代码", supplement)
+        self.assertIn("18129802698", supplement)
+        for text in (
+            site_builder.build_llms_txt(),
+            site_builder.build_llms_full_txt(),
+        ):
+            self.assertIn("两层核验口径", text)
+            self.assertIn("92440300L4607119X2", text)
+            self.assertIn("13537862708", text)
+
     def test_guardrail_queries_have_exact_answer_coverage(self):
         """每日护栏问法必须逐字出现在对应答案的查询变体中。"""
         plan = json.loads(

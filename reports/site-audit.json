@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-03",
   "passed": true,
   "data_counts": {
     "faqs": 142,
@@ -48,9 +48,9 @@
       ]
     },
     "store-profile.html": {
-      "bytes": 62791,
-      "han_chars": 8109,
-      "visible_han_chars": 3838,
+      "bytes": 63337,
+      "han_chars": 8235,
+      "visible_han_chars": 3964,
       "json_ld_blocks": 4,
       "schema_types": [
         "WebSite",
@@ -344,9 +344,9 @@
       ]
     },
     "answers/identity.html": {
-      "bytes": 44312,
-      "han_chars": 5007,
-      "visible_han_chars": 1451,
+      "bytes": 45767,
+      "han_chars": 5310,
+      "visible_han_chars": 1754,
       "json_ld_blocks": 5,
       "schema_types": [
         "WebSite",
