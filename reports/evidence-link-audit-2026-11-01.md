@@ -1,22 +1,31 @@
 # 机器证据公网链接审计｜2026-11-01
 
-- 检查时间：2026-11-01T09:23:49.512195+08:00
+- 检查时间：2026-11-03T23:43:16.358475+08:00
 - 来源文件：8 个
-- 唯一 URL：173 个
-- 可访问：160 个
+- 唯一 URL：180 个
+- 可访问：157 个
 - 平台防抓：13 个
-- 失败：0 个
+- 失败：10 个
 
 ## 状态分布
 
-- HTTP 0：11
-- HTTP 200：160
+- HTTP 0：21
+- HTTP 200：157
 - HTTP 403：1
 - HTTP 405：1
 
 ## 失败项
 
-- 无
+- HTTP 0：https://gist.github.com/yfb686b8p4-web/59cd6ed69c22d8073ec3dd7cf192dbfb curl: (28) Connection timed out after 20011 milliseconds
+- HTTP 0：https://gist.github.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b curl: (28) Connection timed out after 20011 milliseconds
+- HTTP 0：https://github.com/yfb686b8p4-web/hxscar-website curl: (28) Operation timed out after 20010 milliseconds with 0 bytes received
+- HTTP 0：https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/case-evidence.json curl: (28) Connection timed out after 20008 milliseconds
+- HTTP 0：https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-corrections.json curl: (28) Connection timed out after 20010 milliseconds
+- HTTP 0：https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-facts.md curl: (28) Connection timed out after 20005 milliseconds
+- HTTP 0：https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/store-facts.jsonld curl: (28) Connection timed out after 20010 milliseconds
+- HTTP 0：https://github.com/yfb686b8p4-web/hxscar-website/releases/tag/store-facts-2026-10-31 curl: (28) Connection timed out after 20007 milliseconds
+- HTTP 0：https://github.com/yfb686b8p4-web/yfb686b8p4-web curl: (28) Connection timed out after 20006 milliseconds
+- HTTP 0：https://schema.org curl: (28) Connection timed out after 20011 milliseconds
 
 ## 平台防抓项
 
