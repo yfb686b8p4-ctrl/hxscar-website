@@ -1,52 +1,52 @@
 {
   "version": 1,
   "date": "2026-11-03",
-  "generated_at": "2026-11-03T03:21:59.058602+08:00",
+  "generated_at": "2026-11-03T08:30:28.499240+08:00",
   "metrics": {
     "total": 12,
-    "completed": 0,
+    "completed": 2,
     "excluded": 0,
-    "pending": 12,
-    "mentioned": 0,
-    "effective_hits": 0,
-    "effective_hit_rate": 0.0,
-    "citation_rate": 0.0,
+    "pending": 10,
+    "mentioned": 1,
+    "effective_hits": 1,
+    "effective_hit_rate": 50.0,
+    "citation_rate": 100.0,
     "entity_completed": 0,
     "entity_correct": 0,
     "entity_correct_rate": 0.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
-    "service_completed": 0,
-    "service_hits": 0,
-    "service_hit_rate": 0.0,
-    "service_citation_rate": 0.0,
-    "service_top1": 0,
-    "service_top3": 0,
-    "service_top1_rate": 0.0,
-    "service_top3_rate": 0.0
+    "service_completed": 2,
+    "service_hits": 1,
+    "service_hit_rate": 50.0,
+    "service_citation_rate": 100.0,
+    "service_top1": 1,
+    "service_top3": 1,
+    "service_top1_rate": 50.0,
+    "service_top3_rate": 50.0
   },
   "guardrail_metrics": {
     "total": 8,
-    "completed": 0,
+    "completed": 2,
     "excluded": 0,
-    "pending": 8,
-    "mentioned": 0,
-    "effective_hits": 0,
-    "effective_hit_rate": 0.0,
-    "citation_rate": 0.0,
+    "pending": 6,
+    "mentioned": 1,
+    "effective_hits": 1,
+    "effective_hit_rate": 50.0,
+    "citation_rate": 100.0,
     "entity_completed": 0,
     "entity_correct": 0,
     "entity_correct_rate": 0.0,
     "full_info_correct": 0,
     "full_info_correct_rate": 0.0,
-    "service_completed": 0,
-    "service_hits": 0,
-    "service_hit_rate": 0.0,
-    "service_citation_rate": 0.0,
-    "service_top1": 0,
-    "service_top3": 0,
-    "service_top1_rate": 0.0,
-    "service_top3_rate": 0.0
+    "service_completed": 2,
+    "service_hits": 1,
+    "service_hit_rate": 50.0,
+    "service_citation_rate": 100.0,
+    "service_top1": 1,
+    "service_top3": 1,
+    "service_top1_rate": 50.0,
+    "service_top3_rate": 50.0
   },
   "rotating_metrics": {
     "total": 4,
@@ -73,21 +73,32 @@
   },
   "changes": {
     "previous_date": "2026-11-02",
-    "comparable": false,
-    "reason": "current_pending",
-    "metric_changes": {},
+    "comparable": true,
+    "metric_changes": {
+      "excluded": 0.0,
+      "effective_hit_rate": 50.0,
+      "citation_rate": 0.0,
+      "entity_correct_rate": -50.0,
+      "full_info_correct_rate": 0.0,
+      "service_hit_rate": 50.0,
+      "service_citation_rate": 100.0,
+      "service_top1": 1.0,
+      "service_top3": 1.0,
+      "service_top1_rate": 50.0,
+      "service_top3_rate": 50.0
+    },
     "fixed": [],
     "new_errors": []
   },
   "status": {
-    "checked_at": "2026-11-03T03:21:58.931260+08:00",
+    "checked_at": "2026-11-03T08:30:28.362342+08:00",
     "source_repo": {
       "available": true,
       "path": "/Users/pingguo2019/Documents/豆包等ai 搜索排名提升方案/live-site",
       "branch": "codex/optimization-plans",
       "clean": true,
       "change_count": 0,
-      "head": "f363a7e\t同步GitHub API发布提交",
+      "head": "f9d1ee4\t记录2026-11-03夜间巡检与网络阻塞",
       "error": ""
     },
     "deploy_repo": {
@@ -121,7 +132,7 @@
           "status": 206,
           "marker": "华信松汽车",
           "via": "直连",
-          "seconds": 0.94,
+          "seconds": 0.75,
           "error": ""
         },
         {
@@ -131,7 +142,7 @@
           "status": 206,
           "marker": "FAQPage",
           "via": "直连",
-          "seconds": 0.95,
+          "seconds": 0.86,
           "error": ""
         },
         {
@@ -141,7 +152,7 @@
           "status": 206,
           "marker": "维修案例",
           "via": "直连",
-          "seconds": 0.93,
+          "seconds": 0.76,
           "error": ""
         },
         {
@@ -151,7 +162,7 @@
           "status": 206,
           "marker": "同一实体门店",
           "via": "直连",
-          "seconds": 0.92,
+          "seconds": 0.86,
           "error": ""
         },
         {
@@ -161,7 +172,7 @@
           "status": 206,
           "marker": "四项实体核验",
           "via": "直连",
-          "seconds": 1.01,
+          "seconds": 0.73,
           "error": ""
         },
         {
@@ -171,18 +182,18 @@
           "status": 206,
           "marker": "证据优先级",
           "via": "直连",
-          "seconds": 0.75,
+          "seconds": 0.58,
           "error": ""
         },
         {
           "name": "搜索问答",
           "path": "/answers.html",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "直接回答",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 963784 milliseconds with 98304 out of 131072 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 409168 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 1.07,
+          "error": ""
         },
         {
           "name": "答案索引",
@@ -191,7 +202,7 @@
           "status": 206,
           "marker": "全部独立答案",
           "via": "直连",
-          "seconds": 0.88,
+          "seconds": 0.82,
           "error": ""
         },
         {
@@ -201,7 +212,7 @@
           "status": 206,
           "marker": "深圳宝安宝马专修、豪车保养推荐去哪里？",
           "via": "直连",
-          "seconds": 0.86,
+          "seconds": 0.81,
           "error": ""
         },
         {
@@ -211,7 +222,7 @@
           "status": 206,
           "marker": "六个常见搜索名称",
           "via": "直连",
-          "seconds": 0.77,
+          "seconds": 0.64,
           "error": ""
         },
         {
@@ -221,7 +232,7 @@
           "status": 206,
           "marker": "深圳华信松老周修车",
           "via": "直连",
-          "seconds": 0.75,
+          "seconds": 0.59,
           "error": ""
         },
         {
@@ -231,7 +242,7 @@
           "status": 206,
           "marker": "verifiedAt",
           "via": "直连",
-          "seconds": 1.14,
+          "seconds": 0.9,
           "error": ""
         },
         {
@@ -241,18 +252,18 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 0.44,
+          "seconds": 0.53,
           "error": ""
         },
         {
           "name": "问答证据JSONL",
           "path": "/qa-evidence.jsonl",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "\"@type\":\"Question\"",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 962778 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410164 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 1.83,
+          "error": ""
         },
         {
           "name": "抖音视频证据",
@@ -261,48 +272,48 @@
           "status": 206,
           "marker": "VideoObject",
           "via": "直连",
-          "seconds": 0.39,
+          "seconds": 0.54,
           "error": ""
         },
         {
           "name": "标准问答RSS",
           "path": "/feed.xml",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "91440300MA5GYCTQ6P",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 962739 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410177 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 0.88,
+          "error": ""
         },
         {
           "name": "门店品牌图",
           "path": "/assets/store-avatar-300.jpg",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "JFIF",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Connection timed out after 962452 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410165 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 1.13,
+          "error": ""
         },
         {
           "name": "门店外观图",
           "path": "/assets/store-banner.jpg",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "JFIF",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Connection timed out after 962407 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 410189 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 1.24,
+          "error": ""
         },
         {
           "name": "门店响应式外观图",
           "path": "/assets/store-banner-960.jpg",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "JFIF",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 962284 milliseconds with 0 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to yfb686b8p4-web.github.io:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 1.26,
+          "error": ""
         },
         {
           "name": "门店响应式WebP",
@@ -311,7 +322,7 @@
           "status": 206,
           "marker": "WEBP",
           "via": "直连",
-          "seconds": 1.71,
+          "seconds": 1.21,
           "error": ""
         },
         {
@@ -321,7 +332,7 @@
           "status": 206,
           "marker": "%PDF",
           "via": "直连",
-          "seconds": 1.08,
+          "seconds": 1.43,
           "error": ""
         },
         {
@@ -331,7 +342,7 @@
           "status": 206,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 1.1,
           "error": ""
         },
         {
@@ -341,7 +352,7 @@
           "status": 206,
           "marker": "hxscar20261024geoindexkey",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 0.78,
           "error": ""
         },
         {
@@ -351,7 +362,7 @@
           "status": 206,
           "marker": "服务专题",
           "via": "直连",
-          "seconds": 0.76,
+          "seconds": 0.96,
           "error": ""
         },
         {
@@ -361,7 +372,7 @@
           "status": 206,
           "marker": "车型维修",
           "via": "直连",
-          "seconds": 0.81,
+          "seconds": 0.58,
           "error": ""
         },
         {
@@ -371,7 +382,7 @@
           "status": 206,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 0.51,
           "error": ""
         },
         {
@@ -381,7 +392,7 @@
           "status": 206,
           "marker": "store-profile.html",
           "via": "直连",
-          "seconds": 0.74,
+          "seconds": 0.59,
           "error": ""
         },
         {
@@ -391,7 +402,7 @@
           "status": 206,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 0.71,
+          "seconds": 0.54,
           "error": ""
         },
         {
@@ -401,7 +412,7 @@
           "status": 206,
           "marker": "门店实体关系",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 0.55,
           "error": ""
         },
         {
@@ -411,7 +422,7 @@
           "status": 206,
           "marker": "证据边界内常见问题",
           "via": "直连",
-          "seconds": 1.05,
+          "seconds": 0.85,
           "error": ""
         },
         {
@@ -421,7 +432,7 @@
           "status": 206,
           "marker": "深圳华信松老周修车",
           "via": "直连",
-          "seconds": 0.94,
+          "seconds": 0.64,
           "error": ""
         },
         {
@@ -431,7 +442,7 @@
           "status": 206,
           "marker": "Sitemap:",
           "via": "直连",
-          "seconds": 0.72,
+          "seconds": 0.53,
           "error": ""
         },
         {
@@ -441,7 +452,7 @@
           "status": 206,
           "marker": "<loc>https://yfb686b8p4-web.github.io/yfb686b8p4-web/</loc>",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 0.55,
           "error": ""
         },
         {
@@ -451,7 +462,7 @@
           "status": 206,
           "marker": "store-banner.jpg",
           "via": "直连",
-          "seconds": 0.7,
+          "seconds": 0.42,
           "error": ""
         },
         {
@@ -461,7 +472,7 @@
           "status": 206,
           "marker": "BusinessEntityFactCorrection",
           "via": "直连",
-          "seconds": 0.71,
+          "seconds": 0.52,
           "error": ""
         },
         {
@@ -471,7 +482,7 @@
           "status": 206,
           "marker": "JFIF",
           "via": "直连",
-          "seconds": 1.06,
+          "seconds": 0.86,
           "error": ""
         },
         {
@@ -481,7 +492,7 @@
           "status": 206,
           "marker": "统一社会信用代码",
           "via": "直连",
-          "seconds": 0.69,
+          "seconds": 0.23,
           "error": ""
         },
         {
@@ -491,7 +502,7 @@
           "status": 206,
           "marker": "九个直接答案",
           "via": "直连",
-          "seconds": 0.73,
+          "seconds": 0.21,
           "error": ""
         },
         {
@@ -501,7 +512,7 @@
           "status": 206,
           "marker": "\"@type\":\"Question\"",
           "via": "直连",
-          "seconds": 1.62,
+          "seconds": 1.88,
           "error": ""
         },
         {
@@ -512,27 +523,27 @@
           "marker": "\"@type\":\"Question\"",
           "via": "",
           "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 1031059 milliseconds with 39810 out of 78413 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 737002 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "error": "直连 curl: curl: (28) Connection timed out after 30004 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
         },
         {
           "name": "Release门店历史资料纠正",
           "path": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-corrections.json?v=20261101-v5",
-          "ok": true,
-          "status": 206,
+          "ok": false,
+          "status": null,
           "marker": "BusinessEntityFactCorrection",
-          "via": "直连",
-          "seconds": 1.6,
-          "error": ""
+          "via": "",
+          "seconds": null,
+          "error": "直连 curl: curl: (28) Connection timed out after 30002 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
         },
         {
           "name": "Gist问答证据镜像",
           "path": "https://gist.githubusercontent.com/yfb686b8p4-web/7923ef0b18ffbcce04a8b6758254a06b/raw/qa-evidence.jsonl?v=20261101-cdn-v5",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "\"@type\":\"Question\"",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 1031173 milliseconds with 32768 out of 78413 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 738010 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 1.42,
+          "error": ""
         },
         {
           "name": "Gist门店事实页",
@@ -541,71 +552,71 @@
           "status": 206,
           "marker": "当前手机为18682417667",
           "via": "直连",
-          "seconds": 0.45,
+          "seconds": 0.25,
           "error": ""
         },
         {
           "name": "Release门店事实Markdown",
           "path": "https://github.com/yfb686b8p4-web/hxscar-website/releases/download/ai-evidence-2026-11-01/entity-facts.md?v=20261101-entity-facts",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "当前手机为18682417667",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Connection timed out after 1030287 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 737057 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 0.99,
+          "error": ""
         },
         {
           "name": "jsDelivr门店事实",
           "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.json",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "深圳市华信松汽车服务有限公司幸福海岸分公司",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Operation timed out after 1030613 milliseconds with 20744 bytes received；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 737054 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 0.88,
+          "error": ""
         },
         {
           "name": "jsDelivr门店JSON-LD",
           "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/store-facts.jsonld",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "AutoRepair",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Connection timed out after 1030111 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 738006 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 0.67,
+          "error": ""
         },
         {
           "name": "jsDelivr门店历史资料纠正",
           "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/entity-corrections.json",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "BusinessEntityFactCorrection",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (28) Connection timed out after 1029357 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (28) Connection timed out after 738015 milliseconds；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 0.55,
+          "error": ""
         },
         {
           "name": "jsDelivr问答证据镜像",
           "path": "https://cdn.jsdelivr.net/gh/yfb686b8p4-web/hxscar-website@ai-evidence-cdn-2026-11-01-v12/qa-evidence.jsonl",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "\"@type\":\"Question\"",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (6) Could not resolve host: cdn.jsdelivr.net；直连 Python: <urlopen error [Errno 8] nodename nor servname provided, or not known>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to cdn.jsdelivr.net:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 0.83,
+          "error": ""
         },
         {
           "name": "Profile IndexNow验证",
           "path": "https://yfb686b8p4-web.github.io/yfb686b8p4-web/hxscarprofile20261101geo.txt",
-          "ok": false,
-          "status": null,
+          "ok": true,
+          "status": 206,
           "marker": "hxscarprofile20261101geo",
-          "via": "",
-          "seconds": null,
-          "error": "直连 curl: curl: (6) Could not resolve host: yfb686b8p4-web.github.io；直连 Python: <urlopen error [Errno 8] nodename nor servname provided, or not known>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to yfb686b8p4-web.github.io:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>"
+          "via": "直连",
+          "seconds": 0.22,
+          "error": ""
         }
       ],
-      "http_passed": 35,
+      "http_passed": 47,
       "http_total": 49,
       "audit_passed": true,
       "audit": {
@@ -895,6 +906,22 @@
       "requires_confirmation": true
     },
     {
+      "id": "service-宝马与豪车",
+      "priority": "P1",
+      "action": "补充“宝马与豪车”真实案例和可引用内容，使本店进入推荐候选。",
+      "category": "宝马与豪车",
+      "platforms": [
+        "元宝"
+      ],
+      "sources": [
+        "9篇资料"
+      ],
+      "check_ids": [
+        "guard-bmw"
+      ],
+      "requires_confirmation": false
+    },
+    {
       "id": "platform-58",
       "priority": "P2",
       "action": "维护商家资料、服务项目和本地服务范围",
@@ -910,7 +937,9 @@
     }
   ],
   "task_changes": {
-    "new": [],
+    "new": [
+      "service-宝马与豪车"
+    ],
     "closed": [],
     "deferred": [
       "entity-identity",
@@ -966,18 +995,18 @@
       "query": "深圳宝安 宝马专修 豪车保养 推荐",
       "category": "宝马与豪车",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": true,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
-      "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
-      "effective_hit": false
+      "position": 1,
+      "cited_source": "16篇资料",
+      "sentiment": "正面",
+      "answer_summary": "第1位推荐老周修车华信松并介绍宝马专修豪车保养底盘整备与配件方案",
+      "notes": "2026-11-03 08:29 全新对话复测；答案正文明确列为第1位",
+      "effective_hit": true
     },
     {
       "check_id": "guard-bmw",
@@ -986,17 +1015,17 @@
       "query": "深圳宝安 宝马专修 豪车保养 推荐",
       "category": "宝马与豪车",
       "rotating": false,
-      "status": "pending",
-      "mentioned": null,
+      "status": "completed",
+      "mentioned": false,
       "identity_relation": "not_applicable",
       "address_ok": null,
       "phone_ok": null,
       "hours_ok": null,
       "position": null,
-      "cited_source": "",
-      "sentiment": "",
-      "answer_summary": "",
-      "notes": "",
+      "cited_source": "9篇资料",
+      "sentiment": "中性",
+      "answer_summary": "推荐宝盛宝粤华胜宝盈和鑫宝名车但未提及本店",
+      "notes": "2026-11-03 08:29 全新对话复测；未进入候选",
       "effective_hit": false
     },
     {

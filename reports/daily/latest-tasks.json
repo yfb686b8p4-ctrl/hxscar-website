@@ -154,6 +154,22 @@
     "requires_confirmation": true
   },
   {
+    "id": "service-宝马与豪车",
+    "priority": "P1",
+    "action": "补充“宝马与豪车”真实案例和可引用内容，使本店进入推荐候选。",
+    "category": "宝马与豪车",
+    "platforms": [
+      "元宝"
+    ],
+    "sources": [
+      "9篇资料"
+    ],
+    "check_ids": [
+      "guard-bmw"
+    ],
+    "requires_confirmation": false
+  },
+  {
     "id": "platform-58",
     "priority": "P2",
     "action": "维护商家资料、服务项目和本地服务范围",
