@@ -213,6 +213,36 @@ class RepositoryReadmeTests(unittest.TestCase):
             self.assertIn("submit_indexnow.py", text)
             self.assertIn("submit_profile_indexnow.py", text)
 
+    def test_weekly_deploy_rejects_diverged_deployment_copy(self):
+        """自动部署前必须同步远端主线，分叉时停止。"""
+        script = (ROOT / "scripts" / "weekly_deploy.sh").read_text(
+            encoding="utf-8"
+        )
+        for marker in (
+            'git fetch "$remote_name" main --prune',
+            "merge-base --is-ancestor",
+            "git merge --ff-only FETCH_HEAD",
+            "部署副本与远端 main 已分叉",
+            "推送后线上 main 与本地 HEAD 不一致",
+        ):
+            self.assertIn(marker, script)
+
+    def test_ai_login_checker_uses_the_dedicated_cdp_profile(self):
+        """登录态检查必须连接专用 Chrome，并明确区分未登录。"""
+        script = (ROOT / "scripts" / "check_ai_login.mjs").read_text(
+            encoding="utf-8"
+        )
+        for marker in (
+            "http://127.0.0.1:9223",
+            "doubao.com",
+            "yuanbao.tencent.com",
+            "logged_out",
+            "logged_in",
+            "loggedInSignals",
+            "missing_tab",
+        ):
+            self.assertIn(marker, script)
+
     def test_ai_crawlers_are_explicitly_allowed(self):
         """主站与 Profile 必须明确允许主流 AI 搜索爬虫。"""
         robots_files = (
