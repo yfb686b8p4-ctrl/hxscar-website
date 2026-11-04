@@ -26,6 +26,7 @@ reports/*
 !reports/ai-probes/
 !reports/ai-probes/**
 !reports/recheck-*.md
+!reports/owner-actions-*.md
 !reports/tencent-map-index-*.json
 !reports/mirror-consistency-*.json
 !reports/mirror-consistency-*.md
