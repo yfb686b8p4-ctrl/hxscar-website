@@ -124,12 +124,16 @@ python3 scripts/final_summary.py
 
 ```bash
 node scripts/check_ai_login.mjs
+node scripts/ai_search_probe.mjs --platform yuanbao
+node scripts/ai_search_probe.mjs --platform doubao
 bash -n scripts/weekly_deploy.sh
 ```
 
 `check_ai_login.mjs` 只连接本机 `9223` 端口上的专用 Chrome，
 不会使用匿名会话冒充已登录结果。每周部署脚本在生成内容前会先同步
 远端 `main`；部署副本落后时自动快进，分叉或存在未提交改动时直接停止。
+`ai_search_probe.mjs` 会为每道题新建独立标签页，等待答案稳定后保存原始
+证据，默认输出到 `reports/ai-probes/`。
 
 ### 每日搜索检查
 

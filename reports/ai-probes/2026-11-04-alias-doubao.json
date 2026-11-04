@@ -1,0 +1,19 @@
+{
+  "platform": "doubao",
+  "label": "豆包",
+  "cdp": "http://127.0.0.1:9223",
+  "generatedAt": "2026-11-04T02:15:20.685Z",
+  "results": [
+    {
+      "id": "rotate-alias-05",
+      "query": "华信松汽车 老周修车 同一家吗",
+      "startedAt": "2026-11-04T02:12:15.725Z",
+      "completedAt": "2026-11-04T02:15:20.674Z",
+      "complete": false,
+      "url": "https://www.doubao.com/chat/",
+      "text": "",
+      "bodyText": "",
+      "error": "答案生成超时或未成功提交"
+    }
+  ]
+}

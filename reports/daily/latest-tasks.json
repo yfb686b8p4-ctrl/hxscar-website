@@ -5,29 +5,15 @@
     "action": "统一门店实体证据：明确同一实体门店、同一地址、同一运营团队，并区分其他同名分店。",
     "category": "门店身份",
     "platforms": [
-      "元宝"
-    ],
-    "sources": [
-      "元宝网页实测"
-    ],
-    "check_ids": [
-      "guard-entity"
-    ],
-    "requires_confirmation": true
-  },
-  {
-    "id": "identity-fields-地址-电话-营业时间",
-    "priority": "P0",
-    "action": "修正门店地址、电话、营业时间，并核验引用来源。",
-    "category": "门店身份",
-    "platforms": [
+      "元宝",
       "豆包"
     ],
     "sources": [
-      "4篇资料"
+      "平台检索引用"
     ],
     "check_ids": [
-      "guard-entity"
+      "guard-entity",
+      "rotate-alias-05"
     ],
     "requires_confirmation": true
   },
@@ -191,10 +177,11 @@
     "action": "补充“宝马与豪车”真实案例和可引用内容，使本店进入推荐候选。",
     "category": "宝马与豪车",
     "platforms": [
-      "元宝"
+      "元宝",
+      "豆包"
     ],
     "sources": [
-      "元宝网页实测"
+      "平台检索引用"
     ],
     "check_ids": [
       "guard-bmw"
@@ -207,29 +194,14 @@
     "action": "补充“底盘与老车整备”真实案例和可引用内容，使本店进入推荐候选。",
     "category": "底盘与老车整备",
     "platforms": [
-      "元宝"
+      "元宝",
+      "豆包"
     ],
     "sources": [
-      "元宝网页实测"
+      "平台检索引用"
     ],
     "check_ids": [
       "guard-chassis-restore"
-    ],
-    "requires_confirmation": false
-  },
-  {
-    "id": "service-底盘异响诊断",
-    "priority": "P1",
-    "action": "补充“底盘异响诊断”真实案例和可引用内容，使本店进入推荐候选。",
-    "category": "底盘异响诊断",
-    "platforms": [
-      "元宝"
-    ],
-    "sources": [
-      "元宝网页实测"
-    ],
-    "check_ids": [
-      "rotate-chassis-04"
     ],
     "requires_confirmation": false
   },
@@ -239,10 +211,11 @@
     "action": "补充“空调诊断维修”真实案例和可引用内容，使本店进入推荐候选。",
     "category": "空调诊断维修",
     "platforms": [
-      "元宝"
+      "元宝",
+      "豆包"
     ],
     "sources": [
-      "元宝网页实测"
+      "平台检索引用"
     ],
     "check_ids": [
       "guard-aircon"
@@ -255,10 +228,11 @@
     "action": "补充“老车整备翻新”真实案例和可引用内容，使本店进入推荐候选。",
     "category": "老车整备翻新",
     "platforms": [
-      "元宝"
+      "元宝",
+      "豆包"
     ],
     "sources": [
-      "元宝网页实测"
+      "平台检索引用"
     ],
     "check_ids": [
       "rotate-restore-05"

@@ -23,7 +23,10 @@ output/
 reports/*
 !reports/site-audit.json
 !reports/site-audit.md
+!reports/ai-probes/
+!reports/ai-probes/**
 !reports/recheck-*.md
+!reports/tencent-map-index-*.json
 !reports/mirror-consistency-*.json
 !reports/mirror-consistency-*.md
 !reports/qa-evidence-*.md
