@@ -1,6 +1,6 @@
 # AI 搜索每日效果简报｜2026-11-04
 
-- 生成时间：2026-11-04T10:23:01.263904+08:00
+- 生成时间：2026-11-04T10:25:19.975224+08:00
 - 今日结论：已完成 12 项搜索检查，有效命中 0 项。
 - 完成检查：12/12，待补测 0，已排除 0
 - 护栏有效命中率：0.0%
@@ -46,10 +46,10 @@
 
 ## 运行状态
 
-- 线上页面：49/49 通过
+- 线上页面：48/49 通过
 - 最近站点审计：通过
 - 自动部署：已加载，最近退出码 暂无记录
-- 源仓库：fe3630b	合并线上主线与部署安全修复，有未提交改动
+- 源仓库：478fae4	建立AI搜索自动复测并生成11月4日基线，干净
 - 部署副本：305e519	同步线上主线与部署安全修复，干净
 
 ## 待执行任务
@@ -60,4 +60,4 @@
 
 ## 运行异常
 
-- 无
+- Release门店历史资料纠正：失败 直连 curl: curl: (28) Connection timed out after 30008 milliseconds；直连 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>；本机代理 curl: curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443；本机代理 Python: <urlopen error EOF occurred in violation of protocol (_ssl.c:1108)>
