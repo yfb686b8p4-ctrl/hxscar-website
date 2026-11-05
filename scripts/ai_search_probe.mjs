@@ -270,7 +270,7 @@ async function submitQuery(client, query) {
   }
 }
 
-async function waitForAnswer(client, initialText) {
+async function waitForAnswer(client, initialText, platformId) {
   const startedAt = Date.now();
   let previousText = "";
   let stableCount = 0;
@@ -302,8 +302,13 @@ async function waitForAnswer(client, initialText) {
       };
     }
     const text = page.answerText;
+    const busy = /正在思考|深度思考中|正在搜索相关资料|停止生成/.test(text);
+    const completeMarker =
+      platformId === "doubao" ? /共用时/.test(text) : text.length >= 500;
     const grew =
-      text.length >= 120 &&
+      text.length >= 500 &&
+      completeMarker &&
+      !busy &&
       page.bodyText.length > initialText.length + 300;
     if (grew && text === previousText) {
       stableCount += 1;
@@ -338,7 +343,11 @@ async function probeOne(platformId, item) {
     await client.connect();
     const initialState = await waitForInput(client, platform);
     await submitQuery(client, item.query);
-    const answer = await waitForAnswer(client, initialState.text);
+    const answer = await waitForAnswer(
+      client,
+      initialState.text,
+      platformId,
+    );
     return {
       id: item.id,
       query: item.query,

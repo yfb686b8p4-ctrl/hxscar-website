@@ -1,0 +1,13 @@
+﻿check_id,platform,session_mode,query,category,mentioned,identity_relation,address_ok,phone_ok,hours_ok,position,cited_source,sentiment,answer_summary,notes
+guard-entity,豆包,fresh,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,True,wrong,True,True,False,,平台检索引用,,判为不是同一家；标准地址和双电话正确，营业时间未给出。,独立新标签页，首次答案未完成，重试后取得完整回答。 完整证据见 reports/ai-probes/2026-11-05-doubao.json
+guard-entity,元宝,fresh,深圳市华信松汽车服务有限公司幸福海岸分公司 老周修车 同一家吗,门店身份,,pending,,,,,,,,独立新标签页连续两次均未生成答案，按超时保留待补测，不猜测结果。完整证据见 reports/ai-probes/2026-11-05-yuanbao.json
+guard-bmw,豆包,fresh,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,平台检索引用,,推荐群辉宜养车、华胜、宝创森那美、宝盛等，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-doubao.json
+guard-bmw,元宝,fresh,深圳宝安 宝马专修 豪车保养 推荐,宝马与豪车,False,not_applicable,,,,,平台检索引用,,推荐宝盈、鑫宝、群辉、华胜等，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-yuanbao.json
+guard-aircon,豆包,fresh,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,False,not_applicable,,,,,平台检索引用,,推荐车博士及其他空调维修店，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-doubao.json
+guard-aircon,元宝,fresh,深圳宝安 汽车空调不凉 诊断维修,空调诊断维修,False,not_applicable,,,,,平台检索引用,,推荐伟业、宝丰、美孚1号等门店，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-yuanbao.json
+guard-chassis-restore,豆包,fresh,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,False,not_applicable,,,,,平台检索引用,,推荐车博士等经官方评级核验的门店，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-doubao.json
+guard-chassis-restore,元宝,fresh,深圳宝安 底盘异响 老车整备 能修不换,底盘与老车整备,False,not_applicable,,,,,平台检索引用,,给出底盘胶套压换原则和门店名单，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-yuanbao.json
+rotate-alias-05,豆包,fresh,华信松汽车 老周修车 同一家吗,门店身份,True,wrong,False,False,False,,平台检索引用,,判为不是同一家，未建立老周修车与华信松的实体关系。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-doubao.json
+rotate-alias-05,元宝,fresh,华信松汽车 老周修车 同一家吗,门店身份,True,wrong,False,False,False,,平台检索引用,,判为不是同一家，未建立老周修车与华信松的实体关系。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-yuanbao.json
+rotate-bmw-07,豆包,fresh,宝安奥迪A6L维修保养,宝马与豪车,False,not_applicable,,,,,平台检索引用,,推荐华胜、车总裁、车博士、宝腾等，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-doubao.json
+rotate-bmw-07,元宝,fresh,宝安奥迪A6L维修保养,宝马与豪车,False,not_applicable,,,,,平台检索引用,,推荐鹏峰奥星、华胜、华星、锦诚等，未提及本店。,独立新标签页复测。 完整证据见 reports/ai-probes/2026-11-05-yuanbao.json

@@ -184,7 +184,8 @@
       "平台检索引用"
     ],
     "check_ids": [
-      "guard-bmw"
+      "guard-bmw",
+      "rotate-bmw-07"
     ],
     "requires_confirmation": false
   },
@@ -219,23 +220,6 @@
     ],
     "check_ids": [
       "guard-aircon"
-    ],
-    "requires_confirmation": false
-  },
-  {
-    "id": "service-老车整备翻新",
-    "priority": "P1",
-    "action": "补充“老车整备翻新”真实案例和可引用内容，使本店进入推荐候选。",
-    "category": "老车整备翻新",
-    "platforms": [
-      "元宝",
-      "豆包"
-    ],
-    "sources": [
-      "平台检索引用"
-    ],
-    "check_ids": [
-      "rotate-restore-05"
     ],
     "requires_confirmation": false
   },
